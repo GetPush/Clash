@@ -47,7 +47,7 @@ proxy-providers:
     interval: 86400
 
 proxy-groups:
-- name: UMUM
+- name: 🌏
   type: select
   proxies:
   - FB On 📡
@@ -58,8 +58,8 @@ proxy-groups:
   - NL 🇳🇱 📡
   - FR 🇫🇷 📡
   - US 🇺🇸 📡
-  - ID- 🇮🇩 📡
-  - Enhanced📡
+  - ID 🇮🇩 📡
+  - Trojan 📡
   - DIRECT Interface
   - DIRECT
   url: https://cp.cloudflare.com/generate_204
@@ -82,7 +82,7 @@ proxy-groups:
   disable-udp: false
   proxies:
   - REJECT
-  - UMUM
+  - 🌏
   - DIRECT Interface
   - DIRECT
   url: https://cp.cloudflare.com/generate_204
@@ -94,7 +94,7 @@ proxy-groups:
   lazy: true
   disable-udp: false
   proxies:
-  - UMUM
+  - 🌏
   - LB On 📡
   - DIRECT Interface
   - DIRECT
@@ -106,7 +106,7 @@ proxy-groups:
   lazy: true
   disable-udp: false
   proxies:
-  - UMUM
+  - 🌏
   - FB On 📡
   - DIRECT Interface
   - DIRECT
@@ -118,7 +118,7 @@ proxy-groups:
   lazy: true
   disable-udp: false
   proxies:
-  - UMUM
+  - 🌏
   - UT On 📡
   - DIRECT Interface
   - DIRECT
@@ -130,9 +130,9 @@ proxy-groups:
   lazy: true
   disable-udp: false
   proxies:
-  - UMUM
+  - 🌏
   - FB On 📡
-  - ID- 🇮🇩 📡
+  - ID 🇮🇩 📡
   - ByOne 📡
   - DIRECT Interface
   - DIRECT
@@ -142,16 +142,16 @@ proxy-groups:
   type: select
   disable-udp: false
   proxies:
-  - UMUM
+  - 🌏
   - UT On 📡
-  - ID- 🇮🇩 📡
+  - ID 🇮🇩 📡
   - ByOne 📡
   - DIRECT Interface
   - DIRECT
   url: https://cp.cloudflare.com/generate_204
   interval: '70'
 
-- name: ID- 🇮🇩 📡
+- name: ID 🇮🇩 📡
   type: fallback
   strategy: round-robin
   lazy: true
@@ -160,7 +160,7 @@ proxy-groups:
   - Indonesia
   url: https://cp.cloudflare.com/generate_204
   interval: '80'
-- name: Enhanced📡
+- name: 💫 🐎 📡
   type: fallback
   strategy: round-robin
   lazy: true
@@ -170,7 +170,7 @@ proxy-groups:
   - LB On 📡
   - UT On 📡
   - Trojan 📡
-  - ID- 🇮🇩 📡
+  - ID 🇮🇩 📡
   - DIRECT
   url: https://cp.cloudflare.com/generate_204
   interval: '90'
@@ -272,7 +272,7 @@ proxy-groups:
   disable-udp: false
   proxies:
   - REJECT
-  - UMUM
+  - 🌏
   - DIRECT Interface
   url: https://cp.cloudflare.com/generate_204
   interval: '50'
@@ -535,7 +535,7 @@ rules:
 
   ## rules inner, recommended untuk non kuota reguler
 - AND,((PROCESS-NAME,clash),(NOT,((IN-TYPE,inner)))),REJECT
-- IN-TYPE,inner,Enhanced📡
+- IN-TYPE,inner,💫 🐎 📡
 
  ## final
 - DST-PORT,7895,REJECT
@@ -556,7 +556,7 @@ rules:
 - DST-PORT,22,DIRECT
 
 - RULE-SET,rule_lancidr,DIRECT,no-resolve
-- RULE-SET,rule_falsepositive,UMUM
+- RULE-SET,rule_falsepositive,🌏
 - RULE-SET,rule_malicious,REJECT
 - RULE-SET,rule_maliciousip,REJECT
 
@@ -572,7 +572,7 @@ rules:
 - RULE-SET,rule_porn,TrafficPorn
 - RULE-SET,rule_nsfw,TrafficPorn
 - RULE-SET,rule_whatsapp,CHATTING
-- RULE-SET,rule_playstore,UMUM
+- RULE-SET,rule_playstore,🌏
 - RULE-SET,rule_disneyplus,INDO🇮🇩
 - RULE-SET,rule_netflix,INDO🇮🇩
 - RULE-SET,rule_Indo,INDO🇮🇩
@@ -598,7 +598,7 @@ rules:
 - RULE-SET,rule_Gaming,GAMES🎮
 - RULE-SET,rule_games,GAMES🎮
 - RULE-SET,rule_discord,GAMES🎮
-- RULE-SET,rule_umum,UMUM
+- RULE-SET,rule_umum,🌏
 #- RULE-SET,rule_global,GLOBAL
 - MATCH,GLOBAL
 
