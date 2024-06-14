@@ -47,7 +47,25 @@ proxy-providers:
     interval: 86400
 
 proxy-groups:
-- name: By One🛰️
+- name: UMUM
+  type: select
+  proxies:
+  - FB On 📡
+  - LB On 📡
+  - UT On 📡
+  - ByOne 📡
+  - SG 🇸🇬 📡
+  - NL 🇳🇱 📡
+  - FR 🇫🇷 📡
+  - US 🇺🇸 📡
+  - ID- 🇮🇩 📡
+  - Enhanced📡
+  - DIRECT Interface
+  - DIRECT
+  url: https://cp.cloudflare.com/generate_204
+  interval: '10'
+
+- name: ByOne 📡
   type: select
   strategy: round-robin
   lazy: true
@@ -59,30 +77,12 @@ proxy-groups:
   url: https://cp.cloudflare.com/generate_204
   interval: '50'
 
-- name: UMUM
-  type: select
-  proxies:
-  - FB On📡
-  - LB On📡
-  - UT On📡
-  - By One🛰️
-  - SG 🇸🇬🛰️
-  - NL 🇳🇱🛰️
-  - FR 🇫🇷🛰️
-  - US 🇺🇸🛰️
-  - ID 🇮🇩🛰️
-  - Enhancer🛰️
-  - DIRECT Interface
-  - DIRECT
-  url: https://cp.cloudflare.com/generate_204
-  interval: '10'
-
 - name: IKLAN
   type: select
   disable-udp: false
   proxies:
-  - UMUM
   - REJECT
+  - UMUM
   - DIRECT Interface
   - DIRECT
   url: https://cp.cloudflare.com/generate_204
@@ -95,7 +95,7 @@ proxy-groups:
   disable-udp: false
   proxies:
   - UMUM
-  - LB On📡
+  - LB On 📡
   - DIRECT Interface
   - DIRECT
   url: https://cp.cloudflare.com/generate_204
@@ -107,7 +107,7 @@ proxy-groups:
   disable-udp: false
   proxies:
   - UMUM
-  - FB On📡
+  - FB On 📡
   - DIRECT Interface
   - DIRECT
   url: https://cp.cloudflare.com/generate_204
@@ -119,7 +119,7 @@ proxy-groups:
   disable-udp: false
   proxies:
   - UMUM
-  - UT On📡
+  - UT On 📡
   - DIRECT Interface
   - DIRECT
   url: https://cp.cloudflare.com/generate_204
@@ -131,9 +131,9 @@ proxy-groups:
   disable-udp: false
   proxies:
   - UMUM
-  - FB On📡
-  - ID 🇮🇩🛰️
-  - By One🛰️
+  - FB On 📡
+  - ID- 🇮🇩 📡
+  - ByOne 📡
   - DIRECT Interface
   - DIRECT
   url: https://cp.cloudflare.com/generate_204
@@ -143,15 +143,15 @@ proxy-groups:
   disable-udp: false
   proxies:
   - UMUM
-  - UT On📡
-  - ID 🇮🇩🛰️
-  - By One🛰️
+  - UT On 📡
+  - ID- 🇮🇩 📡
+  - ByOne 📡
   - DIRECT Interface
   - DIRECT
   url: https://cp.cloudflare.com/generate_204
   interval: '70'
 
-- name: ID 🇮🇩🛰️
+- name: ID- 🇮🇩 📡
   type: fallback
   strategy: round-robin
   lazy: true
@@ -160,58 +160,58 @@ proxy-groups:
   - Indonesia
   url: https://cp.cloudflare.com/generate_204
   interval: '80'
-- name: Enhancer🛰️
+- name: Enhanced📡
   type: fallback
   strategy: round-robin
   lazy: true
   disable-udp: false
   proxies:
-  - FB On📡
-  - LB On📡
-  - UT On📡
-  - 🛰️ Trojan
-  - ID 🇮🇩🛰️
+  - FB On 📡
+  - LB On 📡
+  - UT On 📡
+  - Trojan 📡
+  - ID- 🇮🇩 📡
   - DIRECT
   url: https://cp.cloudflare.com/generate_204
   interval: '90'
-- name: FB On📡
+- name: FB On 📡
   type: fallback
   strategy: round-robin
   lazy: true
   disable-udp: false
   proxies:
-  - SG 🇸🇬🛰️
-  - NL 🇳🇱🛰️
-  - FR 🇫🇷🛰️
-  - US 🇺🇸🛰️
+  - SG 🇸🇬 📡
+  - NL 🇳🇱 📡
+  - FR 🇫🇷 📡
+  - US 🇺🇸 📡
   url: https://cp.cloudflare.com/generate_204
   interval: '35'
-- name: LB On📡
+- name: LB On 📡
   type: load-balance
   strategy: round-robin
   lazy: true
   disable-udp: false
   proxies:
-  - SG 🇸🇬🛰️
-  - NL 🇳🇱🛰️
-  - FR 🇫🇷🛰️
-  - US 🇺🇸🛰️
+  - SG 🇸🇬 📡
+  - NL 🇳🇱 📡
+  - FR 🇫🇷 📡
+  - US 🇺🇸 📡
   url: https://cp.cloudflare.com/generate_204
   interval: '15'
-- name: UT On📡
+- name: UT On 📡
   type: url-test
   strategy: round-robin
   lazy: true
   disable-udp: false
   proxies:
-  - SG 🇸🇬🛰️
-  - NL 🇳🇱🛰️
-  - FR 🇫🇷🛰️
-  - US 🇺🇸🛰️
+  - SG 🇸🇬 📡
+  - NL 🇳🇱 📡
+  - FR 🇫🇷 📡
+  - US 🇺🇸 📡
   url: https://cp.cloudflare.com/generate_204
   interval: '25'
 
-- name: SG 🇸🇬🛰️
+- name: SG 🇸🇬 📡
   type: load-balance
   strategy: round-robin
   lazy: true
@@ -220,7 +220,7 @@ proxy-groups:
   - Singapore
   url: https://cp.cloudflare.com/generate_204
   interval: '40'
-- name: FR 🇫🇷🛰️
+- name: FR 🇫🇷 📡
   type: load-balance
   strategy: round-robin
   lazy: true
@@ -229,7 +229,7 @@ proxy-groups:
   - France
   url: https://cp.cloudflare.com/generate_204
   interval: '40'
-- name: NL 🇳🇱🛰️
+- name: NL 🇳🇱 📡
   type: load-balance
   strategy: round-robin
   lazy: true
@@ -238,7 +238,7 @@ proxy-groups:
   - Netherlands
   url: https://cp.cloudflare.com/generate_204
   interval: '40'
-- name: US 🇺🇸🛰️
+- name: US 🇺🇸 📡
   type: fallback
   strategy: round-robin
   lazy: true
@@ -247,7 +247,7 @@ proxy-groups:
   - America
   url: https://cp.cloudflare.com/generate_204
   interval: '40'
-- name: 🛰️ Trojan
+- name: Trojan 📡
   type: url-test
   strategy: round-robin
   lazy: true
@@ -535,7 +535,7 @@ rules:
 
   ## rules inner, recommended untuk non kuota reguler
 - AND,((PROCESS-NAME,clash),(NOT,((IN-TYPE,inner)))),REJECT
-- IN-TYPE,inner,Enhancer🛰️
+- IN-TYPE,inner,Enhanced📡
 
  ## final
 - DST-PORT,7895,REJECT
