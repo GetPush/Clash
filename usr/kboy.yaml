@@ -47,29 +47,6 @@ proxy-providers:
     interval: 86400
 
 proxy-groups:
-- name: IKLAN
-  type: select
-  disable-udp: false
-  proxies:
-  - UMUM
-  - REJECT
-  - DIRECT Interface
-  - DIRECT
-  url: https://cp.cloudflare.com/generate_204
-  interval: '20'
-
-- name: ByOne 📡
-  type: select
-  strategy: round-robin
-  lazy: true
-  disable-udp: false
-  use:
-  - Singapore
-  - Netherlands
-  - Indonesia
-  url: https://cp.cloudflare.com/generate_204
-  interval: '50'
-
 - name: UMUM
   type: select
   proxies:
@@ -87,6 +64,29 @@ proxy-groups:
   - DIRECT
   url: https://cp.cloudflare.com/generate_204
   interval: '10'
+
+- name: ByOne 📡
+  type: select
+  strategy: round-robin
+  lazy: true
+  disable-udp: false
+  use:
+  - Singapore
+  - Netherlands
+  - Indonesia
+  url: https://cp.cloudflare.com/generate_204
+  interval: '50'
+
+- name: IKLAN
+  type: select
+  disable-udp: false
+  proxies:
+  - REJECT
+  - UMUM
+  - DIRECT Interface
+  - DIRECT
+  url: https://cp.cloudflare.com/generate_204
+  interval: '20'
 
 - name: SOSMED
   type: select
