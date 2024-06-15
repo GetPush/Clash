@@ -2,6 +2,11 @@ payload:
   # Hotstar
   - IP-CIDR,198.18.0.1/16
 
+  - DST-PORT,7895
+  - DST-PORT,7892
+  - DST-PORT,7895
+  - DST-PORT,7892
+
 # minimalisir ads YouTube Google 
   - DOMAIN-SUFFIX,doubleclick.net
   - DOMAIN-SUFFIX,googleadservices.com
