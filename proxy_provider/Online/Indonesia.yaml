@@ -1,21 +1,5 @@
 proxies:
-- name: 🇮🇩 1 Game 21 juni
-  server: 104.19.142.89
-  port: 443
-  type: vmess
-  uuid: c9392f97-a2c4-4bc7-9539-aedf07725ef5
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: true
-  servername: id1.v2vmess.site
-  network: ws
-  ws-opts:
-    path: /vmess
-    headers:
-      Host: id1.v2vmess.site
-  udp: true
-- name: 🇮🇩 1 Boost 21 juni
+- name: 🇮🇩 AXIS All BOOSTER B2
   server: 104.18.34.70
   port: 443
   type: vmess
@@ -32,36 +16,70 @@ proxies:
       Host: id1.v2vmess.site
   udp: true
 
-
-- name: 🇮🇩 2 Game ex 16 juni
+- name: 🇮🇩 AXIS GAME JBR B1
   server: 104.19.142.89
   port: 443
   type: vmess
-  uuid: c2784c26-3318-450f-80d5-244921036c71
+  uuid: c9392f97-a2c4-4bc7-9539-aedf07725ef5
   alterId: 0
   cipher: auto
   tls: true
   skip-cert-verify: true
-  servername: id2.v2vmess.site
+  servername: id1.v2vmess.site
   network: ws
   ws-opts:
     path: /vmess
     headers:
-      Host: id2.v2vmess.site
+      Host: id1.v2vmess.site
   udp: true
-- name: 🇮🇩 2 Boost ex 16 juni
-  server: 104.18.34.70
+
+- name: 🇮🇩 AXIS GAME JTM
+  server: 104.18.21.94
   port: 443
   type: vmess
-  uuid: c2784c26-3318-450f-80d5-244921036c71
+  uuid: c9392f97-a2c4-4bc7-9539-aedf07725ef5
   alterId: 0
   cipher: auto
   tls: true
   skip-cert-verify: true
-  servername: id2.v2vmess.site
+  servername: id1.v2vmess.site
   network: ws
   ws-opts:
     path: /vmess
     headers:
-      Host: id2.v2vmess.site
+      Host: id1.v2vmess.site
+  udp: true
+
+- name: 🇮🇩 XL AXIS OPOK B6
+  server: 104.22.28.102
+  port: 443
+  type: vmess
+  uuid: c9392f97-a2c4-4bc7-9539-aedf07725ef5
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  servername: id1.v2vmess.site
+  network: ws
+  ws-opts:
+    path: /vmess
+    headers:
+      Host: id1.v2vmess.site
+  udp: true
+
+- name: 🇮🇩 XL AXIS OPOK B7
+  server: 104.17.58.20
+  port: 443
+  type: vmess
+  uuid: c9392f97-a2c4-4bc7-9539-aedf07725ef5
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  servername: id1.v2vmess.site
+  network: ws
+  ws-opts:
+    path: /vmess
+    headers:
+      Host: id1.v2vmess.site
   udp: true
