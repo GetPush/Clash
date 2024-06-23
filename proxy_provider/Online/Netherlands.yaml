@@ -134,3 +134,22 @@ proxies:
     headers:
       Host: vmess-nl1.sshkit.org
   udp: true
+
+
+# ocean
+- name: 🇳🇱 1-7 AXIS GAME JBR B1
+  server: 104.19.142.89
+  port: 443
+  type: vmess
+  uuid: 599db411-4473-448e-bfc2-062c20fbe2cb
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  servername: nl1.v2vmess.site
+  network: ws
+  ws-opts:
+    path: /vmess
+    headers:
+      Host: nl1.v2vmess.site
+  udp: true
