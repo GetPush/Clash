@@ -1,12 +1,12 @@
 proxies:
-- name: 🇳🇱 AXIS All BOOSTER B2
-  server: 104.18.34.70
-  port: 80
+- name: 🇳🇱 AXIS GAME JBR B1
+  server: 104.19.142.89
+  port: 443
   type: vmess
   uuid: e620d600-ee19-4012-a96c-968e85a52de9
   alterId: 0
   cipher: auto
-  tls: false
+  tls: true
   skip-cert-verify: true
   servername: vmess-nl1.sshkit.org
   network: ws
@@ -16,14 +16,31 @@ proxies:
       Host: vmess-nl1.sshkit.org
   udp: true
 
-- name: 🇳🇱 AXIS GAME JBR B1
-  server: 104.19.142.89
-  port: 80
+- name: 🇳🇱 AXIS All BOOSTER B1
+  server: 172.64.153.186
+  port: 443
   type: vmess
   uuid: e620d600-ee19-4012-a96c-968e85a52de9
   alterId: 0
   cipher: auto
-  tls: false
+  tls: true
+  skip-cert-verify: true
+  servername: vmess-nl1.sshkit.org
+  network: ws
+  ws-opts:
+    path: /sshkit/1828396894/6654205ede26b/
+    headers:
+      Host: vmess-nl1.sshkit.org
+  udp: true
+
+- name: 🇳🇱 AXIS All BOOSTER B2
+  server: 104.18.34.70
+  port: 443
+  type: vmess
+  uuid: e620d600-ee19-4012-a96c-968e85a52de9
+  alterId: 0
+  cipher: auto
+  tls: true
   skip-cert-verify: true
   servername: vmess-nl1.sshkit.org
   network: ws
@@ -35,12 +52,46 @@ proxies:
 
 - name: 🇳🇱 AXIS GAME JTM
   server: 104.18.21.94
-  port: 80
+  port: 443
   type: vmess
   uuid: e620d600-ee19-4012-a96c-968e85a52de9
   alterId: 0
   cipher: auto
-  tls: false
+  tls: true
+  skip-cert-verify: true
+  servername: vmess-nl1.sshkit.org
+  network: ws
+  ws-opts:
+    path: /sshkit/1828396894/6654205ede26b/
+    headers:
+      Host: vmess-nl1.sshkit.org
+  udp: true
+
+- name: 🇳🇱 AXIS GENFLIX
+  server: 104.21.30.242
+  port: 443
+  type: vmess
+  uuid: e620d600-ee19-4012-a96c-968e85a52de9
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  servername: vmess-nl1.sshkit.org
+  network: ws
+  ws-opts:
+    path: /sshkit/1828396894/6654205ede26b/
+    headers:
+      Host: vmess-nl1.sshkit.org
+  udp: true
+
+- name: 🇳🇱 XL AXIS SUSHIROLL B2
+  server: 104.21.69.223
+  port: 443
+  type: vmess
+  uuid: e620d600-ee19-4012-a96c-968e85a52de9
+  alterId: 0
+  cipher: auto
+  tls: true
   skip-cert-verify: true
   servername: vmess-nl1.sshkit.org
   network: ws
@@ -52,12 +103,12 @@ proxies:
 
 - name: 🇳🇱 XL AXIS OPOK B6
   server: 104.22.28.102
-  port: 80
+  port: 443
   type: vmess
   uuid: e620d600-ee19-4012-a96c-968e85a52de9
   alterId: 0
   cipher: auto
-  tls: false
+  tls: true
   skip-cert-verify: true
   servername: vmess-nl1.sshkit.org
   network: ws
@@ -69,12 +120,12 @@ proxies:
 
 - name: 🇳🇱 XL AXIS OPOK B7
   server: 104.17.58.20
-  port: 80
+  port: 443
   type: vmess
   uuid: e620d600-ee19-4012-a96c-968e85a52de9
   alterId: 0
   cipher: auto
-  tls: false
+  tls: true
   skip-cert-verify: true
   servername: vmess-nl1.sshkit.org
   network: ws
