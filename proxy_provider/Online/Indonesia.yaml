@@ -1,5 +1,5 @@
 proxies:
-- name: 🇮🇩 28 AXIS GAME
+- name: 🇺🇲 1-7
   server: 104.19.142.89
   port: 443
   type: vmess
@@ -16,120 +16,36 @@ proxies:
       Host: us1.v2vmess.site
   udp: true
 
-- name: 🇮🇩 28 AXIS All BOOSTER B1
+- name: 🇳🇱 1-7
+  server: 104.19.142.89
   port: 443
   type: vmess
-  uuid: ef38f04f-70ed-4e0f-8530-203f6f759d40
+  uuid: 599db411-4473-448e-bfc2-062c20fbe2cb
   alterId: 0
   cipher: auto
   tls: true
   skip-cert-verify: true
-  servername: us1.v2vmess.site
+  servername: nl1.v2vmess.site
   network: ws
   ws-opts:
     path: /vmess
     headers:
-      Host: us1.v2vmess.site
+      Host: nl1.v2vmess.site
   udp: true
 
-- name: 🇮🇩 28 AXIS All BOOSTER B2
-  server: 104.18.34.70
+- name: 🇬🇧 1-7
+  server: 104.19.142.89
   port: 443
   type: vmess
-  uuid: ef38f04f-70ed-4e0f-8530-203f6f759d40
+  uuid: 42b6cc05-ce37-44be-91eb-ef90b58ffe44
   alterId: 0
   cipher: auto
   tls: true
   skip-cert-verify: true
-  servername: us1.v2vmess.site
+  servername: uk1.v2vmess.site
   network: ws
   ws-opts:
     path: /vmess
     headers:
-      Host: us1.v2vmess.site
-  udp: true
-
-- name: 🇮🇩 28 AXIS GAME JTM
-  server: 104.18.21.94
-  port: 443
-  type: vmess
-  uuid: ef38f04f-70ed-4e0f-8530-203f6f759d40
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: true
-  servername: us1.v2vmess.site
-  network: ws
-  ws-opts:
-    path: /vmess
-    headers:
-      Host: us1.v2vmess.site
-  udp: true
-
-- name: 🇮🇩 28 AXIS GENFLIX
-  server: 104.21.30.242
-  port: 443
-  type: vmess
-  uuid: ef38f04f-70ed-4e0f-8530-203f6f759d40
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: true
-  servername: us1.v2vmess.site
-  network: ws
-  ws-opts:
-    path: /vmess
-    headers:
-      Host: us1.v2vmess.site
-  udp: true
-
-- name: 🇮🇩 28 XL AXIS SUSHIROLL B2
-  server: 104.21.69.223
-  port: 443
-  type: vmess
-  uuid: ef38f04f-70ed-4e0f-8530-203f6f759d40
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: true
-  servername: us1.v2vmess.site
-  network: ws
-  ws-opts:
-    path: /vmess
-    headers:
-      Host: us1.v2vmess.site
-  udp: true
-
-- name: 🇮🇩 28 XL AXIS OPOK B6
-  server: 104.22.28.102
-  port: 443
-  type: vmess
-  uuid: ef38f04f-70ed-4e0f-8530-203f6f759d40
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: true
-  servername: us1.v2vmess.site
-  network: ws
-  ws-opts:
-    path: /vmess
-    headers:
-      Host: us1.v2vmess.site
-  udp: true
-
-- name: 🇮🇩 28 XL AXIS OPOK B7
-  server: 104.17.58.20
-  port: 443
-  type: vmess
-  uuid: ef38f04f-70ed-4e0f-8530-203f6f759d40
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: true
-  servername: us1.v2vmess.site
-  network: ws
-  ws-opts:
-    path: /vmess
-    headers:
-      Host: us1.v2vmess.site
+      Host: uk1.v2vmess.site
   udp: true
