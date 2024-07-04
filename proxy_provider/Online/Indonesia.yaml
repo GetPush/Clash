@@ -134,7 +134,7 @@ proxies:
       Host: id1.v2vmess.site
   udp: true
 
-- name: 🇮🇩 11 Vless WS (CDN) Non TLS
+- name: 🇮🇩 11 Vless WS CDN Non TLS
   server: 104.19.142.89
   port: 80
   type: vless
