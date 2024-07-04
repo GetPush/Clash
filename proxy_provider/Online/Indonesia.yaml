@@ -133,34 +133,3 @@ proxies:
     headers:
       Host: id1.v2vmess.site
   udp: true
-
-- name: 🇮🇩 11 Vless WS CDN Non TLS
-  server: 104.19.142.89
-  port: 80
-  type: vless
-  uuid: 2a990a51-1e82-4c86-a820-ceaa74a7b50d
-  cipher: auto
-  tls: false
-  skip-cert-verify: false
-  servername: id4.v2vless.xyz
-  network: ws
-  ws-opts:
-    path: /vless
-    headers:
-      Host: id4.v2vless.xyz
-  udp: true
-
-- name: 🇮🇩 Vless AXIS All BOOSTER B1
-  port: 80
-  type: vless
-  uuid: 2a990a51-1e82-4c86-a820-ceaa74a7b50d
-  cipher: auto
-  tls: false
-  skip-cert-verify: false
-  servername: id4.v2vless.xyz
-  network: ws
-  ws-opts:
-    path: /vless
-    headers:
-      Host: id4.v2vless.xyz
-  udp: true
