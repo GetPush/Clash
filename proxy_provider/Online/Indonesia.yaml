@@ -1,5 +1,5 @@
 proxies:
-- name: 🇮🇩 28 vmess WS (CDN) Non TLS
+- name: 🇮🇩 28 AXIS GAME
   server: 104.19.142.89
   port: 80
   type: vmess
