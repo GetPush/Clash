@@ -1,33 +1,46 @@
 ---
 proxy-providers:
+#Interval: detik
+#86400 = 24 jam #43200 = 12 jam #21600 = 6 jam
   France:
     type: http
     url: "https://raw.githubusercontent.com/GetPush/Clash/main/proxy_provider/Online/France.yaml"
     path: "./proxy_provider/Online/France.yaml"
     health-check:
       enable: true
-    interval: 86400
+    interval: 21600
   Netherlands:
     type: http
     url: "https://raw.githubusercontent.com/GetPush/Clash/main/proxy_provider/Online/Netherlands.yaml"
     path: "./proxy_provider/Online/Netherlands.yaml"
     health-check:
       enable: true
-    interval: 86400
+    interval: 21600
   Singapore:
     type: http
     url: "https://raw.githubusercontent.com/GetPush/Clash/main/proxy_provider/Online/Singapore.yaml"
     path: "./proxy_provider/Online/Singapore.yaml"
     health-check:
       enable: true
-    interval: 86400
+    interval: 21600
   America:
     type: http
     url: "https://raw.githubusercontent.com/GetPush/Clash/main/proxy_provider/Online/America.yaml"
     path: "./proxy_provider/Online/America.yaml"
     health-check:
       enable: true
-    interval: 86400
+    interval: 21600
+
+
+
+
+  Indonesia:
+    type: http
+    url: "https://raw.githubusercontent.com/GetPush/Clash/main/proxy_provider/Online/Indonesia.yaml"
+    path: "./proxy_provider/Online/Indonesia.yaml"
+    health-check:
+      enable: true
+    interval: 21600
 
 #Trojan
   Trojan:
@@ -36,129 +49,149 @@ proxy-providers:
     path: "./proxy_provider/Online/Trojan.yaml"
     health-check:
       enable: true
-    interval: 86400
+    interval: 21600
 
-  Indonesia:
+  FOCUS:
     type: http
-    url: "https://raw.githubusercontent.com/GetPush/Clash/main/proxy_provider/Online/Indonesia.yaml"
-    path: "./proxy_provider/Online/Indonesia.yaml"
+    url: "https://raw.githubusercontent.com/GetPush/Clash/main/proxy_provider/Online/FOCUS.yaml"
+    path: "./proxy_provider/Online/FOCUS.yaml"
     health-check:
       enable: true
-    interval: 86400
+    interval: 21600
 
 proxy-groups:
-- name: 🌏select
+- name: BOOST
   type: select
   proxies:
-  - BOOST FB 📡
-  - BOOST LB 📡
-  - BOOST UT 📡
-  - IP SG 🇸🇬 📡
-  - IP NL 🇳🇱 📡
-  - IP FR 🇫🇷 📡
-  - IP US 🇺🇸 📡
-  - IP ID^ 🇮🇩 📡
-  - IP 🐎 🚩 📡
-  - IP On 🏁 📡
+  - FallBack📡
+  - LoadBalance📡
+  - UrlTest📡
   - DIRECT Interface
   - DIRECT
+  - FOCUS 📡
   url: https://cp.cloudflare.com/generate_204
   interval: '10'
 
-- name: IP On 🏁 📡
+- name: FOCUS 📡
   type: select
   strategy: round-robin
   lazy: true
   disable-udp: false
+  proxies:
+  - IP SG 🇸🇬 📡
+  - IP NL 🇳🇱 📡
+  - IP FR 🇫🇷 📡
+  - IP US 🇺🇸 📡
+  - IP 🐎 🚩 📡
+  - IP ID^ 🇮🇩 📡
+  - DIRECT
+  - DIRECT Interface
   use:
-  - Singapore
-  - Netherlands
-  - Indonesia
+  - FOCUS
   url: https://cp.cloudflare.com/generate_204
-  interval: '50'
+  interval: '100'
 
 - name: TrafficAds
   type: select
   disable-udp: false
   proxies:
   - REJECT
-  - 🌏select
-  - DIRECT Interface
+  - BOOST
+  - FOCUS 📡
+  - FallBack📡
+  - LoadBalance📡
+  - UrlTest📡
   - DIRECT
+  - DIRECT Interface
   url: https://cp.cloudflare.com/generate_204
-  interval: '20'
+  interval: '100'
 
-- name: TrafficSosmed
-  type: select
-  strategy: round-robin
-  lazy: true
-  disable-udp: false
-  proxies:
-  - 🌏select
-  - BOOST LB 📡
-  - DIRECT Interface
-  - DIRECT
-  url: https://cp.cloudflare.com/generate_204
-  interval: '30'
-- name: TrafficChat
-  type: select
-  strategy: round-robin
-  lazy: true
-  disable-udp: false
-  proxies:
-  - 🌏select
-  - BOOST FB 📡
-  - DIRECT Interface
-  - DIRECT
-  url: https://cp.cloudflare.com/generate_204
-  interval: '40'
-- name: TrafficStreaming
-  type: select
-  strategy: round-robin
-  lazy: true
-  disable-udp: false
-  proxies:
-  - 🌏select
-  - BOOST UT 📡
-  - DIRECT Interface
-  - DIRECT
-  url: https://cp.cloudflare.com/generate_204
-  interval: '50'
 - name: TrafficIndo
   type: select
   strategy: round-robin
   lazy: true
   disable-udp: false
   proxies:
-  - 🌏select
-  - BOOST FB 📡
+  - BOOST
+  - FallBack📡
+  - LoadBalance📡
+  - UrlTest📡
+  - FOCUS 📡
+  - IP SG 🇸🇬 📡
+  - IP NL 🇳🇱 📡
+  - IP FR 🇫🇷 📡
+  - IP US 🇺🇸 📡
   - IP ID^ 🇮🇩 📡
-  - IP On 🏁 📡
-  - DIRECT Interface
   - DIRECT
+  - DIRECT Interface
   url: https://cp.cloudflare.com/generate_204
-  interval: '60'
-- name: TrafficGaming
+  interval: '100'
+- name: TrafficSosmed
   type: select
-  disable-udp: false
-  proxies:
-  - 🌏select
-  - BOOST UT 📡
-  - IP ID^ 🇮🇩 📡
-  - IP On 🏁 📡
-  - DIRECT Interface
-  - DIRECT
-  url: https://cp.cloudflare.com/generate_204
-  interval: '70'
-
-
-
-- name: 💫 🐎 📡
-  type: fallback
   strategy: round-robin
   lazy: true
   disable-udp: false
   proxies:
+  - BOOST
+  - FallBack📡
+  - LoadBalance📡
+  - UrlTest📡
+  - FOCUS 📡
+  - IP SG 🇸🇬 📡
+  - IP NL 🇳🇱 📡
+  - IP FR 🇫🇷 📡
+  - IP US 🇺🇸 📡
+  - IP ID^ 🇮🇩 📡
+  - DIRECT
+  - DIRECT Interface
+  url: https://cp.cloudflare.com/generate_204
+  interval: '100'
+- name: TrafficChat
+  type: select
+  strategy: round-robin
+  lazy: true
+  disable-udp: false
+  proxies:
+  - BOOST
+  - FallBack📡
+  - LoadBalance📡
+  - UrlTest📡
+  - FOCUS 📡
+  - IP SG 🇸🇬 📡
+  - IP NL 🇳🇱 📡
+  - IP FR 🇫🇷 📡
+  - IP US 🇺🇸 📡
+  - IP ID^ 🇮🇩 📡
+  - DIRECT
+  - DIRECT Interface
+  url: https://cp.cloudflare.com/generate_204
+  interval: '100'
+- name: TrafficStreaming
+  type: select
+  strategy: round-robin
+  lazy: true
+  disable-udp: false
+  proxies:
+  - BOOST
+  - FallBack📡
+  - LoadBalance📡
+  - UrlTest📡
+  - FOCUS 📡
+  - IP SG 🇸🇬 📡
+  - IP NL 🇳🇱 📡
+  - IP FR 🇫🇷 📡
+  - IP US 🇺🇸 📡
+  - IP ID^ 🇮🇩 📡
+  - DIRECT
+  - DIRECT Interface
+  url: https://cp.cloudflare.com/generate_204
+  interval: '100'
+- name: TrafficGaming
+  type: select
+  disable-udp: false
+  proxies:
+  - BOOST
+  - FOCUS 📡
   - IP SG 🇸🇬 📡
   - IP NL 🇳🇱 📡
   - IP FR 🇫🇷 📡
@@ -168,8 +201,9 @@ proxy-groups:
   - DIRECT
   - DIRECT Interface
   url: https://cp.cloudflare.com/generate_204
-  interval: '90'
-- name: BOOST FB 📡
+  interval: '100'
+
+- name: FallBack📡
   type: fallback
   strategy: round-robin
   lazy: true
@@ -180,8 +214,8 @@ proxy-groups:
   - IP FR 🇫🇷 📡
   - IP US 🇺🇸 📡
   url: https://cp.cloudflare.com/generate_204
-  interval: '35'
-- name: BOOST LB 📡
+  interval: '100'
+- name: LoadBalance📡
   type: load-balance
   strategy: round-robin
   lazy: true
@@ -192,8 +226,8 @@ proxy-groups:
   - IP FR 🇫🇷 📡
   - IP US 🇺🇸 📡
   url: https://cp.cloudflare.com/generate_204
-  interval: '15'
-- name: BOOST UT 📡
+  interval: '100'
+- name: UrlTest📡
   type: url-test
   strategy: round-robin
   lazy: true
@@ -204,17 +238,17 @@ proxy-groups:
   - IP FR 🇫🇷 📡
   - IP US 🇺🇸 📡
   url: https://cp.cloudflare.com/generate_204
-  interval: '25'
+  interval: '100'
 
 - name: IP ID^ 🇮🇩 📡
-  type: fallback
+  type: load-balance
   strategy: round-robin
   lazy: true
   disable-udp: false
   use:
   - Indonesia
   url: https://cp.cloudflare.com/generate_204
-  interval: '80'
+  interval: '100'
 - name: IP SG 🇸🇬 📡
   type: load-balance
   strategy: round-robin
@@ -223,7 +257,7 @@ proxy-groups:
   use:
   - Singapore
   url: https://cp.cloudflare.com/generate_204
-  interval: '40'
+  interval: '100'
 - name: IP FR 🇫🇷 📡
   type: load-balance
   strategy: round-robin
@@ -232,7 +266,7 @@ proxy-groups:
   use:
   - France
   url: https://cp.cloudflare.com/generate_204
-  interval: '40'
+  interval: '100'
 - name: IP NL 🇳🇱 📡
   type: load-balance
   strategy: round-robin
@@ -241,7 +275,7 @@ proxy-groups:
   use:
   - Netherlands
   url: https://cp.cloudflare.com/generate_204
-  interval: '40'
+  interval: '100'
 - name: IP US 🇺🇸 📡
   type: fallback
   strategy: round-robin
@@ -250,7 +284,7 @@ proxy-groups:
   use:
   - America
   url: https://cp.cloudflare.com/generate_204
-  interval: '40'
+  interval: '100'
 - name: IP 🐎 🚩 📡
   type: url-test
   strategy: round-robin
@@ -269,17 +303,37 @@ proxy-groups:
   proxies:
   - DIRECT
   url: https://cp.cloudflare.com/generate_204
-  interval: '50'
+  interval: '100'
 
 - name: TrafficPorn
   type: select
   disable-udp: false
   proxies:
   - REJECT
-  - 🌏select
+  - BOOST
+  - FOCUS 📡
+  - IP SG 🇸🇬 📡
+  url: https://cp.cloudflare.com/generate_204
+  interval: '100'
+
+- name: TrafficInner✓
+  type: fallback
+  strategy: round-robin
+  lazy: true
+  disable-udp: false
+  proxies:
+  - FallBack📡
+  - LoadBalance📡
+  - UrlTest📡
+  - BOOST
+  - FOCUS 📡
+  - IP 🐎 🚩 📡
+  - DIRECT
   - DIRECT Interface
   url: https://cp.cloudflare.com/generate_204
-  interval: '50'
+  interval: '100'
+
+
 
 redir-port: 9797
 port: 7890
@@ -321,7 +375,7 @@ profile:
 
 tun:
   enable: true
-  mtu: 9000 # 65535 # 9000
+  mtu: 65535 # 65535 # 9000
   device: utun
   stack: system # mixed / gvisor / system / lwip
   dns-hijack:
@@ -330,10 +384,7 @@ tun:
   auto-route: true
   strict-route: false
   auto-detect-interface: true
-  include-android-user: [0, 13, 14]
-  exclude-package: []
-  include-package: []
- 
+
 dns:
   enable: true
   ipv6: false
@@ -464,8 +515,8 @@ dns:
   nameserver:
   - https://dns.cloudflare.com/dns-query
   - tls://8.8.8.8:853
-#  - https://dns.bebasid.com/dns-query
-#  - tls://dns.bebasid.com
+  - https://dns.bebasid.com/dns-query
+  - tls://dns.bebasid.com
 
   proxy-server-nameserver:
   - https://doh.pub/dns-query
@@ -480,8 +531,8 @@ dns:
   fallback:
   - https://dns.google/dns-query
   - tls://1.1.1.1:853
-#  - https://dns.bebasid.com/dns-query
-#  - tls://dns.bebasid.com
+  - https://dns.bebasid.com/dns-query
+  - tls://dns.bebasid.com
 
   fallback-filter:
     geoip: true
@@ -517,10 +568,10 @@ dns:
     - "+.*"
 
 sniffer:
-  enable: false
-  force-dns-mapping: false
-  parse-pure-ip: false
-  override-destination: false 
+  enable: true
+#  force-dns-mapping: false
+#  parse-pure-ip: false
+#  override-destination: false 
   sniffing:
   - tls
   - http
@@ -540,11 +591,40 @@ sniffer:
   - 80
 
 rules:
-- GEOSITE,category-ads-all,TrafficAds
+  ## block ads
+#- DOMAIN-SUFFIX,googlesyndication.com,BOOST
+#- AND,((GEOSITE,category-ads-all),(NOT,((DOMAIN-SUFFIX,googlesyndication.com)))),REJECT
+#- GEOSITE,category-ads-all,REJECT
+#- RULE-SET,block,REJECT
+#- SCRIPT,quic,REJECT
+#- SCRIPT,youshit,REJECT
 
+  ## direct FCM
+- AND,((NETWORK,TCP),(DST-PORT,5228-5230)),DIRECT
+- AND,((NETWORK,TCP),(DST-PORT,5228-5230),(OR,((DOMAIN-KEYWORD,google)))),DIRECT
+ 
   ## block udp/quic YouTube
 - AND,((NETWORK,udp),(OR,((DST-PORT,443/80),(GEOSITE,youtube)))),REJECT
 - AND,((NETWORK,udp),(GEOSITE,youtube)),REJECT
+
+  # # fix dnsleak
+- IP-CIDR,127.0.0.1/32,REJECT,no-resolve
+#- IP-CIDR,198.18.0.1/16,REJECT,no-resolve
+- IP-CIDR,28.0.0.1/8,REJECT,no-resolve
+- IP-CIDR6,::1/128,REJECT,no-resolve
+  
+  ## rules telegram
+#- GEOIP,telegram,BOOST
+#- GEOSITE,telegram,BOOST
+
+  ## direct ntp
+- AND,((NETWORK,UDP),(DST-PORT,123)),DIRECT
+- DST-PORT,123/136/137-139,DIRECT,udp
+
+  ## rules inner, recommended untuk non kuota reguler
+- AND,((PROCESS-NAME,clash),(NOT,((IN-TYPE,inner)))),REJECT
+- IN-TYPE,inner,TrafficInner✓
+
 
 - IP-CIDR,198.18.0.1/16,REJECT,no-resolve
 - DST-PORT,22,TrafficChat
@@ -593,9 +673,9 @@ rules:
 - RULE-SET,rule_games,TrafficGaming
 - RULE-SET,rule_discord,TrafficGaming
 
-- RULE-SET,rule_falsepositive,🌏select
-- RULE-SET,rule_playstore,🌏select
-- RULE-SET,rule_umum,🌏select
+- RULE-SET,rule_falsepositive,BOOST
+- RULE-SET,rule_playstore,BOOST
+- RULE-SET,rule_umum,BOOST
 - MATCH,GLOBAL
 
 rule-providers:
@@ -698,7 +778,7 @@ rule-providers:
     path: "./rule_provider/games/rule_discord.yaml"
     interval: 86400
 
-#indonesia
+#Indonesia
   rule_Indo:
     type: file
     behavior: classical
