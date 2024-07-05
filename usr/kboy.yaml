@@ -31,9 +31,6 @@ proxy-providers:
       enable: true
     interval: 21600
 
-
-
-
   Indonesia:
     type: http
     url: "https://raw.githubusercontent.com/GetPush/Clash/main/proxy_provider/Online/Indonesia.yaml"
@@ -213,6 +210,8 @@ proxy-groups:
   - IP NL 🇳🇱 📡
   - IP FR 🇫🇷 📡
   - IP US 🇺🇸 📡
+  - DIRECT
+  - DIRECT Interface
   url: https://cp.cloudflare.com/generate_204
   interval: '100'
 - name: LoadBalance📡
@@ -225,6 +224,8 @@ proxy-groups:
   - IP NL 🇳🇱 📡
   - IP FR 🇫🇷 📡
   - IP US 🇺🇸 📡
+  - DIRECT
+  - DIRECT Interface
   url: https://cp.cloudflare.com/generate_204
   interval: '100'
 - name: UrlTest📡
@@ -237,6 +238,8 @@ proxy-groups:
   - IP NL 🇳🇱 📡
   - IP FR 🇫🇷 📡
   - IP US 🇺🇸 📡
+  - DIRECT
+  - DIRECT Interface
   url: https://cp.cloudflare.com/generate_204
   interval: '100'
 
@@ -686,6 +689,12 @@ rule-providers:
     url: https://raw.githubusercontent.com/GetPush/Clash/main/rule_provider/traffic/rule_umum.yaml
     interval: 86400
 #direct
+  rule_modem:
+    type: file
+    behavior: ipcidr
+    url: https://raw.githubusercontent.com/GetPush/Clash/main/rule_provider/traffic/rule_modem.yaml
+    path: "./rule_provider/traffic/rule_modem.yaml"
+    interval: 86400
   rule_lancidr:
     type: file
     behavior: ipcidr
@@ -778,7 +787,7 @@ rule-providers:
     path: "./rule_provider/games/rule_discord.yaml"
     interval: 86400
 
-#Indonesia
+#indonesia
   rule_Indo:
     type: file
     behavior: classical
