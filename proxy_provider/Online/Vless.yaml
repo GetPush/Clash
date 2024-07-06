@@ -13,7 +13,6 @@ proxies:
     path: /vless
     headers:
       Host: id4.v2vless.xyz
-  udp: true
 
 - name: 🇸🇬 AXIS All BOOSTER B1
   server: 172.64.153.186
@@ -29,7 +28,6 @@ proxies:
     path: /vless
     headers:
       Host: id4.v2vless.xyz
-  udp: true
 
 - name: 🇸🇬 AXIS All BOOSTER B2
   server: 104.18.34.70
@@ -45,7 +43,6 @@ proxies:
     path: /vless
     headers:
       Host: id4.v2vless.xyz
-  udp: true
 
 - name: 🇸🇬 AXIS GAME JTM
   server: 104.18.21.94
@@ -61,7 +58,6 @@ proxies:
     path: /vless
     headers:
       Host: id4.v2vless.xyz
-  udp: true
 
 - name: 🇸🇬 AXIS GENFLIX
   server: 104.21.30.242
@@ -77,7 +73,6 @@ proxies:
     path: /vless
     headers:
       Host: id4.v2vless.xyz
-  udp: true
 
 - name: 🇸🇬 XL AXIS SUSHIROLL B2
   server: 104.21.69.223
@@ -93,7 +88,6 @@ proxies:
     path: /vless
     headers:
       Host: id4.v2vless.xyz
-  udp: true
 
 - name: 🇸🇬 XL AXIS OPOK B6
   server: 104.22.28.102
@@ -109,7 +103,6 @@ proxies:
     path: /vless
     headers:
       Host: id4.v2vless.xyz
-  udp: true
 
 - name: 🇸🇬 XL AXIS OPOK B7
   server: 104.17.58.20
@@ -125,4 +118,3 @@ proxies:
     path: /vless
     headers:
       Host: id4.v2vless.xyz
-  udp: true
