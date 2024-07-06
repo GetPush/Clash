@@ -92,12 +92,9 @@ proxy-groups:
   type: select
   disable-udp: false
   proxies:
-  - REJECT
   - BOOST
+  - REJECT
   - FOCUS 📡
-  - FallBack📡
-  - LoadBalance📡
-  - UrlTest📡
   - DIRECT
   - DIRECT Interface
   url: https://cp.cloudflare.com/generate_204
@@ -110,14 +107,7 @@ proxy-groups:
   disable-udp: false
   proxies:
   - BOOST
-  - FallBack📡
-  - LoadBalance📡
-  - UrlTest📡
   - FOCUS 📡
-  - IP SG 🇸🇬 📡
-  - IP NL 🇳🇱 📡
-  - IP FR 🇫🇷 📡
-  - IP US 🇺🇸 📡
   - IP ID^ 🇮🇩 📡
   - DIRECT
   - DIRECT Interface
@@ -130,15 +120,7 @@ proxy-groups:
   disable-udp: false
   proxies:
   - BOOST
-  - FallBack📡
-  - LoadBalance📡
-  - UrlTest📡
   - FOCUS 📡
-  - IP SG 🇸🇬 📡
-  - IP NL 🇳🇱 📡
-  - IP FR 🇫🇷 📡
-  - IP US 🇺🇸 📡
-  - IP ID^ 🇮🇩 📡
   - DIRECT
   - DIRECT Interface
   url: https://cp.cloudflare.com/generate_204
@@ -150,15 +132,7 @@ proxy-groups:
   disable-udp: false
   proxies:
   - BOOST
-  - FallBack📡
-  - LoadBalance📡
-  - UrlTest📡
   - FOCUS 📡
-  - IP SG 🇸🇬 📡
-  - IP NL 🇳🇱 📡
-  - IP FR 🇫🇷 📡
-  - IP US 🇺🇸 📡
-  - IP ID^ 🇮🇩 📡
   - DIRECT
   - DIRECT Interface
   url: https://cp.cloudflare.com/generate_204
@@ -170,15 +144,7 @@ proxy-groups:
   disable-udp: false
   proxies:
   - BOOST
-  - FallBack📡
-  - LoadBalance📡
-  - UrlTest📡
   - FOCUS 📡
-  - IP SG 🇸🇬 📡
-  - IP NL 🇳🇱 📡
-  - IP FR 🇫🇷 📡
-  - IP US 🇺🇸 📡
-  - IP ID^ 🇮🇩 📡
   - DIRECT
   - DIRECT Interface
   url: https://cp.cloudflare.com/generate_204
@@ -189,12 +155,6 @@ proxy-groups:
   proxies:
   - BOOST
   - FOCUS 📡
-  - IP SG 🇸🇬 📡
-  - IP NL 🇳🇱 📡
-  - IP FR 🇫🇷 📡
-  - IP US 🇺🇸 📡
-  - IP 🐎 🚩 📡
-  - IP ID^ 🇮🇩 📡
   - DIRECT
   - DIRECT Interface
   url: https://cp.cloudflare.com/generate_204
@@ -631,6 +591,8 @@ rules:
 
 - IP-CIDR,198.18.0.1/16,REJECT,no-resolve
 - DST-PORT,22,TrafficChat
+
+- RULE-SET,rule_modem,DIRECT,no-resolve
 
 - RULE-SET,rule_lancidr,DIRECT,no-resolve
 
