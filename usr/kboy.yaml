@@ -8,28 +8,32 @@ proxy-providers:
     path: "./proxy_provider/Online/France.yaml"
     health-check:
       enable: true
-    interval: 21600
+    interval: 12000
+    #21600
   Netherlands:
     type: http
     url: "https://raw.githubusercontent.com/GetPush/Clash/main/proxy_provider/Online/Netherlands.yaml"
     path: "./proxy_provider/Online/Netherlands.yaml"
     health-check:
       enable: true
-    interval: 21600
+    interval: 12000
+    #21600
   Singapore:
     type: http
     url: "https://raw.githubusercontent.com/GetPush/Clash/main/proxy_provider/Online/Singapore.yaml"
     path: "./proxy_provider/Online/Singapore.yaml"
     health-check:
       enable: true
-    interval: 21600
+    interval: 12000
+    #21600
   America:
     type: http
     url: "https://raw.githubusercontent.com/GetPush/Clash/main/proxy_provider/Online/America.yaml"
     path: "./proxy_provider/Online/America.yaml"
     health-check:
       enable: true
-    interval: 21600
+    interval: 12000
+    #21600
 
   Indonesia:
     type: http
@@ -37,7 +41,8 @@ proxy-providers:
     path: "./proxy_provider/Online/Indonesia.yaml"
     health-check:
       enable: true
-    interval: 21600
+    interval: 12000
+    #21600
 
 #Trojan
   Trojan:
@@ -46,15 +51,17 @@ proxy-providers:
     path: "./proxy_provider/Online/Trojan.yaml"
     health-check:
       enable: true
-    interval: 21600
+    interval: 12000
+    #21600
 
-  FOCUS:
+  Vless:
     type: http
-    url: "https://raw.githubusercontent.com/GetPush/Clash/main/proxy_provider/Online/FOCUS.yaml"
-    path: "./proxy_provider/Online/FOCUS.yaml"
+    url: "https://raw.githubusercontent.com/GetPush/Clash/main/proxy_provider/Online/Vless.yaml"
+    path: "./proxy_provider/Online/Vless.yaml"
     health-check:
       enable: true
-    interval: 21600
+    interval: 12000
+    #21600
 
 proxy-groups:
 - name: BOOST
@@ -63,9 +70,9 @@ proxy-groups:
   - FallBack📡
   - LoadBalance📡
   - UrlTest📡
+  - FOCUS 📡
   - DIRECT Interface
   - DIRECT
-  - FOCUS 📡
   url: https://cp.cloudflare.com/generate_204
   interval: '10'
 
@@ -79,12 +86,13 @@ proxy-groups:
   - IP NL 🇳🇱 📡
   - IP FR 🇫🇷 📡
   - IP US 🇺🇸 📡
-  - IP 🐎 🚩 📡
+  - Trojan
   - IP ID^ 🇮🇩 📡
+  - Vless
   - DIRECT
   - DIRECT Interface
   use:
-  - FOCUS
+  - Vless
   url: https://cp.cloudflare.com/generate_204
   interval: '100'
 
@@ -248,13 +256,22 @@ proxy-groups:
   - America
   url: https://cp.cloudflare.com/generate_204
   interval: '100'
-- name: IP 🐎 🚩 📡
+- name: Trojan
   type: url-test
   strategy: round-robin
   lazy: true
   disable-udp: false
   use:
   - Trojan
+  url: https://cp.cloudflare.com/generate_204
+  interval: '100'
+- name: Vless
+  type: load-balance
+  strategy: round-robin
+  lazy: true
+  disable-udp: false
+  use:
+  - Vless
   url: https://cp.cloudflare.com/generate_204
   interval: '100'
 
@@ -290,7 +307,8 @@ proxy-groups:
   - UrlTest📡
   - BOOST
   - FOCUS 📡
-  - IP 🐎 🚩 📡
+  - Trojan
+  - Vless
   - DIRECT
   - DIRECT Interface
   url: https://cp.cloudflare.com/generate_204
