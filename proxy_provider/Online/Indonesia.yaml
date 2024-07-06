@@ -1,9 +1,9 @@
 proxies:
-- name: 🇮🇩 EX 12 juli AXIS GAME JBR B1
+- name: 🇮🇩 EX14 Juli AXIS GAME JBR B1
   server: 104.19.142.89
   port: 80
   type: vmess
-  uuid: 397b25d9-3f77-4c85-b5cd-b7b2183cad6e
+  uuid: 333f94fb-675f-4145-823b-9ca4bca6dd75
   alterId: 0
   cipher: auto
   tls: false
@@ -16,11 +16,11 @@ proxies:
       Host: id4.v2vmess.site
   udp: true
 
-- name: 🇮🇩 EX 12 juli AXIS All BOOSTER B1
+- name: 🇮🇩 EX14 Juli AXIS All BOOSTER B1
   server: 172.64.153.186
   port: 80
   type: vmess
-  uuid: 397b25d9-3f77-4c85-b5cd-b7b2183cad6e
+  uuid: 333f94fb-675f-4145-823b-9ca4bca6dd75
   alterId: 0
   cipher: auto
   tls: false
@@ -33,11 +33,11 @@ proxies:
       Host: id4.v2vmess.site
   udp: true
 
-- name: 🇮🇩 EX 12 juli AXIS All BOOSTER B2
+- name: 🇮🇩 EX14 Juli AXIS All BOOSTER B2
   server: 104.18.34.70
   port: 80
   type: vmess
-  uuid: 397b25d9-3f77-4c85-b5cd-b7b2183cad6e
+  uuid: 333f94fb-675f-4145-823b-9ca4bca6dd75
   alterId: 0
   cipher: auto
   tls: false
@@ -50,11 +50,11 @@ proxies:
       Host: id4.v2vmess.site
   udp: true
 
-- name: 🇮🇩 EX 12 juli AXIS GAME JTM
+- name: 🇮🇩 EX14 Juli AXIS GAME JTM
   server: 104.18.21.94
   port: 80
   type: vmess
-  uuid: 397b25d9-3f77-4c85-b5cd-b7b2183cad6e
+  uuid: 333f94fb-675f-4145-823b-9ca4bca6dd75
   alterId: 0
   cipher: auto
   tls: false
@@ -67,11 +67,11 @@ proxies:
       Host: id4.v2vmess.site
   udp: true
 
-- name: 🇮🇩 EX 12 juli AXIS GENFLIX
+- name: 🇮🇩 EX14 Juli AXIS GENFLIX
   server: 104.21.30.242
   port: 80
   type: vmess
-  uuid: 397b25d9-3f77-4c85-b5cd-b7b2183cad6e
+  uuid: 333f94fb-675f-4145-823b-9ca4bca6dd75
   alterId: 0
   cipher: auto
   tls: false
@@ -84,11 +84,11 @@ proxies:
       Host: id4.v2vmess.site
   udp: true
 
-- name: 🇮🇩 EX 12 juli XL AXIS SUSHIROLL B2
+- name: 🇮🇩 EX14 Juli XL AXIS SUSHIROLL B2
   server: 104.21.69.223
   port: 80
   type: vmess
-  uuid: 397b25d9-3f77-4c85-b5cd-b7b2183cad6e
+  uuid: 333f94fb-675f-4145-823b-9ca4bca6dd75
   alterId: 0
   cipher: auto
   tls: false
@@ -101,11 +101,11 @@ proxies:
       Host: id4.v2vmess.site
   udp: true
 
-- name: 🇮🇩 EX 12 juli XL AXIS OPOK B6
+- name: 🇮🇩 EX14 Juli XL AXIS OPOK B6
   server: 104.22.28.102
   port: 80
   type: vmess
-  uuid: 397b25d9-3f77-4c85-b5cd-b7b2183cad6e
+  uuid: 333f94fb-675f-4145-823b-9ca4bca6dd75
   alterId: 0
   cipher: auto
   tls: false
@@ -118,11 +118,11 @@ proxies:
       Host: id4.v2vmess.site
   udp: true
 
-- name: 🇮🇩 EX 12 juli XL AXIS OPOK B7
+- name: 🇮🇩 EX14 Juli XL AXIS OPOK B7
   server: 104.17.58.20
   port: 80
   type: vmess
-  uuid: 397b25d9-3f77-4c85-b5cd-b7b2183cad6e
+  uuid: 333f94fb-675f-4145-823b-9ca4bca6dd75
   alterId: 0
   cipher: auto
   tls: false
