@@ -1,0 +1,34 @@
+proxies:
+- name: 🇮🇩 EX14 Juli JAGOANSSH B1
+  server: 104.19.142.89
+  port: 80
+  type: vmess
+  uuid: b490d8e2-a62b-4061-bb57-95211d1529fd
+  alterId: 0
+  cipher: auto
+  tls: false
+  skip-cert-verify: true
+  servername: id2-ray.ipservers.xyz
+  network: ws
+  ws-opts:
+    path: /JAGOANSSH/
+    headers:
+      Host: id2-ray.ipservers.xyz
+  udp: true
+
+- name: 🇮🇩 EX14 Juli JAGOANSSH B1
+  server: 104.18.34.70
+  port: 80
+  type: vmess
+  uuid: b490d8e2-a62b-4061-bb57-95211d1529fd
+  alterId: 0
+  cipher: auto
+  tls: false
+  skip-cert-verify: true
+  servername: id2-ray.ipservers.xyz
+  network: ws
+  ws-opts:
+    path: /JAGOANSSH/
+    headers:
+      Host: id2-ray.ipservers.xyz
+  udp: true
