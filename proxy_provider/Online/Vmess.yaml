@@ -16,7 +16,7 @@ proxies:
       Host: id2-ray.ipservers.xyz
   udp: true
 
-- name: 🇮🇩 EX14 Juli JAGOANSSH B1
+- name: 🇮🇩 EX14 Juli JAGOANSSH B2
   server: 104.18.34.70
   port: 80
   type: vmess
