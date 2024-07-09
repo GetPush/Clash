@@ -1,5 +1,5 @@
 proxies:
-- name: 🇮🇩 EX14 Juli AXIS GAME JBR B1
+- name: 🇮🇩 AXIS GAME JBR B1
   server: 104.19.142.89
   port: 80
   type: vmess
@@ -16,7 +16,7 @@ proxies:
       Host: id4.v2vmess.site
   udp: true
 
-- name: 🇮🇩 EX14 Juli AXIS All BOOSTER B1
+- name: 🇮🇩 AXIS All BOOSTER B1
   server: 172.64.153.186
   port: 80
   type: vmess
@@ -33,7 +33,7 @@ proxies:
       Host: id4.v2vmess.site
   udp: true
 
-- name: 🇮🇩 EX14 Juli AXIS All BOOSTER B2
+- name: 🇮🇩 AXIS All BOOSTER B2
   server: 104.18.34.70
   port: 80
   type: vmess
@@ -50,7 +50,7 @@ proxies:
       Host: id4.v2vmess.site
   udp: true
 
-- name: 🇮🇩 EX14 Juli AXIS GAME JTM
+- name: 🇮🇩 AXIS GAME JTM
   server: 104.18.21.94
   port: 80
   type: vmess
@@ -67,7 +67,7 @@ proxies:
       Host: id4.v2vmess.site
   udp: true
 
-- name: 🇮🇩 EX14 Juli AXIS GENFLIX
+- name: 🇮🇩 AXIS GENFLIX
   server: 104.21.30.242
   port: 80
   type: vmess
@@ -84,7 +84,24 @@ proxies:
       Host: id4.v2vmess.site
   udp: true
 
-- name: 🇮🇩 EX14 Juli XL AXIS SUSHIROLL B2
+- name: 🇮🇩 XL AXIS VIDEO B3
+  server: 104.22.4.240
+  port: 80
+  type: vmess
+  uuid: 333f94fb-675f-4145-823b-9ca4bca6dd75
+  alterId: 0
+  cipher: auto
+  tls: false
+  skip-cert-verify: true
+  servername: id4.v2vmess.site
+  network: ws
+  ws-opts:
+    path: /vmess
+    headers:
+      Host: id4.v2vmess.site
+  udp: true
+
+- name: 🇮🇩 XL AXIS SUSHIROLL B2
   server: 104.21.69.223
   port: 80
   type: vmess
@@ -101,7 +118,7 @@ proxies:
       Host: id4.v2vmess.site
   udp: true
 
-- name: 🇮🇩 EX14 Juli XL AXIS OPOK B6
+- name: 🇮🇩 XL AXIS OPOK B6
   server: 104.22.28.102
   port: 80
   type: vmess
@@ -118,7 +135,7 @@ proxies:
       Host: id4.v2vmess.site
   udp: true
 
-- name: 🇮🇩 EX14 Juli XL AXIS OPOK B7
+- name: 🇮🇩 XL AXIS OPOK B7
   server: 104.17.58.20
   port: 80
   type: vmess
