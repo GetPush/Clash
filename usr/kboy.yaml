@@ -54,6 +54,15 @@ proxy-providers:
     interval: 12000
     #21600
 
+  Vmess:
+    type: http
+    url: "https://raw.githubusercontent.com/GetPush/Clash/main/proxy_provider/Online/Vmess.yaml"
+    path: "./proxy_provider/Online/Vmess.yaml"
+    health-check:
+      enable: true
+    interval: 12000
+    #21600
+
   Vless:
     type: http
     url: "https://raw.githubusercontent.com/GetPush/Clash/main/proxy_provider/Online/Vless.yaml"
@@ -71,10 +80,11 @@ proxy-groups:
   - LoadBalance📡
   - UrlTest📡
   - FOCUS 📡
+  - TrafficInner✓
   - DIRECT Interface
   - DIRECT
   url: https://cp.cloudflare.com/generate_204
-  interval: '10'
+  interval: '30'
 
 - name: FOCUS 📡
   type: select
@@ -83,16 +93,15 @@ proxy-groups:
   disable-udp: false
   proxies:
   - IP SG 🇸🇬 📡
-  - IP NL 🇳🇱 📡
-  - IP FR 🇫🇷 📡
-  - IP US 🇺🇸 📡
   - Trojan
   - IP ID^ 🇮🇩 📡
+  - Indonesia
+  - Vmess
   - Vless
   - DIRECT
   - DIRECT Interface
   use:
-  - Vless
+  - Indonesia
   url: https://cp.cloudflare.com/generate_204
   interval: '100'
 
@@ -161,10 +170,10 @@ proxy-groups:
   type: select
   disable-udp: false
   proxies:
-  - BOOST
-  - FOCUS 📡
   - DIRECT
   - DIRECT Interface
+  - BOOST
+  - FOCUS 📡
   url: https://cp.cloudflare.com/generate_204
   interval: '100'
 
@@ -216,8 +225,10 @@ proxy-groups:
   strategy: round-robin
   lazy: true
   disable-udp: false
-  use:
+  proxies:
   - Indonesia
+  - Vmess
+  - Vless
   url: https://cp.cloudflare.com/generate_204
   interval: '100'
 - name: IP SG 🇸🇬 📡
@@ -265,6 +276,25 @@ proxy-groups:
   - Trojan
   url: https://cp.cloudflare.com/generate_204
   interval: '100'
+
+- name: Indonesia
+  type: load-balance
+  strategy: round-robin
+  lazy: true
+  disable-udp: false
+  use:
+  - Indonesia
+  url: https://cp.cloudflare.com/generate_204
+  interval: '100'
+- name: Vmess
+  type: load-balance
+  strategy: round-robin
+  lazy: true
+  disable-udp: false
+  use:
+  - Vmess
+  url: https://cp.cloudflare.com/generate_204
+  interval: '100'
 - name: Vless
   type: load-balance
   strategy: round-robin
@@ -305,9 +335,10 @@ proxy-groups:
   - FallBack📡
   - LoadBalance📡
   - UrlTest📡
-  - BOOST
   - FOCUS 📡
   - Trojan
+  - Indonesia
+  - Vmess
   - Vless
   - DIRECT
   - DIRECT Interface
@@ -332,7 +363,7 @@ unified-delay: true
 external-controller: 0.0.0.0:9090
 # secret: "123456"
 bind-address: "*"
-external-ui: /data/adb/box/clash/ui/yacd
+external-ui: /data/adb/box/clash/ui/Yacd-meta-gh-pages/
 experimental:
   ignore-resolve-fail: true
 
@@ -494,8 +525,8 @@ dns:
   - '*.lan'
 
   nameserver:
-  - https://dns.cloudflare.com/dns-query
-  - tls://8.8.8.8:853
+#  - https://dns.cloudflare.com/dns-query
+#  - tls://8.8.8.8:853
   - https://dns.bebasid.com/dns-query
   - tls://dns.bebasid.com
 
@@ -508,12 +539,13 @@ dns:
   'www.baidu.com': '114.114.114.114'
   '+.internal.crop.com': '10.0.0.1'
   'geosite:cn': https://doh.pub/dns-query
+  'geosite:id': https://dns.bebasid.com/dns-query
 
   fallback:
   - https://dns.google/dns-query
   - tls://1.1.1.1:853
-  - https://dns.bebasid.com/dns-query
-  - tls://dns.bebasid.com
+#  - https://dns.bebasid.com/dns-query
+#  - tls://dns.bebasid.com
 
   fallback-filter:
     geoip: true
@@ -572,14 +604,6 @@ sniffer:
   - 80
 
 rules:
-  ## block ads
-#- DOMAIN-SUFFIX,googlesyndication.com,BOOST
-#- AND,((GEOSITE,category-ads-all),(NOT,((DOMAIN-SUFFIX,googlesyndication.com)))),REJECT
-#- GEOSITE,category-ads-all,REJECT
-#- RULE-SET,block,REJECT
-#- SCRIPT,quic,REJECT
-#- SCRIPT,youshit,REJECT
-
   ## direct FCM
 - AND,((NETWORK,TCP),(DST-PORT,5228-5230)),DIRECT
 - AND,((NETWORK,TCP),(DST-PORT,5228-5230),(OR,((DOMAIN-KEYWORD,google)))),DIRECT
