@@ -1,5 +1,5 @@
 proxies:
-- name: 🇮🇩 17 AXIS GAME JBR B1
+- name: 🇮🇩 CR19 AXIS GAME JBR B1
   server: 104.19.142.89
   port: 80
   type: vmess
