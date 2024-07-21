@@ -386,12 +386,12 @@ bind-address: '*'
 # host
       
 #hosts:
-#  time.facebook.com: 17.253.84.125
-#  time.android.com: 17.253.84.125
-#  '*.mihomo.dev': 127.0.0.1
-#  '.dev': 127.0.0.1
-#  'alpha.mihomo.dev': '::1'
- # test.com: [1.1.1.1, 2.2.2.2]
+  time.facebook.com: 17.253.84.125
+  time.android.com: 17.253.84.125
+  '*.mihomo.dev': 127.0.0.1
+  '.dev': 127.0.0.1
+  'alpha.mihomo.dev': '::1'
+  test.com: [1.1.1.1, 2.2.2.2]
  # home.lan: lan
 
 dns:
