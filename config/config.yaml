@@ -372,9 +372,6 @@ keep-alive-interval: 1800  # 减少移动端设备耗电
 
 mode: rule  # rule global direct 
 log-level: debug
-
-# 全局 TLS 指纹，优先低于 proxy 内的 client-fingerprint。
-# 目前支持开启 TLS 传输的 TCP/grpc/WS/HTTP , 支持协议有 VLESS,Vmess 和 Trojan.
 global-client-fingerprint: random
 # Note:
 # 可选："chrome", "firefox", "safari", "iOS", "android", "edge", "360"," qq", "random"
@@ -386,12 +383,12 @@ bind-address: '*'
 # host
       
 #hosts:
-  time.facebook.com: 17.253.84.125
-  time.android.com: 17.253.84.125
-  '*.mihomo.dev': 127.0.0.1
-  '.dev': 127.0.0.1
-  'alpha.mihomo.dev': '::1'
-  test.com: [1.1.1.1, 2.2.2.2]
+#  time.facebook.com: 17.253.84.125
+#  time.android.com: 17.253.84.125
+#  '*.mihomo.dev': 127.0.0.1
+#  '.dev': 127.0.0.1
+#  'alpha.mihomo.dev': '::1'
+ # test.com: [1.1.1.1, 2.2.2.2]
  # home.lan: lan
 
 dns:
