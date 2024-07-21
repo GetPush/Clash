@@ -230,6 +230,8 @@ proxy-groups:
   - IP ID^ 🇮🇩 📡
   - Vmess
   - Vless
+  - DIRECT
+  - DIRECT Interface
   url: https://cp.cloudflare.com/generate_204
   interval: '100'
 - name: IP SG 🇸🇬 📡
