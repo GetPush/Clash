@@ -356,7 +356,6 @@ tproxy-port: 9898
 external-controller: 127.0.0.1:9090 
 # secret: "123456"   # 密码可以选择不添加
 external-ui: /data/adb/box/clash/ui/dashboard
-# 配置组二            布尔类
 ipv6: false
 allow-lan: true
 tcp-concurrent: true
@@ -371,7 +370,7 @@ geo-auto-update: false # 是否自动更新 geodata
 geo-update-interval: 24 # 更新间隔，单位：小时
 keep-alive-interval: 1800  # 减少移动端设备耗电
 
-mode: rule  # rule（默认） global（需要在GLOBAL策略组选择）direct 
+mode: rule  # rule global direct 
 log-level: debug
 
 # 全局 TLS 指纹，优先低于 proxy 内的 client-fingerprint。
@@ -392,8 +391,8 @@ hosts:
   '*.mihomo.dev': 127.0.0.1
   '.dev': 127.0.0.1
   'alpha.mihomo.dev': '::1'
-  test.com: [1.1.1.1, 2.2.2.2]
-  home.lan: lan
+ # test.com: [1.1.1.1, 2.2.2.2]
+ # home.lan: lan
 
 dns:
   cache-algorithm: arc 
@@ -648,7 +647,7 @@ dns:
       - "+.msftncsi.com"
       - "+.*"
 
-tun:    # tun模式
+tun:
   enable: true
   device: utun # gvisor/mixed
   mtu: 9000 # 65535 # 9000
@@ -674,7 +673,7 @@ tun:    # tun模式
     # - com.tencent.mm #  没必要开
     
 
-sniffer:      # mihomo的域名嗅探功能 如果不使用Clash内置的DNS解析服务，就无法准确还原域名，进行域名分流             
+sniffer:
   enable: true                    
   force-dns-mapping: false
   parse-pure-ip: false          
@@ -705,10 +704,6 @@ sniffer:      # mihomo的域名嗅探功能 如果不使用Clash内置的DNS解�
   port-whitelist:
     - "80"
     - "443"
-  
-
-
-
 
 profile:
   store-selected: true
