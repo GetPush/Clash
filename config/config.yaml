@@ -9,7 +9,7 @@ proxy-providers:
     health-check:
       enable: true
     interval: 12000
-
+    #21600
   Netherlands:
     type: http
     url: "https://raw.githubusercontent.com/GetPush/Clash/main/proxy_provider/Online/Netherlands.yaml"
@@ -17,7 +17,7 @@ proxy-providers:
     health-check:
       enable: true
     interval: 12000
-
+    #21600
   Singapore:
     type: http
     url: "https://raw.githubusercontent.com/GetPush/Clash/main/proxy_provider/Online/Singapore.yaml"
@@ -25,7 +25,7 @@ proxy-providers:
     health-check:
       enable: true
     interval: 12000
-
+    #21600
   America:
     type: http
     url: "https://raw.githubusercontent.com/GetPush/Clash/main/proxy_provider/Online/America.yaml"
@@ -33,6 +33,7 @@ proxy-providers:
     health-check:
       enable: true
     interval: 12000
+    #21600
 
   Indonesia:
     type: http
@@ -41,6 +42,7 @@ proxy-providers:
     health-check:
       enable: true
     interval: 12000
+    #21600
 
 #Trojan
   Trojan:
@@ -50,6 +52,7 @@ proxy-providers:
     health-check:
       enable: true
     interval: 12000
+    #21600
 
   Vmess:
     type: http
@@ -58,6 +61,7 @@ proxy-providers:
     health-check:
       enable: true
     interval: 12000
+    #21600
 
   Vless:
     type: http
@@ -66,6 +70,7 @@ proxy-providers:
     health-check:
       enable: true
     interval: 12000
+    #21600
 
 proxy-groups:
 - name: BOOST
@@ -370,7 +375,9 @@ keep-alive-interval: 1800  # 减少移动端设备耗电
 mode: rule  # rule global direct 
 log-level: debug
 global-client-fingerprint: random
-# "chrome", "firefox", "safari", "iOS", "android", "edge", "360"," qq", "random" - "random", Cloudflare Radar
+# Note:
+# 可选："chrome", "firefox", "safari", "iOS", "android", "edge", "360"," qq", "random"
+# 若选择 "random", 则按 Cloudflare Radar 数据按概率生成一个现代浏览器指纹。
 
 geodata-loader: standard # memconservative
 find-process-mode: strict
@@ -519,31 +526,30 @@ dns:
     - https://dns.alidns.com/dns-query##🌏 快速选择代理&h3=true # 强制 HTTP/3，与 perfer-h3 无关，强制开启 DoH 的 HTTP/3 支持，若不支持将无法使用
     - https://mozilla.cloudflare-dns.com/dns-query##🌏 快速选择代理&h3=true # 指定策略组和使用 HTTP/3
     - dhcp://en0#🌏 快速选择代理  # dns from dhcp #测试
-
-    - tls://dns.google:853
-    - tls://8.8.8.8:853
-    - tls://8.8.4.4:853
-    - tls://dns.alidns.com
-    - tls://223.5.5.5
-    - tls://223.6.6.6
-    - tls://dot.pub
-    - tls://1.12.12.12
-    - tls://120.53.53.53
-    - https://dns.google/dns-query
-    - https://8.8.8.8/dns-query
-    - https://8.8.4.4/dns-query
-    - https://dns.alidns.com/dns-query
-    - https://223.5.5.5/dns-query
-    - https://223.6.6.6/dns-query
-    - https://doh.pub/dns-query
-    - https://1.12.12.12/dns-query
-    - https://120.53.53.53/dns-query
-    - 'tls://8.8.4.4#dns'
-    - 'tls://1.0.0.1#dns'
-    - 'tls://[2001:4860:4860::8844]#dns'
-    - 'tls://[2606:4700:4700::1001]#dns'
-
+ #   - tls://dns.google:853
+ #   - tls://8.8.8.8:853
+ #   - tls://8.8.4.4:853
+ #   - tls://dns.alidns.com
+ #   - tls://223.5.5.5
+ #   - tls://223.6.6.6
+ #   - tls://dot.pub
+ #   - tls://1.12.12.12
+ #   - tls://120.53.53.53
+ #   - https://dns.google/dns-query
+ #   - https://8.8.8.8/dns-query
+ #   - https://8.8.4.4/dns-query
+ #   - https://dns.alidns.com/dns-query
+ #   - https://223.5.5.5/dns-query
+ #   - https://223.6.6.6/dns-query
+ #   - https://doh.pub/dns-query
+ #   - https://1.12.12.12/dns-query
+ #   - https://120.53.53.53/dns-query
+ #   - 'tls://8.8.4.4#dns'
+ #   - 'tls://1.0.0.1#dns'
+ #   - 'tls://[2001:4860:4860::8844]#dns'
+ #   - 'tls://[2606:4700:4700::1001]#dns'
     - https://dns.cloudflare.com/dns-query
+    - tls://8.8.8.8:853
     - https://dns.bebasid.com/dns-query
     - tls://dns.bebasid.com
 
@@ -678,13 +684,14 @@ sniffer:
       ports: [443, 8443]
     QUIC:
       ports: [ 443 ]
-    HTTP:
+    HTTP: # 需要嗅探的端口, 默认嗅探 80
       ports: [80, 8080-8880]
       override-destination: true
   force-domain:
     - google.com
     - +.v2ex.com
 
+  # # 白名单,跳过嗅探结果
   skip-domain:
     - Mijia Cloud
     - +.apple.com
