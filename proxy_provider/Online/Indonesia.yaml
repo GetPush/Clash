@@ -1,153 +1,153 @@
 proxies:
-- name: 🇮🇩 CR18 AXIS GAME JBR B1
+- name: 🇮🇩 EX31 AXIS GAME JBR B1
   server: 104.19.142.89
   port: 80
   type: vmess
-  uuid: 744d86c4-e263-41ea-b848-9a61e38dbfba
+  uuid: 4a0de928-fcc5-49d6-957d-25f24d7e9eac
   alterId: 0
   cipher: auto
   tls: false
   skip-cert-verify: true
-  servername: id3.v2vmess.site
+  servername: id2-ray.ipservers.xyz
   network: ws
   ws-opts:
-    path: /vmess
+    path: /JAGOANSSH/
     headers:
-      Host: id3.v2vmess.site
+      Host: id2-ray.ipservers.xyz
   udp: true
 
-- name: 🇮🇩 CR18 AXIS All BOOSTER B1
+- name: 🇮🇩 EX31 AXIS All BOOSTER B1
   server: 172.64.153.186
   port: 80
   type: vmess
-  uuid: 744d86c4-e263-41ea-b848-9a61e38dbfba
+  uuid: 4a0de928-fcc5-49d6-957d-25f24d7e9eac
   alterId: 0
   cipher: auto
   tls: false
   skip-cert-verify: true
-  servername: id3.v2vmess.site
+  servername: id2-ray.ipservers.xyz
   network: ws
   ws-opts:
-    path: /vmess
+    path: /JAGOANSSH/
     headers:
-      Host: id3.v2vmess.site
+      Host: id2-ray.ipservers.xyz
   udp: true
 
-- name: 🇮🇩 CR18 AXIS All BOOSTER B2
+- name: 🇮🇩 EX31 AXIS All BOOSTER B2
   server: 104.18.34.70
   port: 80
   type: vmess
-  uuid: 744d86c4-e263-41ea-b848-9a61e38dbfba
+  uuid: 4a0de928-fcc5-49d6-957d-25f24d7e9eac
   alterId: 0
   cipher: auto
   tls: false
   skip-cert-verify: true
-  servername: id3.v2vmess.site
+  servername: id2-ray.ipservers.xyz
   network: ws
   ws-opts:
-    path: /vmess
+    path: /JAGOANSSH/
     headers:
-      Host: id3.v2vmess.site
+      Host: id2-ray.ipservers.xyz
   udp: true
 
-- name: 🇮🇩 CR18 AXIS GAME JTM
+- name: 🇮🇩 EX31 AXIS GAME JTM
   server: 104.18.21.94
   port: 80
   type: vmess
-  uuid: 744d86c4-e263-41ea-b848-9a61e38dbfba
+  uuid: 4a0de928-fcc5-49d6-957d-25f24d7e9eac
   alterId: 0
   cipher: auto
   tls: false
   skip-cert-verify: true
-  servername: id3.v2vmess.site
+  servername: id2-ray.ipservers.xyz
   network: ws
   ws-opts:
-    path: /vmess
+    path: /JAGOANSSH/
     headers:
-      Host: id3.v2vmess.site
+      Host: id2-ray.ipservers.xyz
   udp: true
 
-- name: 🇮🇩 CR18 AXIS GENFLIX
+- name: 🇮🇩 EX31 AXIS GENFLIX
   server: 104.21.30.242
   port: 80
   type: vmess
-  uuid: 744d86c4-e263-41ea-b848-9a61e38dbfba
+  uuid: 4a0de928-fcc5-49d6-957d-25f24d7e9eac
   alterId: 0
   cipher: auto
   tls: false
   skip-cert-verify: true
-  servername: id3.v2vmess.site
+  servername: id2-ray.ipservers.xyz
   network: ws
   ws-opts:
-    path: /vmess
+    path: /JAGOANSSH/
     headers:
-      Host: id3.v2vmess.site
+      Host: id2-ray.ipservers.xyz
   udp: true
 
-- name: 🇮🇩 CR18 XL AXIS VIDEO B3
+- name: 🇮🇩 EX31 XL AXIS VIDEO B3
   server: 104.22.4.240
   port: 80
   type: vmess
-  uuid: 744d86c4-e263-41ea-b848-9a61e38dbfba
+  uuid: 4a0de928-fcc5-49d6-957d-25f24d7e9eac
   alterId: 0
   cipher: auto
   tls: false
   skip-cert-verify: true
-  servername: id3.v2vmess.site
+  servername: id2-ray.ipservers.xyz
   network: ws
   ws-opts:
-    path: /vmess
+    path: /JAGOANSSH/
     headers:
-      Host: id3.v2vmess.site
+      Host: id2-ray.ipservers.xyz
   udp: true
 
-- name: 🇮🇩 CR18 XL AXIS SUSHIROLL B2
+- name: 🇮🇩 EX31 XL AXIS SUSHIROLL B2
   server: 104.21.69.223
   port: 80
   type: vmess
-  uuid: 744d86c4-e263-41ea-b848-9a61e38dbfba
+  uuid: 4a0de928-fcc5-49d6-957d-25f24d7e9eac
   alterId: 0
   cipher: auto
   tls: false
   skip-cert-verify: true
-  servername: id3.v2vmess.site
+  servername: id2-ray.ipservers.xyz
   network: ws
   ws-opts:
-    path: /vmess
+    path: /JAGOANSSH/
     headers:
-      Host: id3.v2vmess.site
+      Host: id2-ray.ipservers.xyz
   udp: true
 
-- name: 🇮🇩 CR18 XL AXIS OPOK B6
+- name: 🇮🇩 EX31 XL AXIS OPOK B6
   server: 104.22.28.102
   port: 80
   type: vmess
-  uuid: 744d86c4-e263-41ea-b848-9a61e38dbfba
+  uuid: 4a0de928-fcc5-49d6-957d-25f24d7e9eac
   alterId: 0
   cipher: auto
   tls: false
   skip-cert-verify: true
-  servername: id3.v2vmess.site
+  servername: id2-ray.ipservers.xyz
   network: ws
   ws-opts:
-    path: /vmess
+    path: /JAGOANSSH/
     headers:
-      Host: id3.v2vmess.site
+      Host: id2-ray.ipservers.xyz
   udp: true
 
-- name: 🇮🇩 CR18 XL AXIS OPOK B7
+- name: 🇮🇩 EX31 XL AXIS OPOK B7
   server: 104.17.58.20
   port: 80
   type: vmess
-  uuid: 744d86c4-e263-41ea-b848-9a61e38dbfba
+  uuid: 4a0de928-fcc5-49d6-957d-25f24d7e9eac
   alterId: 0
   cipher: auto
   tls: false
   skip-cert-verify: true
-  servername: id3.v2vmess.site
+  servername: id2-ray.ipservers.xyz
   network: ws
   ws-opts:
-    path: /vmess
+    path: /JAGOANSSH/
     headers:
-      Host: id3.v2vmess.site
+      Host: id2-ray.ipservers.xyz
   udp: true
