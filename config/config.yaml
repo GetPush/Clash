@@ -93,7 +93,6 @@ proxy-groups:
   disable-udp: false
   proxies:
   - INDONESIA
-  - IP SG 🇸🇬 📡
   - IP ID^ 🇮🇩 📡
   - Vmess
   - Vless
@@ -202,11 +201,11 @@ proxy-groups:
   strategy: round-robin
   lazy: true
   disable-udp: false
-  proxies:
-  - IP SG 🇸🇬 📡
-  - IP NL 🇳🇱 📡
-  - IP FR 🇫🇷 📡
-  - IP US 🇺🇸 📡
+  use:
+  - Singapore
+  - France
+  - Netherlands
+  - America
   - DIRECT
   - DIRECT Interface
   url: https://cp.cloudflare.com/generate_204
@@ -216,11 +215,11 @@ proxy-groups:
   strategy: round-robin
   lazy: true
   disable-udp: false
-  proxies:
-  - IP SG 🇸🇬 📡
-  - IP NL 🇳🇱 📡
-  - IP FR 🇫🇷 📡
-  - IP US 🇺🇸 📡
+  use:
+  - Singapore
+  - France
+  - Netherlands
+  - America
   - DIRECT
   - DIRECT Interface
   url: https://cp.cloudflare.com/generate_204
@@ -230,11 +229,11 @@ proxy-groups:
   strategy: round-robin
   lazy: true
   disable-udp: false
-  proxies:
-  - IP SG 🇸🇬 📡
-  - IP NL 🇳🇱 📡
-  - IP FR 🇫🇷 📡
-  - IP US 🇺🇸 📡
+  use:
+  - Singapore
+  - France
+  - Netherlands
+  - America
   - DIRECT
   - DIRECT Interface
   url: https://cp.cloudflare.com/generate_204
@@ -253,42 +252,7 @@ proxy-groups:
   - DIRECT Interface
   url: https://cp.cloudflare.com/generate_204
   interval: '100'
-- name: IP SG 🇸🇬 📡
-  type: load-balance
-  strategy: round-robin
-  lazy: true
-  disable-udp: false
-  use:
-  - Singapore
-  url: https://cp.cloudflare.com/generate_204
-  interval: '100'
-- name: IP FR 🇫🇷 📡
-  type: load-balance
-  strategy: round-robin
-  lazy: true
-  disable-udp: false
-  use:
-  - France
-  url: https://cp.cloudflare.com/generate_204
-  interval: '100'
-- name: IP NL 🇳🇱 📡
-  type: load-balance
-  strategy: round-robin
-  lazy: true
-  disable-udp: false
-  use:
-  - Netherlands
-  url: https://cp.cloudflare.com/generate_204
-  interval: '100'
-- name: IP US 🇺🇸 📡
-  type: fallback
-  strategy: round-robin
-  lazy: true
-  disable-udp: false
-  use:
-  - America
-  url: https://cp.cloudflare.com/generate_204
-  interval: '100'
+
 - name: Trojan
   type: url-test
   strategy: round-robin
