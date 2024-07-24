@@ -81,6 +81,9 @@ proxy-groups:
   - UrlTest📡
   - FOCUS 📡
   - TrafficInner✓
+  - IP ID^ 🇮🇩 📡
+  - Vmess
+  - Vless
   - DIRECT Interface
   - DIRECT
   url: https://cp.cloudflare.com/generate_204
@@ -112,6 +115,7 @@ proxy-groups:
   - BOOST
   - REJECT
   - FOCUS 📡
+  - TrafficInner✓
   - DIRECT
   - DIRECT Interface
   url: https://cp.cloudflare.com/generate_204
@@ -125,9 +129,7 @@ proxy-groups:
   proxies:
   - BOOST
   - FOCUS 📡
-  - FallBack📡
-  - LoadBalance📡
-  - UrlTest📡
+  - TrafficInner✓
   - INDONESIA
   - DIRECT
   - DIRECT Interface
@@ -141,9 +143,7 @@ proxy-groups:
   proxies:
   - BOOST
   - FOCUS 📡
-  - FallBack📡
-  - LoadBalance📡
-  - UrlTest📡
+  - TrafficInner✓
   - INDONESIA
   - DIRECT
   - DIRECT Interface
@@ -157,9 +157,7 @@ proxy-groups:
   proxies:
   - BOOST
   - FOCUS 📡
-  - FallBack📡
-  - LoadBalance📡
-  - UrlTest📡
+  - TrafficInner✓
   - INDONESIA
   - DIRECT
   - DIRECT Interface
@@ -173,9 +171,7 @@ proxy-groups:
   proxies:
   - BOOST
   - FOCUS 📡
-  - FallBack📡
-  - LoadBalance📡
-  - UrlTest📡
+  - TrafficInner✓
   - INDONESIA
   - DIRECT
   - DIRECT Interface
@@ -189,9 +185,7 @@ proxy-groups:
   - DIRECT Interface
   - BOOST
   - FOCUS 📡
-  - FallBack📡
-  - LoadBalance📡
-  - UrlTest📡
+  - TrafficInner✓
   - INDONESIA
   url: https://cp.cloudflare.com/generate_204
   interval: '100'
@@ -314,9 +308,8 @@ proxy-groups:
   - FallBack📡
   - LoadBalance📡
   - UrlTest📡
-  - FOCUS 📡
   - Trojan
-  - INDONESIA
+  - IP ID^ 🇮🇩 📡
   - Vmess
   - Vless
   - DIRECT
