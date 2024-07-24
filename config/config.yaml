@@ -206,8 +206,6 @@ proxy-groups:
   - France
   - Netherlands
   - America
-  - DIRECT
-  - DIRECT Interface
   url: https://cp.cloudflare.com/generate_204
   interval: '100'
 - name: LoadBalance📡
@@ -220,8 +218,6 @@ proxy-groups:
   - France
   - Netherlands
   - America
-  - DIRECT
-  - DIRECT Interface
   url: https://cp.cloudflare.com/generate_204
   interval: '100'
 - name: UrlTest📡
@@ -234,8 +230,6 @@ proxy-groups:
   - France
   - Netherlands
   - America
-  - DIRECT
-  - DIRECT Interface
   url: https://cp.cloudflare.com/generate_204
   interval: '100'
 
