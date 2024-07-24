@@ -241,7 +241,7 @@ proxy-groups:
   interval: '100'
 
 - name: INDONESIA
-  type: fallback
+  type: load-balance
   strategy: round-robin
   lazy: true
   disable-udp: false
@@ -375,8 +375,8 @@ mixed-port: 7892
 redir-port: 9797
 tproxy-port: 9898
 external-controller: 127.0.0.1:9090 
-# secret: "123456"   # 密码可以选择不添加
-external-ui: /data/adb/box/clash/ui/dashboard
+# secret: "123456"
+external-ui: /data/adb/box/clash/ui/metacubexd
 ipv6: false
 allow-lan: true
 tcp-concurrent: true
@@ -666,7 +666,7 @@ dns:
       - "+.*"
 
 tun:
-  enable: true
+  enable: false
   device: utun # gvisor/mixed
   mtu: 9000 # 65535 # 9000
   stack: system # gvisor / lwip / system
@@ -703,14 +703,13 @@ sniffer:
       ports: [443, 8443]
     QUIC:
       ports: [ 443 ]
-    HTTP: # 需要嗅探的端口, 默认嗅探 80
+    HTTP:
       ports: [80, 8080-8880]
       override-destination: true
   force-domain:
     - google.com
     - +.v2ex.com
 
-  # # 白名单,跳过嗅探结果
   skip-domain:
     - Mijia Cloud
     - +.apple.com
