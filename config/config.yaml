@@ -302,7 +302,6 @@ proxy-groups:
   - REJECT
   - BOOST
   - FOCUS 📡
-  - IP SG 🇸🇬 📡
   url: https://cp.cloudflare.com/generate_204
   interval: '100'
 
