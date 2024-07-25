@@ -1,135 +1,135 @@
 proxies:
-- name: 🇮🇩 17 AXIS GAME JBR B1
+- name: 🇮🇩 EX31 AXIS GAME JBR B1
   server: 104.19.142.89
   port: 443
   type: vless
-  uuid: bdac42c5-4a99-479e-bbf1-e11bf5eb0933
+  uuid: d0ae8cdf-bde7-4f50-9ed7-0225b4a7b615
   cipher: auto
   tls: true
   skip-cert-verify: true
-  servername: id4.v2vless.site
+  servername: id1vless.ipservers.xyz
   network: ws
   ws-opts:
-    path: /vless
+    path: /jagoanssh
     headers:
-      Host: id4.v2vless.site
+      Host: id1vless.ipservers.xyz
 
-- name: 🇮🇩 AXIS All BOOSTER B1
+- name: 🇮🇩 EX31 AXIS All BOOSTER B1
   server: 172.64.153.186
   port: 443
   type: vless
-  uuid: bdac42c5-4a99-479e-bbf1-e11bf5eb0933
+  uuid: d0ae8cdf-bde7-4f50-9ed7-0225b4a7b615
   cipher: auto
   tls: true
   skip-cert-verify: true
-  servername: id4.v2vless.site
+  servername: id1vless.ipservers.xyz
   network: ws
   ws-opts:
-    path: /vless
+    path: /jagoanssh
     headers:
-      Host: id4.v2vless.site
+      Host: id1vless.ipservers.xyz
 
-- name: 🇮🇩 AXIS All BOOSTER B2
+- name: 🇮🇩 EX31 AXIS All BOOSTER B2
   server: 104.18.34.70
   port: 443
   type: vless
-  uuid: bdac42c5-4a99-479e-bbf1-e11bf5eb0933
+  uuid: d0ae8cdf-bde7-4f50-9ed7-0225b4a7b615
   cipher: auto
   tls: true
   skip-cert-verify: true
-  servername: id4.v2vless.site
+  servername: id1vless.ipservers.xyz
   network: ws
   ws-opts:
-    path: /vless
+    path: /jagoanssh
     headers:
-      Host: id4.v2vless.site
+      Host: id1vless.ipservers.xyz
 
-- name: 🇮🇩 AXIS GAME JTM
+- name: 🇮🇩 EX31 AXIS GAME JTM
   server: 104.18.21.94
   port: 443
   type: vless
-  uuid: bdac42c5-4a99-479e-bbf1-e11bf5eb0933
+  uuid: d0ae8cdf-bde7-4f50-9ed7-0225b4a7b615
   cipher: auto
   tls: true
   skip-cert-verify: true
-  servername: id4.v2vless.site
+  servername: id1vless.ipservers.xyz
   network: ws
   ws-opts:
-    path: /vless
+    path: /jagoanssh
     headers:
-      Host: id4.v2vless.site
+      Host: id1vless.ipservers.xyz
 
-- name: 🇮🇩 AXIS GENFLIX
+- name: 🇮🇩 EX31 AXIS GENFLIX
   server: 104.21.30.242
   port: 443
   type: vless
-  uuid: bdac42c5-4a99-479e-bbf1-e11bf5eb0933
+  uuid: d0ae8cdf-bde7-4f50-9ed7-0225b4a7b615
   cipher: auto
   tls: true
   skip-cert-verify: true
-  servername: id4.v2vless.site
+  servername: id1vless.ipservers.xyz
   network: ws
   ws-opts:
-    path: /vless
+    path: /jagoanssh
     headers:
-      Host: id4.v2vless.site
+      Host: id1vless.ipservers.xyz
 
-- name: 🇮🇩 XL AXIS VIDEO B3
+- name: 🇮🇩 EX31 XL AXIS VIDEO B3
   server: 104.22.4.240
   port: 443
   type: vless
-  uuid: bdac42c5-4a99-479e-bbf1-e11bf5eb0933
+  uuid: d0ae8cdf-bde7-4f50-9ed7-0225b4a7b615
   cipher: auto
   tls: true
   skip-cert-verify: true
-  servername: id4.v2vless.site
+  servername: id1vless.ipservers.xyz
   network: ws
   ws-opts:
-    path: /vless
+    path: /jagoanssh
     headers:
-      Host: id4.v2vless.site
+      Host: id1vless.ipservers.xyz
 
-- name: 🇮🇩 XL AXIS SUSHIROLL B2
+- name: 🇮🇩 EX31 XL AXIS SUSHIROLL B2
   server: 104.21.69.223
   port: 443
   type: vless
-  uuid: bdac42c5-4a99-479e-bbf1-e11bf5eb0933
+  uuid: d0ae8cdf-bde7-4f50-9ed7-0225b4a7b615
   cipher: auto
   tls: true
   skip-cert-verify: true
-  servername: id4.v2vless.site
+  servername: id1vless.ipservers.xyz
   network: ws
   ws-opts:
-    path: /vless
+    path: /jagoanssh
     headers:
-      Host: id4.v2vless.site
+      Host: id1vless.ipservers.xyz
 
-- name: 🇮🇩 XL AXIS OPOK B6
+- name: 🇮🇩 EX31 XL AXIS OPOK B6
   server: 104.22.28.102
   port: 443
   type: vless
-  uuid: bdac42c5-4a99-479e-bbf1-e11bf5eb0933
+  uuid: d0ae8cdf-bde7-4f50-9ed7-0225b4a7b615
   cipher: auto
   tls: true
   skip-cert-verify: true
-  servername: id4.v2vless.site
+  servername: id1vless.ipservers.xyz
   network: ws
   ws-opts:
-    path: /vless
+    path: /jagoanssh
     headers:
-      Host: id4.v2vless.site
+      Host: id1vless.ipservers.xyz
 
-- name: 🇮🇩 XL AXIS OPOK B7
+- name: 🇮🇩 EX31 XL AXIS OPOK B7
   server: 104.17.58.20
   port: 443
   type: vless
-  uuid: bdac42c5-4a99-479e-bbf1-e11bf5eb0933
+  uuid: d0ae8cdf-bde7-4f50-9ed7-0225b4a7b615
   cipher: auto
   tls: true
   skip-cert-verify: true
-  servername: id4.v2vless.site
+  servername: id1vless.ipservers.xyz
   network: ws
   ws-opts:
-    path: /vless
+    path: /jagoanssh
     headers:
-      Host: id4.v2vless.site
+      Host: id1vless.ipservers.xyz
