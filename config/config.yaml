@@ -228,7 +228,7 @@ proxy-groups:
   interval: '100'
 
 - name: INDONESIA
-  type: load-balance
+  type: fallback
   strategy: round-robin
   lazy: true
   disable-udp: false
