@@ -1,9 +1,9 @@
 proxies:
-- name: 🇮🇩 EX1 AXIS GAME JBR B1
+- name: 🇮🇩 EX2 AXIS GAME JBR B1
   server: 104.19.142.89
   port: 443
   type: vless
-  uuid: 1499121d-bcbd-40f6-9913-9591b68da52d
+  uuid: 3297d049-8614-4f74-aa30-6bcc9c9b7159
   cipher: auto
   tls: true
   skip-cert-verify: true
@@ -14,11 +14,11 @@ proxies:
     headers:
       Host: id1.v2vless.site
 
-- name: 🇮🇩 EX1 AXIS All BOOSTER B1
+- name: 🇮🇩 EX2 AXIS All BOOSTER B1
   server: 172.64.153.186
   port: 443
   type: vless
-  uuid: 1499121d-bcbd-40f6-9913-9591b68da52d
+  uuid: 3297d049-8614-4f74-aa30-6bcc9c9b7159
   cipher: auto
   tls: true
   skip-cert-verify: true
@@ -29,11 +29,11 @@ proxies:
     headers:
       Host: id1.v2vless.site
 
-- name: 🇮🇩 EX1 AXIS All BOOSTER B2
+- name: 🇮🇩 EX2 AXIS All BOOSTER B2
   server: 104.18.34.70
   port: 443
   type: vless
-  uuid: 1499121d-bcbd-40f6-9913-9591b68da52d
+  uuid: 3297d049-8614-4f74-aa30-6bcc9c9b7159
   cipher: auto
   tls: true
   skip-cert-verify: true
@@ -44,11 +44,11 @@ proxies:
     headers:
       Host: id1.v2vless.site
 
-- name: 🇮🇩 EX1 AXIS GAME JTM
+- name: 🇮🇩 EX2 AXIS GAME JTM
   server: 104.18.21.94
   port: 443
   type: vless
-  uuid: 1499121d-bcbd-40f6-9913-9591b68da52d
+  uuid: 3297d049-8614-4f74-aa30-6bcc9c9b7159
   cipher: auto
   tls: true
   skip-cert-verify: true
@@ -59,11 +59,11 @@ proxies:
     headers:
       Host: id1.v2vless.site
 
-- name: 🇮🇩 EX1 AXIS GENFLIX
+- name: 🇮🇩 EX2 AXIS GENFLIX
   server: 104.21.30.242
   port: 443
   type: vless
-  uuid: 1499121d-bcbd-40f6-9913-9591b68da52d
+  uuid: 3297d049-8614-4f74-aa30-6bcc9c9b7159
   cipher: auto
   tls: true
   skip-cert-verify: true
@@ -74,11 +74,11 @@ proxies:
     headers:
       Host: id1.v2vless.site
 
-- name: 🇮🇩 EX1 XL AXIS VIDEO B3
+- name: 🇮🇩 EX2 XL AXIS VIDEO B3
   server: 104.22.4.240
   port: 443
   type: vless
-  uuid: 1499121d-bcbd-40f6-9913-9591b68da52d
+  uuid: 3297d049-8614-4f74-aa30-6bcc9c9b7159
   cipher: auto
   tls: true
   skip-cert-verify: true
@@ -89,11 +89,11 @@ proxies:
     headers:
       Host: id1.v2vless.site
 
-- name: 🇮🇩 EX1 XL AXIS SUSHIROLL B2
+- name: 🇮🇩 EX2 XL AXIS SUSHIROLL B2
   server: 104.21.69.223
   port: 443
   type: vless
-  uuid: 1499121d-bcbd-40f6-9913-9591b68da52d
+  uuid: 3297d049-8614-4f74-aa30-6bcc9c9b7159
   cipher: auto
   tls: true
   skip-cert-verify: true
@@ -104,11 +104,11 @@ proxies:
     headers:
       Host: id1.v2vless.site
 
-- name: 🇮🇩 EX1 XL AXIS OPOK B6
+- name: 🇮🇩 EX2 XL AXIS OPOK B6
   server: 104.22.28.102
   port: 443
   type: vless
-  uuid: 1499121d-bcbd-40f6-9913-9591b68da52d
+  uuid: 3297d049-8614-4f74-aa30-6bcc9c9b7159
   cipher: auto
   tls: true
   skip-cert-verify: true
@@ -119,11 +119,11 @@ proxies:
     headers:
       Host: id1.v2vless.site
 
-- name: 🇮🇩 EX1 XL AXIS OPOK B7
+- name: 🇮🇩 EX2 XL AXIS OPOK B7
   server: 104.17.58.20
   port: 443
   type: vless
-  uuid: 1499121d-bcbd-40f6-9913-9591b68da52d
+  uuid: 3297d049-8614-4f74-aa30-6bcc9c9b7159
   cipher: auto
   tls: true
   skip-cert-verify: true
