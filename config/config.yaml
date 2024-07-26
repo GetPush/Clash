@@ -84,7 +84,6 @@ proxy-groups:
   - IP ID^ 🇮🇩 📡
   - Vmess
   - Vless
-  - DIRECT Interface
   - DIRECT
   url: https://cp.cloudflare.com/generate_204
   interval: '30'
@@ -99,12 +98,9 @@ proxy-groups:
   - IP ID^ 🇮🇩 📡
   - Vmess
   - Vless
-  - DIRECT
   - DIRECT Interface
   use:
   - Indonesia
-  - Vmess
-  - Vless
   url: https://cp.cloudflare.com/generate_204
   interval: '100'
 
@@ -496,7 +492,7 @@ dns:
     - https://mozilla.cloudflare-dns.com/dns-query##🌏 快速选择代理&h3=true # 指定策略组和使用 HTTP/3
     - dhcp://en0#🌏 快速选择代理  # dns from dhcp #测试
     - tls://dns.google:853
-    - tls://8.8.8.8:853
+ #   - tls://8.8.8.8:853
     - tls://8.8.4.4:853
     - tls://dns.alidns.com
     - tls://223.5.5.5
@@ -517,8 +513,13 @@ dns:
     - 'tls://1.0.0.1#dns'
     - 'tls://[2001:4860:4860::8844]#dns'
     - 'tls://[2606:4700:4700::1001]#dns'
+    
+    - https://dns.adguard.com/dns-query
+    - tls://dns.adguard.com
+    - tls://1dot1dot1dot1.cloudflare-dns.com
+
     - https://dns.cloudflare.com/dns-query
-#    - tls://8.8.8.8:853
+    - tls://8.8.8.8:853
     - https://dns.bebasid.com/dns-query
     - tls://dns.bebasid.com
 
@@ -616,7 +617,7 @@ dns:
       - "+.*"
 
 tun:
-  enable: false
+  enable: true
   device: utun # gvisor/mixed
   mtu: 9000 # 65535 # 9000
   stack: system # gvisor / lwip / system
