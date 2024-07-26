@@ -81,7 +81,9 @@ proxy-groups:
   - UrlTest📡
   - FOCUS 📡
   - TrafficInner✓
-  - DIRECT Interface
+  - IP ID^ 🇮🇩 📡
+  - Vmess
+  - Vless
   - DIRECT
   url: https://cp.cloudflare.com/generate_204
   interval: '30'
@@ -93,16 +95,12 @@ proxy-groups:
   disable-udp: false
   proxies:
   - INDONESIA
-  - IP SG 🇸🇬 📡
   - IP ID^ 🇮🇩 📡
   - Vmess
   - Vless
-  - DIRECT
   - DIRECT Interface
   use:
   - Indonesia
-  - Vmess
-  - Vless
   url: https://cp.cloudflare.com/generate_204
   interval: '100'
 
@@ -113,6 +111,7 @@ proxy-groups:
   - BOOST
   - REJECT
   - FOCUS 📡
+  - TrafficInner✓
   - DIRECT
   - DIRECT Interface
   url: https://cp.cloudflare.com/generate_204
@@ -126,9 +125,7 @@ proxy-groups:
   proxies:
   - BOOST
   - FOCUS 📡
-  - FallBack📡
-  - LoadBalance📡
-  - UrlTest📡
+  - TrafficInner✓
   - INDONESIA
   - DIRECT
   - DIRECT Interface
@@ -142,9 +139,7 @@ proxy-groups:
   proxies:
   - BOOST
   - FOCUS 📡
-  - FallBack📡
-  - LoadBalance📡
-  - UrlTest📡
+  - TrafficInner✓
   - INDONESIA
   - DIRECT
   - DIRECT Interface
@@ -158,9 +153,7 @@ proxy-groups:
   proxies:
   - BOOST
   - FOCUS 📡
-  - FallBack📡
-  - LoadBalance📡
-  - UrlTest📡
+  - TrafficInner✓
   - INDONESIA
   - DIRECT
   - DIRECT Interface
@@ -174,9 +167,7 @@ proxy-groups:
   proxies:
   - BOOST
   - FOCUS 📡
-  - FallBack📡
-  - LoadBalance📡
-  - UrlTest📡
+  - TrafficInner✓
   - INDONESIA
   - DIRECT
   - DIRECT Interface
@@ -190,9 +181,7 @@ proxy-groups:
   - DIRECT Interface
   - BOOST
   - FOCUS 📡
-  - FallBack📡
-  - LoadBalance📡
-  - UrlTest📡
+  - TrafficInner✓
   - INDONESIA
   url: https://cp.cloudflare.com/generate_204
   interval: '100'
@@ -202,13 +191,11 @@ proxy-groups:
   strategy: round-robin
   lazy: true
   disable-udp: false
-  proxies:
-  - IP SG 🇸🇬 📡
-  - IP NL 🇳🇱 📡
-  - IP FR 🇫🇷 📡
-  - IP US 🇺🇸 📡
-  - DIRECT
-  - DIRECT Interface
+  use:
+  - Singapore
+  - France
+  - Netherlands
+  - America
   url: https://cp.cloudflare.com/generate_204
   interval: '100'
 - name: LoadBalance📡
@@ -216,13 +203,11 @@ proxy-groups:
   strategy: round-robin
   lazy: true
   disable-udp: false
-  proxies:
-  - IP SG 🇸🇬 📡
-  - IP NL 🇳🇱 📡
-  - IP FR 🇫🇷 📡
-  - IP US 🇺🇸 📡
-  - DIRECT
-  - DIRECT Interface
+  use:
+  - Singapore
+  - France
+  - Netherlands
+  - America
   url: https://cp.cloudflare.com/generate_204
   interval: '100'
 - name: UrlTest📡
@@ -230,18 +215,16 @@ proxy-groups:
   strategy: round-robin
   lazy: true
   disable-udp: false
-  proxies:
-  - IP SG 🇸🇬 📡
-  - IP NL 🇳🇱 📡
-  - IP FR 🇫🇷 📡
-  - IP US 🇺🇸 📡
-  - DIRECT
-  - DIRECT Interface
+  use:
+  - Singapore
+  - France
+  - Netherlands
+  - America
   url: https://cp.cloudflare.com/generate_204
   interval: '100'
 
 - name: INDONESIA
-  type: load-balance
+  type: fallback
   strategy: round-robin
   lazy: true
   disable-udp: false
@@ -253,42 +236,7 @@ proxy-groups:
   - DIRECT Interface
   url: https://cp.cloudflare.com/generate_204
   interval: '100'
-- name: IP SG 🇸🇬 📡
-  type: load-balance
-  strategy: round-robin
-  lazy: true
-  disable-udp: false
-  use:
-  - Singapore
-  url: https://cp.cloudflare.com/generate_204
-  interval: '100'
-- name: IP FR 🇫🇷 📡
-  type: load-balance
-  strategy: round-robin
-  lazy: true
-  disable-udp: false
-  use:
-  - France
-  url: https://cp.cloudflare.com/generate_204
-  interval: '100'
-- name: IP NL 🇳🇱 📡
-  type: load-balance
-  strategy: round-robin
-  lazy: true
-  disable-udp: false
-  use:
-  - Netherlands
-  url: https://cp.cloudflare.com/generate_204
-  interval: '100'
-- name: IP US 🇺🇸 📡
-  type: fallback
-  strategy: round-robin
-  lazy: true
-  disable-udp: false
-  use:
-  - America
-  url: https://cp.cloudflare.com/generate_204
-  interval: '100'
+
 - name: Trojan
   type: url-test
   strategy: round-robin
@@ -344,7 +292,6 @@ proxy-groups:
   - REJECT
   - BOOST
   - FOCUS 📡
-  - IP SG 🇸🇬 📡
   url: https://cp.cloudflare.com/generate_204
   interval: '100'
 
@@ -357,9 +304,8 @@ proxy-groups:
   - FallBack📡
   - LoadBalance📡
   - UrlTest📡
-  - FOCUS 📡
   - Trojan
-  - INDONESIA
+  - IP ID^ 🇮🇩 📡
   - Vmess
   - Vless
   - DIRECT
@@ -546,7 +492,7 @@ dns:
     - https://mozilla.cloudflare-dns.com/dns-query##🌏 快速选择代理&h3=true # 指定策略组和使用 HTTP/3
     - dhcp://en0#🌏 快速选择代理  # dns from dhcp #测试
     - tls://dns.google:853
-    - tls://8.8.8.8:853
+ #   - tls://8.8.8.8:853
     - tls://8.8.4.4:853
     - tls://dns.alidns.com
     - tls://223.5.5.5
@@ -567,8 +513,13 @@ dns:
     - 'tls://1.0.0.1#dns'
     - 'tls://[2001:4860:4860::8844]#dns'
     - 'tls://[2606:4700:4700::1001]#dns'
+    
+    - https://dns.adguard.com/dns-query
+    - tls://dns.adguard.com
+    - tls://1dot1dot1dot1.cloudflare-dns.com
+
     - https://dns.cloudflare.com/dns-query
-#    - tls://8.8.8.8:853
+    - tls://8.8.8.8:853
     - https://dns.bebasid.com/dns-query
     - tls://dns.bebasid.com
 
@@ -666,7 +617,7 @@ dns:
       - "+.*"
 
 tun:
-  enable: false
+  enable: true
   device: utun # gvisor/mixed
   mtu: 9000 # 65535 # 9000
   stack: system # gvisor / lwip / system
