@@ -332,7 +332,7 @@ tls:
   private-key: string
 
 unified-delay: true
-geodata-mode: false
+geodata-mode: true
 geo-auto-update: false # 是否自动更新 geodata
 geo-update-interval: 24 # 更新间隔，单位：小时
 keep-alive-interval: 1800  # 减少移动端设备耗电
@@ -619,7 +619,7 @@ dns:
 tun:
   enable: true
   device: utun # gvisor/mixed
-  mtu: 9000 # 65535 # 9000
+  mtu: 65535 # 65535 # 9000
   stack: system # gvisor / lwip / system
   dns-hijack:
     - any:53  # 需要劫持的 DNS
@@ -678,10 +678,10 @@ profile:
   store-fake-ip: true
 
 # https://github.com/Loyalsoldier/v2ray-rules-dat 的复刻 https://github.com/DustinWin/ruleset_geodata 
-geox-url:
-  geoip: "https://cdn.jsdelivr.net/gh/DustinWin/ruleset_geodata@clash/geoip-all.metadb"
-  geosite: "https://cdn.jsdelivr.net/gh/DustinWin/ruleset_geodata@clash/geosite-all.dat"
-  mmdb: "https://cdn.jsdelivr.net/gh/DustinWin/ruleset_geodata@clash/Country-all.mmdb"
+#geox-url:
+#  geoip: "https://cdn.jsdelivr.net/gh/DustinWin/ruleset_geodata@clash/geoip-all.metadb"
+#  geosite: "https://cdn.jsdelivr.net/gh/DustinWin/ruleset_geodata@clash/geosite-all.dat"
+#  mmdb: "https://cdn.jsdelivr.net/gh/DustinWin/ruleset_geodata@clash/Country-all.mmdb"
 
 # 查看说明 https://github.com/DustinWin/ruleset_geodata/blob/master/README.md
 #  geosite 包含	ads、private、microsoft-cn、apple-cn、google-cn、games-cn、netflix、disney、max、primevideo、appletv、youtube、tiktok、bilibili、ai、networktest、proxy 和 cn
