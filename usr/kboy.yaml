@@ -74,17 +74,15 @@ proxy-providers:
 
 proxy-groups:
 - name: BOOST
-  type: select
+  type: fallback
+  strategy: round-robin
+  lazy: true
+  disable-udp: false
   proxies:
   - FallBack📡
   - LoadBalance📡
   - UrlTest📡
-  - FOCUS 📡
   - TrafficInner✓
-  - IP ID^ 🇮🇩 📡
-  - Vmess
-  - Vless
-  - DIRECT
   url: https://cp.cloudflare.com/generate_204
   interval: '30'
 
@@ -94,15 +92,17 @@ proxy-groups:
   lazy: true
   disable-udp: false
   proxies:
+  - BOOST
   - INDONESIA
   - IP ID^ 🇮🇩 📡
   - Vmess
   - Vless
+  - DIRECT
   - DIRECT Interface
   use:
   - Indonesia
   url: https://cp.cloudflare.com/generate_204
-  interval: '100'
+  interval: '30'
 
 - name: TrafficAds
   type: select
@@ -779,9 +779,9 @@ rules:
 - RULE-SET,rule_games,TrafficGaming
 - RULE-SET,rule_discord,TrafficGaming
 
-- RULE-SET,rule_falsepositive,BOOST
-- RULE-SET,rule_playstore,BOOST
-- RULE-SET,rule_umum,BOOST
+- RULE-SET,rule_falsepositive,FOCUS 📡
+- RULE-SET,rule_playstore,FOCUS 📡
+- RULE-SET,rule_umum,FOCUS 📡
 - MATCH,GLOBAL
 
 rule-providers:
