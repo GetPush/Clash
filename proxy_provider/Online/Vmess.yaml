@@ -1,9 +1,9 @@
 proxies:
-- name: 🇮🇩 4 EX2 AXIS GAME JBR B1
+- name: 🇮🇩 4 EX7 AXIS GAME JBR B1
   server: 104.19.142.89
   port: 80
   type: vmess
-  uuid: 128f7995-36b4-4172-9931-5bd41e63b381
+  uuid: 431a56bf-a493-4804-8b02-7b15351d31c1
   alterId: 0
   cipher: auto
   tls: false
@@ -16,11 +16,11 @@ proxies:
       Host: id4.v2vmess.site
   udp: true
 
-- name: 🇮🇩 4 EX2 AXIS All BOOSTER B1
+- name: 🇮🇩 4 EX7 AXIS All BOOSTER B1
   server: 172.64.153.186
   port: 80
   type: vmess
-  uuid: 128f7995-36b4-4172-9931-5bd41e63b381
+  uuid: 431a56bf-a493-4804-8b02-7b15351d31c1
   alterId: 0
   cipher: auto
   tls: false
@@ -33,11 +33,11 @@ proxies:
       Host: id4.v2vmess.site
   udp: true
 
-- name: 🇮🇩 4 EX2 AXIS All BOOSTER B2
+- name: 🇮🇩 4 EX7 AXIS All BOOSTER B2
   server: 104.18.34.70
   port: 80
   type: vmess
-  uuid: 128f7995-36b4-4172-9931-5bd41e63b381
+  uuid: 431a56bf-a493-4804-8b02-7b15351d31c1
   alterId: 0
   cipher: auto
   tls: false
@@ -50,11 +50,11 @@ proxies:
       Host: id4.v2vmess.site
   udp: true
 
-- name: 🇮🇩 4 EX2 AXIS GAME JTM
+- name: 🇮🇩 4 EX7 AXIS GAME JTM
   server: 104.18.21.94
   port: 80
   type: vmess
-  uuid: 128f7995-36b4-4172-9931-5bd41e63b381
+  uuid: 431a56bf-a493-4804-8b02-7b15351d31c1
   alterId: 0
   cipher: auto
   tls: false
@@ -67,11 +67,11 @@ proxies:
       Host: id4.v2vmess.site
   udp: true
 
-- name: 🇮🇩 4 EX2 AXIS GENFLIX
+- name: 🇮🇩 4 EX7 AXIS GENFLIX
   server: 104.21.30.242
   port: 80
   type: vmess
-  uuid: 128f7995-36b4-4172-9931-5bd41e63b381
+  uuid: 431a56bf-a493-4804-8b02-7b15351d31c1
   alterId: 0
   cipher: auto
   tls: false
@@ -84,11 +84,11 @@ proxies:
       Host: id4.v2vmess.site
   udp: true
 
-- name: 🇮🇩 4 EX2 XL AXIS VIDEO B3
+- name: 🇮🇩 4 EX7 XL AXIS VIDEO B3
   server: 104.22.4.240
   port: 80
   type: vmess
-  uuid: 128f7995-36b4-4172-9931-5bd41e63b381
+  uuid: 431a56bf-a493-4804-8b02-7b15351d31c1
   alterId: 0
   cipher: auto
   tls: false
@@ -101,11 +101,11 @@ proxies:
       Host: id4.v2vmess.site
   udp: true
 
-- name: 🇮🇩 4 EX2 XL AXIS SUSHIROLL B2
+- name: 🇮🇩 4 EX7 XL AXIS SUSHIROLL B2
   server: 104.21.69.223
   port: 80
   type: vmess
-  uuid: 128f7995-36b4-4172-9931-5bd41e63b381
+  uuid: 431a56bf-a493-4804-8b02-7b15351d31c1
   alterId: 0
   cipher: auto
   tls: false
@@ -118,11 +118,11 @@ proxies:
       Host: id4.v2vmess.site
   udp: true
 
-- name: 🇮🇩 4 EX2 XL AXIS OPOK B6
+- name: 🇮🇩 4 EX7 XL AXIS OPOK B6
   server: 104.22.28.102
   port: 80
   type: vmess
-  uuid: 128f7995-36b4-4172-9931-5bd41e63b381
+  uuid: 431a56bf-a493-4804-8b02-7b15351d31c1
   alterId: 0
   cipher: auto
   tls: false
@@ -135,11 +135,11 @@ proxies:
       Host: id4.v2vmess.site
   udp: true
 
-- name: 🇮🇩 4 EX2 XL AXIS OPOK B7
+- name: 🇮🇩 4 EX7 XL AXIS OPOK B7
   server: 104.17.58.20
   port: 80
   type: vmess
-  uuid: 128f7995-36b4-4172-9931-5bd41e63b381
+  uuid: 431a56bf-a493-4804-8b02-7b15351d31c1
   alterId: 0
   cipher: auto
   tls: false
