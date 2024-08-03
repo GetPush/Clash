@@ -2,7 +2,7 @@
 proxy-providers:
 #Interval: detik
 #86400 = 24 jam #43200 = 12 jam #21600 = 6 jam
-  France:
+  IP 🇫🇷:
     type: http
     url: "https://raw.githubusercontent.com/GetPush/Clash/main/proxy_provider/Online/France.yaml"
     path: "./proxy_provider/Online/France.yaml"
@@ -10,7 +10,7 @@ proxy-providers:
       enable: true
     interval: 12000
     #21600
-  Netherlands:
+  IP 🇳🇱:
     type: http
     url: "https://raw.githubusercontent.com/GetPush/Clash/main/proxy_provider/Online/Netherlands.yaml"
     path: "./proxy_provider/Online/Netherlands.yaml"
@@ -18,7 +18,7 @@ proxy-providers:
       enable: true
     interval: 12000
     #21600
-  Singapore:
+  IP 🇸🇬:
     type: http
     url: "https://raw.githubusercontent.com/GetPush/Clash/main/proxy_provider/Online/Singapore.yaml"
     path: "./proxy_provider/Online/Singapore.yaml"
@@ -26,7 +26,7 @@ proxy-providers:
       enable: true
     interval: 12000
     #21600
-  America:
+  IP 🇺🇲:
     type: http
     url: "https://raw.githubusercontent.com/GetPush/Clash/main/proxy_provider/Online/America.yaml"
     path: "./proxy_provider/Online/America.yaml"
@@ -35,7 +35,7 @@ proxy-providers:
     interval: 12000
     #21600
 
-  Indonesia:
+  IP 🇮🇩:
     type: http
     url: "https://raw.githubusercontent.com/GetPush/Clash/main/proxy_provider/Online/Indonesia.yaml"
     path: "./proxy_provider/Online/Indonesia.yaml"
@@ -73,34 +73,24 @@ proxy-providers:
     #21600
 
 proxy-groups:
-- name: BOOST
-  type: fallback
-  strategy: round-robin
-  lazy: true
-  disable-udp: false
-  proxies:
-  - FallBack📡
-  - LoadBalance📡
-  - UrlTest📡
-  - TrafficInner✓
-  url: https://cp.cloudflare.com/generate_204
-  interval: '30'
-
-- name: FOCUS 📡
+- name: FOCUS
   type: select
   strategy: round-robin
   lazy: true
   disable-udp: false
   proxies:
-  - BOOST
+  - BOOSTER
+  - BALANCED
+  - TESTBEST
+  - TrafficInner✓
   - INDONESIA
-  - IP ID^ 🇮🇩 📡
+  - Route 🇮🇩
   - Vmess
   - Vless
   - DIRECT
   - DIRECT Interface
   use:
-  - Indonesia
+  - IP 🇮🇩
   url: https://cp.cloudflare.com/generate_204
   interval: '30'
 
@@ -108,9 +98,9 @@ proxy-groups:
   type: select
   disable-udp: false
   proxies:
-  - BOOST
+  - FOCUS
+  - BOOSTER
   - REJECT
-  - FOCUS 📡
   - TrafficInner✓
   - DIRECT
   - DIRECT Interface
@@ -123,8 +113,8 @@ proxy-groups:
   lazy: true
   disable-udp: false
   proxies:
-  - BOOST
-  - FOCUS 📡
+  - FOCUS
+  - BOOSTER
   - TrafficInner✓
   - INDONESIA
   - DIRECT
@@ -137,8 +127,8 @@ proxy-groups:
   lazy: true
   disable-udp: false
   proxies:
-  - BOOST
-  - FOCUS 📡
+  - FOCUS
+  - BOOSTER
   - TrafficInner✓
   - INDONESIA
   - DIRECT
@@ -151,8 +141,8 @@ proxy-groups:
   lazy: true
   disable-udp: false
   proxies:
-  - BOOST
-  - FOCUS 📡
+  - FOCUS
+  - BOOSTER
   - TrafficInner✓
   - INDONESIA
   - DIRECT
@@ -165,8 +155,8 @@ proxy-groups:
   lazy: true
   disable-udp: false
   proxies:
-  - BOOST
-  - FOCUS 📡
+  - FOCUS
+  - BOOSTER
   - TrafficInner✓
   - INDONESIA
   - DIRECT
@@ -177,49 +167,49 @@ proxy-groups:
   type: select
   disable-udp: false
   proxies:
-  - DIRECT
-  - DIRECT Interface
-  - BOOST
-  - FOCUS 📡
+  - FOCUS
+  - BOOSTER
   - TrafficInner✓
   - INDONESIA
+  - DIRECT
+  - DIRECT Interface
   url: https://cp.cloudflare.com/generate_204
   interval: '100'
 
-- name: FallBack📡
+- name: BOOSTER
   type: fallback
   strategy: round-robin
   lazy: true
   disable-udp: false
   use:
-  - Singapore
-  - France
-  - Netherlands
-  - America
+  - IP 🇸🇬
+  - IP 🇫🇷
+  - IP 🇳🇱
+  - IP 🇺🇲
   url: https://cp.cloudflare.com/generate_204
   interval: '100'
-- name: LoadBalance📡
+- name: BALANCED
   type: load-balance
   strategy: round-robin
   lazy: true
   disable-udp: false
   use:
-  - Singapore
-  - France
-  - Netherlands
-  - America
+  - IP 🇸🇬
+  - IP 🇫🇷
+  - IP 🇳🇱
+  - IP 🇺🇲
   url: https://cp.cloudflare.com/generate_204
   interval: '100'
-- name: UrlTest📡
+- name: TESTBEST
   type: url-test
   strategy: round-robin
   lazy: true
   disable-udp: false
   use:
-  - Singapore
-  - France
-  - Netherlands
-  - America
+  - IP 🇸🇬
+  - IP 🇫🇷
+  - IP 🇳🇱
+  - IP 🇺🇲
   url: https://cp.cloudflare.com/generate_204
   interval: '100'
 
@@ -229,13 +219,11 @@ proxy-groups:
   lazy: true
   disable-udp: false
   proxies:
-  - IP ID^ 🇮🇩 📡
+  - Route 🇮🇩
   - Vmess
   - Vless
-  - DIRECT
-  - DIRECT Interface
   url: https://cp.cloudflare.com/generate_204
-  interval: '100'
+  interval: '300'
 
 - name: Trojan
   type: url-test
@@ -247,13 +235,13 @@ proxy-groups:
   url: https://cp.cloudflare.com/generate_204
   interval: '100'
 
-- name: IP ID^ 🇮🇩 📡
+- name: Route 🇮🇩
   type: load-balance
   strategy: round-robin
   lazy: true
   disable-udp: false
   use:
-  - Indonesia
+  - IP 🇮🇩
   url: https://cp.cloudflare.com/generate_204
   interval: '100'
 - name: Vmess
@@ -290,8 +278,8 @@ proxy-groups:
   disable-udp: false
   proxies:
   - REJECT
-  - BOOST
-  - FOCUS 📡
+  - BOOSTER
+  - FOCUS
   url: https://cp.cloudflare.com/generate_204
   interval: '100'
 
@@ -301,17 +289,14 @@ proxy-groups:
   lazy: true
   disable-udp: false
   proxies:
-  - FallBack📡
-  - LoadBalance📡
-  - UrlTest📡
+  - BOOSTER
+  - BALANCED
+  - TESTBEST
   - Trojan
-  - IP ID^ 🇮🇩 📡
-  - Vmess
-  - Vless
   - DIRECT
   - DIRECT Interface
   url: https://cp.cloudflare.com/generate_204
-  interval: '100'
+  interval: '30'
 
 
 
@@ -322,7 +307,7 @@ redir-port: 9797
 tproxy-port: 9898
 external-controller: 127.0.0.1:9090 
 # secret: "123456"
-external-ui: /data/adb/box/clash/ui/metacubexd
+external-ui: /data/adb/box/clash/dashboard
 ipv6: false
 allow-lan: true
 tcp-concurrent: true
@@ -482,7 +467,7 @@ dns:
     - time-ios.apple.com
     - shark007.net
 
-  nameserver:
+  nameserver:    # 主要 国内代理
     - quic://dns.adguard.com:784#🌏 快速选择代理  # DNS over QUIC 测试
     - https://1.1.1.1/dns-query#🌏 快速选择代理
     - https://1.0.0.1/dns-query#🌏 快速选择代理
@@ -491,32 +476,32 @@ dns:
     - https://dns.alidns.com/dns-query##🌏 快速选择代理&h3=true # 强制 HTTP/3，与 perfer-h3 无关，强制开启 DoH 的 HTTP/3 支持，若不支持将无法使用
     - https://mozilla.cloudflare-dns.com/dns-query##🌏 快速选择代理&h3=true # 指定策略组和使用 HTTP/3
     - dhcp://en0#🌏 快速选择代理  # dns from dhcp #测试
-    - tls://dns.google:853
+ #   - tls://dns.google:853
  #   - tls://8.8.8.8:853
-    - tls://8.8.4.4:853
-    - tls://dns.alidns.com
-    - tls://223.5.5.5
-    - tls://223.6.6.6
-    - tls://dot.pub
-    - tls://1.12.12.12
-    - tls://120.53.53.53
-    - https://dns.google/dns-query
-    - https://8.8.8.8/dns-query
-    - https://8.8.4.4/dns-query
-    - https://dns.alidns.com/dns-query
-    - https://223.5.5.5/dns-query
-    - https://223.6.6.6/dns-query
-    - https://doh.pub/dns-query
-    - https://1.12.12.12/dns-query
-    - https://120.53.53.53/dns-query
-    - 'tls://8.8.4.4#dns'
-    - 'tls://1.0.0.1#dns'
-    - 'tls://[2001:4860:4860::8844]#dns'
-    - 'tls://[2606:4700:4700::1001]#dns'
+ #   - tls://8.8.4.4:853
+ #   - tls://dns.alidns.com
+ #   - tls://223.5.5.5
+ #   - tls://223.6.6.6
+ #   - tls://dot.pub
+ #   - tls://1.12.12.12
+ #   - tls://120.53.53.53
+ #   - https://dns.google/dns-query
+ #   - https://8.8.8.8/dns-query
+ #   - https://8.8.4.4/dns-query
+ #   - https://dns.alidns.com/dns-query
+ #   - https://223.5.5.5/dns-query
+ #   - https://223.6.6.6/dns-query
+ #   - https://doh.pub/dns-query
+ #   - https://1.12.12.12/dns-query
+ #   - https://120.53.53.53/dns-query
+ #   - 'tls://8.8.4.4#dns'
+ #   - 'tls://1.0.0.1#dns'
+ #   - 'tls://[2001:4860:4860::8844]#dns'
+ #   - 'tls://[2606:4700:4700::1001]#dns'
     
-    - https://dns.adguard.com/dns-query
-    - tls://dns.adguard.com
-    - tls://1dot1dot1dot1.cloudflare-dns.com
+ #   - https://dns.adguard.com/dns-query
+ #   - tls://dns.adguard.com
+ #   - tls://1dot1dot1dot1.cloudflare-dns.com
 
     - https://dns.cloudflare.com/dns-query
     - tls://8.8.8.8:853
@@ -618,7 +603,7 @@ dns:
 
 tun:
   enable: true
-  device: utun # gvisor/mixed
+  device: gvisor # gvisor mixed utun
   mtu: 65535 # 65535 # 9000
   stack: system # gvisor / lwip / system
   dns-hijack:
@@ -698,7 +683,7 @@ rules:
   ## block ads
 - DOMAIN-SUFFIX,googlesyndication.com,TrafficAds
 - AND,((GEOSITE,category-ads-all),(NOT,((DOMAIN-SUFFIX,googlesyndication.com)))),TrafficAds
-- GEOSITE,category-ads-all,REJECT
+- GEOSITE,category-ads-all,TrafficAds
 #- RULE-SET,block,REJECT
 #- SCRIPT,quic,REJECT
 #- SCRIPT,youshit,REJECT
@@ -779,9 +764,9 @@ rules:
 - RULE-SET,rule_games,TrafficGaming
 - RULE-SET,rule_discord,TrafficGaming
 
-- RULE-SET,rule_falsepositive,FOCUS 📡
-- RULE-SET,rule_playstore,FOCUS 📡
-- RULE-SET,rule_umum,FOCUS 📡
+- RULE-SET,rule_falsepositive,FOCUS
+- RULE-SET,rule_playstore,FOCUS
+- RULE-SET,rule_umum,FOCUS
 - MATCH,GLOBAL
 
 rule-providers:
