@@ -4,7 +4,7 @@ proxies:
   server: 104.19.142.89
   port: 443
   type: trojan
-  password: 109bf4e0-4032-11ef-9f89-1239d0255272
+  password: 4e70f940-518d-11ef-86a3-1239d0255272
   skip-cert-verify: true
   sni: sg1-trojan.bonds.id
   network: ws
@@ -18,7 +18,7 @@ proxies:
   server: 172.64.153.186
   port: 443
   type: trojan
-  password: 109bf4e0-4032-11ef-9f89-1239d0255272
+  password: 4e70f940-518d-11ef-86a3-1239d0255272
   skip-cert-verify: true
   sni: sg1-trojan.bonds.id
   network: ws
@@ -32,7 +32,7 @@ proxies:
   server: 104.18.34.70
   port: 443
   type: trojan
-  password: 109bf4e0-4032-11ef-9f89-1239d0255272
+  password: 4e70f940-518d-11ef-86a3-1239d0255272
   skip-cert-verify: true
   sni: sg1-trojan.bonds.id
   network: ws
@@ -46,7 +46,7 @@ proxies:
   server: 104.18.21.94
   port: 443
   type: trojan
-  password: 109bf4e0-4032-11ef-9f89-1239d0255272
+  password: 4e70f940-518d-11ef-86a3-1239d0255272
   skip-cert-verify: true
   sni: sg1-trojan.bonds.id
   network: ws
@@ -60,7 +60,7 @@ proxies:
   server: 104.21.30.242
   port: 443
   type: trojan
-  password: 109bf4e0-4032-11ef-9f89-1239d0255272
+  password: 4e70f940-518d-11ef-86a3-1239d0255272
   skip-cert-verify: true
   sni: sg1-trojan.bonds.id
   network: ws
@@ -74,7 +74,7 @@ proxies:
   server: 104.22.4.240
   port: 443
   type: trojan
-  password: 109bf4e0-4032-11ef-9f89-1239d0255272
+  password: 4e70f940-518d-11ef-86a3-1239d0255272
   skip-cert-verify: true
   sni: sg1-trojan.bonds.id
   network: ws
@@ -88,7 +88,7 @@ proxies:
   server: 104.21.69.223
   port: 443
   type: trojan
-  password: 109bf4e0-4032-11ef-9f89-1239d0255272
+  password: 4e70f940-518d-11ef-86a3-1239d0255272
   skip-cert-verify: true
   sni: sg1-trojan.bonds.id
   network: ws
@@ -102,7 +102,7 @@ proxies:
   server: 104.22.28.102
   port: 443
   type: trojan
-  password: 109bf4e0-4032-11ef-9f89-1239d0255272
+  password: 4e70f940-518d-11ef-86a3-1239d0255272
   skip-cert-verify: true
   sni: sg1-trojan.bonds.id
   network: ws
@@ -116,7 +116,7 @@ proxies:
   server: 104.17.58.20
   port: 443
   type: trojan
-  password: 109bf4e0-4032-11ef-9f89-1239d0255272
+  password: 4e70f940-518d-11ef-86a3-1239d0255272
   skip-cert-verify: true
   sni: sg1-trojan.bonds.id
   network: ws
@@ -131,7 +131,7 @@ proxies:
   server: 104.19.142.89
   port: 443
   type: trojan
-  password: a5d8bf30-404e-11ef-a315-1239d0255272
+  password: 99bd6350-518d-11ef-ac9d-1239d0255272
   skip-cert-verify: true
   sni: sg2-trojan.bonds.id
   network: ws
@@ -145,7 +145,7 @@ proxies:
   server: 172.64.153.186
   port: 443
   type: trojan
-  password: a5d8bf30-404e-11ef-a315-1239d0255272
+  password: 99bd6350-518d-11ef-ac9d-1239d0255272
   skip-cert-verify: true
   sni: sg2-trojan.bonds.id
   network: ws
@@ -159,7 +159,7 @@ proxies:
   server: 104.18.34.70
   port: 443
   type: trojan
-  password: a5d8bf30-404e-11ef-a315-1239d0255272
+  password: 99bd6350-518d-11ef-ac9d-1239d0255272
   skip-cert-verify: true
   sni: sg2-trojan.bonds.id
   network: ws
@@ -173,7 +173,7 @@ proxies:
   server: 104.18.21.94
   port: 443
   type: trojan
-  password: a5d8bf30-404e-11ef-a315-1239d0255272
+  password: 99bd6350-518d-11ef-ac9d-1239d0255272
   skip-cert-verify: true
   sni: sg2-trojan.bonds.id
   network: ws
@@ -187,7 +187,7 @@ proxies:
   server: 104.21.30.242
   port: 443
   type: trojan
-  password: a5d8bf30-404e-11ef-a315-1239d0255272
+  password: 99bd6350-518d-11ef-ac9d-1239d0255272
   skip-cert-verify: true
   sni: sg2-trojan.bonds.id
   network: ws
@@ -201,7 +201,7 @@ proxies:
   server: 104.22.4.240
   port: 443
   type: trojan
-  password: a5d8bf30-404e-11ef-a315-1239d0255272
+  password: 99bd6350-518d-11ef-ac9d-1239d0255272
   skip-cert-verify: true
   sni: sg2-trojan.bonds.id
   network: ws
@@ -215,7 +215,7 @@ proxies:
   server: 104.21.69.223
   port: 443
   type: trojan
-  password: a5d8bf30-404e-11ef-a315-1239d0255272
+  password: 99bd6350-518d-11ef-ac9d-1239d0255272
   skip-cert-verify: true
   sni: sg2-trojan.bonds.id
   network: ws
@@ -229,7 +229,7 @@ proxies:
   server: 104.22.28.102
   port: 443
   type: trojan
-  password: a5d8bf30-404e-11ef-a315-1239d0255272
+  password: 99bd6350-518d-11ef-ac9d-1239d0255272
   skip-cert-verify: true
   sni: sg2-trojan.bonds.id
   network: ws
@@ -243,7 +243,7 @@ proxies:
   server: 104.17.58.20
   port: 443
   type: trojan
-  password: a5d8bf30-404e-11ef-a315-1239d0255272
+  password: 99bd6350-518d-11ef-ac9d-1239d0255272
   skip-cert-verify: true
   sni: sg2-trojan.bonds.id
   network: ws
@@ -252,13 +252,141 @@ proxies:
     headers:
       Host: sg2-trojan.bonds.id
   udp: true
+# SG HE3
+proxies:
+- name: 🇸🇬 🐎 HE3 AXIS GAME JBR B1
+  server: 104.19.142.89
+  port: 443
+  type: trojan
+  password: e00a620-518e-11ef-936c-1239d0255272
+  skip-cert-verify: true
+  sni: sg3-trojan.bonds.id
+  network: ws
+  ws-opts:
+    path: /howdy
+    headers:
+      Host: sg3-trojan.bonds.id
+  udp: true
+
+- name: 🇸🇬 🐎 HE3 AXIS All BOOSTER B1
+  server: 172.64.153.186
+  port: 443
+  type: trojan
+  password: e00a620-518e-11ef-936c-1239d0255272
+  skip-cert-verify: true
+  sni: sg3-trojan.bonds.id
+  network: ws
+  ws-opts:
+    path: /howdy
+    headers:
+      Host: sg3-trojan.bonds.id
+  udp: true
+
+- name: 🇸🇬 🐎 HE3 AXIS All BOOSTER B2
+  server: 104.18.34.70
+  port: 443
+  type: trojan
+  password: e00a620-518e-11ef-936c-1239d0255272
+  skip-cert-verify: true
+  sni: sg3-trojan.bonds.id
+  network: ws
+  ws-opts:
+    path: /howdy
+    headers:
+      Host: sg3-trojan.bonds.id
+  udp: true
+
+- name: 🇸🇬 🐎 HE3 AXIS GAME JTM
+  server: 104.18.21.94
+  port: 443
+  type: trojan
+  password: e00a620-518e-11ef-936c-1239d0255272
+  skip-cert-verify: true
+  sni: sg3-trojan.bonds.id
+  network: ws
+  ws-opts:
+    path: /howdy
+    headers:
+      Host: sg3-trojan.bonds.id
+  udp: true
+
+- name: 🇸🇬 🐎 HE3 AXIS GENFLIX
+  server: 104.21.30.242
+  port: 443
+  type: trojan
+  password: e00a620-518e-11ef-936c-1239d0255272
+  skip-cert-verify: true
+  sni: sg3-trojan.bonds.id
+  network: ws
+  ws-opts:
+    path: /howdy
+    headers:
+      Host: sg3-trojan.bonds.id
+  udp: true
+
+- name: 🇸🇬 🐎 HE3 XL AXIS VIDEO B3
+  server: 104.22.4.240
+  port: 443
+  type: trojan
+  password: e00a620-518e-11ef-936c-1239d0255272
+  skip-cert-verify: true
+  sni: sg3-trojan.bonds.id
+  network: ws
+  ws-opts:
+    path: /howdy
+    headers:
+      Host: sg3-trojan.bonds.id
+  udp: true
+
+- name: 🇸🇬 🐎 HE3 XL AXIS SUSHIROLL B2
+  server: 104.21.69.223
+  port: 443
+  type: trojan
+  password: e00a620-518e-11ef-936c-1239d0255272
+  skip-cert-verify: true
+  sni: sg3-trojan.bonds.id
+  network: ws
+  ws-opts:
+    path: /howdy
+    headers:
+      Host: sg3-trojan.bonds.id
+  udp: true
+
+- name: 🇸🇬 🐎 HE3 XL AXIS OPOK B6
+  server: 104.22.28.102
+  port: 443
+  type: trojan
+  password: e00a620-518e-11ef-936c-1239d0255272
+  skip-cert-verify: true
+  sni: sg3-trojan.bonds.id
+  network: ws
+  ws-opts:
+    path: /howdy
+    headers:
+      Host: sg3-trojan.bonds.id
+  udp: true
+
+- name: 🇸🇬 🐎 HE3 XL AXIS OPOK B7
+  server: 104.17.58.20
+  port: 443
+  type: trojan
+  password: e00a620-518e-11ef-936c-1239d0255272
+  skip-cert-verify: true
+  sni: sg3-trojan.bonds.id
+  network: ws
+  ws-opts:
+    path: /howdy
+    headers:
+      Host: sg3-trojan.bonds.id
+  udp: true
+
 
 # SG MELBI
 - name: 🇸🇬 🐎 MELBI AXIS GAME JBR B1
   server: 104.19.142.89
   port: 443
   type: trojan
-  password: b5552820-3e03-11ef-8255-1239d0255272
+  password: c96b2420-518c-11ef-93db-1239d0255272
   skip-cert-verify: true
   sni: sg-4.test3.net
   network: ws
@@ -272,7 +400,7 @@ proxies:
   server: 172.64.153.186
   port: 443
   type: trojan
-  password: b5552820-3e03-11ef-8255-1239d0255272
+  password: c96b2420-518c-11ef-93db-1239d0255272
   skip-cert-verify: true
   sni: sg-4.test3.net
   network: ws
@@ -286,7 +414,7 @@ proxies:
   server: 104.18.34.70
   port: 443
   type: trojan
-  password: b5552820-3e03-11ef-8255-1239d0255272
+  password: c96b2420-518c-11ef-93db-1239d0255272
   skip-cert-verify: true
   sni: sg-4.test3.net
   network: ws
@@ -300,7 +428,7 @@ proxies:
   server: 104.18.21.94
   port: 443
   type: trojan
-  password: b5552820-3e03-11ef-8255-1239d0255272
+  password: c96b2420-518c-11ef-93db-1239d0255272
   skip-cert-verify: true
   sni: sg-4.test3.net
   network: ws
@@ -314,7 +442,7 @@ proxies:
   server: 104.21.30.242
   port: 443
   type: trojan
-  password: b5552820-3e03-11ef-8255-1239d0255272
+  password: c96b2420-518c-11ef-93db-1239d0255272
   skip-cert-verify: true
   sni: sg-4.test3.net
   network: ws
@@ -328,7 +456,7 @@ proxies:
   server: 104.22.4.240
   port: 443
   type: trojan
-  password: b5552820-3e03-11ef-8255-1239d0255272
+  password: c96b2420-518c-11ef-93db-1239d0255272
   skip-cert-verify: true
   sni: sg-4.test3.net
   network: ws
@@ -342,7 +470,7 @@ proxies:
   server: 104.21.69.223
   port: 443
   type: trojan
-  password: b5552820-3e03-11ef-8255-1239d0255272
+  password: c96b2420-518c-11ef-93db-1239d0255272
   skip-cert-verify: true
   sni: sg-4.test3.net
   network: ws
@@ -356,7 +484,7 @@ proxies:
   server: 104.22.28.102
   port: 443
   type: trojan
-  password: b5552820-3e03-11ef-8255-1239d0255272
+  password: c96b2420-518c-11ef-93db-1239d0255272
   skip-cert-verify: true
   sni: sg-4.test3.net
   network: ws
@@ -370,7 +498,7 @@ proxies:
   server: 104.17.58.20
   port: 443
   type: trojan
-  password: b5552820-3e03-11ef-8255-1239d0255272
+  password: c96b2420-518c-11ef-93db-1239d0255272
   skip-cert-verify: true
   sni: sg-4.test3.net
   network: ws
