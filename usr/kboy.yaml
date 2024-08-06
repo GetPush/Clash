@@ -214,7 +214,7 @@ proxy-groups:
   interval: '100'
 
 - name: INDONESIA
-  type: fallback
+  type: load-balance
   strategy: round-robin
   lazy: true
   disable-udp: false
@@ -222,8 +222,10 @@ proxy-groups:
   - Route 🇮🇩
   - Vmess
   - Vless
+  - DIRECT
+  - DIRECT Interface
   url: https://cp.cloudflare.com/generate_204
-  interval: '300'
+  interval: '30'
 
 - name: Trojan
   type: url-test
@@ -503,10 +505,10 @@ dns:
  #   - tls://dns.adguard.com
  #   - tls://1dot1dot1dot1.cloudflare-dns.com
 
-    - https://dns.cloudflare.com/dns-query
-    - tls://8.8.8.8:853
-    - https://dns.bebasid.com/dns-query
-    - tls://dns.bebasid.com
+ #   - https://dns.cloudflare.com/dns-query
+ #   - tls://8.8.8.8:853
+ #   - https://dns.bebasid.com/dns-query
+ #   - tls://dns.bebasid.com
 
   # 只能使用纯 IP 地址，可使用加密 DNS
   default-nameserver: 
