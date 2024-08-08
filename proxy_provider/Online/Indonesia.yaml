@@ -1,5 +1,6 @@
 proxies:
-- name: IP 🇮🇩 EX8 AXIS GAME JBR B1
+# ip id 1
+- name: IPv1 🇮🇩 EX8 AXIS GAME JBR B1
   server: 104.19.142.89
   port: 80
   type: vmess
@@ -16,7 +17,7 @@ proxies:
       Host: id1.v2vmess.site
   udp: true
 
-- name: IP 🇮🇩 EX8 AXIS All BOOSTER B1
+- name: IPv1 🇮🇩 EX8 AXIS All BOOSTER B1
   server: 172.64.153.186
   port: 80
   type: vmess
@@ -33,7 +34,7 @@ proxies:
       Host: id1.v2vmess.site
   udp: true
 
-- name: IP 🇮🇩 EX8 AXIS All BOOSTER B2
+- name: IPv1 🇮🇩 EX8 AXIS All BOOSTER B2
   server: 104.18.34.70
   port: 80
   type: vmess
@@ -50,7 +51,7 @@ proxies:
       Host: id1.v2vmess.site
   udp: true
 
-- name: IP 🇮🇩 EX8 AXIS GAME JTM
+- name: IPv1 🇮🇩 EX8 AXIS GAME JTM
   server: 104.18.21.94
   port: 80
   type: vmess
@@ -67,7 +68,7 @@ proxies:
       Host: id1.v2vmess.site
   udp: true
 
-- name: IP 🇮🇩 EX8 AXIS GENFLIX
+- name: IPv1 🇮🇩 EX8 AXIS GENFLIX
   server: 104.21.30.242
   port: 80
   type: vmess
@@ -84,7 +85,7 @@ proxies:
       Host: id1.v2vmess.site
   udp: true
 
-- name: IP 🇮🇩 EX8 XL AXIS VIDEO B3
+- name: IPv1 🇮🇩 EX8 XL AXIS VIDEO B3
   server: 104.22.4.240
   port: 80
   type: vmess
@@ -101,7 +102,7 @@ proxies:
       Host: id1.v2vmess.site
   udp: true
 
-- name: IP 🇮🇩 EX8 XL AXIS SUSHIROLL B2
+- name: IPv1 🇮🇩 EX8 XL AXIS SUSHIROLL B2
   server: 104.21.69.223
   port: 80
   type: vmess
@@ -118,7 +119,7 @@ proxies:
       Host: id1.v2vmess.site
   udp: true
 
-- name: IP 🇮🇩 EX8 XL AXIS OPOK B6
+- name: IPv1 🇮🇩 EX8 XL AXIS OPOK B6
   server: 104.22.28.102
   port: 80
   type: vmess
@@ -135,7 +136,7 @@ proxies:
       Host: id1.v2vmess.site
   udp: true
 
-- name: IP 🇮🇩 EX8 XL AXIS OPOK B7
+- name: IPv1 🇮🇩 EX8 XL AXIS OPOK B7
   server: 104.17.58.20
   port: 80
   type: vmess
@@ -150,4 +151,158 @@ proxies:
     path: /vmess
     headers:
       Host: id1.v2vmess.site
+  udp: true
+
+# ip id 4
+- name: IPv4 🇮🇩 EX11 AXIS GAME JBR B1
+  server: 104.19.142.89
+  port: 80
+  type: vmess
+  uuid: b8a3dade-4432-4f5d-b736-c9912b2a1500
+  alterId: 0
+  cipher: auto
+  tls: false
+  skip-cert-verify: true
+  servername: id4.v2vmess.site
+  network: ws
+  ws-opts:
+    path: /vmess
+    headers:
+      Host: id4.v2vmess.site
+  udp: true
+
+- name: IPv4 🇮🇩 EX11 AXIS All BOOSTER B1
+  server: 172.64.153.186
+  port: 80
+  type: vmess
+  uuid: b8a3dade-4432-4f5d-b736-c9912b2a1500
+  alterId: 0
+  cipher: auto
+  tls: false
+  skip-cert-verify: true
+  servername: id4.v2vmess.site
+  network: ws
+  ws-opts:
+    path: /vmess
+    headers:
+      Host: id4.v2vmess.site
+  udp: true
+
+- name: IPv4 🇮🇩 EX11 AXIS All BOOSTER B2
+  server: 104.18.34.70
+  port: 80
+  type: vmess
+  uuid: b8a3dade-4432-4f5d-b736-c9912b2a1500
+  alterId: 0
+  cipher: auto
+  tls: false
+  skip-cert-verify: true
+  servername: id4.v2vmess.site
+  network: ws
+  ws-opts:
+    path: /vmess
+    headers:
+      Host: id4.v2vmess.site
+  udp: true
+
+- name: IPv4 🇮🇩 EX11 AXIS GAME JTM
+  server: 104.18.21.94
+  port: 80
+  type: vmess
+  uuid: b8a3dade-4432-4f5d-b736-c9912b2a1500
+  alterId: 0
+  cipher: auto
+  tls: false
+  skip-cert-verify: true
+  servername: id4.v2vmess.site
+  network: ws
+  ws-opts:
+    path: /vmess
+    headers:
+      Host: id4.v2vmess.site
+  udp: true
+
+- name: IPv4 🇮🇩 EX11 AXIS GENFLIX
+  server: 104.21.30.242
+  port: 80
+  type: vmess
+  uuid: b8a3dade-4432-4f5d-b736-c9912b2a1500
+  alterId: 0
+  cipher: auto
+  tls: false
+  skip-cert-verify: true
+  servername: id4.v2vmess.site
+  network: ws
+  ws-opts:
+    path: /vmess
+    headers:
+      Host: id4.v2vmess.site
+  udp: true
+
+- name: IPv4 🇮🇩 EX11 XL AXIS VIDEO B3
+  server: 104.22.4.240
+  port: 80
+  type: vmess
+  uuid: b8a3dade-4432-4f5d-b736-c9912b2a1500
+  alterId: 0
+  cipher: auto
+  tls: false
+  skip-cert-verify: true
+  servername: id4.v2vmess.site
+  network: ws
+  ws-opts:
+    path: /vmess
+    headers:
+      Host: id4.v2vmess.site
+  udp: true
+
+- name: IPv4 🇮🇩 EX11 XL AXIS SUSHIROLL B2
+  server: 104.21.69.223
+  port: 80
+  type: vmess
+  uuid: b8a3dade-4432-4f5d-b736-c9912b2a1500
+  alterId: 0
+  cipher: auto
+  tls: false
+  skip-cert-verify: true
+  servername: id4.v2vmess.site
+  network: ws
+  ws-opts:
+    path: /vmess
+    headers:
+      Host: id4.v2vmess.site
+  udp: true
+
+- name: IPv4 🇮🇩 EX11 XL AXIS OPOK B6
+  server: 104.22.28.102
+  port: 80
+  type: vmess
+  uuid: b8a3dade-4432-4f5d-b736-c9912b2a1500
+  alterId: 0
+  cipher: auto
+  tls: false
+  skip-cert-verify: true
+  servername: id4.v2vmess.site
+  network: ws
+  ws-opts:
+    path: /vmess
+    headers:
+      Host: id4.v2vmess.site
+  udp: true
+
+- name: IPv4 🇮🇩 EX11 XL AXIS OPOK B7
+  server: 104.17.58.20
+  port: 80
+  type: vmess
+  uuid: b8a3dade-4432-4f5d-b736-c9912b2a1500
+  alterId: 0
+  cipher: auto
+  tls: false
+  skip-cert-verify: true
+  servername: id4.v2vmess.site
+  network: ws
+  ws-opts:
+    path: /vmess
+    headers:
+      Host: id4.v2vmess.site
   udp: true
