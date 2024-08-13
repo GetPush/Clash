@@ -75,16 +75,25 @@ proxy-providers:
     #21600
 
 proxy-groups:
+- name: BOOST
+  type: select
+  strategy: round-robin
+  lazy: true
+  disable-udp: false
+  proxies:
+  - Type A
+  - Type B
+  - Type C
+  - Type D
+  - FOCUS
+  url: https://cp.cloudflare.com/generate_204
+  interval: '30'
 - name: FOCUS
   type: select
   strategy: round-robin
   lazy: true
   disable-udp: false
   proxies:
-  - BOOSTER
-  - BALANCED
-  - TESTBEST
-  - TrafficInner✓
   - ROUTE 🇸🇬
   - ROUTE 🇫🇷
   - ROUTE 🇳🇱
@@ -105,10 +114,8 @@ proxy-groups:
   type: select
   disable-udp: false
   proxies:
-  - FOCUS
-  - BOOSTER
+  - BOOST
   - REJECT
-  - TrafficInner✓
   - DIRECT
   - DIRECT Interface
   url: https://cp.cloudflare.com/generate_204
@@ -121,7 +128,7 @@ proxy-groups:
   - DIRECT
   - DIRECT Interface
   - ROUTE 🇮🇩
-  - FOCUS
+  - BOOST
   url: https://cp.cloudflare.com/generate_204
   interval: '100'
 - name: TrafficIndo
@@ -130,10 +137,8 @@ proxy-groups:
   lazy: true
   disable-udp: false
   proxies:
+  - BOOST
   - FOCUS
-  - BOOSTER
-  - ROUTE 🇮🇩
-  - TrafficInner✓
   - DIRECT
   - DIRECT Interface
   url: https://cp.cloudflare.com/generate_204
@@ -144,10 +149,8 @@ proxy-groups:
   lazy: true
   disable-udp: false
   proxies:
+  - BOOST
   - FOCUS
-  - BOOSTER
-  - TrafficInner✓
-  - ROUTE 🇮🇩
   - DIRECT
   - DIRECT Interface
   url: https://cp.cloudflare.com/generate_204
@@ -158,10 +161,8 @@ proxy-groups:
   lazy: true
   disable-udp: false
   proxies:
+  - BOOST
   - FOCUS
-  - BOOSTER
-  - TrafficInner✓
-  - ROUTE 🇮🇩
   - DIRECT
   - DIRECT Interface
   url: https://cp.cloudflare.com/generate_204
@@ -172,16 +173,14 @@ proxy-groups:
   lazy: true
   disable-udp: false
   proxies:
+  - BOOST
   - FOCUS
-  - BOOSTER
-  - TrafficInner✓
-  - ROUTE 🇮🇩
   - DIRECT
   - DIRECT Interface
   url: https://cp.cloudflare.com/generate_204
   interval: '100'
 
-- name: BOOSTER
+- name: Type A
   type: fallback
   strategy: round-robin
   lazy: true
@@ -193,7 +192,7 @@ proxy-groups:
   - ROUTE 🇺🇲
   url: https://cp.cloudflare.com/generate_204
   interval: '100'
-- name: BALANCED
+- name: Type B
   type: load-balance
   strategy: round-robin
   lazy: true
@@ -205,7 +204,7 @@ proxy-groups:
   - ROUTE 🇺🇲
   url: https://cp.cloudflare.com/generate_204
   interval: '100'
-- name: TESTBEST
+- name: Type C
   type: url-test
   strategy: round-robin
   lazy: true
@@ -330,12 +329,12 @@ proxy-groups:
   disable-udp: false
   proxies:
   - REJECT
-  - BOOSTER
-  - FOCUS
+  - Type A
+  - BOOST
   url: https://cp.cloudflare.com/generate_204
   interval: '100'
 
-- name: TrafficInner✓
+- name: Type D
   type: fallback
   strategy: round-robin
   lazy: true
@@ -512,7 +511,6 @@ dns:
     - msftconnecttest.com
     - msftncsi.com
     - "+.*"
-
   default-nameserver:
   - 8.8.8.8
   - 8.8.4.4
@@ -548,7 +546,7 @@ profile:
   store-fake-ip: true
 
 tun:
-  enable: true
+  enable: false
   stack: system
   auto-route: false
   auto-detect-interface: false
@@ -588,7 +586,7 @@ rules:
 
   ## rules inner, recommended untuk non kuota reguler
 - AND,((PROCESS-NAME,clash),(NOT,((IN-TYPE,inner)))),REJECT
-- IN-TYPE,inner,TrafficInner✓
+- IN-TYPE,inner,Type D
 
 
 - IP-CIDR,198.18.0.1/16,REJECT,no-resolve
@@ -640,10 +638,10 @@ rules:
 - RULE-SET,rule_games,TrafficGaming
 - RULE-SET,rule_discord,TrafficGaming
 
-- RULE-SET,rule_falsepositive,FOCUS
-- RULE-SET,rule_playstore,FOCUS
-- RULE-SET,rule_umum,FOCUS
-- MATCH,FOCUS,GLOBAL
+- RULE-SET,rule_falsepositive,BOOST
+- RULE-SET,rule_playstore,BOOST
+- RULE-SET,rule_umum,BOOST
+- MATCH,BOOST,GLOBAL
 
 rule-providers:
   rule_umum:
