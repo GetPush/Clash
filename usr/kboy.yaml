@@ -35,38 +35,40 @@ proxy-providers:
     interval: 12000
     #21600
 
-  IP 🇮🇩:
+  IPv1 🇮🇩:
     type: http
-    url: "https://raw.githubusercontent.com/GetPush/Clash/main/proxy_provider/Online/Indonesia.yaml"
-    path: "./proxy_provider/Online/Indonesia.yaml"
+    url: "https://raw.githubusercontent.com/GetPush/Clash/main/proxy_provider/Online/idv1.yaml"
+    path: "./proxy_provider/Online/idv1.yaml"
     health-check:
       enable: true
     interval: 12000
-    #21600
+  IPv2 🇮🇩:
+    type: http
+    url: "https://raw.githubusercontent.com/GetPush/Clash/main/proxy_provider/Online/idv2.yaml"
+    path: "./proxy_provider/Online/idv2.yaml"
+    health-check:
+      enable: true
+    interval: 12000
+  IPv3 🇮🇩:
+    type: http
+    url: "https://raw.githubusercontent.com/GetPush/Clash/main/proxy_provider/Online/idv3.yaml"
+    path: "./proxy_provider/Online/idv3.yaml"
+    health-check:
+      enable: true
+    interval: 12000
+  IPv4 🇮🇩:
+    type: http
+    url: "https://raw.githubusercontent.com/GetPush/Clash/main/proxy_provider/Online/idv4.yaml"
+    path: "./proxy_provider/Online/idv4.yaml"
+    health-check:
+      enable: true
+    interval: 12000
 
 #Trojan
   Trojan:
     type: http
     url: "https://raw.githubusercontent.com/GetPush/Clash/main/proxy_provider/Online/Trojan.yaml"
     path: "./proxy_provider/Online/Trojan.yaml"
-    health-check:
-      enable: true
-    interval: 12000
-    #21600
-
-  Vmess:
-    type: http
-    url: "https://raw.githubusercontent.com/GetPush/Clash/main/proxy_provider/Online/Vmess.yaml"
-    path: "./proxy_provider/Online/Vmess.yaml"
-    health-check:
-      enable: true
-    interval: 12000
-    #21600
-
-  Vless:
-    type: http
-    url: "https://raw.githubusercontent.com/GetPush/Clash/main/proxy_provider/Online/Vless.yaml"
-    path: "./proxy_provider/Online/Vless.yaml"
     health-check:
       enable: true
     interval: 12000
@@ -83,14 +85,19 @@ proxy-groups:
   - BALANCED
   - TESTBEST
   - TrafficInner✓
-  - INDONESIA
-  - Route 🇮🇩
-  - Vmess
-  - Vless
+  - ROUTE 🇸🇬
+  - ROUTE 🇫🇷
+  - ROUTE 🇳🇱
+  - ROUTE 🇺🇲
+  - ROUTE 🇮🇩
+  - IPv1 🇮🇩
+  - IPv2 🇮🇩
+  - IPv3 🇮🇩
+  - IPv4 🇮🇩
   - DIRECT
   - DIRECT Interface
   use:
-  - IP 🇮🇩
+  - IPv1 🇮🇩
   url: https://cp.cloudflare.com/generate_204
   interval: '30'
 
@@ -107,6 +114,16 @@ proxy-groups:
   url: https://cp.cloudflare.com/generate_204
   interval: '100'
 
+- name: TrafficGaming
+  type: select
+  disable-udp: false
+  proxies:
+  - DIRECT
+  - DIRECT Interface
+  - ROUTE 🇮🇩
+  - FOCUS
+  url: https://cp.cloudflare.com/generate_204
+  interval: '100'
 - name: TrafficIndo
   type: select
   strategy: round-robin
@@ -115,8 +132,8 @@ proxy-groups:
   proxies:
   - FOCUS
   - BOOSTER
+  - ROUTE 🇮🇩
   - TrafficInner✓
-  - INDONESIA
   - DIRECT
   - DIRECT Interface
   url: https://cp.cloudflare.com/generate_204
@@ -130,7 +147,7 @@ proxy-groups:
   - FOCUS
   - BOOSTER
   - TrafficInner✓
-  - INDONESIA
+  - ROUTE 🇮🇩
   - DIRECT
   - DIRECT Interface
   url: https://cp.cloudflare.com/generate_204
@@ -144,7 +161,7 @@ proxy-groups:
   - FOCUS
   - BOOSTER
   - TrafficInner✓
-  - INDONESIA
+  - ROUTE 🇮🇩
   - DIRECT
   - DIRECT Interface
   url: https://cp.cloudflare.com/generate_204
@@ -158,19 +175,7 @@ proxy-groups:
   - FOCUS
   - BOOSTER
   - TrafficInner✓
-  - INDONESIA
-  - DIRECT
-  - DIRECT Interface
-  url: https://cp.cloudflare.com/generate_204
-  interval: '100'
-- name: TrafficGaming
-  type: select
-  disable-udp: false
-  proxies:
-  - FOCUS
-  - BOOSTER
-  - TrafficInner✓
-  - INDONESIA
+  - ROUTE 🇮🇩
   - DIRECT
   - DIRECT Interface
   url: https://cp.cloudflare.com/generate_204
@@ -181,11 +186,11 @@ proxy-groups:
   strategy: round-robin
   lazy: true
   disable-udp: false
-  use:
-  - IP 🇸🇬
-  - IP 🇫🇷
-  - IP 🇳🇱
-  - IP 🇺🇲
+  proxies:
+  - ROUTE 🇸🇬
+  - ROUTE 🇫🇷
+  - ROUTE 🇳🇱
+  - ROUTE 🇺🇲
   url: https://cp.cloudflare.com/generate_204
   interval: '100'
 - name: BALANCED
@@ -193,11 +198,11 @@ proxy-groups:
   strategy: round-robin
   lazy: true
   disable-udp: false
-  use:
-  - IP 🇸🇬
-  - IP 🇫🇷
-  - IP 🇳🇱
-  - IP 🇺🇲
+  proxies:
+  - ROUTE 🇸🇬
+  - ROUTE 🇫🇷
+  - ROUTE 🇳🇱
+  - ROUTE 🇺🇲
   url: https://cp.cloudflare.com/generate_204
   interval: '100'
 - name: TESTBEST
@@ -205,27 +210,100 @@ proxy-groups:
   strategy: round-robin
   lazy: true
   disable-udp: false
-  use:
-  - IP 🇸🇬
-  - IP 🇫🇷
-  - IP 🇳🇱
-  - IP 🇺🇲
+  proxies:
+  - ROUTE 🇸🇬
+  - ROUTE 🇫🇷
+  - ROUTE 🇳🇱
+  - ROUTE 🇺🇲
   url: https://cp.cloudflare.com/generate_204
   interval: '100'
 
-- name: INDONESIA
+- name: ROUTE 🇸🇬
   type: load-balance
   strategy: round-robin
   lazy: true
   disable-udp: false
-  proxies:
-  - Route 🇮🇩
-  - Vmess
-  - Vless
-  - DIRECT
-  - DIRECT Interface
+  use:
+  - IP 🇸🇬
   url: https://cp.cloudflare.com/generate_204
-  interval: '30'
+  interval: '100'
+- name: ROUTE 🇫🇷
+  type: load-balance
+  strategy: round-robin
+  lazy: true
+  disable-udp: false
+  use:
+  - IP 🇫🇷
+  url: https://cp.cloudflare.com/generate_204
+  interval: '100'
+- name: ROUTE 🇳🇱
+  type: load-balance
+  strategy: round-robin
+  lazy: true
+  disable-udp: false
+  use:
+  - IP 🇳🇱
+  url: https://cp.cloudflare.com/generate_204
+  interval: '100'
+- name: ROUTE 🇺🇲
+  type: load-balance
+  strategy: round-robin
+  lazy: true
+  disable-udp: false
+  use:
+  - IP 🇺🇲
+  url: https://cp.cloudflare.com/generate_204
+  interval: '100'
+
+- name: ROUTE 🇮🇩
+  type: fallback
+  strategy: round-robin
+  lazy: true
+  disable-udp: false
+  proxies:
+  - IPv1 🇮🇩
+  - IPv2 🇮🇩
+  - IPv3 🇮🇩
+  - IPv4 🇮🇩
+  url: https://cp.cloudflare.com/generate_204
+  interval: '100'
+
+- name: IPv1 🇮🇩
+  type: load-balance
+  strategy: round-robin
+  lazy: true
+  disable-udp: false
+  use:
+  - IPv1 🇮🇩
+  url: https://cp.cloudflare.com/generate_204
+  interval: '100'
+- name: IPv2 🇮🇩
+  type: load-balance
+  strategy: round-robin
+  lazy: true
+  disable-udp: false
+  use:
+  - IPv2 🇮🇩
+  url: https://cp.cloudflare.com/generate_204
+  interval: '100'
+- name: IPv3 🇮🇩
+  type: load-balance
+  strategy: round-robin
+  lazy: true
+  disable-udp: false
+  use:
+  - IPv3 🇮🇩
+  url: https://cp.cloudflare.com/generate_204
+  interval: '100'
+- name: IPv4 🇮🇩
+  type: load-balance
+  strategy: round-robin
+  lazy: true
+  disable-udp: false
+  use:
+  - IPv4 🇮🇩
+  url: https://cp.cloudflare.com/generate_204
+  interval: '100'
 
 - name: Trojan
   type: url-test
@@ -234,34 +312,6 @@ proxy-groups:
   disable-udp: false
   use:
   - Trojan
-  url: https://cp.cloudflare.com/generate_204
-  interval: '100'
-
-- name: Route 🇮🇩
-  type: load-balance
-  strategy: round-robin
-  lazy: true
-  disable-udp: false
-  use:
-  - IP 🇮🇩
-  url: https://cp.cloudflare.com/generate_204
-  interval: '100'
-- name: Vmess
-  type: load-balance
-  strategy: round-robin
-  lazy: true
-  disable-udp: false
-  use:
-  - Vmess
-  url: https://cp.cloudflare.com/generate_204
-  interval: '100'
-- name: Vless
-  type: load-balance
-  strategy: round-robin
-  lazy: true
-  disable-udp: false
-  use:
-  - Vless
   url: https://cp.cloudflare.com/generate_204
   interval: '100'
 
@@ -291,10 +341,15 @@ proxy-groups:
   lazy: true
   disable-udp: false
   proxies:
-  - BOOSTER
-  - BALANCED
-  - TESTBEST
+  - ROUTE 🇸🇬
+  - ROUTE 🇫🇷
+  - ROUTE 🇳🇱
+  - ROUTE 🇺🇲
   - Trojan
+  - IPv4 🇮🇩
+  - IPv3 🇮🇩
+  - IPv2 🇮🇩
+  - IPv1 🇮🇩
   - DIRECT
   - DIRECT Interface
   url: https://cp.cloudflare.com/generate_204
@@ -302,384 +357,203 @@ proxy-groups:
 
 
 
+redir-port: 9797
 port: 7890
 socks-port: 7891
-mixed-port: 7892
-redir-port: 9797
+mixed-port: 7893
 tproxy-port: 9898
-external-controller: 127.0.0.1:9090 
-# secret: "123456"
-external-ui: /data/adb/box/clash/dashboard
-ipv6: false
+ipv6: true
+mode: rule
+log-level: silent
 allow-lan: true
 tcp-concurrent: true
-
-tls:
-  certificate: string
-  private-key: string
-
 unified-delay: true
-geodata-mode: true
-geo-auto-update: false # 是否自动更新 geodata
-geo-update-interval: 24 # 更新间隔，单位：小时
-keep-alive-interval: 1800  # 减少移动端设备耗电
-
-mode: rule  # rule global direct 
-log-level: debug
-global-client-fingerprint: random
-# Note:
-# 可选："chrome", "firefox", "safari", "iOS", "android", "edge", "360"," qq", "random"
-# 若选择 "random", 则按 Cloudflare Radar 数据按概率生成一个现代浏览器指纹。
-
-geodata-loader: standard # memconservative
-find-process-mode: strict
-bind-address: '*'
-# host
-      
-#hosts:
-#  time.facebook.com: 17.253.84.125
-#  time.android.com: 17.253.84.125
-#  '*.mihomo.dev': 127.0.0.1
-#  '.dev': 127.0.0.1
-#  'alpha.mihomo.dev': '::1'
- # test.com: [1.1.1.1, 2.2.2.2]
- # home.lan: lan
-
+external-controller: 0.0.0.0:9090 
+# secret: "123456"
+external-ui: /data/adb/box/clash/dashboard
+bind-address: "*"
+experimental:
+  ignore-resolve-fail: true
 dns:
-  cache-algorithm: arc 
   enable: true
-  listen: 0.0.0.0:1053
-  use-hosts: true
   ipv6: true
-  ipv6-timeout: 300
-  prefer-h3: true
   enhanced-mode: fake-ip
+  listen: 0.0.0.0:7874
   fake-ip-range: 198.18.0.1/16
   fake-ip-filter:
-    - '*'
-    - '+.lan'
-    - '+.local'
-    - '+.leigod.com'
-    - '+.vivox.com'
-    - '+.stun.+'
-    - '.n.n.srv.nintendo.net'
-    - '+.stun.playstation.net'
-    - 'xbox.*.*.microsoft.com'
-    - '*.*.xboxlive.com'
-    - 'lens.l.google.com'
-    - '*.mcdn.bilivideo.cn'
-    - 'localhost.ptlogin2.qq.com'
-    - WORKGROUP
-    - "*.localdomain"
-    - "*.example"
-    - "*.invalid"
-    - "*.localhost"
-    - "*.test"
-    - "*.home.arpa"
-    - time.*.com
-    - time.*.gov
-    - time.*.edu.cn
-    - time.*.apple.com
-    - time1.*.com
-    - time2.*.com
-    - time3.*.com
-    - time4.*.com
-    - time5.*.com
-    - time6.*.com
-    - time7.*.com
-    - ntp.*.com
-    - ntp1.*.com
-    - ntp2.*.com
-    - ntp3.*.com
-    - ntp4.*.com
-    - ntp5.*.com
-    - ntp6.*.com
-    - ntp7.*.com
-    - "*.time.edu.cn"
-    - "*.ntp.org.cn"
-    - "+.pool.ntp.org"
-    - time1.cloud.tencent.com
-    - music.163.com
-    - "*.music.163.com"
-    - "*.126.net"
-    - musicapi.taihe.com
-    - music.taihe.com
-    - songsearch.kugou.com
-    - trackercdn.kugou.com
-    - "*.kuwo.cn"
-    - api-jooxtt.sanook.com
-    - api.joox.com
-    - joox.com
-    - y.qq.com
-    - "*.y.qq.com"
-    - streamoc.music.tc.qq.com
-    - mobileoc.music.tc.qq.com
-    - isure.stream.qqmusic.qq.com
-    - dl.stream.qqmusic.qq.com
-    - aqqmusic.tc.qq.com
-    - amobile.music.tc.qq.com
-    - "*.xiami.com"
-    - "*.music.migu.cn"
-    - music.migu.cn
+  - "*.lan"
+  - "*.localdomain"
+  - "*.example"
+  - "*.invalid"
+  - "*.localhost"
+  - "*.test"
+  - "*.local"
+  - "*.home.arpa"
+  - time.*.com
+  - time.*.gov
+  - time.*.edu.cn
+  - time.*.apple.com
+  - time1.*.com
+  - time2.*.com
+  - time3.*.com
+  - time4.*.com
+  - time5.*.com
+  - time6.*.com
+  - time7.*.com
+  - ntp.*.com
+  - ntp1.*.com
+  - ntp2.*.com
+  - ntp3.*.com
+  - ntp4.*.com
+  - ntp5.*.com
+  - ntp6.*.com
+  - ntp7.*.com
+  - "*.time.edu.cn"
+  - "*.ntp.org.cn"
+  - "+.pool.ntp.org"
+  - time1.cloud.tencent.com
+  - music.163.com
+  - "*.music.163.com"
+  - "*.126.net"
+  - musicapi.taihe.com
+  - music.taihe.com
+  - songsearch.kugou.com
+  - trackercdn.kugou.com
+  - "*.kuwo.cn"
+  - api-jooxtt.sanook.com
+  - api.joox.com
+  - joox.com
+  - y.qq.com
+  - "*.y.qq.com"
+  - streamoc.music.tc.qq.com
+  - mobileoc.music.tc.qq.com
+  - isure.stream.qqmusic.qq.com
+  - dl.stream.qqmusic.qq.com
+  - aqqmusic.tc.qq.com
+  - amobile.music.tc.qq.com
+  - "*.xiami.com"
+  - "*.music.migu.cn"
+  - music.migu.cn
+  - "+.msftconnecttest.com"
+  - "+.msftncsi.com"
+  - msftconnecttest.com
+  - msftncsi.com
+  - localhost.ptlogin2.qq.com
+  - localhost.sec.qq.com
+  - "+.srv.nintendo.net"
+  - "*.n.n.srv.nintendo.net"
+  - "+.stun.playstation.net"
+  - xbox.*.*.microsoft.com
+  - "*.*.xboxlive.com"
+  - xbox.*.microsoft.com
+  - xnotify.xboxlive.com
+  - "+.battlenet.com.cn"
+  - "+.wotgame.cn"
+  - "+.wggames.cn"
+  - "+.wowsgame.cn"
+  - "+.wargaming.net"
+  - proxy.golang.org
+  - stun.*.*
+  - stun.*.*.*
+  - "+.stun.*.*"
+  - "+.stun.*.*.*"
+  - "+.stun.*.*.*.*"
+  - "+.stun.*.*.*.*.*"
+  - heartbeat.belkin.com
+  - "*.linksys.com"
+  - "*.linksyssmartwifi.com"
+  - "*.router.asus.com"
+  - mesu.apple.com
+  - swscan.apple.com
+  - swquery.apple.com
+  - swdownload.apple.com
+  - swcdn.apple.com
+  - swdist.apple.com
+  - lens.l.google.com
+  - stun.l.google.com
+  - "+.nflxvideo.net"
+  - "*.square-enix.com"
+  - "*.finalfantasyxiv.com"
+  - "*.ffxiv.com"
+  - "*.ff14.sdo.com"
+  - ff.dorado.sdo.com
+  - "*.mcdn.bilivideo.cn"
+  - "+.media.dssott.com"
+  - time-ios.apple.com
+  - shark007.net
+  fallback-filter:
+    geoip: true
+    geoip-code: ID
+    ipcidr:
+    - 0.0.0.0/8
+    - 10.0.0.0/8
+    - 100.64.0.0/10
+    - 127.0.0.0/8
+    - 169.254.0.0/16
+    - 172.16.0.0/12
+    - 192.0.0.0/24
+    - 192.0.2.0/24
+    - 192.88.99.0/24
+    - 192.168.0.0/16
+    - 198.18.0.0/15
+    - 198.51.100.0/24
+    - 203.0.113.0/24
+    - 224.0.0.0/4
+    - 240.0.0.0/4
+    - 255.255.255.255/32
+    domain:
+    - "+.google.com"
+    - "+.facebook.com"
+    - "+.youtube.com"
+    - "+.githubusercontent.com"
+    - "+.googlevideo.com"
     - "+.msftconnecttest.com"
     - "+.msftncsi.com"
     - msftconnecttest.com
     - msftncsi.com
-    - localhost.ptlogin2.qq.com
-    - localhost.sec.qq.com
-    - "+.srv.nintendo.net"
-    - "*.n.n.srv.nintendo.net"
-    - "+.stun.playstation.net"
-    - xbox.*.*.microsoft.com
-    - "*.*.xboxlive.com"
-    - xbox.*.microsoft.com
-    - xnotify.xboxlive.com
-    - "+.battlenet.com.cn"
-    - "+.wotgame.cn"
-    - "+.wggames.cn"
-    - "+.wowsgame.cn"
-    - "+.wargaming.net"
-    - proxy.golang.org
-    - stun.*.*
-    - stun.*.*.*
-    - "+.stun.*.*"
-    - "+.stun.*.*.*"
-    - "+.stun.*.*.*.*"
-    - "+.stun.*.*.*.*.*"
-    - heartbeat.belkin.com
-    - "*.linksys.com"
-    - "*.linksyssmartwifi.com"
-    - "*.router.asus.com"
-    - mesu.apple.com
-    - swscan.apple.com
-    - swquery.apple.com
-    - swdownload.apple.com
-    - swcdn.apple.com
-    - swdist.apple.com
-    - lens.l.google.com
-    - stun.l.google.com
-    - "+.nflxvideo.net"
-    - "*.square-enix.com"
-    - "*.finalfantasyxiv.com"
-    - "*.ffxiv.com"
-    - "*.ff14.sdo.com"
-    - ff.dorado.sdo.com
-    - "*.mcdn.bilivideo.cn"
-    - "+.media.dssott.com"
-    - time-ios.apple.com
-    - shark007.net
+    - "+.*"
 
-  nameserver:    # 主要 国内代理
-    - quic://dns.adguard.com:784#🌏 快速选择代理  # DNS over QUIC 测试
-    - https://1.1.1.1/dns-query#🌏 快速选择代理
-    - https://1.0.0.1/dns-query#🌏 快速选择代理
-    - tls://223.5.5.5:853##🌏 快速选择代理 # DNS over TLS
-    - https://doh.pub/dns-query##🌏 快速选择代理 # DNS over HTTPS
-    - https://dns.alidns.com/dns-query##🌏 快速选择代理&h3=true # 强制 HTTP/3，与 perfer-h3 无关，强制开启 DoH 的 HTTP/3 支持，若不支持将无法使用
-    - https://mozilla.cloudflare-dns.com/dns-query##🌏 快速选择代理&h3=true # 指定策略组和使用 HTTP/3
-    - dhcp://en0#🌏 快速选择代理  # dns from dhcp #测试
- #   - tls://dns.google:853
- #   - tls://8.8.8.8:853
- #   - tls://8.8.4.4:853
- #   - tls://dns.alidns.com
- #   - tls://223.5.5.5
- #   - tls://223.6.6.6
- #   - tls://dot.pub
- #   - tls://1.12.12.12
- #   - tls://120.53.53.53
- #   - https://dns.google/dns-query
- #   - https://8.8.8.8/dns-query
- #   - https://8.8.4.4/dns-query
- #   - https://dns.alidns.com/dns-query
- #   - https://223.5.5.5/dns-query
- #   - https://223.6.6.6/dns-query
- #   - https://doh.pub/dns-query
- #   - https://1.12.12.12/dns-query
- #   - https://120.53.53.53/dns-query
- #   - 'tls://8.8.4.4#dns'
- #   - 'tls://1.0.0.1#dns'
- #   - 'tls://[2001:4860:4860::8844]#dns'
- #   - 'tls://[2606:4700:4700::1001]#dns'
-    
- #   - https://dns.adguard.com/dns-query
- #   - tls://dns.adguard.com
- #   - tls://1dot1dot1dot1.cloudflare-dns.com
+  default-nameserver:
+  - 8.8.8.8
+  - 8.8.4.4
+  - 1.1.1.1
+  - 1.0.0.1
+  - 9.9.9.9
+  - 149.112.112.112
+  - 208.67.222.222
+  - 208.67.220.220
+  - 185.228.168.9
+  - 185.228.169.168
+  - 76.76.2.0
+  - 76.76.10.0
+  - 94.140.14.140
+  - 94.140.14.141
+  - 172.105.216.54
 
- #   - https://dns.cloudflare.com/dns-query
- #   - tls://8.8.8.8:853
- #   - https://dns.bebasid.com/dns-query
- #   - tls://dns.bebasid.com
+  nameserver:
+    - https://dns.cloudflare.com/dns-query
+    - tls://8.8.8.8:853
+    - https://dns.bebasid.com/dns-query
+    - tls://dns.bebasid.com
 
-  # 只能使用纯 IP 地址，可使用加密 DNS
-  default-nameserver: 
-    - tls://1.12.12.12:853
-    - tls://223.5.5.5:853
-    - https://223.5.5.5/dns-query 
-    - tcp://119.29.29.29
-    - tcp://223.6.6.6 
-    - system 
-    - 8.8.8.8
-    - 8.8.4.4
-    - 1.1.1.1
-    - 1.0.0.1
-    - 9.9.9.9
-    - 149.112.112.112
-    - 208.67.222.222
-    - 208.67.220.220
-    - 185.228.168.9
-    - 185.228.169.168
-    - 76.76.2.0
-    - 76.76.10.0
-    - 94.140.14.140
-    - 94.140.14.141
-    - 172.105.216.54
-    
-  nameserver-policy:
-    "geosite:cn,private":
-      - https://223.5.5.5/dns-query
-      - https://doh.pub/dns-query
-      - https://doh.360.cn/dns-query
-      - tls://223.5.5.5
-      - tls://dot.pub
-    #"rule-set:direct,private,apple,icloud":
-      - https://223.5.5.5/dns-query
-      - https://doh.pub/dns-query
-      - https://doh.360.cn/dns-query
-      - tls://223.5.5.5
-      - tls://dot.pub
-
-
-  proxy-server-nameserver:
-  #  - https://223.5.5.5/dns-query
-    - https://doh.pub/dns-query
-    - https://doh.360.cn/dns-query
-    - tls://223.5.5.5
-    - tls://dot.pub     
-    
   fallback:
-   #- tls://8.8.4.4
-    - quic://a.passcloud.xyz:784#🌏 快速选择代理 # quic是新兴的，比tls快一倍
-    - tls://8.8.4.4:853#🌏 快速选择代理
-    - tcp://1.1.1.1#🌏 快速选择代理
-    - https://1.1.1.1/dns-query#🌏 快速选择代理&h3=true
-    - https://1.0.0.1/dns-query#🌏 快速选择代理
-    - tls://1dot1dot1dot1.cloudflare-dns.com#🌏 快速选择代理 
-  
-      
-    
-  fallback-filter:
-    geoip: true
-    geoip-code: CN
-    geosite:
-      - cn
-      - gfw
-      
-    ipcidr:
-      - 240.0.0.0/4
-      - 0.0.0.0/8
-      - 10.0.0.0/8
-      - 100.64.0.0/10
-      - 127.0.0.0/8
-      - 169.254.0.0/16
-      - 172.16.0.0/12
-      - 192.0.0.0/24
-      - 192.0.2.0/24
-      - 192.88.99.0/24
-      - 192.168.0.0/16
-      - 198.18.0.0/15
-      - 198.51.100.0/24
-      - 203.0.113.0/24
-      - 224.0.0.0/4
-      - 255.255.255.255/32
-      
-    domain:
-      - '+.google.com'
-      - '+.facebook.com'
-      - '+.youtube.com'
-      - '+.googleapis.+'
-      - "+.githubusercontent.com"
-      - "+.googlevideo.com"
-      - "+.msftconnecttest.com"
-      - "+.msftncsi.com"
-      - "+.*"
-
-tun:
-  enable: true
-  device: gvisor # gvisor mixed utun
-  mtu: 65535 # 65535 # 9000
-  stack: system # gvisor / lwip / system
-  dns-hijack:
-    - any:53  # 需要劫持的 DNS
-    - tcp://any:53
-  auto-route: true # 配置路由表
-  auto-detect-interface: true
-  inet4-route-address:
-    - 0.0.0.0/1
-    - 128.0.0.0/1
-  inet6-route-address:
-    - "::/1"
-    - "8000::/1"
-   # strict-route: true # 将所有连接路由到 tun 来防止泄漏，但你的设备将无法其他设备被访问 热点将无法共享网络
-  include_android_user:
-    - 0
-    # 多开用户
-   #  include_package:
-   #    - com.android.chrome
-  # exclude_package:
-    # - com.tencent.mm #  没必要开
-    
-
-sniffer:
-  enable: true                    
-  force-dns-mapping: false
-  parse-pure-ip: false          
-  override-destination: false      
-
-
-  sniff:
-    TLS:
-      ports: [443, 8443]
-    QUIC:
-      ports: [ 443 ]
-    HTTP:
-      ports: [80, 8080-8880]
-      override-destination: true
-  force-domain:
-    - google.com
-    - +.v2ex.com
-
-  skip-domain:
-    - Mijia Cloud
-    - +.apple.com
-
-  sniffing:
-    - tls
-    - http
-
-  port-whitelist:
-    - "80"
-    - "443"
+    - https://dns.cloudflare.com/dns-query
+    - tls://8.8.8.8:853
+    - https://dns.bebasid.com/dns-query
+    - tls://dns.bebasid.com
 
 profile:
   store-selected: true
+  store-fakeip: true
   store-fake-ip: true
 
-# https://github.com/Loyalsoldier/v2ray-rules-dat 的复刻 https://github.com/DustinWin/ruleset_geodata 
-#geox-url:
-#  geoip: "https://cdn.jsdelivr.net/gh/DustinWin/ruleset_geodata@clash/geoip-all.metadb"
-#  geosite: "https://cdn.jsdelivr.net/gh/DustinWin/ruleset_geodata@clash/geosite-all.dat"
-#  mmdb: "https://cdn.jsdelivr.net/gh/DustinWin/ruleset_geodata@clash/Country-all.mmdb"
-
-# 查看说明 https://github.com/DustinWin/ruleset_geodata/blob/master/README.md
-#  geosite 包含	ads、private、microsoft-cn、apple-cn、google-cn、games-cn、netflix、disney、max、primevideo、appletv、youtube、tiktok、bilibili、ai、networktest、proxy 和 cn
-  
-
-ntp:
+tun:
   enable: true
-  write-to-system: false
-  server: time.apple.com
-  port: 123
-  interval: 30
+  stack: system
+  auto-route: false
+  auto-detect-interface: false
+  dns-hijack:
+  - tcp://any:53
 
 rules:
   ## block ads
@@ -769,7 +643,7 @@ rules:
 - RULE-SET,rule_falsepositive,FOCUS
 - RULE-SET,rule_playstore,FOCUS
 - RULE-SET,rule_umum,FOCUS
-- MATCH,GLOBAL
+- MATCH,FOCUS,GLOBAL
 
 rule-providers:
   rule_umum:
@@ -1038,4 +912,3 @@ rule-providers:
     url: https://raw.githubusercontent.com/GetPush/Clash/main/rule_provider/traffic/rule_falsepositive.yaml
     path: "./rule_provider/traffic/rule_falsepositive.yaml"
     interval: 86400
-
