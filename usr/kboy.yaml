@@ -72,7 +72,13 @@ proxy-providers:
     health-check:
       enable: true
     interval: 12000
-    #21600
+  Vmess:
+    type: http
+    url: "https://raw.githubusercontent.com/GetPush/Clash/main/proxy_provider/Online/Vmess.yaml"
+    path: "./proxy_provider/Online/Vmess.yaml"
+    health-check:
+      enable: true
+    interval: 12000
 
 proxy-groups:
 - name: BOOST
@@ -81,10 +87,11 @@ proxy-groups:
   lazy: true
   disable-udp: false
   proxies:
-  - Type A
-  - Type B
-  - Type C
-  - Type D
+  - TYPE-A
+  - TYPE-B
+  - TYPE-C
+  - TYPE-D
+  - TYPE-E
   - FOCUS
   url: https://cp.cloudflare.com/generate_204
   interval: '30'
@@ -103,10 +110,9 @@ proxy-groups:
   - IPv2 🇮🇩
   - IPv3 🇮🇩
   - IPv4 🇮🇩
+  - Vmess
   - DIRECT
-  - DIRECT Interface
-  use:
-  - IPv1 🇮🇩
+  - DIRECT-M
   url: https://cp.cloudflare.com/generate_204
   interval: '30'
 
@@ -117,7 +123,7 @@ proxy-groups:
   - BOOST
   - REJECT
   - DIRECT
-  - DIRECT Interface
+  - DIRECT-M
   url: https://cp.cloudflare.com/generate_204
   interval: '100'
 
@@ -126,9 +132,10 @@ proxy-groups:
   disable-udp: false
   proxies:
   - DIRECT
-  - DIRECT Interface
+  - DIRECT-M
   - ROUTE 🇮🇩
   - BOOST
+  - TYPE-E
   url: https://cp.cloudflare.com/generate_204
   interval: '100'
 - name: TrafficIndo
@@ -140,7 +147,7 @@ proxy-groups:
   - BOOST
   - FOCUS
   - DIRECT
-  - DIRECT Interface
+  - DIRECT-M
   url: https://cp.cloudflare.com/generate_204
   interval: '100'
 - name: TrafficSosmed
@@ -152,7 +159,7 @@ proxy-groups:
   - BOOST
   - FOCUS
   - DIRECT
-  - DIRECT Interface
+  - DIRECT-M
   url: https://cp.cloudflare.com/generate_204
   interval: '100'
 - name: TrafficChat
@@ -164,7 +171,7 @@ proxy-groups:
   - BOOST
   - FOCUS
   - DIRECT
-  - DIRECT Interface
+  - DIRECT-M
   url: https://cp.cloudflare.com/generate_204
   interval: '100'
 - name: TrafficStreaming
@@ -176,11 +183,11 @@ proxy-groups:
   - BOOST
   - FOCUS
   - DIRECT
-  - DIRECT Interface
+  - DIRECT-M
   url: https://cp.cloudflare.com/generate_204
   interval: '100'
 
-- name: Type A
+- name: TYPE-A
   type: fallback
   strategy: round-robin
   lazy: true
@@ -192,7 +199,7 @@ proxy-groups:
   - ROUTE 🇺🇲
   url: https://cp.cloudflare.com/generate_204
   interval: '100'
-- name: Type B
+- name: TYPE-B
   type: load-balance
   strategy: round-robin
   lazy: true
@@ -204,7 +211,7 @@ proxy-groups:
   - ROUTE 🇺🇲
   url: https://cp.cloudflare.com/generate_204
   interval: '100'
-- name: Type C
+- name: TYPE-C
   type: url-test
   strategy: round-robin
   lazy: true
@@ -216,6 +223,32 @@ proxy-groups:
   - ROUTE 🇺🇲
   url: https://cp.cloudflare.com/generate_204
   interval: '100'
+- name: TYPE-D
+  type: fallback
+  strategy: round-robin
+  lazy: true
+  disable-udp: false
+  proxies:
+  - ROUTE 🇸🇬
+  - ROUTE 🇫🇷
+  - ROUTE 🇳🇱
+  - ROUTE 🇺🇲
+  - Trojan
+  - ROUTE 🇮🇩
+  - DIRECT
+  - DIRECT-M
+  url: https://cp.cloudflare.com/generate_204
+  interval: '30'
+- name: TYPE-E
+  type: fallback
+  strategy: round-robin
+  lazy: true
+  disable-udp: false
+  proxies:
+  - DIRECT
+  - FOCUS
+  url: https://cp.cloudflare.com/generate_204
+  interval: '30'
 
 - name: ROUTE 🇸🇬
   type: load-balance
@@ -314,8 +347,18 @@ proxy-groups:
   url: https://cp.cloudflare.com/generate_204
   interval: '100'
 
+- name: Vmess
+  type: url-test
+  strategy: round-robin
+  lazy: true
+  disable-udp: false
+  use:
+  - Vmess
+  url: https://cp.cloudflare.com/generate_204
+  interval: '100'
+
  # (usb0) interface: eth1 wlan0 eth2 usb0
-- name: DIRECT Interface
+- name: DIRECT-M
   type: select
   disable-udp: false
   interface-name: usb0
@@ -329,41 +372,18 @@ proxy-groups:
   disable-udp: false
   proxies:
   - REJECT
-  - Type A
   - BOOST
   url: https://cp.cloudflare.com/generate_204
   interval: '100'
-
-- name: Type D
-  type: fallback
-  strategy: round-robin
-  lazy: true
-  disable-udp: false
-  proxies:
-  - ROUTE 🇸🇬
-  - ROUTE 🇫🇷
-  - ROUTE 🇳🇱
-  - ROUTE 🇺🇲
-  - Trojan
-  - IPv4 🇮🇩
-  - IPv3 🇮🇩
-  - IPv2 🇮🇩
-  - IPv1 🇮🇩
-  - DIRECT
-  - DIRECT Interface
-  url: https://cp.cloudflare.com/generate_204
-  interval: '30'
-
-
 
 redir-port: 9797
 port: 7890
 socks-port: 7891
 mixed-port: 7893
 tproxy-port: 9898
-ipv6: true
+ipv6: false
 mode: rule
-log-level: silent
+log-level: info
 allow-lan: true
 tcp-concurrent: true
 unified-delay: true
@@ -480,6 +500,7 @@ dns:
   - "+.media.dssott.com"
   - time-ios.apple.com
   - shark007.net
+
   fallback-filter:
     geoip: true
     geoip-code: ID
@@ -511,6 +532,7 @@ dns:
     - msftconnecttest.com
     - msftncsi.com
     - "+.*"
+
   default-nameserver:
   - 8.8.8.8
   - 8.8.4.4
@@ -546,7 +568,7 @@ profile:
   store-fake-ip: true
 
 tun:
-  enable: false
+  enable: true
   stack: system
   auto-route: false
   auto-detect-interface: false
@@ -586,7 +608,7 @@ rules:
 
   ## rules inner, recommended untuk non kuota reguler
 - AND,((PROCESS-NAME,clash),(NOT,((IN-TYPE,inner)))),REJECT
-- IN-TYPE,inner,Type D
+- IN-TYPE,inner,TYPE-D
 
 
 - IP-CIDR,198.18.0.1/16,REJECT,no-resolve
@@ -597,8 +619,9 @@ rules:
 - RULE-SET,rule_lancidr,DIRECT,no-resolve
 
 - RULE-SET,rule_reject,REJECT
-- RULE-SET,rule_malicious,REJECT
-- RULE-SET,rule_maliciousip,REJECT
+- RULE-SET,rule_malicious,TrafficAds
+- RULE-SET,rule_maliciousip,TrafficAds
+
 - RULE-SET,rule_personalads,TrafficAds
 - RULE-SET,rule_basicads,TrafficAds
 - RULE-SET,rule_hijacking,TrafficAds
@@ -641,7 +664,7 @@ rules:
 - RULE-SET,rule_falsepositive,BOOST
 - RULE-SET,rule_playstore,BOOST
 - RULE-SET,rule_umum,BOOST
-- MATCH,BOOST,GLOBAL
+- MATCH,GLOBAL,BOOST
 
 rule-providers:
   rule_umum:
