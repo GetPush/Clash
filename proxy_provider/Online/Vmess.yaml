@@ -1,8 +1,8 @@
 default:
-- &pro 104.21.30.242
-proxies:
+- &bug 104.21.30.242
+bugxies:
 - name: IPv1 🇮🇩 EX16
-  server: *pro
+  server: *bug
   port: 80
   type: vmess
   uuid: 2c9addaf-aa77-4faa-99cc-13b5a63dd97e
@@ -19,7 +19,7 @@ proxies:
   udp: true
 
 - name: IPv2 🇮🇩 EX16
-  server: *pro
+  server: *bug
   port: 80
   type: vmess
   uuid: ed3e646a-b3a9-4721-840c-20623ae74f8b
@@ -36,7 +36,7 @@ proxies:
   udp: true
 
 - name: IPv3 🇮🇩 EX16
-  server: *pro
+  server: *bug
   port: 80
   type: vmess
   uuid: e13ba530-bcd2-4729-a7fc-5b1af607ab13
@@ -53,7 +53,7 @@ proxies:
   udp: true
 
 - name: IPv4 🇮🇩 EX21
-  server: *pro
+  server: *bug
   port: 80
   type: vmess
   uuid: 787987ba-1a18-4eee-9549-7fdbd2f6991e
