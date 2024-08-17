@@ -5,7 +5,7 @@ proxies:
   server: *bug
   port: 80
   type: vmess
-  uuid: 2c9addaf-aa77-4faa-99cc-13b5a63dd97e
+  uuid: 0aaf534e-9b18-41f8-93cb-651b4c8d4513
   alterId: 0
   cipher: auto
   tls: false
@@ -22,7 +22,7 @@ proxies:
   server: *bug
   port: 80
   type: vmess
-  uuid: ed3e646a-b3a9-4721-840c-20623ae74f8b
+  uuid: 88bb7f94-4ef8-44fb-886a-9dc96c7e95d1
   alterId: 0
   cipher: auto
   tls: false
@@ -39,7 +39,7 @@ proxies:
   server: *bug
   port: 80
   type: vmess
-  uuid: e13ba530-bcd2-4729-a7fc-5b1af607ab13
+  uuid: 3471328e-0573-4e94-a996-30c51718c973
   alterId: 0
   cipher: auto
   tls: false
