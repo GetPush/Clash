@@ -1,7 +1,7 @@
 default:
 - &bug 104.21.30.242
 proxies:
-- name: IPv1 🇮🇩 EX16
+- name: IPv1 🇮🇩
   server: *bug
   port: 80
   type: vmess
@@ -18,7 +18,7 @@ proxies:
       Host: id1.v2vmess.site
   udp: true
 
-- name: IPv2 🇮🇩 EX16
+- name: IPv2 🇮🇩
   server: *bug
   port: 80
   type: vmess
@@ -35,7 +35,7 @@ proxies:
       Host: id2.v2vmess.site
   udp: true
 
-- name: IPv3 🇮🇩 EX16
+- name: IPv3 🇮🇩
   server: *bug
   port: 80
   type: vmess
