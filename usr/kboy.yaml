@@ -1,85 +1,214 @@
----
-proxy-providers:
-#Interval: detik
-#86400 = 24 jam #43200 = 12 jam #21600 = 6 jam
-  IP 🇫🇷:
-    type: http
-    url: "https://raw.githubusercontent.com/GetPush/Clash/main/proxy_provider/Online/France.yaml"
-    path: "./proxy_provider/Online/France.yaml"
-    health-check:
-      enable: true
-    interval: 12000
-    #21600
-  IP 🇳🇱:
-    type: http
-    url: "https://raw.githubusercontent.com/GetPush/Clash/main/proxy_provider/Online/Netherlands.yaml"
-    path: "./proxy_provider/Online/Netherlands.yaml"
-    health-check:
-      enable: true
-    interval: 12000
-    #21600
-  IP 🇸🇬:
-    type: http
-    url: "https://raw.githubusercontent.com/GetPush/Clash/main/proxy_provider/Online/Singapore.yaml"
-    path: "./proxy_provider/Online/Singapore.yaml"
-    health-check:
-      enable: true
-    interval: 12000
-    #21600
-  IP 🇺🇲:
-    type: http
-    url: "https://raw.githubusercontent.com/GetPush/Clash/main/proxy_provider/Online/America.yaml"
-    path: "./proxy_provider/Online/America.yaml"
-    health-check:
-      enable: true
-    interval: 12000
-    #21600
+port: 7890
+socks-port: 7891
+mixed-port: 7893
+redir-port: 9797
+tproxy-port: 9898
 
-  IPv1 🇮🇩:
-    type: http
-    url: "https://raw.githubusercontent.com/GetPush/Clash/main/proxy_provider/Online/idv1.yaml"
-    path: "./proxy_provider/Online/idv1.yaml"
-    health-check:
-      enable: true
-    interval: 12000
-  IPv2 🇮🇩:
-    type: http
-    url: "https://raw.githubusercontent.com/GetPush/Clash/main/proxy_provider/Online/idv2.yaml"
-    path: "./proxy_provider/Online/idv2.yaml"
-    health-check:
-      enable: true
-    interval: 12000
-  IPv3 🇮🇩:
-    type: http
-    url: "https://raw.githubusercontent.com/GetPush/Clash/main/proxy_provider/Online/idv3.yaml"
-    path: "./proxy_provider/Online/idv3.yaml"
-    health-check:
-      enable: true
-    interval: 12000
-  IPv4 🇮🇩:
-    type: http
-    url: "https://raw.githubusercontent.com/GetPush/Clash/main/proxy_provider/Online/idv4.yaml"
-    path: "./proxy_provider/Online/idv4.yaml"
-    health-check:
-      enable: true
-    interval: 12000
+# rule 规则匹配
+# global 全局代理(需要在GLOBAL策略组选择代理/策略)
+# direct 全局直连
+# 此项拥有默认值，默认为规则模式
+mode: rule
+allow-lan: true
+unified-delay: true
+bind-address: '*'
 
-#Trojan
-  Trojan:
-    type: http
-    url: "https://raw.githubusercontent.com/GetPush/Clash/main/proxy_provider/Online/Trojan.yaml"
-    path: "./proxy_provider/Online/Trojan.yaml"
-    health-check:
-      enable: true
-    interval: 12000
-  Vmess:
-    type: http
-    url: "https://raw.githubusercontent.com/GetPush/Clash/main/proxy_provider/Online/Vmess.yaml"
-    path: "./proxy_provider/Online/Vmess.yaml"
-    health-check:
-      enable: true
-    interval: 12000
+# silent
+# error
+# warning
+# info
+# debug
+log-level: silent
+ipv6: false
 
+# 更改geoip使用文件,mmdb或者dat,true为dat
+# geodata-mode: true
+
+# 可选的加载模式如下
+# standard：标准加载器
+# memconservative：专为内存受限(小内存)设备优化的加载器(默认值)
+# geodata-loader: memconservative
+
+external-controller: 0.0.0.0:9090 
+# secret: "123456"
+external-ui: /data/adb/box/clash/dashboard
+tcp-concurrent: false
+
+# 目前仅用于 API 的 https
+# tls:
+  # certificate: string # 证书 PEM 格式，或者 证书的路径
+  # private-key: string # 证书对应的私钥 PEM 格式，或者私钥路径
+
+# 全局 TLS 指纹，优先低于 proxy 内的 client-fingerprint。
+# 目前支持开启 TLS 传输的 TCP/grpc/WS/HTTP , 支持协议有 VLESS,Vmess 和 trojan.
+# global-client-fingerprint: chrome
+# Note:
+# 可选："chrome", "firefox", "safari", "iOS", "android", "edge", "360"," qq", "random"
+# 若选择 "random", 则按 Cloudflare Radar 数据按概率生成一个现代浏览器指纹。
+
+# geox-url:
+  # mmdb: "https://raw.githubusercontent.com/Loyalsoldier/geoip/release/Country.mmdb"
+  # geoip: "https://raw.githubusercontent.com/Loyalsoldier/v2ray-rules-dat/release/geoip.dat"
+  # geosite: "https://raw.githubusercontent.com/Loyalsoldier/v2ray-rules-dat/release/geosite.dat"
+
+# 控制是否让 Clash 去匹配进程
+# always 开启，强制匹配所有进程
+# strict 默认，由 Clash 判断是否开启
+# off 不匹配进程，推荐在路由器上使用此模式
+find-process-mode: strict
+
+profile:
+  store-selected: true
+  # 储存 API 对策略组的选择，以供下次启动时使用
+  store-fake-ip: false
+  # 储存 fakeip 映射表，域名再次发生连接时，使用原有映射地址
+
+# sniffer:                           #【Meta专属】sniffer域名嗅探器
+  # enable: false                    # 嗅探器开关
+
+                                   # # 开启后对 redir-host 类型识别的流量进行强制嗅探
+                                   # # 包含 Tun、Redir 和 TProxy 或 DNS 为 redir-host
+  # # force-dns-mapping: false
+  # # parse-pure-ip: false           # 对所有未获取到域名的流量进行强制嗅探
+
+  # override-destination: false      # 是否使用嗅探结果作为实际访问,默认 true
+                                   # # 全局配置,优先级低于 sniffer.sniff 实际配置
+  # sniff: # TLS 默认如果不配置 ports 默认嗅探 443
+    # TLS:
+      # ports: [443, 8443]
+    # HTTP: # 需要嗅探的端口, 默认嗅探 80
+      # ports: [80, 8080-8880]
+      # override-destination: true # 可覆盖 sniffer.override-destination
+  # force-domain:
+    # - +.v2ex.com
+  # # 白名单,跳过嗅探结果
+  # skip-domain:
+    # - Mijia Cloud
+
+tun:
+  enable: true
+  device: utun
+  mtu: 9000
+  stack: system # gvisor / lwip / system
+  dns-hijack:
+    - any:53
+    - tcp://any:53
+  auto-route: true
+  auto-detect-interface: true
+  # include_android_user:
+    # - 0
+    # - 10
+  # include_package:
+  # - com.android.chrome
+  # exclude_package:
+    # - com.whatsapp
+
+dns:
+  enable: true
+  # 可选值 true/false
+  # 是否解析 IPV6, 如为 false, 则回应 AAAA 的空解析
+  ipv6: true
+
+  # 可选值 true/false
+  # 是否开启 DOH 的 http/3
+  # prefer-h3: false
+
+  # 默认 dns, 用于解析 DNS 服务器 的域名
+  # 必须为 ip, 可为加密 dns
+  default-nameserver:
+  #  - 9.9.9.9
+     - tls://223.5.5.5:853
+     - https://223.5.5.5/dns-query
+
+  # dns 服务监听
+  listen: 0.0.0.0:1053
+  use-hosts: true
+
+  # 可选值 fake-ip / redir-host
+  # Clash 的 dns 处理模式
+  enhanced-mode: fake-ip
+
+  # 格式为 ip/掩码
+  # fakeip 下的 IP 段设置，tun 网卡的默认 ip 也使用此值
+  fake-ip-range: 198.18.0.1/16
+
+  # fakeip 过滤，以下地址不会下发 fakeip 映射用于连接
+  fake-ip-filter:
+    - '*.lan'
+    # - localhost.ptlogin2.qq.com
+
+  # 默认的域名解析服务器，如不配置 fallback/proxy-server-nameserver , 则所有域名都由 nameserver 解析
+  nameserver:
+#    - 9.9.9.9
+#    - 8.8.8.8
+#    - 1.0.0.1
+#    - https://dns.cloudflare.com/dns-query
+#    - tls://8.8.8.8:853
+    - https://dns.bebasid.com/dns-query
+    - tls://dns.bebasid.com
+#    - tls://dot.tiar.app
+
+  # proxy-server-nameserver:
+    # - https://doh.pub/dns-query
+
+  # 指定域名查询的解析服务器，可使用 geosite, 优先于 nameserver/fallback 查询
+  # Note: 并发查询，无法保证顺序，以下仅作为书写演示，建议根据自己需求写
+  # nameserver-policy:
+    # 'www.baidu.com': '114.114.114.114'
+    # '+.internal.crop.com': '10.0.0.1'
+    # 'geosite:cn': https://doh.pub/dns-query
+
+  # 后备域名解析服务器，一般情况下使用境外 DNS, 保证结果可信
+  # 配置 fallback后默认启用 fallback-filter,geoip-code为 cn
+  fallback:
+     - tls://8.8.4.4
+     - tls://1.1.1.1
+
+  # 代理节点域名解析服务器，仅用于解析代理节点的域名
+  # proxy-server-nameserver:
+    # - https://doh.pub/dns-query
+
+  # fallback-filter
+  # 后备域名解析服务器筛选，满足条件的将使用 fallback结果或只使用 fallback解析
+  fallback-filter:
+
+    # geoip
+    # 可选值为 true/false
+    # 是否启用 fallback filter
+     geoip: true
+
+    # geoip-code
+    # 可选值为 国家缩写，默认值为 CN
+    # 除了 geoip-code 配置的国家 IP, 其他的 IP 结果会被视为污染
+    # geoip-code 配置的国家的结果会直接采用，否则将采用 fallback结果
+     geoip-code: ID
+
+    # geosite
+    # 可选值为对于的 geosite 内包含的集合
+    # geosite 列表的内容被视为已污染，匹配到 geosite 的域名，将只使用 fallback解析，不去使用 nameserver
+     geosite:
+       - gfw
+
+    # ipcidr
+    # 书写内容为 IP/掩码
+    # 这些网段的结果会被视为污染，nameserver解析出这些结果时将会采用 fallback的解析结果
+     ipcidr:
+       - 240.0.0.0/4
+
+    # domain
+    # 这些域名被视为已污染，匹配到这些域名，会直接使用 fallback解析，不去使用 nameserver
+     domain:
+       - '+.google.com'
+       - '+.facebook.com'
+       - '+.youtube.com'
+
+# hosts:
+  # # block update system android
+  # 'ota.googlezip.net': 127.0.0.1
+  # 'ota-cache1.googlezip.net': 127.0.0.1
+  # 'ota-cache2.googlezip.net': 127.0.0.1
+
+proxies:
 proxy-groups:
 - name: BOOST
   type: select
@@ -114,7 +243,7 @@ proxy-groups:
   - DIRECT
   - DIRECT-M
   url: https://cp.cloudflare.com/generate_204
-  interval: '30'
+  interval: '100'
 
 - name: TrafficAds
   type: select
@@ -129,55 +258,6 @@ proxy-groups:
 
 - name: TrafficGaming
   type: select
-  disable-udp: false
-  proxies:
-  - DIRECT
-  - DIRECT-M
-  - ROUTE 🇮🇩
-  - BOOST
-  - TYPE-E
-  url: https://cp.cloudflare.com/generate_204
-  interval: '100'
-- name: TrafficIndo
-  type: select
-  strategy: round-robin
-  lazy: true
-  disable-udp: false
-  proxies:
-  - BOOST
-  - FOCUS
-  - DIRECT
-  - DIRECT-M
-  url: https://cp.cloudflare.com/generate_204
-  interval: '100'
-- name: TrafficSosmed
-  type: select
-  strategy: round-robin
-  lazy: true
-  disable-udp: false
-  proxies:
-  - BOOST
-  - FOCUS
-  - DIRECT
-  - DIRECT-M
-  url: https://cp.cloudflare.com/generate_204
-  interval: '100'
-- name: TrafficChat
-  type: select
-  strategy: round-robin
-  lazy: true
-  disable-udp: false
-  proxies:
-  - BOOST
-  - FOCUS
-  - DIRECT
-  - DIRECT-M
-  url: https://cp.cloudflare.com/generate_204
-  interval: '100'
-- name: TrafficStreaming
-  type: select
-  strategy: round-robin
-  lazy: true
   disable-udp: false
   proxies:
   - BOOST
@@ -288,7 +368,7 @@ proxy-groups:
   interval: '100'
 
 - name: ROUTE 🇮🇩
-  type: fallback
+  type: url-test
   strategy: round-robin
   lazy: true
   disable-udp: false
@@ -376,303 +456,161 @@ proxy-groups:
   url: https://cp.cloudflare.com/generate_204
   interval: '100'
 
-redir-port: 9797
-port: 7890
-socks-port: 7891
-mixed-port: 7893
-tproxy-port: 9898
-ipv6: false
-mode: rule
-log-level: info
-allow-lan: true
-tcp-concurrent: true
-unified-delay: true
-external-controller: 0.0.0.0:9090 
-# secret: "123456"
-external-ui: /data/adb/box/clash/dashboard
-bind-address: "*"
-experimental:
-  ignore-resolve-fail: true
-dns:
-  enable: true
-  ipv6: true
-  enhanced-mode: fake-ip
-  listen: 0.0.0.0:7874
-  fake-ip-range: 198.18.0.1/16
-  fake-ip-filter:
-  - "*.lan"
-  - "*.localdomain"
-  - "*.example"
-  - "*.invalid"
-  - "*.localhost"
-  - "*.test"
-  - "*.local"
-  - "*.home.arpa"
-  - time.*.com
-  - time.*.gov
-  - time.*.edu.cn
-  - time.*.apple.com
-  - time1.*.com
-  - time2.*.com
-  - time3.*.com
-  - time4.*.com
-  - time5.*.com
-  - time6.*.com
-  - time7.*.com
-  - ntp.*.com
-  - ntp1.*.com
-  - ntp2.*.com
-  - ntp3.*.com
-  - ntp4.*.com
-  - ntp5.*.com
-  - ntp6.*.com
-  - ntp7.*.com
-  - "*.time.edu.cn"
-  - "*.ntp.org.cn"
-  - "+.pool.ntp.org"
-  - time1.cloud.tencent.com
-  - music.163.com
-  - "*.music.163.com"
-  - "*.126.net"
-  - musicapi.taihe.com
-  - music.taihe.com
-  - songsearch.kugou.com
-  - trackercdn.kugou.com
-  - "*.kuwo.cn"
-  - api-jooxtt.sanook.com
-  - api.joox.com
-  - joox.com
-  - y.qq.com
-  - "*.y.qq.com"
-  - streamoc.music.tc.qq.com
-  - mobileoc.music.tc.qq.com
-  - isure.stream.qqmusic.qq.com
-  - dl.stream.qqmusic.qq.com
-  - aqqmusic.tc.qq.com
-  - amobile.music.tc.qq.com
-  - "*.xiami.com"
-  - "*.music.migu.cn"
-  - music.migu.cn
-  - "+.msftconnecttest.com"
-  - "+.msftncsi.com"
-  - msftconnecttest.com
-  - msftncsi.com
-  - localhost.ptlogin2.qq.com
-  - localhost.sec.qq.com
-  - "+.srv.nintendo.net"
-  - "*.n.n.srv.nintendo.net"
-  - "+.stun.playstation.net"
-  - xbox.*.*.microsoft.com
-  - "*.*.xboxlive.com"
-  - xbox.*.microsoft.com
-  - xnotify.xboxlive.com
-  - "+.battlenet.com.cn"
-  - "+.wotgame.cn"
-  - "+.wggames.cn"
-  - "+.wowsgame.cn"
-  - "+.wargaming.net"
-  - proxy.golang.org
-  - stun.*.*
-  - stun.*.*.*
-  - "+.stun.*.*"
-  - "+.stun.*.*.*"
-  - "+.stun.*.*.*.*"
-  - "+.stun.*.*.*.*.*"
-  - heartbeat.belkin.com
-  - "*.linksys.com"
-  - "*.linksyssmartwifi.com"
-  - "*.router.asus.com"
-  - mesu.apple.com
-  - swscan.apple.com
-  - swquery.apple.com
-  - swdownload.apple.com
-  - swcdn.apple.com
-  - swdist.apple.com
-  - lens.l.google.com
-  - stun.l.google.com
-  - "+.nflxvideo.net"
-  - "*.square-enix.com"
-  - "*.finalfantasyxiv.com"
-  - "*.ffxiv.com"
-  - "*.ff14.sdo.com"
-  - ff.dorado.sdo.com
-  - "*.mcdn.bilivideo.cn"
-  - "+.media.dssott.com"
-  - time-ios.apple.com
-  - shark007.net
 
-  fallback-filter:
-    geoip: true
-    geoip-code: ID
-    ipcidr:
-    - 0.0.0.0/8
-    - 10.0.0.0/8
-    - 100.64.0.0/10
-    - 127.0.0.0/8
-    - 169.254.0.0/16
-    - 172.16.0.0/12
-    - 192.0.0.0/24
-    - 192.0.2.0/24
-    - 192.88.99.0/24
-    - 192.168.0.0/16
-    - 198.18.0.0/15
-    - 198.51.100.0/24
-    - 203.0.113.0/24
-    - 224.0.0.0/4
-    - 240.0.0.0/4
-    - 255.255.255.255/32
-    domain:
-    - "+.google.com"
-    - "+.facebook.com"
-    - "+.youtube.com"
-    - "+.githubusercontent.com"
-    - "+.googlevideo.com"
-    - "+.msftconnecttest.com"
-    - "+.msftncsi.com"
-    - msftconnecttest.com
-    - msftncsi.com
-    - "+.*"
+proxy-providers:
+#Interval: detik
+#86400 = 24 jam #43200 = 12 jam #21600 = 6 jam
+  IP 🇫🇷:
+    type: http
+    url: "https://raw.githubusercontent.com/GetPush/Clash/main/proxy_provider/Online/France.yaml"
+    path: "./proxy_provider/Online/France.yaml"
+    health-check:
+      enable: true
+    interval: 12000
+    #21600
+  IP 🇳🇱:
+    type: http
+    url: "https://raw.githubusercontent.com/GetPush/Clash/main/proxy_provider/Online/Netherlands.yaml"
+    path: "./proxy_provider/Online/Netherlands.yaml"
+    health-check:
+      enable: true
+    interval: 12000
+    #21600
+  IP 🇸🇬:
+    type: http
+    url: "https://raw.githubusercontent.com/GetPush/Clash/main/proxy_provider/Online/Singapore.yaml"
+    path: "./proxy_provider/Online/Singapore.yaml"
+    health-check:
+      enable: true
+    interval: 12000
+    #21600
+  IP 🇺🇲:
+    type: http
+    url: "https://raw.githubusercontent.com/GetPush/Clash/main/proxy_provider/Online/America.yaml"
+    path: "./proxy_provider/Online/America.yaml"
+    health-check:
+      enable: true
+    interval: 12000
+    #21600
 
-  default-nameserver:
-  - 8.8.8.8
-  - 8.8.4.4
-  - 1.1.1.1
-  - 1.0.0.1
-  - 9.9.9.9
-  - 149.112.112.112
-  - 208.67.222.222
-  - 208.67.220.220
-  - 185.228.168.9
-  - 185.228.169.168
-  - 76.76.2.0
-  - 76.76.10.0
-  - 94.140.14.140
-  - 94.140.14.141
-  - 172.105.216.54
+  IPv1 🇮🇩:
+    type: http
+    url: "https://raw.githubusercontent.com/GetPush/Clash/main/proxy_provider/Online/idv1.yaml"
+    path: "./proxy_provider/Online/idv1.yaml"
+    health-check:
+      enable: true
+    interval: 12000
+  IPv2 🇮🇩:
+    type: http
+    url: "https://raw.githubusercontent.com/GetPush/Clash/main/proxy_provider/Online/idv2.yaml"
+    path: "./proxy_provider/Online/idv2.yaml"
+    health-check:
+      enable: true
+    interval: 12000
+  IPv3 🇮🇩:
+    type: http
+    url: "https://raw.githubusercontent.com/GetPush/Clash/main/proxy_provider/Online/idv3.yaml"
+    path: "./proxy_provider/Online/idv3.yaml"
+    health-check:
+      enable: true
+    interval: 12000
+  IPv4 🇮🇩:
+    type: http
+    url: "https://raw.githubusercontent.com/GetPush/Clash/main/proxy_provider/Online/idv4.yaml"
+    path: "./proxy_provider/Online/idv4.yaml"
+    health-check:
+      enable: true
+    interval: 12000
 
-  nameserver:
-    - https://dns.cloudflare.com/dns-query
-    - tls://8.8.8.8:853
-    - https://dns.bebasid.com/dns-query
-    - tls://dns.bebasid.com
+#Trojan
+  Trojan:
+    type: http
+    url: "https://raw.githubusercontent.com/GetPush/Clash/main/proxy_provider/Online/Trojan.yaml"
+    path: "./proxy_provider/Online/Trojan.yaml"
+    health-check:
+      enable: true
+    interval: 12000
+  Vmess:
+    type: http
+    url: "https://raw.githubusercontent.com/GetPush/Clash/main/proxy_provider/Online/Vmess.yaml"
+    path: "./proxy_provider/Online/Vmess.yaml"
+    health-check:
+      enable: true
+    interval: 12000
 
-  fallback:
-    - https://dns.cloudflare.com/dns-query
-    - tls://8.8.8.8:853
-    - https://dns.bebasid.com/dns-query
-    - tls://dns.bebasid.com
 
-profile:
-  store-selected: true
-  store-fakeip: true
-  store-fake-ip: true
-
-tun:
-  enable: true
-  stack: system
-  auto-route: false
-  auto-detect-interface: false
-  dns-hijack:
-  - tcp://any:53
+# clash.premium
+# script:
+  # shortcuts:
+    # quic: network == 'udp' and dst_port == 443
+    # youshit: network == 'udp' and ('youtube' in host or 'googlevideo' in host)
 
 rules:
   ## block ads
-- DOMAIN-SUFFIX,googlesyndication.com,TrafficAds
-- AND,((GEOSITE,category-ads-all),(NOT,((DOMAIN-SUFFIX,googlesyndication.com)))),TrafficAds
-- GEOSITE,category-ads-all,TrafficAds
-#- RULE-SET,block,REJECT
-#- SCRIPT,quic,REJECT
-#- SCRIPT,youshit,REJECT
+  # - DOMAIN-SUFFIX,googlesyndication.com,TrafficUmum
+   - AND,((GEOSITE,category-ads-all),(NOT,((DOMAIN-SUFFIX,googlesyndication.com)))),REJECT
+   - GEOSITE,category-ads-all,REJECT
+  # - RULE-SET,block,REJECT
+  # - SCRIPT,quic,REJECT
+  # - SCRIPT,youshit,REJECT
 
   ## direct FCM
-- AND,((NETWORK,TCP),(DST-PORT,5228-5230)),DIRECT
-- AND,((NETWORK,TCP),(DST-PORT,5228-5230),(OR,((DOMAIN-KEYWORD,google)))),DIRECT
+   - AND,((NETWORK,TCP),(DST-PORT,5228-5230)),DIRECT
+   - AND,((NETWORK,TCP),(DST-PORT,5228-5230),(OR,((DOMAIN-KEYWORD,google)))),DIRECT
  
   ## block udp/quic YouTube
-- AND,((NETWORK,udp),(OR,((DST-PORT,443/80),(GEOSITE,youtube)))),REJECT
-- AND,((NETWORK,udp),(GEOSITE,youtube)),REJECT
+   - AND,((NETWORK,udp),(OR,((DST-PORT,443/80),(GEOSITE,youtube)))),REJECT
+   - AND,((NETWORK,udp),(GEOSITE,youtube)),REJECT
 
   # # fix dnsleak
-- IP-CIDR,127.0.0.1/32,REJECT,no-resolve
-#- IP-CIDR,198.18.0.1/16,REJECT,no-resolve
-- IP-CIDR,28.0.0.1/8,REJECT,no-resolve
-- IP-CIDR6,::1/128,REJECT,no-resolve
+   - IP-CIDR,127.0.0.1/32,REJECT,no-resolve
+   - IP-CIDR,198.18.0.1/16,REJECT,no-resolve
+   - IP-CIDR,28.0.0.1/8,REJECT,no-resolve
+   - IP-CIDR6,::1/128,REJECT,no-resolve
   
   ## rules telegram
-#- GEOIP,telegram,TrafficSosmed
-#- GEOSITE,telegram,TrafficSosmed
+  # - GEOIP,telegram,TrafficUmum
+  # - GEOSITE,telegram,TrafficUmum
 
   ## direct ntp
-- AND,((NETWORK,UDP),(DST-PORT,123)),DIRECT
-- DST-PORT,123/136/137-139,DIRECT,udp
+  # - AND,((NETWORK,UDP),(DST-PORT,123)),DIRECT
+  # - DST-PORT,123/136/137-139,DIRECT,udp
 
   ## rules inner, recommended untuk non kuota reguler
-- AND,((PROCESS-NAME,clash),(NOT,((IN-TYPE,inner)))),REJECT
-- IN-TYPE,inner,TYPE-D
+   - AND,((PROCESS-NAME,clash),(NOT,((IN-TYPE,inner)))),REJECT
+   - IN-TYPE,inner,TYPE-D
+
+  ## final
 
 
-- IP-CIDR,198.18.0.1/16,REJECT,no-resolve
-- DST-PORT,22,TrafficChat
+  # - IP-CIDR,198.18.0.1/16,REJECT,no-resolve
+   - DST-PORT,22,BOOST
 
-- RULE-SET,rule_modem,DIRECT,no-resolve
+   - RULE-SET,rule_modem,DIRECT,no-resolve
 
-- RULE-SET,rule_lancidr,DIRECT,no-resolve
+   - RULE-SET,rule_lancidr,DIRECT,no-resolve
 
-- RULE-SET,rule_reject,REJECT
-- RULE-SET,rule_malicious,TrafficAds
-- RULE-SET,rule_maliciousip,TrafficAds
+   - RULE-SET,rule_reject,REJECT
+   - RULE-SET,rule_malicious,REJECT
+   - RULE-SET,rule_maliciousip,REJECT
 
-- RULE-SET,rule_personalads,TrafficAds
-- RULE-SET,rule_basicads,TrafficAds
-- RULE-SET,rule_hijacking,TrafficAds
-- RULE-SET,rule_privacy,TrafficAds
+   - RULE-SET,rule_personalads,TrafficAds
+   - RULE-SET,rule_basicads,TrafficAds
+   - RULE-SET,rule_hijacking,TrafficAds
+   - RULE-SET,rule_privacy,TrafficAds
 
-- RULE-SET,rule_porn,TrafficPorn
-- RULE-SET,rule_nsfw,TrafficPorn
+   - RULE-SET,rule_porn,TrafficPorn
+   - RULE-SET,rule_nsfw,TrafficPorn
 
-- RULE-SET,rule_whatsapp,TrafficChat
+   - RULE-SET,rule_Gaming,TrafficGaming
+   - RULE-SET,rule_games,TrafficGaming
+   - RULE-SET,rule_PortTCP,TrafficGaming
+   - RULE-SET,rule_PortUDP,TrafficGaming
+   - RULE-SET,rule_discord,TrafficGaming
 
-- RULE-SET,rule_disneyplus,TrafficIndo
-- RULE-SET,rule_netflix,TrafficIndo
-- RULE-SET,rule_Indo,TrafficIndo
-- RULE-SET,rule_hbo,TrafficIndo
-- RULE-SET,rule_hboasia,TrafficIndo
-- RULE-SET,rule_hbohk,TrafficIndo
-- RULE-SET,rule_hbousa,TrafficIndo
-
-- RULE-SET,rule_Streaming,TrafficStreaming
-- RULE-SET,rule_iqiyi,TrafficStreaming
-- RULE-SET,rule_iqiyiinter,TrafficStreaming
-- RULE-SET,rule_primevideo,TrafficStreaming
-- RULE-SET,rule_twitch,TrafficStreaming
-- RULE-SET,rule_Youtube,TrafficStreaming
-- RULE-SET,rule_videoconferences,TrafficStreaming
-
-- RULE-SET,rule_Medsos,TrafficSosmed
-- RULE-SET,rule_line,TrafficSosmed
-- RULE-SET,rule_metaverse,TrafficSosmed
-- RULE-SET,rule_tiktok,TrafficSosmed
-- RULE-SET,rule_twitter,TrafficSosmed
-- RULE-SET,rule_telegram,TrafficSosmed
-- RULE-SET,rule_telegramcidr,TrafficSosmed
-
-- RULE-SET,rule_portgames,TrafficChat
-- RULE-SET,rule_Gaming,TrafficGaming
-- RULE-SET,rule_games,TrafficGaming
-- RULE-SET,rule_discord,TrafficGaming
-
-- RULE-SET,rule_falsepositive,BOOST
-- RULE-SET,rule_playstore,BOOST
-- RULE-SET,rule_umum,BOOST
-- MATCH,GLOBAL,BOOST
+   - MATCH,BOOST
 
 rule-providers:
-  rule_umum:
-    type: file
-    behavior: classical
-    path: "./rule_provider/traffic/rule_umum.yaml"
-    url: https://raw.githubusercontent.com/GetPush/Clash/main/rule_provider/traffic/rule_umum.yaml
-    interval: 86400
 #direct
   rule_modem:
     type: file
@@ -765,171 +703,23 @@ rule-providers:
     path: "./rule_provider/games/rule_portgames.yaml"
     url: https://raw.githubusercontent.com/GetPush/Clash/main/rule_provider/games/rule_portgames.yaml
     interval: 86400
+
+  rule_PortTCP:
+    type: file
+    behavior: classical
+    path: "./rule_provider/games/rule_PortTCP.yaml"
+    url: https://raw.githubusercontent.com/GetPush/Clash/main/rule_provider/games/rule_PortTCP.yaml
+    interval: 86400
+  rule_PortUDP:
+    type: file
+    behavior: classical
+    path: "./rule_provider/games/rule_PortUDP.yaml"
+    url: https://raw.githubusercontent.com/GetPush/Clash/main/rule_provider/games/rule_PortUDP.yaml
+    interval: 86400
+
   rule_discord:
     type: file
     behavior: classical
     url: https://raw.githubusercontent.com/GetPush/Clash/main/rule_provider/games/rule_discord.yaml
     path: "./rule_provider/games/rule_discord.yaml"
-    interval: 86400
-
-#indonesia
-  rule_Indo:
-    type: file
-    behavior: classical
-    path: "./rule_provider/traffic/rule_indo.yaml"
-    url: https://raw.githubusercontent.com/GetPush/Clash/main/rule_provider/traffic/rule_indo.yaml
-    interval: 86400
-  rule_disneyplus:
-    type: file
-    behavior: classical
-    url: https://raw.githubusercontent.com/GetPush/Clash/main/rule_provider/traffic/rule_disneyplus.yaml
-    path: "./rule_provider/traffic/rule_disneyplus.yaml"
-    interval: 86400
-  rule_netflix:
-    type: file
-    behavior: domain
-    url: https://raw.githubusercontent.com/GetPush/Clash/main/rule_provider/traffic/rule_netflix.yaml
-    path: "./rule_provider/traffic/rule_netflix.yaml"
-    interval: 86400
-  rule_hbo:
-    type: file
-    behavior: classical
-    url: https://raw.githubusercontent.com/GetPush/Clash/main/rule_provider/traffic/rule_hbo.yaml
-    path: "./rule_provider/traffic/rule_hbo.yaml"
-    interval: 86400
-  rule_hboasia:
-    type: file
-    behavior: classical
-    url: https://raw.githubusercontent.com/GetPush/Clash/main/rule_provider/traffic/rule_hboasia.yaml
-    path: "./rule_provider/traffic/rule_hboasia.yaml"
-    interval: 86400
-  rule_hbohk:
-    type: file
-    behavior: classical
-    url: https://raw.githubusercontent.com/GetPush/Clash/main/rule_provider/traffic/rule_hbohk.yaml
-    path: "./rule_provider/traffic/rule_hbohk.yaml"
-    interval: 86400
-  rule_hbousa:
-    type: file
-    behavior: classical
-    url: https://raw.githubusercontent.com/GetPush/Clash/main/rule_provider/traffic/rule_hbousa.yaml
-    path: "./rule_provider/traffic/rule_hbousa.yaml"
-    interval: 86400
-
-
-#Streaming
-  rule_Streaming:
-    type: file
-    behavior: classical
-    path: "./rule_provider/traffic/rule_streaming.yaml"
-    url: https://raw.githubusercontent.com/GetPush/Clash/main/rule_provider/traffic/rule_streaming.yaml
-    interval: 86400
-  rule_iqiyi:
-    type: file
-    behavior: classical
-    url: https://raw.githubusercontent.com/GetPush/Clash/main/rule_provider/traffic/rule_iqiyi.yaml
-    path: "./rule_provider/traffic/rule_iqiyi.yaml"
-    interval: 86400
-  rule_iqiyiinter:
-    type: file
-    behavior: classical
-    url: https://raw.githubusercontent.com/GetPush/Clash/main/rule_provider/traffic/rule_iqiyiinter.yaml
-    path: "./rule_provider/traffic/rule_iqiyiinter.yaml"
-    interval: 86400
-  rule_twitch:
-    type: file
-    behavior: domain
-    url: https://raw.githubusercontent.com/GetPush/Clash/main/rule_provider/traffic/rule_twitch.yaml
-    path: "./rule_provider/traffic/rule_twitch.yaml"
-    interval: 86400
-  rule_Youtube:
-    type: file
-    behavior: domain
-    url: https://raw.githubusercontent.com/GetPush/Clash/main/rule_provider/traffic/rule_youtube.yaml
-    path: "./rule_provider/traffic/rule_youtube.yaml"
-    interval: 86400
-  rule_videoconferences:
-    type: file
-    behavior: classical
-    path: "./rule_provider/traffic/rule_videoconferences.yaml"
-    url: https://raw.githubusercontent.com/GetPush/Clash/main/rule_provider/traffic/rule_videoconferences.yaml
-    interval: 86400
-  rule_primevideo:
-    type: file
-    behavior: domain
-    url: https://raw.githubusercontent.com/GetPush/Clash/main/rule_provider/traffic/rule_primevideo.yaml
-    path: "./rule_provider/traffic/rule_primevideo.yaml"
-    interval: 86400
-
-
-#sosmed
-  rule_Medsos:
-    type: file
-    behavior: classical
-    path: "./rule_provider/traffic/rule_Medsos.yaml"
-    url: https://raw.githubusercontent.com/GetPush/Clash/main/rule_provider/traffic/rule_Medsos.yaml
-    interval: 86400
-  rule_line:
-    type: file
-    behavior: domain
-    url: https://raw.githubusercontent.com/GetPush/Clash/main/rule_provider/traffic/rule_line.yaml
-    path: "./rule_provider/traffic/rule_line.yaml"
-    interval: 86400
-  rule_metaverse:
-    type: file
-    behavior: domain
-    url: https://raw.githubusercontent.com/GetPush/Clash/main/rule_provider/traffic/rule_metaverse.yaml
-    path: "./rule_provider/traffic/rule_metaverse.yaml"
-    interval: 86400
-  rule_tiktok:
-    type: file
-    behavior: domain
-    url: https://raw.githubusercontent.com/GetPush/Clash/main/rule_provider/traffic/rule_tiktok.yaml
-    path: "./rule_provider/traffic/rule_tiktok.yaml"
-    interval: 86400
-  rule_twitter:
-    type: file
-    behavior: domain
-    url: https://raw.githubusercontent.com/GetPush/Clash/main/rule_provider/traffic/rule_twitter.yaml
-    path: "./rule_provider/traffic/rule_twitter.yaml"
-    interval: 86400
-  rule_telegramcidr:
-    type: file
-    behavior: ipcidr
-    url: https://raw.githubusercontent.com/GetPush/Clash/main/rule_provider/traffic/rule_telegramcidr.yaml
-    path: "./rule_provider/traffic/rule_telegramcidr.yaml"
-    interval: 86400
-  rule_telegram:
-    type: file
-    behavior: domain
-    url: https://raw.githubusercontent.com/GetPush/Clash/main/rule_provider/traffic/rule_telegram.yaml
-    path: "./rule_provider/traffic/rule_telegram.yaml"
-    interval: 86400
-
-
-  rule_Speedtest:
-    type: file
-    behavior: classical
-    url: https://raw.githubusercontent.com/GetPush/Clash/main/rule_provider/traffic/rule_speedtest.yaml
-    path: "./rule_provider/traffic/rule_speedtest.yaml"
-    interval: 86400
-  rule_playstore:
-    type: file
-    behavior: domain
-    url: https://raw.githubusercontent.com/GetPush/Clash/main/rule_provider/traffic/rule_playstore.yaml
-    path: "./rule_provider/traffic/rule_playstore.yaml"
-    interval: 86400
-
-  rule_whatsapp:
-    type: file
-    behavior: classical
-    path: "./rule_provider/traffic/rule_whatsapp.yaml"
-    url: https://raw.githubusercontent.com/GetPush/Clash/main/rule_provider/traffic/rule_whatsapp.yaml
-    interval: 86400
-
-  rule_falsepositive:
-    type: file
-    behavior: classical
-    url: https://raw.githubusercontent.com/GetPush/Clash/main/rule_provider/traffic/rule_falsepositive.yaml
-    path: "./rule_provider/traffic/rule_falsepositive.yaml"
     interval: 86400
