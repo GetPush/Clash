@@ -12,7 +12,7 @@ default:
 - &host3 id3.v2vmess.site
 
 - &uid4 787987ba-1a18-4eee-9549-7fdbd2f6991e
-- &host4 *host4
+- &host4 id4.v2vmess.site
 
 proxies:
 - name: IPv1 🇮🇩
