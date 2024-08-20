@@ -1,70 +1,84 @@
 default:
 - &bug 104.21.30.242
+- &path /vmess
+
+- &uid1 0aaf534e-9b18-41f8-93cb-651b4c8d4513
+- &host1 id1.v2vmess.site
+
+- &uid2 88bb7f94-4ef8-44fb-886a-9dc96c7e95d1
+- &host2 id2.v2vmess.site
+
+- &uid3 3471328e-0573-4e94-a996-30c51718c973
+- &host3 id3.v2vmess.site
+
+- &uid4 787987ba-1a18-4eee-9549-7fdbd2f6991e
+- &host4 *host4
+
 proxies:
 - name: IPv1 🇮🇩
   server: *bug
   port: 80
   type: vmess
-  uuid: 0aaf534e-9b18-41f8-93cb-651b4c8d4513
+  uuid: *uid1
   alterId: 0
   cipher: auto
   tls: false
   skip-cert-verify: true
-  servername: id1.v2vmess.site
+  servername: *host1
   network: ws
   ws-opts:
     path: /vmess
     headers:
-      Host: id1.v2vmess.site
+      Host: *host1
   udp: true
 
 - name: IPv2 🇮🇩
   server: *bug
   port: 80
   type: vmess
-  uuid: 88bb7f94-4ef8-44fb-886a-9dc96c7e95d1
+  uuid: *uid2
   alterId: 0
   cipher: auto
   tls: false
   skip-cert-verify: true
-  servername: id2.v2vmess.site
+  servername: *host2
   network: ws
   ws-opts:
     path: /vmess
     headers:
-      Host: id2.v2vmess.site
+      Host: *host2
   udp: true
 
 - name: IPv3 🇮🇩
   server: *bug
   port: 80
   type: vmess
-  uuid: 3471328e-0573-4e94-a996-30c51718c973
+  uuid: *uid3
   alterId: 0
   cipher: auto
   tls: false
   skip-cert-verify: true
-  servername: id3.v2vmess.site
+  servername: *host3
   network: ws
   ws-opts:
     path: /vmess
     headers:
-      Host: id3.v2vmess.site
+      Host: *host3
   udp: true
 
-- name: IPv4 🇮🇩 EX21
+- name: IPv4 🇮🇩
   server: *bug
   port: 80
   type: vmess
-  uuid: 787987ba-1a18-4eee-9549-7fdbd2f6991e
+  uuid: *uid4
   alterId: 0
   cipher: auto
   tls: false
   skip-cert-verify: true
-  servername: id4.v2vmess.site
+  servername: *host4
   network: ws
   ws-opts:
     path: /vmess
     headers:
-      Host: id4.v2vmess.site
+      Host: *host4
   udp: true
