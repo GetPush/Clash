@@ -27,7 +27,7 @@ proxies:
   servername: *host1
   network: ws
   ws-opts:
-    path: /vmess
+    path: *path
     headers:
       Host: *host1
   udp: true
@@ -44,7 +44,7 @@ proxies:
   servername: *host2
   network: ws
   ws-opts:
-    path: /vmess
+    path: *path
     headers:
       Host: *host2
   udp: true
@@ -61,7 +61,7 @@ proxies:
   servername: *host3
   network: ws
   ws-opts:
-    path: /vmess
+    path: *path
     headers:
       Host: *host3
   udp: true
@@ -78,7 +78,7 @@ proxies:
   servername: *host4
   network: ws
   ws-opts:
-    path: /vmess
+    path: *path
     headers:
       Host: *host4
   udp: true
