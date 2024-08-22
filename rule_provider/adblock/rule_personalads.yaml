@@ -25,6 +25,7 @@ payload:
   - DOMAIN-SUFFIX,adservice.google.com
   - DOMAIN-SUFFIX,googleadservices.com
   - DOMAIN-SUFFIX,analytics.google.com
+  - DOMAIN-SUFFIX,afs.googlesyndication.com
 
 # > Google Analytics
   - DOMAIN-SUFFIX,google-analytics.com
