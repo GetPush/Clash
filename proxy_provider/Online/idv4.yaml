@@ -1,7 +1,7 @@
 default:
 - &bug 104.21.30.242
 - &uid 1eea0c43-8552-45d0-b7ce-767a390840a7
-- &host *host
+- &host id4.v2vmess.site
 - &path /vmess
 
 proxies:
