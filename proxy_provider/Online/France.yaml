@@ -5,7 +5,7 @@ default:
 - &path /sshkit/1828396894/66cf26e35ec25/
 
 proxies:
-- name: 🇸🇬 AXIS GAME JBR B1
+- name: 🇨🇵 AXIS GAME JBR B1
   server: 104.19.142.89
   port: 80
   type: vmess
@@ -22,7 +22,7 @@ proxies:
       Host: *host
   udp: true
 
-- name: 🇸🇬 AXIS All BOOSTER B1
+- name: 🇨🇵 AXIS All BOOSTER B1
   server: 172.64.153.186
   port: 80
   type: vmess
@@ -39,7 +39,7 @@ proxies:
       Host: *host
   udp: true
 
-- name: 🇸🇬 AXIS All BOOSTER B2
+- name: 🇨🇵 AXIS All BOOSTER B2
   server: 104.18.34.70
   port: 80
   type: vmess
@@ -56,7 +56,7 @@ proxies:
       Host: *host
   udp: true
 
-- name: 🇸🇬 AXIS GAME JTM
+- name: 🇨🇵 AXIS GAME JTM
   server: 104.18.21.94
   port: 80
   type: vmess
@@ -73,7 +73,7 @@ proxies:
       Host: *host
   udp: true
 
-- name: 🇸🇬 AXIS GENFLIX
+- name: 🇨🇵 AXIS GENFLIX
   server: 104.21.30.242
   port: 80
   type: vmess
@@ -90,7 +90,7 @@ proxies:
       Host: *host
   udp: true
 
-- name: 🇸🇬 XL AXIS VIDEO B3
+- name: 🇨🇵 XL AXIS VIDEO B3
   server: 104.22.4.240
   port: 80
   type: vmess
@@ -107,7 +107,7 @@ proxies:
       Host: *host
   udp: true
 
-- name: 🇸🇬 XL AXIS SUSHIROLL B2
+- name: 🇨🇵 XL AXIS SUSHIROLL B2
   server: 104.21.69.223
   port: 80
   type: vmess
@@ -124,7 +124,7 @@ proxies:
       Host: *host
   udp: true
 
-- name: 🇸🇬 XL AXIS OPOK B6
+- name: 🇨🇵 XL AXIS OPOK B6
   server: 104.22.28.102
   port: 80
   type: vmess
@@ -141,7 +141,7 @@ proxies:
       Host: *host
   udp: true
 
-- name: 🇸🇬 XL AXIS OPOK B7
+- name: 🇨🇵 XL AXIS OPOK B7
   server: 104.17.58.20
   port: 80
   type: vmess
