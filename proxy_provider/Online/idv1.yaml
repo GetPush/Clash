@@ -1,12 +1,12 @@
 default:
 - &bug 104.21.30.242
-- &uid 24a1b080-545b-4fb4-aa7b-ef06a6634721
+- &uid ddfc2b84-2ea1-4f85-89ad-8643b1049e8d
 - &host id1.v2vmess.site
 - &path /vmess
 
 proxies:
-#### IPv1 EX29
-- name: IPv1 EX29 AXIS GAME JBR B1
+#### IPv1 EX7
+- name: IPv1 EX7 AXIS GAME JBR B1
   server: 104.19.142.89
   port: 80
   type: vmess
@@ -23,7 +23,7 @@ proxies:
       Host: *host
   udp: true
 
-- name: IPv1 EX29 AXIS All BOOSTER B1
+- name: IPv1 EX7 AXIS All BOOSTER B1
   server: 172.64.153.186
   port: 80
   type: vmess
@@ -40,7 +40,7 @@ proxies:
       Host: *host
   udp: true
 
-- name: IPv1 EX29 AXIS All BOOSTER B2
+- name: IPv1 EX7 AXIS All BOOSTER B2
   server: 104.18.34.70
   port: 80
   type: vmess
@@ -57,7 +57,7 @@ proxies:
       Host: *host
   udp: true
 
-- name: IPv1 EX29 AXIS GAME JTM
+- name: IPv1 EX7 AXIS GAME JTM
   server: 104.18.21.94
   port: 80
   type: vmess
@@ -74,7 +74,7 @@ proxies:
       Host: *host
   udp: true
 
-- name: IPv1 EX29 AXIS GENFLIX
+- name: IPv1 EX7 AXIS GENFLIX
   server: 104.21.30.242
   port: 80
   type: vmess
@@ -91,7 +91,7 @@ proxies:
       Host: *host
   udp: true
 
-- name: IPv1 EX29 XL AXIS VIDEO B3
+- name: IPv1 EX7 XL AXIS VIDEO B3
   server: 104.22.4.240
   port: 80
   type: vmess
@@ -108,7 +108,7 @@ proxies:
       Host: *host
   udp: true
 
-- name: IPv1 EX29 XL AXIS SUSHIROLL B2
+- name: IPv1 EX7 XL AXIS SUSHIROLL B2
   server: 104.21.69.223
   port: 80
   type: vmess
@@ -125,7 +125,7 @@ proxies:
       Host: *host
   udp: true
 
-- name: IPv1 EX29 XL AXIS OPOK B6
+- name: IPv1 EX7 XL AXIS OPOK B6
   server: 104.22.28.102
   port: 80
   type: vmess
@@ -142,7 +142,7 @@ proxies:
       Host: *host
   udp: true
 
-- name: IPv1 EX29 XL AXIS OPOK B7
+- name: IPv1 EX7 XL AXIS OPOK B7
   server: 104.17.58.20
   port: 80
   type: vmess
