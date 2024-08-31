@@ -31,7 +31,7 @@ ipv6: false
 
 external-controller: 0.0.0.0:9090 
 # secret: "123456"
-external-ui: /data/adb/box/clash/dashboard
+external-ui: /data/adb/box/clash/ui/metacubexd
 tcp-concurrent: false
 
 # 目前仅用于 API 的 https
@@ -208,6 +208,9 @@ dns:
   # 'ota-cache1.googlezip.net': 127.0.0.1
   # 'ota-cache2.googlezip.net': 127.0.0.1
 
+
+
+
 proxies:
 proxy-groups:
 - name: BOOST
@@ -222,6 +225,8 @@ proxy-groups:
   - TYPE-D
   - TYPE-E
   - FOCUS
+  - DIRECT
+  - DIRECT-M
   url: https://cp.cloudflare.com/generate_204
   interval: '30'
 - name: FOCUS
@@ -240,8 +245,6 @@ proxy-groups:
   - IPv3 🇮🇩
   - IPv4 🇮🇩
   - Vmess
-  - DIRECT
-  - DIRECT-M
   url: https://cp.cloudflare.com/generate_204
   interval: '100'
 
@@ -249,8 +252,8 @@ proxy-groups:
   type: select
   disable-udp: false
   proxies:
-  - BOOST
   - REJECT
+  - BOOST
   - DIRECT
   - DIRECT-M
   url: https://cp.cloudflare.com/generate_204
@@ -280,30 +283,6 @@ proxy-groups:
   url: https://cp.cloudflare.com/generate_204
   interval: '100'
 - name: TYPE-B
-  type: load-balance
-  strategy: round-robin
-  lazy: true
-  disable-udp: false
-  proxies:
-  - ROUTE 🇸🇬
-  - ROUTE 🇫🇷
-  - ROUTE 🇳🇱
-  - ROUTE 🇺🇲
-  url: https://cp.cloudflare.com/generate_204
-  interval: '100'
-- name: TYPE-C
-  type: url-test
-  strategy: round-robin
-  lazy: true
-  disable-udp: false
-  proxies:
-  - ROUTE 🇸🇬
-  - ROUTE 🇫🇷
-  - ROUTE 🇳🇱
-  - ROUTE 🇺🇲
-  url: https://cp.cloudflare.com/generate_204
-  interval: '100'
-- name: TYPE-D
   type: fallback
   strategy: round-robin
   lazy: true
@@ -319,8 +298,32 @@ proxy-groups:
   - DIRECT-M
   url: https://cp.cloudflare.com/generate_204
   interval: '30'
+- name: TYPE-C
+  type: url-test
+  strategy: round-robin
+  lazy: true
+  disable-udp: false
+  proxies:
+  - ROUTE 🇸🇬
+  - ROUTE 🇫🇷
+  - ROUTE 🇳🇱
+  - ROUTE 🇺🇲
+  url: https://cp.cloudflare.com/generate_204
+  interval: '100'
 - name: TYPE-E
-  type: fallback
+  type: load-balance
+  strategy: round-robin
+  lazy: true
+  disable-udp: false
+  proxies:
+  - ROUTE 🇸🇬
+  - ROUTE 🇫🇷
+  - ROUTE 🇳🇱
+  - ROUTE 🇺🇲
+  url: https://cp.cloudflare.com/generate_204
+  interval: '100'
+- name: TYPE-D
+  type: load-balance
   strategy: round-robin
   lazy: true
   disable-udp: false
@@ -328,7 +331,7 @@ proxy-groups:
   - DIRECT
   - FOCUS
   url: https://cp.cloudflare.com/generate_204
-  interval: '30'
+  interval: '100'
 
 - name: ROUTE 🇸🇬
   type: load-balance
@@ -368,7 +371,7 @@ proxy-groups:
   interval: '100'
 
 - name: ROUTE 🇮🇩
-  type: url-test
+  type: load-balance
   strategy: round-robin
   lazy: true
   disable-udp: false
@@ -389,8 +392,9 @@ proxy-groups:
   - IPv1 🇮🇩
   url: https://cp.cloudflare.com/generate_204
   interval: '100'
+
 - name: IPv2 🇮🇩
-  type: load-balance
+  type: fallback
   strategy: round-robin
   lazy: true
   disable-udp: false
@@ -398,8 +402,9 @@ proxy-groups:
   - IPv2 🇮🇩
   url: https://cp.cloudflare.com/generate_204
   interval: '100'
+
 - name: IPv3 🇮🇩
-  type: load-balance
+  type: url-test
   strategy: round-robin
   lazy: true
   disable-udp: false
@@ -407,6 +412,7 @@ proxy-groups:
   - IPv3 🇮🇩
   url: https://cp.cloudflare.com/generate_204
   interval: '100'
+
 - name: IPv4 🇮🇩
   type: load-balance
   strategy: round-robin
@@ -428,7 +434,7 @@ proxy-groups:
   interval: '100'
 
 - name: Vmess
-  type: url-test
+  type: load-balance
   strategy: round-robin
   lazy: true
   disable-udp: false
@@ -460,6 +466,36 @@ proxy-groups:
 proxy-providers:
 #Interval: detik
 #86400 = 24 jam #43200 = 12 jam #21600 = 6 jam
+
+  IPv1 🇮🇩:
+    type: http
+    url: "https://raw.githubusercontent.com/GetPush/Clash/main/proxy_provider/Online/idv1.yaml"
+    path: "./proxy_provider/Online/idv1.yaml"
+    health-check:
+      enable: true
+    interval: 12000
+  IPv2 🇮🇩:
+    type: http
+    url: "https://raw.githubusercontent.com/GetPush/Clash/main/proxy_provider/Online/idv2.yaml"
+    path: "./proxy_provider/Online/idv2.yaml"
+    health-check:
+      enable: true
+    interval: 12000
+  IPv3 🇮🇩:
+    type: http
+    url: "https://raw.githubusercontent.com/GetPush/Clash/main/proxy_provider/Online/idv3.yaml"
+    path: "./proxy_provider/Online/idv3.yaml"
+    health-check:
+      enable: true
+    interval: 12000
+  IPv4 🇮🇩:
+    type: http
+    url: "https://raw.githubusercontent.com/GetPush/Clash/main/proxy_provider/Online/idv4.yaml"
+    path: "./proxy_provider/Online/idv4.yaml"
+    health-check:
+      enable: true
+    interval: 12000
+
   IP 🇫🇷:
     type: http
     url: "https://raw.githubusercontent.com/GetPush/Clash/main/proxy_provider/Online/France.yaml"
@@ -493,35 +529,6 @@ proxy-providers:
     interval: 12000
     #21600
 
-  IPv1 🇮🇩:
-    type: http
-    url: "https://raw.githubusercontent.com/GetPush/Clash/main/proxy_provider/Online/idv1.yaml"
-    path: "./proxy_provider/Online/idv1.yaml"
-    health-check:
-      enable: true
-    interval: 12000
-  IPv2 🇮🇩:
-    type: http
-    url: "https://raw.githubusercontent.com/GetPush/Clash/main/proxy_provider/Online/idv2.yaml"
-    path: "./proxy_provider/Online/idv2.yaml"
-    health-check:
-      enable: true
-    interval: 12000
-  IPv3 🇮🇩:
-    type: http
-    url: "https://raw.githubusercontent.com/GetPush/Clash/main/proxy_provider/Online/idv3.yaml"
-    path: "./proxy_provider/Online/idv3.yaml"
-    health-check:
-      enable: true
-    interval: 12000
-  IPv4 🇮🇩:
-    type: http
-    url: "https://raw.githubusercontent.com/GetPush/Clash/main/proxy_provider/Online/idv4.yaml"
-    path: "./proxy_provider/Online/idv4.yaml"
-    health-check:
-      enable: true
-    interval: 12000
-
 #Trojan
   Trojan:
     type: http
@@ -547,9 +554,12 @@ proxy-providers:
 
 rules:
   ## block ads
-  # - DOMAIN-SUFFIX,googlesyndication.com,TrafficUmum
-   - AND,((GEOSITE,category-ads-all),(NOT,((DOMAIN-SUFFIX,googlesyndication.com)))),REJECT
-   - GEOSITE,category-ads-all,REJECT
+   - DOMAIN-SUFFIX,pagead2.googlesyndication.com,BOOST
+   - DOMAIN-SUFFIX,video-ad-stats.googlesyndication.com,BOOST
+   - DOMAIN-SUFFIX,googlesyndication.com,BOOST
+   - DOMAIN-SUFFIX,www3.doubleclick.net,BOOST
+  # - AND,((GEOSITE,category-ads-all),(NOT,((DOMAIN-SUFFIX,googlesyndication.com)))),TrafficAds
+  # - GEOSITE,category-ads-all,TrafficAds
   # - RULE-SET,block,REJECT
   # - SCRIPT,quic,REJECT
   # - SCRIPT,youshit,REJECT
@@ -573,12 +583,12 @@ rules:
   # - GEOSITE,telegram,TrafficUmum
 
   ## direct ntp
-  # - AND,((NETWORK,UDP),(DST-PORT,123)),DIRECT
-  # - DST-PORT,123/136/137-139,DIRECT,udp
+   - AND,((NETWORK,UDP),(DST-PORT,123)),DIRECT
+   - DST-PORT,123/136/137-139,DIRECT,udp
 
   ## rules inner, recommended untuk non kuota reguler
    - AND,((PROCESS-NAME,clash),(NOT,((IN-TYPE,inner)))),REJECT
-   - IN-TYPE,inner,TYPE-D
+   - IN-TYPE,inner,TYPE-B
 
   ## final
 
@@ -586,18 +596,21 @@ rules:
   # - IP-CIDR,198.18.0.1/16,REJECT,no-resolve
    - DST-PORT,22,BOOST
 
-   - RULE-SET,rule_modem,DIRECT,no-resolve
-
    - RULE-SET,rule_lancidr,DIRECT,no-resolve
 
    - RULE-SET,rule_reject,REJECT
    - RULE-SET,rule_malicious,REJECT
    - RULE-SET,rule_maliciousip,REJECT
 
+   - RULE-SET,rule_adblock,TrafficAds
    - RULE-SET,rule_personalads,TrafficAds
+
    - RULE-SET,rule_basicads,TrafficAds
    - RULE-SET,rule_hijacking,TrafficAds
    - RULE-SET,rule_privacy,TrafficAds
+
+#   - GEOSITE,oisd-full,TrafficAds
+#   - GEOSITE,rule-ads,TrafficAds
 
    - RULE-SET,rule_porn,TrafficPorn
    - RULE-SET,rule_nsfw,TrafficPorn
@@ -612,18 +625,13 @@ rules:
 
 rule-providers:
 #direct
-  rule_modem:
-    type: file
-    behavior: ipcidr
-    url: https://raw.githubusercontent.com/GetPush/Clash/main/rule_provider/traffic/rule_modem.yaml
-    path: "./rule_provider/traffic/rule_modem.yaml"
-    interval: 86400
   rule_lancidr:
     type: file
     behavior: ipcidr
     url: https://raw.githubusercontent.com/GetPush/Clash/main/rule_provider/traffic/rule_lancidr.yaml
     path: "./rule_provider/traffic/rule_lancidr.yaml"
     interval: 86400
+
 
 #adblock
   rule_malicious:
@@ -668,6 +676,14 @@ rule-providers:
     url: https://raw.githubusercontent.com/GetPush/Clash/main/rule_provider/adblock/rule_privacy.yaml
     path: "./rule_provider/adblock/rule_privacy.yaml"
     interval: 86400
+
+  rule_adblock:
+    type: file
+    behavior: classical
+    url: https://raw.githubusercontent.com/GetPush/Clash/main/rule_provider/adblock/rule_adblock.yaml
+    path: "./rule_provider/adblock/rule_adblock.yaml"
+    interval: 86400
+
 
 #porn
   rule_porn:
