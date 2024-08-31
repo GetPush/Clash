@@ -225,6 +225,8 @@ proxy-groups:
   - TYPE-D
   - TYPE-E
   - FOCUS
+  - DIRECT
+  - DIRECT-M
   url: https://cp.cloudflare.com/generate_204
   interval: '30'
 - name: FOCUS
@@ -243,8 +245,6 @@ proxy-groups:
   - IPv3 🇮🇩
   - IPv4 🇮🇩
   - Vmess
-  - DIRECT
-  - DIRECT-M
   url: https://cp.cloudflare.com/generate_204
   interval: '100'
 
