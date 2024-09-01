@@ -22,6 +22,7 @@ proxies:
     headers:
       Host: *host
   udp: true
+  interface-name: eth1
 
 - name: IPv1 EX7 AXIS All BOOSTER B1
   server: 172.64.153.186
@@ -39,6 +40,7 @@ proxies:
     headers:
       Host: *host
   udp: true
+  interface-name: eth1
 
 - name: IPv1 EX7 AXIS All BOOSTER B2
   server: 104.18.34.70
@@ -56,6 +58,7 @@ proxies:
     headers:
       Host: *host
   udp: true
+  interface-name: eth1
 
 - name: IPv1 EX7 AXIS GAME JTM
   server: 104.18.21.94
@@ -73,6 +76,7 @@ proxies:
     headers:
       Host: *host
   udp: true
+  interface-name: eth1
 
 - name: IPv1 EX7 AXIS GENFLIX
   server: 104.21.30.242
@@ -90,6 +94,7 @@ proxies:
     headers:
       Host: *host
   udp: true
+  interface-name: eth1
 
 - name: IPv1 EX7 XL AXIS VIDEO B3
   server: 104.22.4.240
@@ -107,6 +112,7 @@ proxies:
     headers:
       Host: *host
   udp: true
+  interface-name: eth1
 
 - name: IPv1 EX7 XL AXIS SUSHIROLL B2
   server: 104.21.69.223
@@ -124,6 +130,7 @@ proxies:
     headers:
       Host: *host
   udp: true
+  interface-name: eth1
 
 - name: IPv1 EX7 XL AXIS OPOK B6
   server: 104.22.28.102
@@ -141,6 +148,7 @@ proxies:
     headers:
       Host: *host
   udp: true
+  interface-name: eth1
 
 - name: IPv1 EX7 XL AXIS OPOK B7
   server: 104.17.58.20
@@ -158,3 +166,4 @@ proxies:
     headers:
       Host: *host
   udp: true
+  interface-name: eth1
