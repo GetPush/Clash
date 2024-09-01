@@ -3,13 +3,13 @@ default:
 - &bug2 104.19.142.89
 - &path /vmess
 
-- &uid1 0aaf534e-9b18-41f8-93cb-651b4c8d4513
+- &uid1 ddfc2b84-2ea1-4f85-89ad-8643b1049e8d
 - &host1 id1.v2vmess.site
 
-- &uid2 88bb7f94-4ef8-44fb-886a-9dc96c7e95d1
+- &uid2 2a0e452c-7f87-4d69-b98c-b55ce006cc23
 - &host2 id2.v2vmess.site
 
-- &uid3 3471328e-0573-4e94-a996-30c51718c973
+- &uid3 6209ecc8-e7f7-42d1-84b7-303529c431ac
 - &host3 id3.v2vmess.site
 
 - &uid4 787987ba-1a18-4eee-9549-7fdbd2f6991e
