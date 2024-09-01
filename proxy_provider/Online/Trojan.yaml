@@ -13,7 +13,6 @@ proxies:
     headers:
       Host: sg1-trojan.bonds.id
   udp: true
-  interface-name: eth1
 
 - name: 🇸🇬 🐎 HE1 AXIS All BOOSTER B2
   server: 104.18.34.70
@@ -28,7 +27,6 @@ proxies:
     headers:
       Host: sg1-trojan.bonds.id
   udp: true
-  interface-name: eth1
 
 
 # SG HE2
@@ -45,7 +43,6 @@ proxies:
     headers:
       Host: sg2-trojan.bonds.id
   udp: true
-  interface-name: eth1
 
 - name: 🇸🇬 🐎 HE2 AXIS All BOOSTER B2
   server: 104.18.34.70
@@ -60,7 +57,6 @@ proxies:
     headers:
       Host: sg2-trojan.bonds.id
   udp: true
-  interface-name: eth1
 
 
 # SG HE3
@@ -77,7 +73,6 @@ proxies:
     headers:
       Host: sg3-trojan.bonds.id
   udp: true
-  interface-name: eth1
 
 - name: 🇸🇬 🐎 HE3 AXIS All BOOSTER B2
   server: 104.18.34.70
@@ -92,7 +87,6 @@ proxies:
     headers:
       Host: sg3-trojan.bonds.id
   udp: true
-  interface-name: eth1
 
 
 # SG MELBI
@@ -109,7 +103,6 @@ proxies:
     headers:
       Host: sg-4.test3.net
   udp: true
-  interface-name: eth1
 
 - name: 🇸🇬 🐎 MELBI AXIS All BOOSTER B2
   server: 104.18.34.70
@@ -124,4 +117,3 @@ proxies:
     headers:
       Host: sg-4.test3.net
   udp: true
-  interface-name: eth1
