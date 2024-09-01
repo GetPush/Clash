@@ -31,6 +31,7 @@ proxies:
     headers:
       Host: *host1
   udp: true
+  interface-name: usb0
 
 - name: IPv2 🇮🇩 GO
   server: *bug
@@ -48,6 +49,7 @@ proxies:
     headers:
       Host: *host2
   udp: true
+  interface-name: usb0
 
 - name: IPv3 🇮🇩 GO
   server: *bug
@@ -65,6 +67,7 @@ proxies:
     headers:
       Host: *host3
   udp: true
+  interface-name: usb0
 
 - name: IPv4 🇮🇩 GO
   server: *bug
@@ -82,3 +85,4 @@ proxies:
     headers:
       Host: *host4
   udp: true
+  interface-name: usb0
