@@ -1,23 +1,24 @@
 default:
-- &bug1 104.21.30.242
-- &bug2 104.19.142.89
-- &path /vmess
-
 - &uid1 ddfc2b84-2ea1-4f85-89ad-8643b1049e8d
 - &host1 id1.v2vmess.site
+- &path1 /vmess
 
 - &uid2 2a0e452c-7f87-4d69-b98c-b55ce006cc23
 - &host2 id2.v2vmess.site
+- &path2 /vmess
 
 - &uid3 6209ecc8-e7f7-42d1-84b7-303529c431ac
 - &host3 id3.v2vmess.site
+- &path3 /vmess
 
-- &uid4 787987ba-1a18-4eee-9549-7fdbd2f6991e
+- &uid4 1eea0c43-8552-45d0-b7ce-767a390840a7
 - &host4 id4.v2vmess.site
+- &path4 /vmess
 
 proxies:
-- name: IPv1-1 🇮🇩 VPN1
-  server: *bug1
+#### IPv1 EX7
+- name: IPv1 EX7 AXIS GAME JBR B1
+  server: 104.19.142.89
   port: 80
   type: vmess
   uuid: *uid1
@@ -28,13 +29,14 @@ proxies:
   servername: *host1
   network: ws
   ws-opts:
-    path: *path
+    path: *path1
     headers:
       Host: *host1
   udp: true
   interface-name: eth1
-- name: IPv1-2 🇮🇩 VPN1
-  server: *bug2
+
+- name: IPv1 EX7 AXIS All BOOSTER B1
+  server: 172.64.153.186
   port: 80
   type: vmess
   uuid: *uid1
@@ -45,14 +47,142 @@ proxies:
   servername: *host1
   network: ws
   ws-opts:
-    path: *path
+    path: *path1
     headers:
       Host: *host1
   udp: true
   interface-name: eth1
 
-- name: IPv2-1 🇮🇩 VPN1
-  server: *bug1
+- name: IPv1 EX7 AXIS All BOOSTER B2
+  server: 104.18.34.70
+  port: 80
+  type: vmess
+  uuid: *uid1
+  alterId: 0
+  cipher: auto
+  tls: false
+  skip-cert-verify: true
+  servername: *host1
+  network: ws
+  ws-opts:
+    path: *path1
+    headers:
+      Host: *host1
+  udp: true
+  interface-name: eth1
+
+- name: IPv1 EX7 AXIS GAME JTM
+  server: 104.18.21.94
+  port: 80
+  type: vmess
+  uuid: *uid1
+  alterId: 0
+  cipher: auto
+  tls: false
+  skip-cert-verify: true
+  servername: *host1
+  network: ws
+  ws-opts:
+    path: *path1
+    headers:
+      Host: *host1
+  udp: true
+  interface-name: eth1
+
+- name: IPv1 EX7 AXIS GENFLIX
+  server: 104.21.30.242
+  port: 80
+  type: vmess
+  uuid: *uid1
+  alterId: 0
+  cipher: auto
+  tls: false
+  skip-cert-verify: true
+  servername: *host1
+  network: ws
+  ws-opts:
+    path: *path1
+    headers:
+      Host: *host1
+  udp: true
+  interface-name: eth1
+
+- name: IPv1 EX7 XL AXIS VIDEO B3
+  server: 104.22.4.240
+  port: 80
+  type: vmess
+  uuid: *uid1
+  alterId: 0
+  cipher: auto
+  tls: false
+  skip-cert-verify: true
+  servername: *host1
+  network: ws
+  ws-opts:
+    path: *path1
+    headers:
+      Host: *host1
+  udp: true
+  interface-name: eth1
+
+- name: IPv1 EX7 XL AXIS SUSHIROLL B2
+  server: 104.21.69.223
+  port: 80
+  type: vmess
+  uuid: *uid1
+  alterId: 0
+  cipher: auto
+  tls: false
+  skip-cert-verify: true
+  servername: *host1
+  network: ws
+  ws-opts:
+    path: *path1
+    headers:
+      Host: *host1
+  udp: true
+  interface-name: eth1
+
+- name: IPv1 EX7 XL AXIS OPOK B6
+  server: 104.22.28.102
+  port: 80
+  type: vmess
+  uuid: *uid1
+  alterId: 0
+  cipher: auto
+  tls: false
+  skip-cert-verify: true
+  servername: *host1
+  network: ws
+  ws-opts:
+    path: *path1
+    headers:
+      Host: *host1
+  udp: true
+  interface-name: eth1
+
+- name: IPv1 EX7 XL AXIS OPOK B7
+  server: 104.17.58.20
+  port: 80
+  type: vmess
+  uuid: *uid1
+  alterId: 0
+  cipher: auto
+  tls: false
+  skip-cert-verify: true
+  servername: *host1
+  network: ws
+  ws-opts:
+    path: *path1
+    headers:
+      Host: *host1
+  udp: true
+  interface-name: eth1
+
+
+#### IPv2
+- name: IPv2 🇮🇩 EX7 AXIS GAME JBR B1
+  server: 104.19.142.89
   port: 80
   type: vmess
   uuid: *uid2
@@ -63,13 +193,14 @@ proxies:
   servername: *host2
   network: ws
   ws-opts:
-    path: *path
+    path: *path2
     headers:
       Host: *host2
   udp: true
   interface-name: eth1
-- name: IPv2-2 🇮🇩 VPN1
-  server: *bug2
+
+- name: IPv2 🇮🇩 EX7 AXIS All BOOSTER B1
+  server: 172.64.153.186
   port: 80
   type: vmess
   uuid: *uid2
@@ -80,31 +211,142 @@ proxies:
   servername: *host2
   network: ws
   ws-opts:
-    path: *path
+    path: *path2
     headers:
       Host: *host2
   udp: true
   interface-name: eth1
 
-- name: IPv3-1 🇮🇩 VPN1
-  server: *bug1
+- name: IPv2 🇮🇩 EX7 AXIS All BOOSTER B2
+  server: 104.18.34.70
   port: 80
   type: vmess
-  uuid: *uid3
+  uuid: *uid2
   alterId: 0
   cipher: auto
   tls: false
   skip-cert-verify: true
-  servername: *host3
+  servername: *host2
   network: ws
   ws-opts:
-    path: *path
+    path: *path2
     headers:
-      Host: *host3
+      Host: *host2
   udp: true
   interface-name: eth1
-- name: IPv3-2 🇮🇩 VPN1
-  server: *bug2
+
+- name: IPv2 🇮🇩 EX7 AXIS GAME JTM
+  server: 104.18.21.94
+  port: 80
+  type: vmess
+  uuid: *uid2
+  alterId: 0
+  cipher: auto
+  tls: false
+  skip-cert-verify: true
+  servername: *host2
+  network: ws
+  ws-opts:
+    path: *path2
+    headers:
+      Host: *host2
+  udp: true
+  interface-name: eth1
+
+- name: IPv2 🇮🇩 EX7 AXIS GENFLIX
+  server: 104.21.30.242
+  port: 80
+  type: vmess
+  uuid: *uid2
+  alterId: 0
+  cipher: auto
+  tls: false
+  skip-cert-verify: true
+  servername: *host2
+  network: ws
+  ws-opts:
+    path: *path2
+    headers:
+      Host: *host2
+  udp: true
+  interface-name: eth1
+
+- name: IPv2 🇮🇩 EX7 XL AXIS VIDEO B3
+  server: 104.22.4.240
+  port: 80
+  type: vmess
+  uuid: *uid2
+  alterId: 0
+  cipher: auto
+  tls: false
+  skip-cert-verify: true
+  servername: *host2
+  network: ws
+  ws-opts:
+    path: *path2
+    headers:
+      Host: *host2
+  udp: true
+  interface-name: eth1
+
+- name: IPv2 🇮🇩 EX7 XL AXIS SUSHIROLL B2
+  server: 104.21.69.223
+  port: 80
+  type: vmess
+  uuid: *uid2
+  alterId: 0
+  cipher: auto
+  tls: false
+  skip-cert-verify: true
+  servername: *host2
+  network: ws
+  ws-opts:
+    path: *path2
+    headers:
+      Host: *host2
+  udp: true
+  interface-name: eth1
+
+- name: IPv2 🇮🇩 EX7 XL AXIS OPOK B6
+  server: 104.22.28.102
+  port: 80
+  type: vmess
+  uuid: *uid2
+  alterId: 0
+  cipher: auto
+  tls: false
+  skip-cert-verify: true
+  servername: *host2
+  network: ws
+  ws-opts:
+    path: *path2
+    headers:
+      Host: *host2
+  udp: true
+  interface-name: eth1
+
+- name: IPv2 🇮🇩 EX7 XL AXIS OPOK B7
+  server: 104.17.58.20
+  port: 80
+  type: vmess
+  uuid: *uid2
+  alterId: 0
+  cipher: auto
+  tls: false
+  skip-cert-verify: true
+  servername: *host2
+  network: ws
+  ws-opts:
+    path: *path2
+    headers:
+      Host: *host2
+  udp: true
+  interface-name: eth1
+
+
+#### IPv3 EX8
+- name: IPv3 EX8 AXIS GAME JBR B1
+  server: 104.19.142.89
   port: 80
   type: vmess
   uuid: *uid3
@@ -115,14 +357,160 @@ proxies:
   servername: *host3
   network: ws
   ws-opts:
-    path: *path
+    path: *path3
     headers:
       Host: *host3
   udp: true
   interface-name: eth1
 
-- name: IPv4-1 🇮🇩 VPN1
-  server: *bug1
+- name: IPv3 EX8 AXIS All BOOSTER B1
+  server: 172.64.153.186
+  port: 80
+  type: vmess
+  uuid: *uid3
+  alterId: 0
+  cipher: auto
+  tls: false
+  skip-cert-verify: true
+  servername: *host3
+  network: ws
+  ws-opts:
+    path: *path3
+    headers:
+      Host: *host3
+  udp: true
+  interface-name: eth1
+
+- name: IPv3 EX8 AXIS All BOOSTER B2
+  server: 104.18.34.70
+  port: 80
+  type: vmess
+  uuid: *uid3
+  alterId: 0
+  cipher: auto
+  tls: false
+  skip-cert-verify: true
+  servername: *host3
+  network: ws
+  ws-opts:
+    path: *path3
+    headers:
+      Host: *host3
+  udp: true
+  interface-name: eth1
+
+- name: IPv3 EX8 AXIS GAME JTM
+  server: 104.18.21.94
+  port: 80
+  type: vmess
+  uuid: *uid3
+  alterId: 0
+  cipher: auto
+  tls: false
+  skip-cert-verify: true
+  servername: *host3
+  network: ws
+  ws-opts:
+    path: *path3
+    headers:
+      Host: *host3
+  udp: true
+  interface-name: eth1
+
+- name: IPv3 EX8 AXIS GENFLIX
+  server: 104.21.30.242
+  port: 80
+  type: vmess
+  uuid: *uid3
+  alterId: 0
+  cipher: auto
+  tls: false
+  skip-cert-verify: true
+  servername: *host3
+  network: ws
+  ws-opts:
+    path: *path3
+    headers:
+      Host: *host3
+  udp: true
+  interface-name: eth1
+
+- name: IPv3 EX8 XL AXIS VIDEO B3
+  server: 104.22.4.240
+  port: 80
+  type: vmess
+  uuid: *uid3
+  alterId: 0
+  cipher: auto
+  tls: false
+  skip-cert-verify: true
+  servername: *host3
+  network: ws
+  ws-opts:
+    path: *path3
+    headers:
+      Host: *host3
+  udp: true
+  interface-name: eth1
+
+- name: IPv3 EX8 XL AXIS SUSHIROLL B2
+  server: 104.21.69.223
+  port: 80
+  type: vmess
+  uuid: *uid3
+  alterId: 0
+  cipher: auto
+  tls: false
+  skip-cert-verify: true
+  servername: *host3
+  network: ws
+  ws-opts:
+    path: *path3
+    headers:
+      Host: *host3
+  udp: true
+  interface-name: eth1
+
+- name: IPv3 EX8 XL AXIS OPOK B6
+  server: 104.22.28.102
+  port: 80
+  type: vmess
+  uuid: *uid3
+  alterId: 0
+  cipher: auto
+  tls: false
+  skip-cert-verify: true
+  servername: *host3
+  network: ws
+  ws-opts:
+    path: *path3
+    headers:
+      Host: *host3
+  udp: true
+  interface-name: eth1
+
+- name: IPv3 EX8 XL AXIS OPOK B7
+  server: 104.17.58.20
+  port: 80
+  type: vmess
+  uuid: *uid3
+  alterId: 0
+  cipher: auto
+  tls: false
+  skip-cert-verify: true
+  servername: *host3
+  network: ws
+  ws-opts:
+    path: *path3
+    headers:
+      Host: *host3
+  udp: true
+  interface-name: eth1
+
+
+#### IPv4
+- name: IPv4 🇮🇩 EX4 AXIS GAME JBR B1
+  server: 104.19.142.89
   port: 80
   type: vmess
   uuid: *uid4
@@ -133,13 +521,14 @@ proxies:
   servername: *host4
   network: ws
   ws-opts:
-    path: *path
+    path: /vmess
     headers:
       Host: *host4
   udp: true
   interface-name: eth1
-- name: IPv4-2 🇮🇩 VPN1
-  server: *bug2
+
+- name: IPv4 🇮🇩 EX4 AXIS All BOOSTER B1
+  server: 172.64.153.186
   port: 80
   type: vmess
   uuid: *uid4
@@ -150,7 +539,133 @@ proxies:
   servername: *host4
   network: ws
   ws-opts:
-    path: *path
+    path: /vmess
+    headers:
+      Host: *host4
+  udp: true
+  interface-name: eth1
+
+- name: IPv4 🇮🇩 EX4 AXIS All BOOSTER B2
+  server: 104.18.34.70
+  port: 80
+  type: vmess
+  uuid: *uid4
+  alterId: 0
+  cipher: auto
+  tls: false
+  skip-cert-verify: true
+  servername: *host4
+  network: ws
+  ws-opts:
+    path: /vmess
+    headers:
+      Host: *host4
+  udp: true
+  interface-name: eth1
+
+- name: IPv4 🇮🇩 EX4 AXIS GAME JTM
+  server: 104.18.21.94
+  port: 80
+  type: vmess
+  uuid: *uid4
+  alterId: 0
+  cipher: auto
+  tls: false
+  skip-cert-verify: true
+  servername: *host4
+  network: ws
+  ws-opts:
+    path: /vmess
+    headers:
+      Host: *host4
+  udp: true
+  interface-name: eth1
+
+- name: IPv4 🇮🇩 EX4 AXIS GENFLIX
+  server: 104.21.30.242
+  port: 80
+  type: vmess
+  uuid: *uid4
+  alterId: 0
+  cipher: auto
+  tls: false
+  skip-cert-verify: true
+  servername: *host4
+  network: ws
+  ws-opts:
+    path: /vmess
+    headers:
+      Host: *host4
+  udp: true
+  interface-name: eth1
+
+- name: IPv4 🇮🇩 EX4 XL AXIS VIDEO B3
+  server: 104.22.4.240
+  port: 80
+  type: vmess
+  uuid: *uid4
+  alterId: 0
+  cipher: auto
+  tls: false
+  skip-cert-verify: true
+  servername: *host4
+  network: ws
+  ws-opts:
+    path: /vmess
+    headers:
+      Host: *host4
+  udp: true
+  interface-name: eth1
+
+- name: IPv4 🇮🇩 EX4 XL AXIS SUSHIROLL B2
+  server: 104.21.69.223
+  port: 80
+  type: vmess
+  uuid: *uid4
+  alterId: 0
+  cipher: auto
+  tls: false
+  skip-cert-verify: true
+  servername: *host4
+  network: ws
+  ws-opts:
+    path: /vmess
+    headers:
+      Host: *host4
+  udp: true
+  interface-name: eth1
+
+- name: IPv4 🇮🇩 EX4 XL AXIS OPOK B6
+  server: 104.22.28.102
+  port: 80
+  type: vmess
+  uuid: *uid4
+  alterId: 0
+  cipher: auto
+  tls: false
+  skip-cert-verify: true
+  servername: *host4
+  network: ws
+  ws-opts:
+    path: /vmess
+    headers:
+      Host: *host4
+  udp: true
+  interface-name: eth1
+
+- name: IPv4 🇮🇩 EX4 XL AXIS OPOK B7
+  server: 104.17.58.20
+  port: 80
+  type: vmess
+  uuid: *uid4
+  alterId: 0
+  cipher: auto
+  tls: false
+  skip-cert-verify: true
+  servername: *host4
+  network: ws
+  ws-opts:
+    path: /vmess
     headers:
       Host: *host4
   udp: true

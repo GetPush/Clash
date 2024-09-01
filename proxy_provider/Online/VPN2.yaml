@@ -1,5 +1,6 @@
 default:
-- &bug 104.21.30.242
+- &bug1 104.21.30.242
+- &bug2 104.19.142.89
 - &path /vmess
 
 - &uid1 0aaf534e-9b18-41f8-93cb-651b4c8d4513
@@ -15,8 +16,25 @@ default:
 - &host4 id4.v2vmess.site
 
 proxies:
-- name: IPv1 🇮🇩 VPN2
-  server: *bug
+- name: IPv1-1 🇮🇩 VPN1
+  server: *bug1
+  port: 80
+  type: vmess
+  uuid: *uid1
+  alterId: 0
+  cipher: auto
+  tls: false
+  skip-cert-verify: true
+  servername: *host1
+  network: ws
+  ws-opts:
+    path: *path
+    headers:
+      Host: *host1
+  udp: true
+  interface-name: usb0
+- name: IPv1-2 🇮🇩 VPN1
+  server: *bug2
   port: 80
   type: vmess
   uuid: *uid1
@@ -33,8 +51,25 @@ proxies:
   udp: true
   interface-name: usb0
 
-- name: IPv2 🇮🇩 VPN2
-  server: *bug
+- name: IPv2-1 🇮🇩 VPN1
+  server: *bug1
+  port: 80
+  type: vmess
+  uuid: *uid2
+  alterId: 0
+  cipher: auto
+  tls: false
+  skip-cert-verify: true
+  servername: *host2
+  network: ws
+  ws-opts:
+    path: *path
+    headers:
+      Host: *host2
+  udp: true
+  interface-name: usb0
+- name: IPv2-2 🇮🇩 VPN1
+  server: *bug2
   port: 80
   type: vmess
   uuid: *uid2
@@ -51,8 +86,25 @@ proxies:
   udp: true
   interface-name: usb0
 
-- name: IPv3 🇮🇩 VPN2
-  server: *bug
+- name: IPv3-1 🇮🇩 VPN1
+  server: *bug1
+  port: 80
+  type: vmess
+  uuid: *uid3
+  alterId: 0
+  cipher: auto
+  tls: false
+  skip-cert-verify: true
+  servername: *host3
+  network: ws
+  ws-opts:
+    path: *path
+    headers:
+      Host: *host3
+  udp: true
+  interface-name: usb0
+- name: IPv3-2 🇮🇩 VPN1
+  server: *bug2
   port: 80
   type: vmess
   uuid: *uid3
@@ -69,8 +121,25 @@ proxies:
   udp: true
   interface-name: usb0
 
-- name: IPv4 🇮🇩 VPN2
-  server: *bug
+- name: IPv4-1 🇮🇩 VPN1
+  server: *bug1
+  port: 80
+  type: vmess
+  uuid: *uid4
+  alterId: 0
+  cipher: auto
+  tls: false
+  skip-cert-verify: true
+  servername: *host4
+  network: ws
+  ws-opts:
+    path: *path
+    headers:
+      Host: *host4
+  udp: true
+  interface-name: usb0
+- name: IPv4-2 🇮🇩 VPN1
+  server: *bug2
   port: 80
   type: vmess
   uuid: *uid4

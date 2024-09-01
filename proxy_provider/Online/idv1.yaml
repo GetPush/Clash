@@ -1,8 +1,8 @@
 default:
-- &bug 104.21.30.242
-- &uid ddfc2b84-2ea1-4f85-89ad-8643b1049e8d
-- &host id1.v2vmess.site
-- &path /vmess
+- &bug1 104.21.30.242
+- &uid1 ddfc2b84-2ea1-4f85-89ad-8643b1049e8d
+- &host1 id1.v2vmess.site
+- &path1 /vmess
 
 proxies:
 #### IPv1 EX7
@@ -10,151 +10,151 @@ proxies:
   server: 104.19.142.89
   port: 80
   type: vmess
-  uuid: *uid
+  uuid: *uid1
   alterId: 0
   cipher: auto
   tls: false
   skip-cert-verify: true
-  servername: *host
+  servername: *host1
   network: ws
   ws-opts:
-    path: *path
+    path: *path1
     headers:
-      Host: *host
+      Host: *host1
   udp: true
 
 - name: IPv1 EX7 AXIS All BOOSTER B1
   server: 172.64.153.186
   port: 80
   type: vmess
-  uuid: *uid
+  uuid: *uid1
   alterId: 0
   cipher: auto
   tls: false
   skip-cert-verify: true
-  servername: *host
+  servername: *host1
   network: ws
   ws-opts:
-    path: *path
+    path: *path1
     headers:
-      Host: *host
+      Host: *host1
   udp: true
 
 - name: IPv1 EX7 AXIS All BOOSTER B2
   server: 104.18.34.70
   port: 80
   type: vmess
-  uuid: *uid
+  uuid: *uid1
   alterId: 0
   cipher: auto
   tls: false
   skip-cert-verify: true
-  servername: *host
+  servername: *host1
   network: ws
   ws-opts:
-    path: *path
+    path: *path1
     headers:
-      Host: *host
+      Host: *host1
   udp: true
 
 - name: IPv1 EX7 AXIS GAME JTM
   server: 104.18.21.94
   port: 80
   type: vmess
-  uuid: *uid
+  uuid: *uid1
   alterId: 0
   cipher: auto
   tls: false
   skip-cert-verify: true
-  servername: *host
+  servername: *host1
   network: ws
   ws-opts:
-    path: *path
+    path: *path1
     headers:
-      Host: *host
+      Host: *host1
   udp: true
 
 - name: IPv1 EX7 AXIS GENFLIX
   server: 104.21.30.242
   port: 80
   type: vmess
-  uuid: *uid
+  uuid: *uid1
   alterId: 0
   cipher: auto
   tls: false
   skip-cert-verify: true
-  servername: *host
+  servername: *host1
   network: ws
   ws-opts:
-    path: *path
+    path: *path1
     headers:
-      Host: *host
+      Host: *host1
   udp: true
 
 - name: IPv1 EX7 XL AXIS VIDEO B3
   server: 104.22.4.240
   port: 80
   type: vmess
-  uuid: *uid
+  uuid: *uid1
   alterId: 0
   cipher: auto
   tls: false
   skip-cert-verify: true
-  servername: *host
+  servername: *host1
   network: ws
   ws-opts:
-    path: *path
+    path: *path1
     headers:
-      Host: *host
+      Host: *host1
   udp: true
 
 - name: IPv1 EX7 XL AXIS SUSHIROLL B2
   server: 104.21.69.223
   port: 80
   type: vmess
-  uuid: *uid
+  uuid: *uid1
   alterId: 0
   cipher: auto
   tls: false
   skip-cert-verify: true
-  servername: *host
+  servername: *host1
   network: ws
   ws-opts:
-    path: *path
+    path: *path1
     headers:
-      Host: *host
+      Host: *host1
   udp: true
 
 - name: IPv1 EX7 XL AXIS OPOK B6
   server: 104.22.28.102
   port: 80
   type: vmess
-  uuid: *uid
+  uuid: *uid1
   alterId: 0
   cipher: auto
   tls: false
   skip-cert-verify: true
-  servername: *host
+  servername: *host1
   network: ws
   ws-opts:
-    path: *path
+    path: *path1
     headers:
-      Host: *host
+      Host: *host1
   udp: true
 
 - name: IPv1 EX7 XL AXIS OPOK B7
   server: 104.17.58.20
   port: 80
   type: vmess
-  uuid: *uid
+  uuid: *uid1
   alterId: 0
   cipher: auto
   tls: false
   skip-cert-verify: true
-  servername: *host
+  servername: *host1
   network: ws
   ws-opts:
-    path: *path
+    path: *path1
     headers:
-      Host: *host
+      Host: *host1
   udp: true
