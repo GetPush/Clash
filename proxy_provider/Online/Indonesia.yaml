@@ -15,7 +15,7 @@ default:
 - &host4 id4.v2vmess.site
 
 proxies:
-- name: IPv1 🇮🇩 GO
+- name: IPv1 🇮🇩 VPN1
   server: *bug
   port: 80
   type: vmess
@@ -33,7 +33,7 @@ proxies:
   udp: true
   interface-name: eth1
 
-- name: IPv2 🇮🇩 GO
+- name: IPv2 🇮🇩 VPN1
   server: *bug
   port: 80
   type: vmess
@@ -51,7 +51,7 @@ proxies:
   udp: true
   interface-name: eth1
 
-- name: IPv3 🇮🇩 GO
+- name: IPv3 🇮🇩 VPN1
   server: *bug
   port: 80
   type: vmess
@@ -69,7 +69,7 @@ proxies:
   udp: true
   interface-name: eth1
 
-- name: IPv4 🇮🇩 GO
+- name: IPv4 🇮🇩 VPN1
   server: *bug
   port: 80
   type: vmess
