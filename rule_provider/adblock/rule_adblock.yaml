@@ -9,7 +9,7 @@ payload:
 - DOMAIN-SUFFIX,advertising-api-eu.amazon.com
 
 # --- Google Ads
-- DOMAIN-SUFFIX,pagead2.googlesyndication.com
+#- DOMAIN-SUFFIX,pagead2.googlesyndication.com
 - DOMAIN-SUFFIX,adservice.google.com
 - DOMAIN-SUFFIX,pagead2.googleadservices.com
 - DOMAIN-SUFFIX,afs.googlesyndication.com
