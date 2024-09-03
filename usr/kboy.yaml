@@ -15,9 +15,9 @@ dns:
   enable: true
   ipv6: false
   respect-rules: true
-  enhanced-mode: fake-ip
   listen: 0.0.0.0:1053
   use-hosts: true
+  enhanced-mode: fake-ip
   fake-ip-range: 28.0.0.1/8
   default-nameserver:
     - 223.5.5.5
@@ -25,15 +25,13 @@ dns:
     - 1.1.1.1
     - 8.8.8.8
   nameserver:
-    - https://dns.bebasid.com/dns-query
-    - tls://dns.bebasid.com
-#    - 1.1.1.1
-#    - 8.8.8.8
-#    - quic://dns.adguard.com:784
-#    - https://dns.adguard.com/dns-query
-#    - tls://dns.adguard.com
-#    - 223.5.5.5
-#    - udp://223.5.5.5
+    - 1.1.1.1
+    - 8.8.8.8
+    - quic://dns.adguard.com:784
+    - https://dns.adguard.com/dns-query
+    - tls://dns.adguard.com
+    - 223.5.5.5
+    - udp://223.5.5.5
   proxy-server-nameserver:
     - 1.1.1.1
     - 8.8.8.8
@@ -78,7 +76,6 @@ dns:
     - msftconnecttest.com
     - msftncsi.com
     - +.*
-
 ipv6: false
 profile:
   store-selected: true
