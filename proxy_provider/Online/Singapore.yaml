@@ -7,1003 +7,1003 @@ default:
 proxies:
 - name: 🇸🇬 AXIS All BOOSTER B1
   server: 172.64.153.186
-  port: 443
+  port: 80
   type: vmess
   uuid: *uidsg
   alterId: 0
   cipher: auto
-  tls: true
+  tls: false
   skip-cert-verify: true
   servername: *hostsg
   network: ws
   ws-opts:
-    path: /sshkit/1828396894/66541f2a32722/
+    path: *pathsg
     headers:
       Host: *hostsg
   udp: true
 
 - name: 🇸🇬 AXIS All BOOSTER B2
   server: 104.18.34.70
-  port: 443
+  port: 80
   type: vmess
   uuid: *uidsg
   alterId: 0
   cipher: auto
-  tls: true
+  tls: false
   skip-cert-verify: true
   servername: *hostsg
   network: ws
   ws-opts:
-    path: /sshkit/1828396894/66541f2a32722/
+    path: *pathsg
     headers:
       Host: *hostsg
   udp: true
 
 - name: 🇸🇬 AXIS GAME JBR B1
   server: 104.19.142.89
-  port: 443
+  port: 80
   type: vmess
   uuid: *uidsg
   alterId: 0
   cipher: auto
-  tls: true
+  tls: false
   skip-cert-verify: true
   servername: *hostsg
   network: ws
   ws-opts:
-    path: /sshkit/1828396894/66541f2a32722/
+    path: *pathsg
     headers:
       Host: *hostsg
   udp: true
 
 - name: 🇸🇬 AXIS GAME JBR B2
   server: 104.16.108.96
-  port: 443
+  port: 80
   type: vmess
   uuid: *uidsg
   alterId: 0
   cipher: auto
-  tls: true
+  tls: false
   skip-cert-verify: true
   servername: *hostsg
   network: ws
   ws-opts:
-    path: /sshkit/1828396894/66541f2a32722/
+    path: *pathsg
     headers:
       Host: *hostsg
   udp: true
 
 - name: 🇸🇬 AXIS GAME JTM
   server: 104.18.21.94
-  port: 443
+  port: 80
   type: vmess
   uuid: *uidsg
   alterId: 0
   cipher: auto
-  tls: true
+  tls: false
   skip-cert-verify: true
   servername: *hostsg
   network: ws
   ws-opts:
-    path: /sshkit/1828396894/66541f2a32722/
+    path: *pathsg
     headers:
       Host: *hostsg
   udp: true
 
 - name: 🇸🇬 AXIS GAME JTG B1
   server: cdn.appsflyer.com
-  port: 443
+  port: 80
   type: vmess
   uuid: *uidsg
   alterId: 0
   cipher: auto
-  tls: true
+  tls: false
   skip-cert-verify: true
   servername: *hostsg
   network: ws
   ws-opts:
-    path: /sshkit/1828396894/66541f2a32722/
+    path: *pathsg
     headers:
       Host: *hostsg
   udp: true
 
 - name: 🇸🇬 AXIS GAME JTG B2
   server: iheartcoupons.onesignal.com
-  port: 443
+  port: 80
   type: vmess
   uuid: *uidsg
   alterId: 0
   cipher: auto
-  tls: true
+  tls: false
   skip-cert-verify: true
   servername: *hostsg
   network: ws
   ws-opts:
-    path: /sshkit/1828396894/66541f2a32722/
+    path: *pathsg
     headers:
       Host: *hostsg
   udp: true
 
 - name: 🇸🇬 AXIS GAME B1
   server: 104.16.85.20
-  port: 443
+  port: 80
   type: vmess
   uuid: *uidsg
   alterId: 0
   cipher: auto
-  tls: true
+  tls: false
   skip-cert-verify: true
   servername: *hostsg
   network: ws
   ws-opts:
-    path: /sshkit/1828396894/66541f2a32722/
+    path: *pathsg
     headers:
       Host: *hostsg
   udp: true
 
 - name: 🇸🇬 AXIS GAME B2
   server: 104.18.20.94
-  port: 443
+  port: 80
   type: vmess
   uuid: *uidsg
   alterId: 0
   cipher: auto
-  tls: true
+  tls: false
   skip-cert-verify: true
   servername: *hostsg
   network: ws
   ws-opts:
-    path: /sshkit/1828396894/66541f2a32722/
+    path: *pathsg
     headers:
       Host: *hostsg
   udp: true
 
 - name: 🇸🇬 AXIS GAME B3
   server: web.poe.garena.com
-  port: 443
+  port: 80
   type: vmess
   uuid: *uidsg
   alterId: 0
   cipher: auto
-  tls: true
+  tls: false
   skip-cert-verify: true
   servername: *hostsg
   network: ws
   ws-opts:
-    path: /sshkit/1828396894/66541f2a32722/
+    path: *pathsg
     headers:
       Host: *hostsg
   udp: true
 
 - name: 🇸🇬 AXIS Chat
   server: chat.sociomile.com
-  port: 443
+  port: 80
   type: vmess
   uuid: *uidsg
   alterId: 0
   cipher: auto
-  tls: true
+  tls: false
   skip-cert-verify: true
   servername: *hostsg
   network: ws
   ws-opts:
-    path: /sshkit/1828396894/66541f2a32722/
+    path: *pathsg
     headers:
       Host: *hostsg
   udp: true
 
 - name: 🇸🇬 AXIS EDUKASI JTG
   server: iainkendari.ac.id
-  port: 443
+  port: 80
   type: vmess
   uuid: *uidsg
   alterId: 0
   cipher: auto
-  tls: true
+  tls: false
   skip-cert-verify: true
   servername: *hostsg
   network: ws
   ws-opts:
-    path: /sshkit/1828396894/66541f2a32722/
+    path: *pathsg
     headers:
       Host: *hostsg
   udp: true
 
 - name: 🇸🇬 AXIS GENFLIX
   server: 104.21.30.242
-  port: 443
+  port: 80
   type: vmess
   uuid: *uidsg
   alterId: 0
   cipher: auto
-  tls: true
+  tls: false
   skip-cert-verify: true
   servername: *hostsg
   network: ws
   ws-opts:
-    path: /sshkit/1828396894/66541f2a32722/
+    path: *pathsg
     headers:
       Host: *hostsg
   udp: true
   
 - name: 🇸🇬 AXIS NETFLIX
   server: creativeservices.netflix.com
-  port: 443
+  port: 80
   type: vmess
   uuid: *uidsg
   alterId: 0
   cipher: auto
-  tls: true
+  tls: false
   skip-cert-verify: true
   servername: *hostsg
   network: ws
   ws-opts:
-    path: /sshkit/1828396894/66541f2a32722/
+    path: *pathsg
     headers:
       Host: *hostsg
   udp: true
 
 - name: 🇸🇬 AXIS XL CONFERENCE B1
   server: 104.26.4.126
-  port: 443
+  port: 80
   type: vmess
   uuid: *uidsg
   alterId: 0
   cipher: auto
-  tls: true
+  tls: false
   skip-cert-verify: true
   servername: *hostsg
   network: ws
   ws-opts:
-    path: /sshkit/1828396894/66541f2a32722/
+    path: *pathsg
     headers:
       Host: *hostsg
   udp: true
 
 - name: 🇸🇬 AXIS XL CONFERENCE B2
   server: 104.18.21.226
-  port: 443
+  port: 80
   type: vmess
   uuid: *uidsg
   alterId: 0
   cipher: auto
-  tls: true
+  tls: false
   skip-cert-verify: true
   servername: *hostsg
   network: ws
   ws-opts:
-    path: /sshkit/1828396894/66541f2a32722/
+    path: *pathsg
     headers:
       Host: *hostsg
   udp: true
 
 - name: 🇸🇬 AXIS XL CONFERENCE B3
   server: cdn-cf.zoom.us
-  port: 443
+  port: 80
   type: vmess
   uuid: *uidsg
   alterId: 0
   cipher: auto
-  tls: true
+  tls: false
   skip-cert-verify: true
   servername: *hostsg
   network: ws
   ws-opts:
-    path: /sshkit/1828396894/66541f2a32722/
+    path: *pathsg
     headers:
       Host: *hostsg
   udp: true
 
 - name: 🇸🇬 AXIS XL CONFERENCE B4
   server: support.zoom.us
-  port: 443
+  port: 80
   type: vmess
   uuid: *uidsg
   alterId: 0
   cipher: auto
-  tls: true
+  tls: false
   skip-cert-verify: true
   servername: *hostsg
   network: ws
   ws-opts:
-    path: /sshkit/1828396894/66541f2a32722/
+    path: *pathsg
     headers:
       Host: *hostsg
   udp: true
 
 - name: 🇸🇬 AXIS XL CONFERENCE B5
   server: 141.193.213.11
-  port: 443
+  port: 80
   type: vmess
   uuid: *uidsg
   alterId: 0
   cipher: auto
-  tls: true
+  tls: false
   skip-cert-verify: true
   servername: *hostsg
   network: ws
   ws-opts:
-    path: /sshkit/1828396894/66541f2a32722/
+    path: *pathsg
     headers:
       Host: *hostsg
   udp: true
 
 - name: 🇸🇬 AXIS XL OPERA B1
   server: img.email.cashback.opera.com
-  port: 443
+  port: 80
   type: vmess
   uuid: *uidsg
   alterId: 0
   cipher: auto
-  tls: true
+  tls: false
   skip-cert-verify: true
   servername: *hostsg
   network: ws
   ws-opts:
-    path: /sshkit/1828396894/66541f2a32722/
+    path: *pathsg
     headers:
       Host: *hostsg
   udp: true
 
 - name: 🇸🇬 AXIS XL SPOTIFY B1
   server: investors.spotify.com
-  port: 443
+  port: 80
   type: vmess
   uuid: *uidsg
   alterId: 0
   cipher: auto
-  tls: true
+  tls: false
   skip-cert-verify: true
   servername: *hostsg
   network: ws
   ws-opts:
-    path: /sshkit/1828396894/66541f2a32722/
+    path: *pathsg
     headers:
       Host: *hostsg
   udp: true
 
 - name: 🇸🇬 AXIS XL MICROSOFT B1
   server: info.microsoft.com
-  port: 443
+  port: 80
   type: vmess
   uuid: *uidsg
   alterId: 0
   cipher: auto
-  tls: true
+  tls: false
   skip-cert-verify: true
   servername: *hostsg
   network: ws
   ws-opts:
-    path: /sshkit/1828396894/66541f2a32722/
+    path: *pathsg
     headers:
       Host: *hostsg
   udp: true
 
 - name: 🇸🇬 AXIS XL OPERA B2
   server: res-odx.op-mobile.opera.com
-  port: 443
+  port: 80
   type: vmess
   uuid: *uidsg
   alterId: 0
   cipher: auto
-  tls: true
+  tls: false
   skip-cert-verify: true
   servername: *hostsg
   network: ws
   ws-opts:
-    path: /sshkit/1828396894/66541f2a32722/
+    path: *pathsg
     headers:
       Host: *hostsg
   udp: true
 
 - name: 🇸🇬 XL AXIS EDUKASI B1
   server: support.udemy.com
-  port: 443
+  port: 80
   type: vmess
   uuid: *uidsg
   alterId: 0
   cipher: auto
-  tls: true
+  tls: false
   skip-cert-verify: true
   servername: *hostsg
   network: ws
   ws-opts:
-    path: /sshkit/1828396894/66541f2a32722/
+    path: *pathsg
     headers:
       Host: *hostsg
   udp: true
 
 - name: 🇸🇬 XL AXIS EDUKASI JTM
   server: www.skillacademy.com
-  port: 443
+  port: 80
   type: vmess
   uuid: *uidsg
   alterId: 0
   cipher: auto
-  tls: true
+  tls: false
   skip-cert-verify: true
   servername: *hostsg
   network: ws
   ws-opts:
-    path: /sshkit/1828396894/66541f2a32722/
+    path: *pathsg
     headers:
       Host: *hostsg
   udp: true
 
 - name: 🇸🇬 XL AXIS EDUKASI LUAR JAWA
   server: cdn.appsflyer.com
-  port: 443
+  port: 80
   type: vmess
   uuid: *uidsg
   alterId: 0
   cipher: auto
-  tls: true
+  tls: false
   skip-cert-verify: true
   servername: *hostsg
   network: ws
   ws-opts:
-    path: /sshkit/1828396894/66541f2a32722/
+    path: *pathsg
     headers:
       Host: *hostsg
   udp: true
 
 - name: 🇸🇬 XL AXIS VIDEO B1
   server: quiz.vidio.com
-  port: 443
+  port: 80
   type: vmess
   uuid: *uidsg
   alterId: 0
   cipher: auto
-  tls: true
+  tls: false
   skip-cert-verify: true
   servername: *hostsg
   network: ws
   ws-opts:
-    path: /sshkit/1828396894/66541f2a32722/
+    path: *pathsg
     headers:
       Host: *hostsg
   udp: true
 
 - name: 🇸🇬 XL AXIS VIDEO B3
   server: 104.22.4.240
-  port: 443
+  port: 80
   type: vmess
   uuid: *uidsg
   alterId: 0
   cipher: auto
-  tls: true
+  tls: false
   skip-cert-verify: true
   servername: *hostsg
   network: ws
   ws-opts:
-    path: /sshkit/1828396894/66541f2a32722/
+    path: *pathsg
     headers:
       Host: *hostsg
   udp: true
 
 - name: 🇸🇬 XL AXIS SUSHIROLL B1
   server: blog.sushiroll.co.id
-  port: 443
+  port: 80
   type: vmess
   uuid: *uidsg
   alterId: 0
   cipher: auto
-  tls: true
+  tls: false
   skip-cert-verify: true
   servername: *hostsg
   network: ws
   ws-opts:
-    path: /sshkit/1828396894/66541f2a32722/
+    path: *pathsg
     headers:
       Host: *hostsg
   udp: true
 
 - name: 🇸🇬 XL AXIS SUSHIROLL B2
   server: 104.21.69.223
-  port: 443
+  port: 80
   type: vmess
   uuid: *uidsg
   alterId: 0
   cipher: auto
-  tls: true
+  tls: false
   skip-cert-verify: true
   servername: *hostsg
   network: ws
   ws-opts:
-    path: /sshkit/1828396894/66541f2a32722/
+    path: *pathsg
     headers:
       Host: *hostsg
   udp: true
 
 - name: 🇸🇬 XL AXIS VIU
   server: 104.18.0.139
-  port: 443
+  port: 80
   type: vmess
   uuid: *uidsg
   alterId: 0
   cipher: auto
-  tls: true
+  tls: false
   skip-cert-verify: true
   servername: *hostsg
   network: ws
   ws-opts:
-    path: /sshkit/1828396894/66541f2a32722/
+    path: *pathsg
     headers:
       Host: *hostsg
   udp: true
 
 - name: 🇸🇬 XL AXIS OPOK B1
   server: www.ovo.id
-  port: 443
+  port: 80
   type: vmess
   uuid: *uidsg
   alterId: 0
   cipher: auto
-  tls: true
+  tls: false
   skip-cert-verify: true
   servername: *hostsg
   network: ws
   ws-opts:
-    path: /sshkit/1828396894/66541f2a32722/
+    path: *pathsg
     headers:
       Host: *hostsg
   udp: true
 
 - name: 🇸🇬 XL AXIS OPOK B2
   server: sit.comet.xl.co.id
-  port: 443
+  port: 80
   type: vmess
   uuid: *uidsg
   alterId: 0
   cipher: auto
-  tls: true
+  tls: false
   skip-cert-verify: true
   servername: *hostsg
   network: ws
   ws-opts:
-    path: /sshkit/1828396894/66541f2a32722/
+    path: *pathsg
     headers:
       Host: *hostsg
   udp: true
 
 - name: 🇸🇬 XL AXIS OPOK B3
   server: zeus.xl.co.id
-  port: 443
+  port: 80
   type: vmess
   uuid: *uidsg
   alterId: 0
   cipher: auto
-  tls: true
+  tls: false
   skip-cert-verify: true
   servername: *hostsg
   network: ws
   ws-opts:
-    path: /sshkit/1828396894/66541f2a32722/
+    path: *pathsg
     headers:
       Host: *hostsg
   udp: true
 
 - name: 🇸🇬 XL AXIS OPOK B5
   server: www.xl.co.id
-  port: 443
+  port: 80
   type: vmess
   uuid: *uidsg
   alterId: 0
   cipher: auto
-  tls: true
+  tls: false
   skip-cert-verify: true
   servername: *hostsg
   network: ws
   ws-opts:
-    path: /sshkit/1828396894/66541f2a32722/
+    path: *pathsg
     headers:
       Host: *hostsg
   udp: true
 
 - name: 🇸🇬 XL AXIS OPOK B6
   server: 104.22.28.102
-  port: 443
+  port: 80
   type: vmess
   uuid: *uidsg
   alterId: 0
   cipher: auto
-  tls: true
+  tls: false
   skip-cert-verify: true
   servername: *hostsg
   network: ws
   ws-opts:
-    path: /sshkit/1828396894/66541f2a32722/
+    path: *pathsg
     headers:
       Host: *hostsg
   udp: true
 
 - name: 🇸🇬 XL AXIS OPOK B7
   server: 104.17.58.20
-  port: 443
+  port: 80
   type: vmess
   uuid: *uidsg
   alterId: 0
   cipher: auto
-  tls: true
+  tls: false
   skip-cert-verify: true
   servername: *hostsg
   network: ws
   ws-opts:
-    path: /sshkit/1828396894/66541f2a32722/
+    path: *pathsg
     headers:
       Host: *hostsg
   udp: true
 
 - name: 🇸🇬 XL AXIS OPOK B8
   server: 104.18.12.65
-  port: 443
+  port: 80
   type: vmess
   uuid: *uidsg
   alterId: 0
   cipher: auto
-  tls: true
+  tls: false
   skip-cert-verify: true
   servername: *hostsg
   network: ws
   ws-opts:
-    path: /sshkit/1828396894/66541f2a32722/
+    path: *pathsg
     headers:
       Host: *hostsg
   udp: true
 
 - name: 🇸🇬 XL AXIS OPOK B9
   server: staging.games.axis.co.id
-  port: 443
+  port: 80
   type: vmess
   uuid: *uidsg
   alterId: 0
   cipher: auto
-  tls: true
+  tls: false
   skip-cert-verify: true
   servername: *hostsg
   network: ws
   ws-opts:
-    path: /sshkit/1828396894/66541f2a32722/
+    path: *pathsg
     headers:
       Host: *hostsg
   udp: true
 
 - name: 🇸🇬 XL FLEX UNLI TURBO B1
   server: 104.22.2.25
-  port: 443
+  port: 80
   type: vmess
   uuid: *uidsg
   alterId: 0
   cipher: auto
-  tls: true
+  tls: false
   skip-cert-verify: true
   servername: *hostsg
   network: ws
   ws-opts:
-    path: /sshkit/1828396894/66541f2a32722/
+    path: *pathsg
     headers:
       Host: *hostsg
   udp: true
 
 - name: 🇸🇬 XL FLEX UNLI TURBO B2
   server: 104.16.17.120
-  port: 443
+  port: 80
   type: vmess
   uuid: *uidsg
   alterId: 0
   cipher: auto
-  tls: true
+  tls: false
   skip-cert-verify: true
   servername: *hostsg
   network: ws
   ws-opts:
-    path: /sshkit/1828396894/66541f2a32722/
+    path: *pathsg
     headers:
       Host: *hostsg
   udp: true
 
 - name: 🇸🇬 XL AKRAB NOICE B1
   server: 104.17.3.81
-  port: 443
+  port: 80
   type: vmess
   uuid: *uidsg
   alterId: 0
   cipher: auto
-  tls: true
+  tls: false
   skip-cert-verify: true
   servername: *hostsg
   network: ws
   ws-opts:
-    path: /sshkit/1828396894/66541f2a32722/
+    path: *pathsg
     headers:
       Host: *hostsg
   udp: true
 
 - name: 🇸🇬 XL AKRAB NOICE B2
   server: 104.17.2.81
-  port: 443
+  port: 80
   type: vmess
   uuid: *uidsg
   alterId: 0
   cipher: auto
-  tls: true
+  tls: false
   skip-cert-verify: true
   servername: *hostsg
   network: ws
   ws-opts:
-    path: /sshkit/1828396894/66541f2a32722/
+    path: *pathsg
     headers:
       Host: *hostsg
   udp: true
 
 - name: 🇸🇬 XL AKRAB NOICE B3
   server: 104.18.2.198
-  port: 443
+  port: 80
   type: vmess
   uuid: *uidsg
   alterId: 0
   cipher: auto
-  tls: true
+  tls: false
   skip-cert-verify: true
   servername: *hostsg
   network: ws
   ws-opts:
-    path: /sshkit/1828396894/66541f2a32722/
+    path: *pathsg
     headers:
       Host: *hostsg
   udp: true
 
 - name: 🇸🇬 XL AKRAB NOICE B4
   server: 104.18.3.198
-  port: 443
+  port: 80
   type: vmess
   uuid: *uidsg
   alterId: 0
   cipher: auto
-  tls: true
+  tls: false
   skip-cert-verify: true
   servername: *hostsg
   network: ws
   ws-opts:
-    path: /sshkit/1828396894/66541f2a32722/
+    path: *pathsg
     headers:
       Host: *hostsg
   udp: true
 
 - name: 🇸🇬 XL AKRAB NOICE B5
   server: api.midtrans.com
-  port: 443
+  port: 80
   type: vmess
   uuid: *uidsg
   alterId: 0
   cipher: auto
-  tls: true
+  tls: false
   skip-cert-verify: true
   servername: *hostsg
   network: ws
   ws-opts:
-    path: /sshkit/1828396894/66541f2a32722/
+    path: *pathsg
     headers:
       Host: *hostsg
   udp: true
 
 - name: 🇸🇬 XL AKRAB NOICE JTM JTG
   server: 104.18.1.196
-  port: 443
+  port: 80
   type: vmess
   uuid: *uidsg
   alterId: 0
   cipher: auto
-  tls: true
+  tls: false
   skip-cert-verify: true
   servername: *hostsg
   network: ws
   ws-opts:
-    path: /sshkit/1828396894/66541f2a32722/
+    path: *pathsg
     headers:
       Host: *hostsg
   udp: true
 
 - name: 🇸🇬 XL AKRAB B2
   server: ruangguru.com
-  port: 443
+  port: 80
   type: vmess
   uuid: *uidsg
   alterId: 0
   cipher: auto
-  tls: true
+  tls: false
   skip-cert-verify: true
   servername: *hostsg
   network: ws
   ws-opts:
-    path: /sshkit/1828396894/66541f2a32722/
+    path: *pathsg
     headers:
       Host: *hostsg
   udp: true
 
 - name: 🇸🇬 XL AKRAB B3
   server: 104.18.21.226
-  port: 443
+  port: 80
   type: vmess
   uuid: *uidsg
   alterId: 0
   cipher: auto
-  tls: true
+  tls: false
   skip-cert-verify: true
   servername: *hostsg
   network: ws
   ws-opts:
-    path: /sshkit/1828396894/66541f2a32722/
+    path: *pathsg
     headers:
       Host: *hostsg
   udp: true
 
 - name: 🇸🇬 XL AKRAB B4
   server: 172.64.149.82
-  port: 443
+  port: 80
   type: vmess
   uuid: *uidsg
   alterId: 0
   cipher: auto
-  tls: true
+  tls: false
   skip-cert-verify: true
   servername: *hostsg
   network: ws
   ws-opts:
-    path: /sshkit/1828396894/66541f2a32722/
+    path: *pathsg
     headers:
       Host: *hostsg
   udp: true
 
 - name: 🇸🇬 XL AKRAB JTM JTG B1
   server: 104.26.4.10
-  port: 443
+  port: 80
   type: vmess
   uuid: *uidsg
   alterId: 0
   cipher: auto
-  tls: true
+  tls: false
   skip-cert-verify: true
   servername: *hostsg
   network: ws
   ws-opts:
-    path: /sshkit/1828396894/66541f2a32722/
+    path: *pathsg
     headers:
       Host: *hostsg
   udp: true
 
 - name: 🇸🇬 XL AKRAB JTM JTG B2
   server: cdn.onlymega.com
-  port: 443
+  port: 80
   type: vmess
   uuid: *uidsg
   alterId: 0
   cipher: auto
-  tls: true
+  tls: false
   skip-cert-verify: true
   servername: *hostsg
   network: ws
   ws-opts:
-    path: /sshkit/1828396894/66541f2a32722/
+    path: *pathsg
     headers:
       Host: *hostsg
   udp: true
 
 - name: 🇸🇬 XL AKRAB JTM JTG B3
   server: api.fastworldpay.com
-  port: 443
+  port: 80
   type: vmess
   uuid: *uidsg
   alterId: 0
   cipher: auto
-  tls: true
+  tls: false
   skip-cert-verify: true
   servername: *hostsg
   network: ws
   ws-opts:
-    path: /sshkit/1828396894/66541f2a32722/
+    path: *pathsg
     headers:
       Host: *hostsg
   udp: true
 
 - name: 🇸🇬 XL FLX JTG JTM B1
   server: ava.game.naver.com
-  port: 443
+  port: 80
   type: vmess
   uuid: *uidsg
   alterId: 0
   cipher: auto
-  tls: true
+  tls: false
   skip-cert-verify: true
   servername: *hostsg
   network: ws
   ws-opts:
-    path: /sshkit/1828396894/66541f2a32722/
+    path: *pathsg
     headers:
       Host: *hostsg
   udp: true
 
 - name: 🇸🇬 XL FLX JTG JTM B2
   server: account.pmang.game.naver.com
-  port: 443
+  port: 80
   type: vmess
   uuid: *uidsg
   alterId: 0
   cipher: auto
-  tls: true
+  tls: false
   skip-cert-verify: true
   servername: *hostsg
   network: ws
   ws-opts:
-    path: /sshkit/1828396894/66541f2a32722/
+    path: *pathsg
     headers:
       Host: *hostsg
   udp: true
 
 - name: 🇸🇬 XL VISION+ B1
   server: 104.21.235.171
-  port: 443
+  port: 80
   type: vmess
   uuid: *uidsg
   alterId: 0
   cipher: auto
-  tls: true
+  tls: false
   skip-cert-verify: true
   servername: *hostsg
   network: ws
   ws-opts:
-    path: /sshkit/1828396894/66541f2a32722/
+    path: *pathsg
     headers:
       Host: *hostsg
   udp: true
 
 - name: 🇸🇬 XL VISION+ B2
   server: 104.21.235.172
-  port: 443
+  port: 80
   type: vmess
   uuid: *uidsg
   alterId: 0
   cipher: auto
-  tls: true
+  tls: false
   skip-cert-verify: true
   servername: *hostsg
   network: ws
   ws-opts:
-    path: /sshkit/1828396894/66541f2a32722/
+    path: *pathsg
     headers:
       Host: *hostsg
   udp: true
 
 - name: 🇸🇬 XL LIVE ON OPOK B1
   server: 104.21.8.121
-  port: 443
+  port: 80
   type: vmess
   uuid: *uidsg
   alterId: 0
   cipher: auto
-  tls: true
+  tls: false
   skip-cert-verify: true
   servername: *hostsg
   network: ws
   ws-opts:
-    path: /sshkit/1828396894/66541f2a32722/
+    path: *pathsg
     headers:
       Host: *hostsg
   udp: true
 
 - name: 🇸🇬 XL LIVE ON OPOK B2
   server: 172.67.139.111
-  port: 443
+  port: 80
   type: vmess
   uuid: *uidsg
   alterId: 0
   cipher: auto
-  tls: true
+  tls: false
   skip-cert-verify: true
   servername: *hostsg
   network: ws
   ws-opts:
-    path: /sshkit/1828396894/66541f2a32722/
+    path: *pathsg
     headers:
       Host: *hostsg
   udp: true
@@ -1011,136 +1011,136 @@ proxies:
 ###################### tsel
 - name: 🇸🇬 TSEL byu EDUKASI
   server: orangtua.ruangguru.com
-  port: 443
+  port: 80
   type: vmess
   uuid: *uidsg
   alterId: 0
   cipher: auto
-  tls: true
+  tls: false
   skip-cert-verify: true
   servername: *hostsg
   network: ws
   ws-opts:
-    path: /sshkit/1828396894/66541f2a32722/
+    path: *pathsg
     headers:
       Host: *hostsg
   udp: true
 
 - name: 🇸🇬 TSEL byu GAME GGWP B1
   server: 104.19.142.108
-  port: 443
+  port: 80
   type: vmess
   uuid: *uidsg
   alterId: 0
   cipher: auto
-  tls: true
+  tls: false
   skip-cert-verify: true
   servername: *hostsg
   network: ws
   ws-opts:
-    path: /sshkit/1828396894/66541f2a32722/
+    path: *pathsg
     headers:
       Host: *hostsg
   udp: true
   
 - name: 🇸🇬 TSEL byu GAME GGWP B2
   server: 104.19.143.108
-  port: 443
+  port: 80
   type: vmess
   uuid: *uidsg
   alterId: 0
   cipher: auto
-  tls: true
+  tls: false
   skip-cert-verify: true
   servername: *hostsg
   network: ws
   ws-opts:
-    path: /sshkit/1828396894/66541f2a32722/
+    path: *pathsg
     headers:
       Host: *hostsg
   udp: true
 
 - name: 🇸🇬 TSEL RUANGGURU
   server: tracker.ruangguru.com
-  port: 443
+  port: 80
   type: vmess
   uuid: *uidsg
   alterId: 0
   cipher: auto
-  tls: true
+  tls: false
   skip-cert-verify: true
   servername: *hostsg
   network: ws
   ws-opts:
-    path: /sshkit/1828396894/66541f2a32722/
+    path: *pathsg
     headers:
       Host: *hostsg
   udp: true
 
 - name: 🇸🇬 TSEL MULTIMEDIA B1
   server: ir.huya.com
-  port: 443
+  port: 80
   type: vmess
   uuid: *uidsg
   alterId: 0
   cipher: auto
-  tls: true
+  tls: false
   skip-cert-verify: true
   servername: *hostsg
   network: ws
   ws-opts:
-    path: /sshkit/1828396894/66541f2a32722/
+    path: *pathsg
     headers:
       Host: *hostsg
   udp: true
 
 - name: 🇸🇬 TSEL OMG Nonton
   server: investors.spotify.com
-  port: 443
+  port: 80
   type: vmess
   uuid: *uidsg
   alterId: 0
   cipher: auto
-  tls: true
+  tls: false
   skip-cert-verify: true
   servername: *hostsg
   network: ws
   ws-opts:
-    path: /sshkit/1828396894/66541f2a32722/
+    path: *pathsg
     headers:
       Host: *hostsg
   udp: true
 
 - name: 🇸🇬 TSEL ILPED B1
   server: io.ruangguru.com
-  port: 443
+  port: 80
   type: vmess
   uuid: *uidsg
   alterId: 0
   cipher: auto
-  tls: true
+  tls: false
   skip-cert-verify: true
   servername: *hostsg
   network: ws
   ws-opts:
-    path: /sshkit/1828396894/66541f2a32722/
+    path: *pathsg
     headers:
       Host: *hostsg
   udp: true
 
 - name: 🇸🇬 BYU OPOK
   server: space.byu.id
-  port: 443
+  port: 80
   type: vmess
   uuid: *uidsg
   alterId: 0
   cipher: auto
-  tls: true
+  tls: false
   skip-cert-verify: true
   servername: *hostsg
   network: ws
   ws-opts:
-    path: /sshkit/1828396894/66541f2a32722/
+    path: *pathsg
     headers:
       Host: *hostsg
   udp: true
@@ -1148,51 +1148,51 @@ proxies:
 ###################### isat
 - name: 🇸🇬 ISAT OPOK B1
   server: 172.67.70.101
-  port: 443
+  port: 80
   type: vmess
   uuid: *uidsg
   alterId: 0
   cipher: auto
-  tls: true
+  tls: false
   skip-cert-verify: true
   servername: *hostsg
   network: ws
   ws-opts:
-    path: /sshkit/1828396894/66541f2a32722/
+    path: *pathsg
     headers:
       Host: *hostsg
   udp: true
 
 - name: 🇸🇬 ISAT OPOK B2
   server: 104.19.142.56
-  port: 443
+  port: 80
   type: vmess
   uuid: *uidsg
   alterId: 0
   cipher: auto
-  tls: true
+  tls: false
   skip-cert-verify: true
   servername: *hostsg
   network: ws
   ws-opts:
-    path: /sshkit/1828396894/66541f2a32722/
+    path: *pathsg
     headers:
       Host: *hostsg
   udp: true
 
 - name: 🇸🇬 ISAT EDUKASI B1
   server: 104.17.2.81
-  port: 443
+  port: 80
   type: vmess
   uuid: *uidsg
   alterId: 0
   cipher: auto
-  tls: true
+  tls: false
   skip-cert-verify: true
   servername: *hostsg
   network: ws
   ws-opts:
-    path: /sshkit/1828396894/66541f2a32722/
+    path: *pathsg
     headers:
       Host: *hostsg
   udp: true
@@ -1200,34 +1200,34 @@ proxies:
 ###################### smartfren
 - name: 🇸🇬 SMARTFREN OPOK
   server: api.ovo.id
-  port: 443
+  port: 80
   type: vmess
   uuid: *uidsg
   alterId: 0
   cipher: auto
-  tls: true
+  tls: false
   skip-cert-verify: true
   servername: *hostsg
   network: ws
   ws-opts:
-    path: /sshkit/1828396894/66541f2a32722/
+    path: *pathsg
     headers:
       Host: *hostsg
   udp: true
 
 - name: 🇸🇬 SMARTFREN EDUKASI
   server: kelas.ruangguru.com
-  port: 443
+  port: 80
   type: vmess
   uuid: *uidsg
   alterId: 0
   cipher: auto
-  tls: true
+  tls: false
   skip-cert-verify: true
   servername: *hostsg
   network: ws
   ws-opts:
-    path: /sshkit/1828396894/66541f2a32722/
+    path: *pathsg
     headers:
       Host: *hostsg
   udp: true
@@ -1235,17 +1235,17 @@ proxies:
 ###################### tri
 - name: 🇸🇬 TRI OPOK
   server: 104.21.22.52
-  port: 443
+  port: 80
   type: vmess
   uuid: *uidsg
   alterId: 0
   cipher: auto
-  tls: true
+  tls: false
   skip-cert-verify: true
   servername: *hostsg
   network: ws
   ws-opts:
-    path: /sshkit/1828396894/66541f2a32722/
+    path: *pathsg
     headers:
       Host: *hostsg
   udp: true
@@ -1253,204 +1253,204 @@ proxies:
 ###################### All SC
 - name: 🇸🇬 XL AXIS TSEL MULTIMEDIA MUSIC
   server: investors.spotify.com
-  port: 443
+  port: 80
   type: vmess
   uuid: *uidsg
   alterId: 0
   cipher: auto
-  tls: true
+  tls: false
   skip-cert-verify: true
   servername: *hostsg
   network: ws
   ws-opts:
-    path: /sshkit/1828396894/66541f2a32722/
+    path: *pathsg
     headers:
       Host: *hostsg
   udp: true
 
 - name: 🇸🇬 VISION B1
   server: 104.21.58.186
-  port: 443
+  port: 80
   type: vmess
   uuid: *uidsg
   alterId: 0
   cipher: auto
-  tls: true
+  tls: false
   skip-cert-verify: true
   servername: *hostsg
   network: ws
   ws-opts:
-    path: /sshkit/1828396894/66541f2a32722/
+    path: *pathsg
     headers:
       Host: *hostsg
   udp: true
 
 - name: 🇸🇬 VISION B2
   server: 172.67.206.64
-  port: 443
+  port: 80
   type: vmess
   uuid: *uidsg
   alterId: 0
   cipher: auto
-  tls: true
+  tls: false
   skip-cert-verify: true
   servername: *hostsg
   network: ws
   ws-opts:
-    path: /sshkit/1828396894/66541f2a32722/
+    path: *pathsg
     headers:
       Host: *hostsg
   udp: true
 
 - name: 🇸🇬 VISION B3
   server: 172.67.192.40
-  port: 443
+  port: 80
   type: vmess
   uuid: *uidsg
   alterId: 0
   cipher: auto
-  tls: true
+  tls: false
   skip-cert-verify: true
   servername: *hostsg
   network: ws
   ws-opts:
-    path: /sshkit/1828396894/66541f2a32722/
+    path: *pathsg
     headers:
       Host: *hostsg
   udp: true
 
 - name: 🇸🇬 VISION B4
   server: 104.21.73.208
-  port: 443
+  port: 80
   type: vmess
   uuid: *uidsg
   alterId: 0
   cipher: auto
-  tls: true
+  tls: false
   skip-cert-verify: true
   servername: *hostsg
   network: ws
   ws-opts:
-    path: /sshkit/1828396894/66541f2a32722/
+    path: *pathsg
     headers:
       Host: *hostsg
   udp: true
 
 - name: 🇸🇬 VISION B6
   server: 104.18.225.52
-  port: 443
+  port: 80
   type: vmess
   uuid: *uidsg
   alterId: 0
   cipher: auto
-  tls: true
+  tls: false
   skip-cert-verify: true
   servername: *hostsg
   network: ws
   ws-opts:
-    path: /sshkit/1828396894/66541f2a32722/
+    path: *pathsg
     headers:
       Host: *hostsg
   udp: true
 
 - name: 🇸🇬 GENFLIX B1
   server: beta.genflix.co.id
-  port: 443
+  port: 80
   type: vmess
   uuid: *uidsg
   alterId: 0
   cipher: auto
-  tls: true
+  tls: false
   skip-cert-verify: true
   servername: *hostsg
   network: ws
   ws-opts:
-    path: /sshkit/1828396894/66541f2a32722/
+    path: *pathsg
     headers:
       Host: *hostsg
   udp: true
 
 - name: 🇸🇬 GENFLIX B2
   server: app.genflix.co.id
-  port: 443
+  port: 80
   type: vmess
   uuid: *uidsg
   alterId: 0
   cipher: auto
-  tls: true
+  tls: false
   skip-cert-verify: true
   servername: *hostsg
   network: ws
   ws-opts:
-    path: /sshkit/1828396894/66541f2a32722/
+    path: *pathsg
     headers:
       Host: *hostsg
   udp: true
 
 - name: 🇸🇬 VIDIO
   server: quiz.int.vidio.com
-  port: 443
+  port: 80
   type: vmess
   uuid: *uidsg
   alterId: 0
   cipher: auto
-  tls: true
+  tls: false
   skip-cert-verify: true
   servername: *hostsg
   network: ws
   ws-opts:
-    path: /sshkit/1828396894/66541f2a32722/
+    path: *pathsg
     headers:
       Host: *hostsg
   udp: true
 
 - name: 🇸🇬 SUSHIROLL
   server: www.sushiroll.co.id
-  port: 443
+  port: 80
   type: vmess
   uuid: *uidsg
   alterId: 0
   cipher: auto
-  tls: true
+  tls: false
   skip-cert-verify: true
   servername: *hostsg
   network: ws
   ws-opts:
-    path: /sshkit/1828396894/66541f2a32722/
+    path: *pathsg
     headers:
       Host: *hostsg
   udp: true
 
 - name: 🇸🇬 WIFI.ID B1
   server: io.ruangguru.com
-  port: 443
+  port: 80
   type: vmess
   uuid: *uidsg
   alterId: 0
   cipher: auto
-  tls: true
+  tls: false
   skip-cert-verify: true
   servername: *hostsg
   network: ws
   ws-opts:
-    path: /sshkit/1828396894/66541f2a32722/
+    path: *pathsg
     headers:
       Host: *hostsg
   udp: true
 
 - name: 🇸🇬 WIFI.ID B2
   server: 104.17.2.81
-  port: 443
+  port: 80
   type: vmess
   uuid: *uidsg
   alterId: 0
   cipher: auto
-  tls: true
+  tls: false
   skip-cert-verify: true
   servername: *hostsg
   network: ws
   ws-opts:
-    path: /sshkit/1828396894/66541f2a32722/
+    path: *pathsg
     headers:
       Host: *hostsg
   udp: true
