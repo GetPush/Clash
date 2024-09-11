@@ -15,9 +15,8 @@ dns:
   enable: true
   ipv6: false
   respect-rules: true
-  listen: 0.0.0.0:1053
-  use-hosts: true
   enhanced-mode: fake-ip
+  listen: 0.0.0.0:7874
   fake-ip-range: 28.0.0.1/8
   default-nameserver:
     - 223.5.5.5
@@ -86,18 +85,12 @@ geodata-loader: memconservative
 sniffer:
   enable: true
   parse-pure-ip: true
-
 tun:
   enable: false
-  device: utun
-  mtu: 9000
-  stack: system # gvisor / lwip / system
   dns-hijack:
     - any:53
     - tcp://any:53
     - udp://any:53
-  auto-route: true
-  auto-detect-interface: true
 
 proxies:
 proxy-groups:
@@ -106,7 +99,6 @@ proxy-groups:
   disable-udp: false
   proxies:
   - ROUTE FB
-  - ROUTE FB+
   - ROUTE UT
   - ROUTE LB
   - FOCUS DIRECT
@@ -132,33 +124,10 @@ proxy-groups:
   - IPv2 🇮🇩
   - IPv3 🇮🇩
   - IPv4 🇮🇩
-  - AUTO REVERSE
+  - AUTO ROUTE
+  use:
+  - Vmees
   url: https://cp.cloudflare.com/generate_204
-  interval: '1'
-- name: AUTO REVERSE
-  type: fallback
-  disable-udp: false
-  use:
-  - VPN1
-  - VPN2
-  url: https://cp.cloudflare.com/generate_204
-  interval: '1'
-  lazy: false
-- name: ROUTE ETH1
-  type: fallback
-  disable-udp: false
-  use:
-  - VPN1
-  interface-name: eth1
-  url: http://cp.cloudflare.com/generate_204
-  interval: '1'
-- name: ROUTE USB0
-  type: fallback
-  disable-udp: false
-  use:
-  - VPN2
-  interface-name: usb0
-  url: http://cp.cloudflare.com/generate_204
   interval: '1'
 - name: Zerotier.com
   type: select
@@ -167,9 +136,6 @@ proxy-groups:
   proxies:
   - BOOST
   - DIRECT
-  use:
-  - VPN1
-  - VPN2
   url: http://cp.cloudflare.com/generate_204
   interval: '1'
 - name: indo traffic
@@ -205,8 +171,6 @@ proxy-groups:
   proxies:
   - BOOST
   - DIRECT
-  use:
-  - VPN1
   url: http://cp.cloudflare.com/generate_204
   interval: '1'
 - name: Viu-Vidio
@@ -215,8 +179,6 @@ proxy-groups:
   proxies:
   - BOOST
   - DIRECT
-  use:
-  - VPN2
   url: http://cp.cloudflare.com/generate_204
   interval: '1'
 - name: PlayStore
@@ -261,24 +223,6 @@ proxy-groups:
   - ROUTE USB0
   url: https://cp.cloudflare.com/generate_204
   interval: '1'
-- name: ROUTE FB+
-  type: fallback
-  strategy: round-robin
-  lazy: true
-  disable-udp: false
-  proxies:
-  - ROUTE 🇸🇬
-  - ROUTE 🇫🇷
-  - ROUTE 🇳🇱
-  - ROUTE 🇺🇲
-  - ROUTE ETH1
-  - ROUTE USB0
-  - Trojan
-  - ROUTE 🇮🇩
-  - DIRECT
-  - DIRECT usb0
-  url: https://cp.cloudflare.com/generate_204
-  interval: '1'
 - name: ROUTE UT
   type: url-test
   strategy: round-robin
@@ -306,6 +250,23 @@ proxy-groups:
   - ROUTE USB0
   url: http://cp.cloudflare.com/generate_204
   interval: '1'
+- name: AUTO ROUTE
+  type: fallback
+  disable-udp: false
+  proxies:
+  - ROUTE 🇸🇬
+  - ROUTE 🇫🇷
+  - ROUTE 🇳🇱
+  - ROUTE 🇺🇲
+  - ROUTE ETH1
+  - ROUTE USB0
+  - Trojan
+  - ROUTE 🇮🇩
+  - DIRECT
+  - DIRECT usb0
+  url: https://cp.cloudflare.com/generate_204
+  interval: '1'
+  lazy: false
 - name: FOCUS DIRECT
   type: load-balance
   strategy: round-robin
@@ -366,6 +327,22 @@ proxy-groups:
   - IPv4 🇮🇩
   url: https://cp.cloudflare.com/generate_204
   interval: '1'
+- name: ROUTE ETH1
+  type: load-balance
+  disable-udp: false
+  use:
+  - VPN1
+  interface-name: eth1
+  url: http://cp.cloudflare.com/generate_204
+  interval: '1'
+- name: ROUTE USB0
+  type: load-balance
+  disable-udp: false
+  use:
+  - VPN2
+  interface-name: usb0
+  url: http://cp.cloudflare.com/generate_204
+  interval: '1'
 
 - name: IPv1 🇮🇩
   type: load-balance
@@ -411,6 +388,7 @@ proxy-groups:
   disable-udp: false
   use:
   - Trojan
+  - Vmees
   url: https://cp.cloudflare.com/generate_204
   interval: '1'
 
@@ -462,11 +440,11 @@ rule-providers:
     path: "./rule_provider/adblock/rule_reject.yaml"
     url: https://raw.githubusercontent.com/GetPush/Clash/main/rule_provider/adblock/rule_reject.yaml
     interval: 86400
-  rule_personalads:
+  rule_oisd_big:
     type: file
     behavior: classical
-    url: https://raw.githubusercontent.com/GetPush/Clash/main/rule_provider/adblock/rule_personalads.yaml
-    path: "./rule_provider/adblock/rule_personalads.yaml"
+    url: https://raw.githubusercontent.com/GetPush/Clash/main/rule_provider/adblock/rule_oisd_big.yaml
+    path: "./rule_provider/adblock/rule_oisd_big.yaml"
     interval: 86400
   rule_basicads:
     type: file
@@ -782,11 +760,18 @@ proxy-providers:
     interval: 12000
     #21600
 
-#Trojan
   Trojan:
     type: http
     url: "https://raw.githubusercontent.com/GetPush/Clash/main/proxy_provider/Online/Trojan.yaml"
     path: "./proxy_provider/Online/Trojan.yaml"
+    health-check:
+      enable: true
+    interval: 12000
+
+  Vmees:
+    type: file
+    url: "https://raw.githubusercontent.com/GetPush/Clash/main/proxy_provider/Online/Vmess.yaml"
+    path: "./proxy_provider/Online/Vmess.yaml"
     health-check:
       enable: true
     interval: 12000
@@ -811,8 +796,8 @@ rules:
 - RULE-SET,rule_malicious,REJECT
 - RULE-SET,rule_maliciousip,REJECT
 
-- RULE-SET,rule_adblock,TrafficAds
-- RULE-SET,rule_personalads,TrafficAds
+- RULE-SET,rule_adblock,REJECT
+- RULE-SET,rule_oisd_big,REJECT
 
 - RULE-SET,rule_basicads,TrafficAds
 - RULE-SET,rule_hijacking,TrafficAds
@@ -821,9 +806,9 @@ rules:
 #   - GEOSITE,oisd-full,TrafficAds
 #   - GEOSITE,rule-ads,TrafficAds
 
-#- DOMAIN-SUFFIX,pagead2.googlesyndication.com,BOOST
+- DOMAIN-SUFFIX,pagead2.googlesyndication.com,BOOST
 #- DOMAIN-SUFFIX,video-ad-stats.googlesyndication.com,BOOST
-#- DOMAIN-SUFFIX,googlesyndication.com,BOOST
+- DOMAIN-SUFFIX,googlesyndication.com,BOOST
 #- DOMAIN-SUFFIX,www3.doubleclick.net,BOOST
 
 - RULE-SET,rule_porn,TrafficPorn
