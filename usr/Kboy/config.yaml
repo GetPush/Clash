@@ -290,6 +290,7 @@ proxy-groups:
   disable-udp: false
   use:
   - IP 🇸🇬
+  - Akun
   url: https://cp.cloudflare.com/generate_204
   interval: '1'
 - name: ROUTE 🇫🇷
