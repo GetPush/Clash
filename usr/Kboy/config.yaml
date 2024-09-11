@@ -105,6 +105,9 @@ proxy-groups:
   - FOCUS
   - DIRECT
   - DIRECT usb0
+  - AUTO ROUTE
+  use:
+  - Akun
   url: http://cp.cloudflare.com/generate_204
   interval: '1'
 - name: FOCUS
@@ -124,9 +127,6 @@ proxy-groups:
   - IPv2 🇮🇩
   - IPv3 🇮🇩
   - IPv4 🇮🇩
-  - AUTO ROUTE
-  use:
-  - Akun
   url: https://cp.cloudflare.com/generate_204
   interval: '1'
 - name: Zerotier.com
