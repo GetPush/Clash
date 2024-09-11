@@ -1,5 +1,6 @@
 default:
-- &bug 104.21.30.242
+# byu opok space.byu.id
+- &bug space.byu.id
 - &path /vmess
 
 - &uid1 0aaf534e-9b18-41f8-93cb-651b4c8d4513
@@ -14,8 +15,12 @@ default:
 - &uid4 787987ba-1a18-4eee-9549-7fdbd2f6991e
 - &host4 id4.v2vmess.site
 
+- &uidsg e620d600-ee19-4012-a96c-968e85a52de9
+- &hostsg vmess-sg1.sshkit.org
+- &pathsg /sshkit/1828396894/66cf268530688/
+
 proxies:
-- name: IPv1 🇮🇩 VPN2
+- name: IPv1 🇮🇩 ID
   server: *bug
   port: 80
   type: vmess
@@ -31,9 +36,8 @@ proxies:
     headers:
       Host: *host1
   udp: true
-  interface-name: usb0
 
-- name: IPv2 🇮🇩 VPN2
+- name: IPv2 🇮🇩 ID
   server: *bug
   port: 80
   type: vmess
@@ -49,9 +53,8 @@ proxies:
     headers:
       Host: *host2
   udp: true
-  interface-name: usb0
 
-- name: IPv3 🇮🇩 VPN2
+- name: IPv3 🇮🇩 ID
   server: *bug
   port: 80
   type: vmess
@@ -67,9 +70,8 @@ proxies:
     headers:
       Host: *host3
   udp: true
-  interface-name: usb0
 
-- name: IPv4 🇮🇩 VPN2
+- name: IPv4 🇮🇩 ID
   server: *bug
   port: 80
   type: vmess
@@ -85,4 +87,20 @@ proxies:
     headers:
       Host: *host4
   udp: true
-  interface-name: usb0
+
+- name: IPv1 🇸🇬 SG
+  server: *bug
+  port: 443
+  type: vmess
+  uuid: *uidsg
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  servername: *hostsg
+  network: ws
+  ws-opts:
+    path: *pathsg
+    headers:
+      Host: *hostsg
+  udp: true
