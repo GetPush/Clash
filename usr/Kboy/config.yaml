@@ -770,7 +770,7 @@ proxy-providers:
 
   Akun:
     type: file
-    url: "https://raw.githubusercontent.com/GetPush/Clash/main/kboy/Akun.yaml"
+    url: "https://raw.githubusercontent.com/GetPush/Clash/main/usr/Kboy/Akun.yaml"
     path: "./proxy_provider/Online/Akun.yaml"
     health-check:
       enable: true
