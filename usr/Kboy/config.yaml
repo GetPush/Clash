@@ -85,8 +85,13 @@ geodata-loader: memconservative
 sniffer:
   enable: true
   parse-pure-ip: true
+
 tun:
   enable: false
+  stack: system
+  device: utun
+  auto-route: false
+  auto-detect-interface: false
   dns-hijack:
     - any:53
     - tcp://any:53
@@ -768,14 +773,6 @@ proxy-providers:
       enable: true
     interval: 12000
 
-  Akun:
-    type: http
-    url: "https://raw.githubusercontent.com/GetPush/Clash/main/usr/Kboy/Akun.yaml"
-    path: "./proxy_provider/Online/Akun.yaml"
-    health-check:
-      enable: true
-    interval: 12000
-
   VPN1:
     type: http
     url: "https://raw.githubusercontent.com/GetPush/Clash/main/proxy_provider/Online/VPN1.yaml"
@@ -787,6 +784,14 @@ proxy-providers:
     type: http
     url: "https://raw.githubusercontent.com/GetPush/Clash/main/proxy_provider/Online/VPN2.yaml"
     path: "./proxy_provider/Online/VPN2.yaml"
+    health-check:
+      enable: true
+    interval: 12000
+
+  Akun:
+    type: http
+    url: "https://raw.githubusercontent.com/GetPush/Clash/main/usr/Kboy/Akun.yaml"
+    path: "./proxy_provider/Online/Akun.yaml"
     health-check:
       enable: true
     interval: 12000
