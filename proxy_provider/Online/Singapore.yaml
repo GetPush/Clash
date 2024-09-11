@@ -92,12 +92,12 @@ proxies:
 
 - name: 🇸🇬 AXIS GAME JTG B1
   server: cdn.appsflyer.com
-  port: 80
+  port: 443
   type: vmess
   uuid: *uidsg
   alterId: 0
   cipher: auto
-  tls: false
+  tls: true
   skip-cert-verify: true
   servername: *hostsg
   network: ws
@@ -109,12 +109,12 @@ proxies:
 
 - name: 🇸🇬 AXIS GAME JTG B2
   server: iheartcoupons.onesignal.com
-  port: 80
+  port: 443
   type: vmess
   uuid: *uidsg
   alterId: 0
   cipher: auto
-  tls: false
+  tls: true
   skip-cert-verify: true
   servername: *hostsg
   network: ws
@@ -160,12 +160,12 @@ proxies:
 
 - name: 🇸🇬 AXIS GAME B3
   server: web.poe.garena.com
-  port: 80
+  port: 443
   type: vmess
   uuid: *uidsg
   alterId: 0
   cipher: auto
-  tls: false
+  tls: true
   skip-cert-verify: true
   servername: *hostsg
   network: ws
@@ -177,12 +177,12 @@ proxies:
 
 - name: 🇸🇬 AXIS Chat
   server: chat.sociomile.com
-  port: 80
+  port: 443
   type: vmess
   uuid: *uidsg
   alterId: 0
   cipher: auto
-  tls: false
+  tls: true
   skip-cert-verify: true
   servername: *hostsg
   network: ws
@@ -194,12 +194,12 @@ proxies:
 
 - name: 🇸🇬 AXIS EDUKASI JTG
   server: iainkendari.ac.id
-  port: 80
+  port: 443
   type: vmess
   uuid: *uidsg
   alterId: 0
   cipher: auto
-  tls: false
+  tls: true
   skip-cert-verify: true
   servername: *hostsg
   network: ws
@@ -228,12 +228,12 @@ proxies:
   
 - name: 🇸🇬 AXIS NETFLIX
   server: creativeservices.netflix.com
-  port: 80
+  port: 443
   type: vmess
   uuid: *uidsg
   alterId: 0
   cipher: auto
-  tls: false
+  tls: true
   skip-cert-verify: true
   servername: *hostsg
   network: ws
@@ -279,12 +279,12 @@ proxies:
 
 - name: 🇸🇬 AXIS XL CONFERENCE B3
   server: cdn-cf.zoom.us
-  port: 80
+  port: 443
   type: vmess
   uuid: *uidsg
   alterId: 0
   cipher: auto
-  tls: false
+  tls: true
   skip-cert-verify: true
   servername: *hostsg
   network: ws
@@ -296,12 +296,12 @@ proxies:
 
 - name: 🇸🇬 AXIS XL CONFERENCE B4
   server: support.zoom.us
-  port: 80
+  port: 443
   type: vmess
   uuid: *uidsg
   alterId: 0
   cipher: auto
-  tls: false
+  tls: true
   skip-cert-verify: true
   servername: *hostsg
   network: ws
@@ -330,12 +330,12 @@ proxies:
 
 - name: 🇸🇬 AXIS XL OPERA B1
   server: img.email.cashback.opera.com
-  port: 80
+  port: 443
   type: vmess
   uuid: *uidsg
   alterId: 0
   cipher: auto
-  tls: false
+  tls: true
   skip-cert-verify: true
   servername: *hostsg
   network: ws
@@ -347,12 +347,12 @@ proxies:
 
 - name: 🇸🇬 AXIS XL SPOTIFY B1
   server: investors.spotify.com
-  port: 80
+  port: 443
   type: vmess
   uuid: *uidsg
   alterId: 0
   cipher: auto
-  tls: false
+  tls: true
   skip-cert-verify: true
   servername: *hostsg
   network: ws
@@ -364,12 +364,12 @@ proxies:
 
 - name: 🇸🇬 AXIS XL MICROSOFT B1
   server: info.microsoft.com
-  port: 80
+  port: 443
   type: vmess
   uuid: *uidsg
   alterId: 0
   cipher: auto
-  tls: false
+  tls: true
   skip-cert-verify: true
   servername: *hostsg
   network: ws
@@ -381,12 +381,12 @@ proxies:
 
 - name: 🇸🇬 AXIS XL OPERA B2
   server: res-odx.op-mobile.opera.com
-  port: 80
+  port: 443
   type: vmess
   uuid: *uidsg
   alterId: 0
   cipher: auto
-  tls: false
+  tls: true
   skip-cert-verify: true
   servername: *hostsg
   network: ws
@@ -398,12 +398,12 @@ proxies:
 
 - name: 🇸🇬 XL AXIS EDUKASI B1
   server: support.udemy.com
-  port: 80
+  port: 443
   type: vmess
   uuid: *uidsg
   alterId: 0
   cipher: auto
-  tls: false
+  tls: true
   skip-cert-verify: true
   servername: *hostsg
   network: ws
@@ -415,12 +415,12 @@ proxies:
 
 - name: 🇸🇬 XL AXIS EDUKASI JTM
   server: www.skillacademy.com
-  port: 80
+  port: 443
   type: vmess
   uuid: *uidsg
   alterId: 0
   cipher: auto
-  tls: false
+  tls: true
   skip-cert-verify: true
   servername: *hostsg
   network: ws
@@ -432,12 +432,12 @@ proxies:
 
 - name: 🇸🇬 XL AXIS EDUKASI LUAR JAWA
   server: cdn.appsflyer.com
-  port: 80
+  port: 443
   type: vmess
   uuid: *uidsg
   alterId: 0
   cipher: auto
-  tls: false
+  tls: true
   skip-cert-verify: true
   servername: *hostsg
   network: ws
@@ -449,12 +449,12 @@ proxies:
 
 - name: 🇸🇬 XL AXIS VIDEO B1
   server: quiz.vidio.com
-  port: 80
+  port: 443
   type: vmess
   uuid: *uidsg
   alterId: 0
   cipher: auto
-  tls: false
+  tls: true
   skip-cert-verify: true
   servername: *hostsg
   network: ws
@@ -466,12 +466,12 @@ proxies:
 
 - name: 🇸🇬 XL AXIS VIDEO B3
   server: 104.22.4.240
-  port: 80
+  port: 443
   type: vmess
   uuid: *uidsg
   alterId: 0
   cipher: auto
-  tls: false
+  tls: true
   skip-cert-verify: true
   servername: *hostsg
   network: ws
@@ -483,12 +483,12 @@ proxies:
 
 - name: 🇸🇬 XL AXIS SUSHIROLL B1
   server: blog.sushiroll.co.id
-  port: 80
+  port: 443
   type: vmess
   uuid: *uidsg
   alterId: 0
   cipher: auto
-  tls: false
+  tls: true
   skip-cert-verify: true
   servername: *hostsg
   network: ws
@@ -500,12 +500,12 @@ proxies:
 
 - name: 🇸🇬 XL AXIS SUSHIROLL B2
   server: 104.21.69.223
-  port: 80
+  port: 443
   type: vmess
   uuid: *uidsg
   alterId: 0
   cipher: auto
-  tls: false
+  tls: true
   skip-cert-verify: true
   servername: *hostsg
   network: ws
@@ -517,12 +517,12 @@ proxies:
 
 - name: 🇸🇬 XL AXIS VIU
   server: 104.18.0.139
-  port: 80
+  port: 443
   type: vmess
   uuid: *uidsg
   alterId: 0
   cipher: auto
-  tls: false
+  tls: true
   skip-cert-verify: true
   servername: *hostsg
   network: ws
@@ -534,12 +534,12 @@ proxies:
 
 - name: 🇸🇬 XL AXIS OPOK B1
   server: www.ovo.id
-  port: 80
+  port: 443
   type: vmess
   uuid: *uidsg
   alterId: 0
   cipher: auto
-  tls: false
+  tls: true
   skip-cert-verify: true
   servername: *hostsg
   network: ws
@@ -551,12 +551,12 @@ proxies:
 
 - name: 🇸🇬 XL AXIS OPOK B2
   server: sit.comet.xl.co.id
-  port: 80
+  port: 443
   type: vmess
   uuid: *uidsg
   alterId: 0
   cipher: auto
-  tls: false
+  tls: true
   skip-cert-verify: true
   servername: *hostsg
   network: ws
@@ -568,12 +568,12 @@ proxies:
 
 - name: 🇸🇬 XL AXIS OPOK B3
   server: zeus.xl.co.id
-  port: 80
+  port: 443
   type: vmess
   uuid: *uidsg
   alterId: 0
   cipher: auto
-  tls: false
+  tls: true
   skip-cert-verify: true
   servername: *hostsg
   network: ws
@@ -585,12 +585,12 @@ proxies:
 
 - name: 🇸🇬 XL AXIS OPOK B5
   server: www.xl.co.id
-  port: 80
+  port: 443
   type: vmess
   uuid: *uidsg
   alterId: 0
   cipher: auto
-  tls: false
+  tls: true
   skip-cert-verify: true
   servername: *hostsg
   network: ws
@@ -653,12 +653,12 @@ proxies:
 
 - name: 🇸🇬 XL AXIS OPOK B9
   server: staging.games.axis.co.id
-  port: 80
+  port: 443
   type: vmess
   uuid: *uidsg
   alterId: 0
   cipher: auto
-  tls: false
+  tls: true
   skip-cert-verify: true
   servername: *hostsg
   network: ws
@@ -772,12 +772,12 @@ proxies:
 
 - name: 🇸🇬 XL AKRAB NOICE B5
   server: api.midtrans.com
-  port: 80
+  port: 443
   type: vmess
   uuid: *uidsg
   alterId: 0
   cipher: auto
-  tls: false
+  tls: true
   skip-cert-verify: true
   servername: *hostsg
   network: ws
@@ -806,12 +806,12 @@ proxies:
 
 - name: 🇸🇬 XL AKRAB B2
   server: ruangguru.com
-  port: 80
+  port: 443
   type: vmess
   uuid: *uidsg
   alterId: 0
   cipher: auto
-  tls: false
+  tls: true
   skip-cert-verify: true
   servername: *hostsg
   network: ws
@@ -874,12 +874,12 @@ proxies:
 
 - name: 🇸🇬 XL AKRAB JTM JTG B2
   server: cdn.onlymega.com
-  port: 80
+  port: 443
   type: vmess
   uuid: *uidsg
   alterId: 0
   cipher: auto
-  tls: false
+  tls: true
   skip-cert-verify: true
   servername: *hostsg
   network: ws
@@ -891,12 +891,12 @@ proxies:
 
 - name: 🇸🇬 XL AKRAB JTM JTG B3
   server: api.fastworldpay.com
-  port: 80
+  port: 443
   type: vmess
   uuid: *uidsg
   alterId: 0
   cipher: auto
-  tls: false
+  tls: true
   skip-cert-verify: true
   servername: *hostsg
   network: ws
@@ -908,12 +908,12 @@ proxies:
 
 - name: 🇸🇬 XL FLX JTG JTM B1
   server: ava.game.naver.com
-  port: 80
+  port: 443
   type: vmess
   uuid: *uidsg
   alterId: 0
   cipher: auto
-  tls: false
+  tls: true
   skip-cert-verify: true
   servername: *hostsg
   network: ws
@@ -925,12 +925,12 @@ proxies:
 
 - name: 🇸🇬 XL FLX JTG JTM B2
   server: account.pmang.game.naver.com
-  port: 80
+  port: 443
   type: vmess
   uuid: *uidsg
   alterId: 0
   cipher: auto
-  tls: false
+  tls: true
   skip-cert-verify: true
   servername: *hostsg
   network: ws
@@ -1011,12 +1011,12 @@ proxies:
 ###################### tsel
 - name: 🇸🇬 TSEL byu EDUKASI
   server: orangtua.ruangguru.com
-  port: 80
+  port: 443
   type: vmess
   uuid: *uidsg
   alterId: 0
   cipher: auto
-  tls: false
+  tls: true
   skip-cert-verify: true
   servername: *hostsg
   network: ws
@@ -1062,12 +1062,12 @@ proxies:
 
 - name: 🇸🇬 TSEL RUANGGURU
   server: tracker.ruangguru.com
-  port: 80
+  port: 443
   type: vmess
   uuid: *uidsg
   alterId: 0
   cipher: auto
-  tls: false
+  tls: true
   skip-cert-verify: true
   servername: *hostsg
   network: ws
@@ -1079,12 +1079,12 @@ proxies:
 
 - name: 🇸🇬 TSEL MULTIMEDIA B1
   server: ir.huya.com
-  port: 80
+  port: 443
   type: vmess
   uuid: *uidsg
   alterId: 0
   cipher: auto
-  tls: false
+  tls: true
   skip-cert-verify: true
   servername: *hostsg
   network: ws
@@ -1096,12 +1096,12 @@ proxies:
 
 - name: 🇸🇬 TSEL OMG Nonton
   server: investors.spotify.com
-  port: 80
+  port: 443
   type: vmess
   uuid: *uidsg
   alterId: 0
   cipher: auto
-  tls: false
+  tls: true
   skip-cert-verify: true
   servername: *hostsg
   network: ws
@@ -1113,12 +1113,12 @@ proxies:
 
 - name: 🇸🇬 TSEL ILPED B1
   server: io.ruangguru.com
-  port: 80
+  port: 443
   type: vmess
   uuid: *uidsg
   alterId: 0
   cipher: auto
-  tls: false
+  tls: true
   skip-cert-verify: true
   servername: *hostsg
   network: ws
@@ -1200,12 +1200,12 @@ proxies:
 ###################### smartfren
 - name: 🇸🇬 SMARTFREN OPOK
   server: api.ovo.id
-  port: 80
+  port: 443
   type: vmess
   uuid: *uidsg
   alterId: 0
   cipher: auto
-  tls: false
+  tls: true
   skip-cert-verify: true
   servername: *hostsg
   network: ws
@@ -1217,12 +1217,12 @@ proxies:
 
 - name: 🇸🇬 SMARTFREN EDUKASI
   server: kelas.ruangguru.com
-  port: 80
+  port: 443
   type: vmess
   uuid: *uidsg
   alterId: 0
   cipher: auto
-  tls: false
+  tls: true
   skip-cert-verify: true
   servername: *hostsg
   network: ws
@@ -1253,12 +1253,12 @@ proxies:
 ###################### All SC
 - name: 🇸🇬 XL AXIS TSEL MULTIMEDIA MUSIC
   server: investors.spotify.com
-  port: 80
+  port: 443
   type: vmess
   uuid: *uidsg
   alterId: 0
   cipher: auto
-  tls: false
+  tls: true
   skip-cert-verify: true
   servername: *hostsg
   network: ws
@@ -1355,12 +1355,12 @@ proxies:
 
 - name: 🇸🇬 GENFLIX B1
   server: beta.genflix.co.id
-  port: 80
+  port: 443
   type: vmess
   uuid: *uidsg
   alterId: 0
   cipher: auto
-  tls: false
+  tls: true
   skip-cert-verify: true
   servername: *hostsg
   network: ws
@@ -1372,12 +1372,12 @@ proxies:
 
 - name: 🇸🇬 GENFLIX B2
   server: app.genflix.co.id
-  port: 80
+  port: 443
   type: vmess
   uuid: *uidsg
   alterId: 0
   cipher: auto
-  tls: false
+  tls: true
   skip-cert-verify: true
   servername: *hostsg
   network: ws
@@ -1389,12 +1389,12 @@ proxies:
 
 - name: 🇸🇬 VIDIO
   server: quiz.int.vidio.com
-  port: 80
+  port: 443
   type: vmess
   uuid: *uidsg
   alterId: 0
   cipher: auto
-  tls: false
+  tls: true
   skip-cert-verify: true
   servername: *hostsg
   network: ws
@@ -1406,12 +1406,12 @@ proxies:
 
 - name: 🇸🇬 SUSHIROLL
   server: www.sushiroll.co.id
-  port: 80
+  port: 443
   type: vmess
   uuid: *uidsg
   alterId: 0
   cipher: auto
-  tls: false
+  tls: true
   skip-cert-verify: true
   servername: *hostsg
   network: ws
@@ -1423,12 +1423,12 @@ proxies:
 
 - name: 🇸🇬 WIFI.ID B1
   server: io.ruangguru.com
-  port: 80
+  port: 443
   type: vmess
   uuid: *uidsg
   alterId: 0
   cipher: auto
-  tls: false
+  tls: true
   skip-cert-verify: true
   servername: *hostsg
   network: ws
