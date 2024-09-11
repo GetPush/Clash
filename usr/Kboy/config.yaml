@@ -104,9 +104,6 @@ proxy-groups:
   disable-udp: false
   proxies:
   - ROUTE FB
-  - ROUTE UT
-  - ROUTE LB
-  - FOCUS DIRECT
   - FOCUS
   - DIRECT
   - DIRECT usb0
@@ -176,6 +173,7 @@ proxy-groups:
   proxies:
   - BOOST
   - DIRECT
+  - REJECT
   url: http://cp.cloudflare.com/generate_204
   interval: '1'
 - name: Viu-Vidio
@@ -184,6 +182,7 @@ proxy-groups:
   proxies:
   - BOOST
   - DIRECT
+  - REJECT
   url: http://cp.cloudflare.com/generate_204
   interval: '1'
 - name: PlayStore
@@ -220,6 +219,7 @@ proxy-groups:
   lazy: true
   disable-udp: false
   proxies:
+  - Akun
   - ROUTE 🇸🇬
   - ROUTE 🇫🇷
   - ROUTE 🇳🇱
@@ -227,38 +227,12 @@ proxy-groups:
   - ROUTE ETH1
   - ROUTE USB0
   url: https://cp.cloudflare.com/generate_204
-  interval: '1'
-- name: ROUTE UT
-  type: url-test
-  strategy: round-robin
-  lazy: true
-  disable-udp: false
-  proxies:
-  - ROUTE 🇸🇬
-  - ROUTE 🇫🇷
-  - ROUTE 🇳🇱
-  - ROUTE 🇺🇲
-  - ROUTE ETH1
-  - ROUTE USB0
-  url: https://cp.cloudflare.com/generate_204
-  interval: '1'
-- name: ROUTE LB
-  type: load-balance
-  strategy: round-robin
-  disable-udp: false
-  proxies:
-  - ROUTE 🇸🇬
-  - ROUTE 🇫🇷
-  - ROUTE 🇳🇱
-  - ROUTE 🇺🇲
-  - ROUTE ETH1
-  - ROUTE USB0
-  url: http://cp.cloudflare.com/generate_204
   interval: '1'
 - name: AUTO ROUTE
   type: fallback
   disable-udp: false
   proxies:
+  - Akun
   - ROUTE 🇸🇬
   - ROUTE 🇫🇷
   - ROUTE 🇳🇱
@@ -272,16 +246,6 @@ proxy-groups:
   url: https://cp.cloudflare.com/generate_204
   interval: '1'
   lazy: false
-- name: FOCUS DIRECT
-  type: load-balance
-  strategy: round-robin
-  lazy: true
-  disable-udp: false
-  proxies:
-  - DIRECT
-  - FOCUS
-  url: https://cp.cloudflare.com/generate_204
-  interval: '1'
 
 - name: ROUTE 🇸🇬
   type: load-balance
@@ -290,7 +254,6 @@ proxy-groups:
   disable-udp: false
   use:
   - IP 🇸🇬
-  - Akun
   url: https://cp.cloudflare.com/generate_204
   interval: '1'
 - name: ROUTE 🇫🇷
@@ -394,6 +357,16 @@ proxy-groups:
   disable-udp: false
   use:
   - Trojan
+  - Akun
+  url: https://cp.cloudflare.com/generate_204
+  interval: '1'
+
+- name: Akun
+  type: load-balance
+  strategy: round-robin
+  lazy: true
+  disable-udp: false
+  use:
   - Akun
   url: https://cp.cloudflare.com/generate_204
   interval: '1'
