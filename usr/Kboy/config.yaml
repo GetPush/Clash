@@ -388,7 +388,7 @@ proxy-groups:
   disable-udp: false
   use:
   - Trojan
-  - Vmees
+  - Akun
   url: https://cp.cloudflare.com/generate_204
   interval: '1'
 
@@ -769,7 +769,7 @@ proxy-providers:
     interval: 12000
 
   Akun:
-    type: file
+    type: http
     url: "https://raw.githubusercontent.com/GetPush/Clash/main/usr/Kboy/Akun.yaml"
     path: "./proxy_provider/Online/Akun.yaml"
     health-check:
