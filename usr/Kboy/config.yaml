@@ -87,7 +87,7 @@ sniffer:
   parse-pure-ip: true
 
 tun:
-  enable: false
+  enable: true
   stack: system
   device: utun
   auto-route: false
@@ -103,33 +103,13 @@ proxy-groups:
   type: select
   disable-udp: false
   proxies:
-  - ROUTE FB
-  - FOCUS
+  - AUTO ROUTE
+  - ROUTE Akun
   - DIRECT
   - DIRECT usb0
-  - AUTO ROUTE
   use:
   - Akun
   url: http://cp.cloudflare.com/generate_204
-  interval: '1'
-- name: FOCUS
-  type: select
-  strategy: round-robin
-  lazy: true
-  disable-udp: false
-  proxies:
-  - ROUTE 🇸🇬
-  - ROUTE 🇫🇷
-  - ROUTE 🇳🇱
-  - ROUTE 🇺🇲
-  - ROUTE 🇮🇩
-  - ROUTE ETH1
-  - ROUTE USB0
-  - IPv1 🇮🇩
-  - IPv2 🇮🇩
-  - IPv3 🇮🇩
-  - IPv4 🇮🇩
-  url: https://cp.cloudflare.com/generate_204
   interval: '1'
 - name: Zerotier.com
   type: select
@@ -212,165 +192,6 @@ proxy-groups:
   - REJECT
   url: http://cp.cloudflare.com/generate_204
   interval: '1'
-
-- name: ROUTE FB
-  type: fallback
-  strategy: round-robin
-  lazy: true
-  disable-udp: false
-  proxies:
-  - Akun
-  - ROUTE 🇸🇬
-  - ROUTE 🇫🇷
-  - ROUTE 🇳🇱
-  - ROUTE 🇺🇲
-  - ROUTE ETH1
-  - ROUTE USB0
-  url: https://cp.cloudflare.com/generate_204
-  interval: '1'
-- name: AUTO ROUTE
-  type: fallback
-  disable-udp: false
-  proxies:
-  - Akun
-  - ROUTE 🇸🇬
-  - ROUTE 🇫🇷
-  - ROUTE 🇳🇱
-  - ROUTE 🇺🇲
-  - ROUTE ETH1
-  - ROUTE USB0
-  - Trojan
-  - ROUTE 🇮🇩
-  - DIRECT
-  - DIRECT usb0
-  url: https://cp.cloudflare.com/generate_204
-  interval: '1'
-  lazy: false
-
-- name: ROUTE 🇸🇬
-  type: load-balance
-  strategy: round-robin
-  lazy: true
-  disable-udp: false
-  use:
-  - IP 🇸🇬
-  url: https://cp.cloudflare.com/generate_204
-  interval: '1'
-- name: ROUTE 🇫🇷
-  type: load-balance
-  strategy: round-robin
-  lazy: true
-  disable-udp: false
-  use:
-  - IP 🇫🇷
-  url: https://cp.cloudflare.com/generate_204
-  interval: '1'
-- name: ROUTE 🇳🇱
-  type: load-balance
-  strategy: round-robin
-  lazy: true
-  disable-udp: false
-  use:
-  - IP 🇳🇱
-  url: https://cp.cloudflare.com/generate_204
-  interval: '1'
-- name: ROUTE 🇺🇲
-  type: load-balance
-  strategy: round-robin
-  lazy: true
-  disable-udp: false
-  use:
-  - IP 🇺🇲
-  url: https://cp.cloudflare.com/generate_204
-  interval: '1'
-
-- name: ROUTE 🇮🇩
-  type: load-balance
-  strategy: round-robin
-  lazy: true
-  disable-udp: false
-  proxies:
-  - IPv1 🇮🇩
-  - IPv2 🇮🇩
-  - IPv3 🇮🇩
-  - IPv4 🇮🇩
-  url: https://cp.cloudflare.com/generate_204
-  interval: '1'
-- name: ROUTE ETH1
-  type: load-balance
-  disable-udp: false
-  use:
-  - VPN1
-  interface-name: eth1
-  url: http://cp.cloudflare.com/generate_204
-  interval: '1'
-- name: ROUTE USB0
-  type: load-balance
-  disable-udp: false
-  use:
-  - VPN2
-  interface-name: usb0
-  url: http://cp.cloudflare.com/generate_204
-  interval: '1'
-
-- name: IPv1 🇮🇩
-  type: load-balance
-  strategy: round-robin
-  lazy: true
-  disable-udp: false
-  use:
-  - IPv1 🇮🇩
-  url: https://cp.cloudflare.com/generate_204
-  interval: '1'
-- name: IPv2 🇮🇩
-  type: fallback
-  strategy: round-robin
-  lazy: true
-  disable-udp: false
-  use:
-  - IPv2 🇮🇩
-  url: https://cp.cloudflare.com/generate_204
-  interval: '1'
-- name: IPv3 🇮🇩
-  type: url-test
-  strategy: round-robin
-  lazy: true
-  disable-udp: false
-  use:
-  - IPv3 🇮🇩
-  url: https://cp.cloudflare.com/generate_204
-  interval: '1'
-- name: IPv4 🇮🇩
-  type: load-balance
-  strategy: round-robin
-  lazy: true
-  disable-udp: false
-  use:
-  - IPv4 🇮🇩
-  url: https://cp.cloudflare.com/generate_204
-  interval: '1'
-
-- name: Trojan
-  type: url-test
-  strategy: round-robin
-  lazy: true
-  disable-udp: false
-  use:
-  - Trojan
-  - Akun
-  url: https://cp.cloudflare.com/generate_204
-  interval: '1'
-
-- name: Akun
-  type: load-balance
-  strategy: round-robin
-  lazy: true
-  disable-udp: false
-  use:
-  - Akun
-  url: https://cp.cloudflare.com/generate_204
-  interval: '1'
-
  # (usb0) interface: eth1 wlan0 eth2 usb0
 - name: DIRECT usb0
   type: select
@@ -380,7 +201,6 @@ proxy-groups:
   - DIRECT
   url: https://cp.cloudflare.com/generate_204
   interval: '1'
-
 - name: TrafficAds
   type: select
   disable-udp: false
@@ -397,6 +217,106 @@ proxy-groups:
   - BOOST
   url: https://cp.cloudflare.com/generate_204
   interval: '1'
+- name: ROUTE Akun
+  type: load-balance
+  strategy: round-robin
+  lazy: true
+  disable-udp: false
+  use:
+  - Akun
+  url: https://cp.cloudflare.com/generate_204
+  interval: '1'
+
+- name: AUTO ROUTE
+  type: fallback
+  disable-udp: false
+  use:
+  - Akun
+  url: https://cp.cloudflare.com/generate_204
+  interval: '1'
+  lazy: false
+
+proxy-providers:
+  Akun:
+    type: http
+    url: "https://raw.githubusercontent.com/GetPush/Clash/main/usr/Kboy/Akun.yaml"
+    path: "./proxy_provider/Online/Akun.yaml"
+    health-check:
+      enable: true
+    interval: 12000
+
+rules:
+- RULE-SET,rule_reject,REJECT
+- RULE-SET,rule_malicious,REJECT
+- RULE-SET,rule_maliciousip,REJECT
+
+- RULE-SET,rule_adblock,REJECT
+- RULE-SET,rule_oisd_big,REJECT
+
+- RULE-SET,rule_basicads,TrafficAds
+- RULE-SET,rule_hijacking,TrafficAds
+- RULE-SET,rule_privacy,TrafficAds
+
+#   - GEOSITE,oisd-full,TrafficAds
+#   - GEOSITE,rule-ads,TrafficAds
+
+- DOMAIN-SUFFIX,pagead2.googlesyndication.com,BOOST
+#- DOMAIN-SUFFIX,video-ad-stats.googlesyndication.com,BOOST
+- DOMAIN-SUFFIX,googlesyndication.com,BOOST
+#- DOMAIN-SUFFIX,www3.doubleclick.net,BOOST
+
+- RULE-SET,rule_porn,TrafficPorn
+- RULE-SET,rule_nsfw,TrafficPorn
+
+- DST-PORT,5228,BOOST
+- DOMAIN-KEYWORD,googleapis,BOOST
+- DOMAIN-KEYWORD,play.google,BOOST
+- DOMAIN-KEYWORD,gvt1,BOOST
+- DOMAIN-SUFFIX,whatsapp.com,BOOST
+- DOMAIN-SUFFIX,whatsapp.net,BOOST
+- DOMAIN-SUFFIX,wa.me,BOOST
+- DST-PORT,3478,BOOST
+- DOMAIN-KEYWORD,youtube,Viu-Vidio
+- DOMAIN-KEYWORD,ytimg,YouTube-TikTok-Stream
+- DOMAIN-KEYWORD,yt,YouTube-TikTok-Stream
+- DOMAIN-KEYWORD,googlevideo,BOOST
+- DOMAIN-KEYWORD,video.google,BOOST
+- DST-PORT,9993,Zerotier.com
+- RULE-SET,Id.only,Viu-Vidio
+- RULE-SET,key-id,Viu-Vidio
+- RULE-SET,direct,DIRECT1
+- RULE-SET,bank,indo traffic
+- RULE-SET,sosmed,YouTube-TikTok-Stream
+- RULE-SET,yt,YouTube-TikTok-Stream
+- RULE-SET,porttcp,Game-Turbo
+- RULE-SET,portudp,Game-Turbo
+- RULE-SET,games,Game-Turbo
+- RULE-SET,game,Game-Turbo
+- RULE-SET,spdt,SpeedTest
+#- RULE-SET,global,All-Inet
+- RULE-SET,olshop,All-Inet
+- RULE-SET,playstore,PlayStore
+- RULE-SET,streaming,Viu-Vidio
+- RULE-SET,tele,All-Inet
+- RULE-SET,webd,All-Inet
+- RULE-SET,indo,Viu-Vidio
+- RULE-SET,gameu,Game-Turbo
+- RULE-SET,bs,All-Inet
+- RULE-SET,ss,All-Inet
+- RULE-SET,stream,Viu-Vidio
+- RULE-SET,tr,All-Inet
+- RULE-SET,wa,All-Inet
+- RULE-SET,mlm,Game-Turbo
+- RULE-SET,gm,Game-Turbo
+- RULE-SET,fb,All-Inet
+- RULE-SET,ig,All-Inet
+- RULE-SET,lan,All-Inet
+- RULE-SET,line,All-Inet
+- RULE-SET,ms,YouTube-TikTok-Stream
+- RULE-SET,msx,All-Inet
+- RULE-SET,tktk,Viu-Vidio
+- RULE-SET,waa,All-Inet
+- MATCH,BOOST
 
 
 rule-providers:
@@ -671,174 +591,3 @@ rule-providers:
     url: https://raw.githubusercontent.com/GetPush/Clash/main/rule_provider/rule_e-banking.yaml
     path: "./rule_provider/rule_e-banking.yaml"
     interval: 43200
-
-
-proxy-providers:
-#Interval: detik
-#86400 = 24 jam #43200 = 12 jam #21600 = 6 jam
-
-  IPv1 🇮🇩:
-    type: http
-    url: "https://raw.githubusercontent.com/GetPush/Clash/main/proxy_provider/Online/idv1.yaml"
-    path: "./proxy_provider/Online/idv1.yaml"
-    health-check:
-      enable: true
-    interval: 12000
-  IPv2 🇮🇩:
-    type: http
-    url: "https://raw.githubusercontent.com/GetPush/Clash/main/proxy_provider/Online/idv2.yaml"
-    path: "./proxy_provider/Online/idv2.yaml"
-    health-check:
-      enable: true
-    interval: 12000
-  IPv3 🇮🇩:
-    type: http
-    url: "https://raw.githubusercontent.com/GetPush/Clash/main/proxy_provider/Online/idv3.yaml"
-    path: "./proxy_provider/Online/idv3.yaml"
-    health-check:
-      enable: true
-    interval: 12000
-  IPv4 🇮🇩:
-    type: http
-    url: "https://raw.githubusercontent.com/GetPush/Clash/main/proxy_provider/Online/idv4.yaml"
-    path: "./proxy_provider/Online/idv4.yaml"
-    health-check:
-      enable: true
-    interval: 12000
-
-  IP 🇫🇷:
-    type: http
-    url: "https://raw.githubusercontent.com/GetPush/Clash/main/proxy_provider/Online/France.yaml"
-    path: "./proxy_provider/Online/France.yaml"
-    health-check:
-      enable: true
-    interval: 12000
-    #21600
-  IP 🇳🇱:
-    type: http
-    url: "https://raw.githubusercontent.com/GetPush/Clash/main/proxy_provider/Online/Netherlands.yaml"
-    path: "./proxy_provider/Online/Netherlands.yaml"
-    health-check:
-      enable: true
-    interval: 12000
-    #21600
-  IP 🇸🇬:
-    type: http
-    url: "https://raw.githubusercontent.com/GetPush/Clash/main/proxy_provider/Online/Singapore.yaml"
-    path: "./proxy_provider/Online/Singapore.yaml"
-    health-check:
-      enable: true
-    interval: 12000
-    #21600
-  IP 🇺🇲:
-    type: http
-    url: "https://raw.githubusercontent.com/GetPush/Clash/main/proxy_provider/Online/America.yaml"
-    path: "./proxy_provider/Online/America.yaml"
-    health-check:
-      enable: true
-    interval: 12000
-    #21600
-
-  Trojan:
-    type: http
-    url: "https://raw.githubusercontent.com/GetPush/Clash/main/proxy_provider/Online/Trojan.yaml"
-    path: "./proxy_provider/Online/Trojan.yaml"
-    health-check:
-      enable: true
-    interval: 12000
-
-  VPN1:
-    type: http
-    url: "https://raw.githubusercontent.com/GetPush/Clash/main/proxy_provider/Online/VPN1.yaml"
-    path: "./proxy_provider/Online/VPN1.yaml"
-    health-check:
-      enable: true
-    interval: 12000
-  VPN2:
-    type: http
-    url: "https://raw.githubusercontent.com/GetPush/Clash/main/proxy_provider/Online/VPN2.yaml"
-    path: "./proxy_provider/Online/VPN2.yaml"
-    health-check:
-      enable: true
-    interval: 12000
-
-  Akun:
-    type: http
-    url: "https://raw.githubusercontent.com/GetPush/Clash/main/usr/Kboy/Akun.yaml"
-    path: "./proxy_provider/Online/Akun.yaml"
-    health-check:
-      enable: true
-    interval: 12000
-
-rules:
-- RULE-SET,rule_reject,REJECT
-- RULE-SET,rule_malicious,REJECT
-- RULE-SET,rule_maliciousip,REJECT
-
-- RULE-SET,rule_adblock,REJECT
-- RULE-SET,rule_oisd_big,REJECT
-
-- RULE-SET,rule_basicads,TrafficAds
-- RULE-SET,rule_hijacking,TrafficAds
-- RULE-SET,rule_privacy,TrafficAds
-
-#   - GEOSITE,oisd-full,TrafficAds
-#   - GEOSITE,rule-ads,TrafficAds
-
-- DOMAIN-SUFFIX,pagead2.googlesyndication.com,BOOST
-#- DOMAIN-SUFFIX,video-ad-stats.googlesyndication.com,BOOST
-- DOMAIN-SUFFIX,googlesyndication.com,BOOST
-#- DOMAIN-SUFFIX,www3.doubleclick.net,BOOST
-
-- RULE-SET,rule_porn,TrafficPorn
-- RULE-SET,rule_nsfw,TrafficPorn
-
-- DST-PORT,5228,BOOST
-- DOMAIN-KEYWORD,googleapis,BOOST
-- DOMAIN-KEYWORD,play.google,BOOST
-- DOMAIN-KEYWORD,gvt1,BOOST
-- DOMAIN-SUFFIX,whatsapp.com,BOOST
-- DOMAIN-SUFFIX,whatsapp.net,BOOST
-- DOMAIN-SUFFIX,wa.me,BOOST
-- DST-PORT,3478,BOOST
-- DOMAIN-KEYWORD,youtube,Viu-Vidio
-- DOMAIN-KEYWORD,ytimg,YouTube-TikTok-Stream
-- DOMAIN-KEYWORD,yt,YouTube-TikTok-Stream
-- DOMAIN-KEYWORD,googlevideo,BOOST
-- DOMAIN-KEYWORD,video.google,BOOST
-- DST-PORT,9993,Zerotier.com
-- RULE-SET,Id.only,Viu-Vidio
-- RULE-SET,key-id,Viu-Vidio
-- RULE-SET,direct,DIRECT1
-- RULE-SET,bank,indo traffic
-- RULE-SET,sosmed,YouTube-TikTok-Stream
-- RULE-SET,yt,YouTube-TikTok-Stream
-- RULE-SET,porttcp,Game-Turbo
-- RULE-SET,portudp,Game-Turbo
-- RULE-SET,games,Game-Turbo
-- RULE-SET,game,Game-Turbo
-- RULE-SET,spdt,SpeedTest
-#- RULE-SET,global,All-Inet
-- RULE-SET,olshop,All-Inet
-- RULE-SET,playstore,PlayStore
-- RULE-SET,streaming,Viu-Vidio
-- RULE-SET,tele,All-Inet
-- RULE-SET,webd,All-Inet
-- RULE-SET,indo,Viu-Vidio
-- RULE-SET,gameu,Game-Turbo
-- RULE-SET,bs,All-Inet
-- RULE-SET,ss,All-Inet
-- RULE-SET,stream,Viu-Vidio
-- RULE-SET,tr,All-Inet
-- RULE-SET,wa,All-Inet
-- RULE-SET,mlm,Game-Turbo
-- RULE-SET,gm,Game-Turbo
-- RULE-SET,fb,All-Inet
-- RULE-SET,ig,All-Inet
-- RULE-SET,lan,All-Inet
-- RULE-SET,line,All-Inet
-- RULE-SET,ms,YouTube-TikTok-Stream
-- RULE-SET,msx,All-Inet
-- RULE-SET,tktk,Viu-Vidio
-- RULE-SET,waa,All-Inet
-- MATCH,BOOST
