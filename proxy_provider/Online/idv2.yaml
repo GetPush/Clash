@@ -1,11 +1,11 @@
 default:
 - &bug 104.21.30.242
-- &uid2 2a0e452c-7f87-4d69-b98c-b55ce006cc23
-- &host2 id2.v2vmess.site
+- &uid2 2ec06f99-2d85-430e-aab7-d598a1ac9b60
+- &host2 id2-ray.ipservers.xyz
 - &path2 /vmess
 
 proxies:
-- name: IPv2 🇮🇩 EX7 ByU
+- name: IPv2 🇮🇩 EX20 ByU
   server: space.byu.id
   port: 443
   type: vmess
@@ -22,7 +22,7 @@ proxies:
       Host: *host2
   udp: true
 
-- name: IPv2 🇮🇩 EX7 AXIS GAME JBR B1
+- name: IPv2 🇮🇩 AXIS GAME JBR B1
   server: 104.19.142.89
   port: 80
   type: vmess
@@ -39,7 +39,7 @@ proxies:
       Host: *host2
   udp: true
 
-- name: IPv2 🇮🇩 EX7 AXIS All BOOSTER B1
+- name: IPv2 🇮🇩 AXIS All BOOSTER B1
   server: 172.64.153.186
   port: 80
   type: vmess
@@ -56,7 +56,7 @@ proxies:
       Host: *host2
   udp: true
 
-- name: IPv2 🇮🇩 EX7 AXIS All BOOSTER B2
+- name: IPv2 🇮🇩 AXIS All BOOSTER B2
   server: 104.18.34.70
   port: 80
   type: vmess
@@ -73,7 +73,7 @@ proxies:
       Host: *host2
   udp: true
 
-- name: IPv2 🇮🇩 EX7 AXIS GAME JTM
+- name: IPv2 🇮🇩 AXIS GAME JTM
   server: 104.18.21.94
   port: 80
   type: vmess
@@ -90,7 +90,7 @@ proxies:
       Host: *host2
   udp: true
 
-- name: IPv2 🇮🇩 EX7 AXIS GENFLIX
+- name: IPv2 🇮🇩 AXIS GENFLIX
   server: 104.21.30.242
   port: 80
   type: vmess
@@ -107,7 +107,7 @@ proxies:
       Host: *host2
   udp: true
 
-- name: IPv2 🇮🇩 EX7 XL AXIS VIDEO B3
+- name: IPv2 🇮🇩 XL AXIS VIDEO B3
   server: 104.22.4.240
   port: 80
   type: vmess
@@ -124,7 +124,7 @@ proxies:
       Host: *host2
   udp: true
 
-- name: IPv2 🇮🇩 EX7 XL AXIS SUSHIROLL B2
+- name: IPv2 🇮🇩 XL AXIS SUSHIROLL B2
   server: 104.21.69.223
   port: 80
   type: vmess
@@ -141,7 +141,7 @@ proxies:
       Host: *host2
   udp: true
 
-- name: IPv2 🇮🇩 EX7 XL AXIS OPOK B6
+- name: IPv2 🇮🇩 XL AXIS OPOK B6
   server: 104.22.28.102
   port: 80
   type: vmess
@@ -158,7 +158,7 @@ proxies:
       Host: *host2
   udp: true
 
-- name: IPv2 🇮🇩 EX7 XL AXIS OPOK B7
+- name: IPv2 🇮🇩 XL AXIS OPOK B7
   server: 104.17.58.20
   port: 80
   type: vmess
