@@ -1,11 +1,26 @@
 default:
-- &bug 104.21.30.242
 - &uid3 6209ecc8-e7f7-42d1-84b7-303529c431ac
 - &host3 id3.v2vmess.site
 - &path3 /vmess
 
 proxies:
-#### IPv3 EX8
+- name: IPv3 🇮🇩 EX7 ByU
+  server: space.byu.id
+  port: 443
+  type: vmess
+  uuid: *uid3
+  alterId: 0
+  cipher: auto
+  tls: false
+  skip-cert-verify: true
+  servername: *host3
+  network: ws
+  ws-opts:
+    path: *path3
+    headers:
+      Host: *host3
+  udp: true
+
 - name: IPv3 EX8 AXIS GAME JBR B1
   server: 104.19.142.89
   port: 80
