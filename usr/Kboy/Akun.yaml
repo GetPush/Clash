@@ -18,7 +18,7 @@ default:
 - &pathsg /sshkit/7193036365/66e16e0fdcc07/
 
 proxies:
-- name: ByU 11 Okt
+- name: 🇸🇬 ByU 11 Okt
   server: space.byu.id
   port: 443
   type: vmess
