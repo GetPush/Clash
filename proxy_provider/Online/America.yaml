@@ -8,17 +8,17 @@ proxies:
   server: space.byu.id
   port: 443
   type: vmess
-  uuid: *uidsg
+  uuid: *uidus
   alterId: 0
   cipher: auto
-  tls: true
+  tls: false
   skip-cert-verify: true
-  servername: *hostsg
+  servername: *hostus
   network: ws
   ws-opts:
-    path: *pathsg
+    path: *pathus
     headers:
-      Host: *hostsg
+      Host: *hostus
   udp: true
 
 - name: 🇺🇲 AXIS GAME JBR B1
