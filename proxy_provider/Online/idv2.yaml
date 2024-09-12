@@ -2,7 +2,7 @@ default:
 - &bug 104.21.30.242
 - &uid2 2ec06f99-2d85-430e-aab7-d598a1ac9b60
 - &host2 id2-ray.ipservers.xyz
-- &path2 /vmess
+- &path2 /JAGOANSSH/
 
 proxies:
 - name: IPv2 🇮🇩 EX20 ByU
