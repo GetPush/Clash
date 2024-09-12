@@ -1,6 +1,4 @@
 default:
-# byu opok space.byu.id
-- &bug space.byu.id
 - &path /vmess
 
 - &uidsg 0aaf534e-9b18-41f8-93cb-651b4c8d4513
