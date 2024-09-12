@@ -1,159 +1,175 @@
 default:
-- &bug 104.21.30.242
-- &uid e620d600-ee19-4012-a96c-968e85a52de9
-- &host vmess-nl1.sshkit.org
-- &path /sshkit/1828396894/66cf27002a7c7/
+- &uidnl e620d600-ee19-4012-a96c-968e85a52de9
+- &hostnl vmess-nl1.sshkit.org
+- &pathnl /sshkit/1828396894/66cf27002a7c7/
 
 proxies:
-- name: 🇳🇱 AXIS GAME JBR B1
-  server: 104.19.142.89
-  port: 80
+- name: 🇳🇱 ByU 11 Okt
+  server: space.byu.id
+  port: 443
   type: vmess
-  uuid: *uid
+  uuid: *uidnl
   alterId: 0
   cipher: auto
   tls: false
   skip-cert-verify: true
-  servername: *host
+  servername: *hostnl
   network: ws
   ws-opts:
-    path: *path
+    path: *pathnl
     headers:
-      Host: *host
+      Host: *hostnl
+  udp: true
+
+- name: 🇳🇱 AXIS GAME JBR B1
+  server: 104.19.142.89
+  port: 80
+  type: vmess
+  uuid: *uidnl
+  alterId: 0
+  cipher: auto
+  tls: false
+  skip-cert-verify: true
+  servername: *hostnl
+  network: ws
+  ws-opts:
+    path: *pathnl
+    headers:
+      Host: *hostnl
   udp: true
 
 - name: 🇳🇱 AXIS All BOOSTER B1
   server: 172.64.153.186
   port: 80
   type: vmess
-  uuid: *uid
+  uuid: *uidnl
   alterId: 0
   cipher: auto
   tls: false
   skip-cert-verify: true
-  servername: *host
+  servername: *hostnl
   network: ws
   ws-opts:
-    path: *path
+    path: *pathnl
     headers:
-      Host: *host
+      Host: *hostnl
   udp: true
 
 - name: 🇳🇱 AXIS All BOOSTER B2
   server: 104.18.34.70
   port: 80
   type: vmess
-  uuid: *uid
+  uuid: *uidnl
   alterId: 0
   cipher: auto
   tls: false
   skip-cert-verify: true
-  servername: *host
+  servername: *hostnl
   network: ws
   ws-opts:
-    path: *path
+    path: *pathnl
     headers:
-      Host: *host
+      Host: *hostnl
   udp: true
 
 - name: 🇳🇱 AXIS GAME JTM
   server: 104.18.21.94
   port: 80
   type: vmess
-  uuid: *uid
+  uuid: *uidnl
   alterId: 0
   cipher: auto
   tls: false
   skip-cert-verify: true
-  servername: *host
+  servername: *hostnl
   network: ws
   ws-opts:
-    path: *path
+    path: *pathnl
     headers:
-      Host: *host
+      Host: *hostnl
   udp: true
 
 - name: 🇳🇱 AXIS GENFLIX
   server: 104.21.30.242
   port: 80
   type: vmess
-  uuid: *uid
+  uuid: *uidnl
   alterId: 0
   cipher: auto
   tls: false
   skip-cert-verify: true
-  servername: *host
+  servername: *hostnl
   network: ws
   ws-opts:
-    path: *path
+    path: *pathnl
     headers:
-      Host: *host
+      Host: *hostnl
   udp: true
 
 - name: 🇳🇱 XL AXIS VIDEO B3
   server: 104.22.4.240
   port: 80
   type: vmess
-  uuid: *uid
+  uuid: *uidnl
   alterId: 0
   cipher: auto
   tls: false
   skip-cert-verify: true
-  servername: *host
+  servername: *hostnl
   network: ws
   ws-opts:
-    path: *path
+    path: *pathnl
     headers:
-      Host: *host
+      Host: *hostnl
   udp: true
 
 - name: 🇳🇱 XL AXIS SUSHIROLL B2
   server: 104.21.69.223
   port: 80
   type: vmess
-  uuid: *uid
+  uuid: *uidnl
   alterId: 0
   cipher: auto
   tls: false
   skip-cert-verify: true
-  servername: *host
+  servername: *hostnl
   network: ws
   ws-opts:
-    path: *path
+    path: *pathnl
     headers:
-      Host: *host
+      Host: *hostnl
   udp: true
 
 - name: 🇳🇱 XL AXIS OPOK B6
   server: 104.22.28.102
   port: 80
   type: vmess
-  uuid: *uid
+  uuid: *uidnl
   alterId: 0
   cipher: auto
   tls: false
   skip-cert-verify: true
-  servername: *host
+  servername: *hostnl
   network: ws
   ws-opts:
-    path: *path
+    path: *pathnl
     headers:
-      Host: *host
+      Host: *hostnl
   udp: true
 
 - name: 🇳🇱 XL AXIS OPOK B7
   server: 104.17.58.20
   port: 80
   type: vmess
-  uuid: *uid
+  uuid: *uidnl
   alterId: 0
   cipher: auto
   tls: false
   skip-cert-verify: true
-  servername: *host
+  servername: *hostnl
   network: ws
   ws-opts:
-    path: *path
+    path: *pathnl
     headers:
-      Host: *host
+      Host: *hostnl
   udp: true
