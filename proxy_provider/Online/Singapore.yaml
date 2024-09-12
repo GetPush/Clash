@@ -1128,9 +1128,22 @@ proxies:
       Host: *hostsg
   udp: true
 
-#- name: 🇸🇬 BYU OPOK
-#  server: space.byu.id
-#  port: 443
+- name: 🇸🇬 BYU OPOK
+  server: space.byu.id
+  port: 443
+  type: vmess
+  uuid: *uidsg
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  servername: *hostsg
+  network: ws
+  ws-opts:
+    path: *pathsg
+    headers:
+      Host: *hostsg
+  udp: true
 
 ###################### isat
 - name: 🇸🇬 ISAT OPOK B1
