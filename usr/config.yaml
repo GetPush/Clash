@@ -230,7 +230,7 @@ proxy-providers:
   Akun:
     type: http
     url: "https://raw.githubusercontent.com/GetPush/Clash/main/usr/Kboy/Akun.yaml"
-    path: "./proxy_provider/Online/usr/Kboy/Akun.yaml"
+    path: "./proxy_provider/Online/Akun.yaml"
     health-check:
       enable: true
     interval: 12000
