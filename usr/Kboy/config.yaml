@@ -17,6 +17,7 @@ dns:
   nameserver:
     - https://cloudflare-dns.com/dns-query
 
+
 proxies:
 proxy-groups:
 - name: BOOST
@@ -24,7 +25,6 @@ proxy-groups:
   disable-udp: false
   proxies:
   - AUTO ROUTE
-  - FOCUS
   - DIRECT
   - DIRECT usb0
   use:
@@ -79,152 +79,11 @@ proxy-groups:
 - name: AUTO ROUTE
   type: fallback
   disable-udp: false
-  proxies:
-  - ROUTE Akun
-  - ROUTE 🇸🇬
-  - ROUTE 🇫🇷
-  - ROUTE 🇳🇱
-  - ROUTE 🇺🇲
-  - ROUTE ETH1
-  - ROUTE USB0
-  - ROUTE 🇮🇩
-  url: https://cp.cloudflare.com/generate_204
-  interval: '1'
-  lazy: false
-
-- name: FOCUS
-  type: select
-  strategy: round-robin
-  lazy: true
-  disable-udp: false
-  proxies:
-  - ROUTE Akun
-  - ROUTE 🇸🇬
-  - ROUTE 🇫🇷
-  - ROUTE 🇳🇱
-  - ROUTE 🇺🇲
-  - ROUTE 🇮🇩
-  - ROUTE ETH1
-  - ROUTE USB0
-  - IPv1 🇮🇩
-  - IPv2 🇮🇩
-  - IPv3 🇮🇩
-  - IPv4 🇮🇩
-  url: https://cp.cloudflare.com/generate_204
-  interval: '1'
-
-- name: ROUTE Akun
-  type: load-balance
-  strategy: round-robin
-  lazy: true
-  disable-udp: false
   use:
   - Akun
   url: https://cp.cloudflare.com/generate_204
   interval: '1'
-
-- name: ROUTE 🇸🇬
-  type: load-balance
-  strategy: round-robin
-  lazy: true
-  disable-udp: false
-  use:
-  - IP 🇸🇬
-  url: https://cp.cloudflare.com/generate_204
-  interval: '1'
-- name: ROUTE 🇫🇷
-  type: load-balance
-  strategy: round-robin
-  lazy: true
-  disable-udp: false
-  use:
-  - IP 🇫🇷
-  url: https://cp.cloudflare.com/generate_204
-  interval: '1'
-- name: ROUTE 🇳🇱
-  type: load-balance
-  strategy: round-robin
-  lazy: true
-  disable-udp: false
-  use:
-  - IP 🇳🇱
-  url: https://cp.cloudflare.com/generate_204
-  interval: '1'
-- name: ROUTE 🇺🇲
-  type: load-balance
-  strategy: round-robin
-  lazy: true
-  disable-udp: false
-  use:
-  - IP 🇺🇲
-  url: https://cp.cloudflare.com/generate_204
-  interval: '1'
-
-- name: ROUTE 🇮🇩
-  type: load-balance
-  strategy: round-robin
-  lazy: true
-  disable-udp: false
-  proxies:
-  - IPv1 🇮🇩
-  - IPv2 🇮🇩
-  - IPv3 🇮🇩
-  - IPv4 🇮🇩
-  url: https://cp.cloudflare.com/generate_204
-  interval: '1'
-- name: ROUTE ETH1
-  type: load-balance
-  disable-udp: false
-  use:
-  - VPN1
-  interface-name: eth1
-  url: http://cp.cloudflare.com/generate_204
-  interval: '1'
-- name: ROUTE USB0
-  type: load-balance
-  disable-udp: false
-  use:
-  - VPN2
-  interface-name: usb0
-  url: http://cp.cloudflare.com/generate_204
-  interval: '1'
-
-- name: IPv1 🇮🇩
-  type: load-balance
-  strategy: round-robin
-  lazy: true
-  disable-udp: false
-  use:
-  - IPv1 🇮🇩
-  url: https://cp.cloudflare.com/generate_204
-  interval: '1'
-- name: IPv2 🇮🇩
-  type: fallback
-  strategy: round-robin
-  lazy: true
-  disable-udp: false
-  use:
-  - IPv2 🇮🇩
-  url: https://cp.cloudflare.com/generate_204
-  interval: '1'
-- name: IPv3 🇮🇩
-  type: url-test
-  strategy: round-robin
-  lazy: true
-  disable-udp: false
-  use:
-  - IPv3 🇮🇩
-  url: https://cp.cloudflare.com/generate_204
-  interval: '1'
-- name: IPv4 🇮🇩
-  type: load-balance
-  strategy: round-robin
-  lazy: true
-  disable-udp: false
-  use:
-  - IPv4 🇮🇩
-  url: https://cp.cloudflare.com/generate_204
-  interval: '1'
+  lazy: false
 
 proxy-providers:
   Akun:
@@ -234,93 +93,14 @@ proxy-providers:
     health-check:
       enable: true
     interval: 12000
-#proxy-providers:
-#Interval: detik
-#86400 = 24 jam #43200 = 12 jam #21600 = 6 jam
-  IP 🇫🇷:
-    type: http
-    url: "https://raw.githubusercontent.com/GetPush/Clash/main/proxy_provider/Online/France.yaml"
-    path: "./proxy_provider/Online/France.yaml"
-    health-check:
-      enable: true
-    interval: 12000
-    #21600
-  IP 🇳🇱:
-    type: http
-    url: "https://raw.githubusercontent.com/GetPush/Clash/main/proxy_provider/Online/Netherlands.yaml"
-    path: "./proxy_provider/Online/Netherlands.yaml"
-    health-check:
-      enable: true
-    interval: 12000
-    #21600
-  IP 🇸🇬:
-    type: http
-    url: "https://raw.githubusercontent.com/GetPush/Clash/main/proxy_provider/Online/Singapore.yaml"
-    path: "./proxy_provider/Online/Singapore.yaml"
-    health-check:
-      enable: true
-    interval: 12000
-    #21600
-  IP 🇺🇲:
-    type: http
-    url: "https://raw.githubusercontent.com/GetPush/Clash/main/proxy_provider/Online/America.yaml"
-    path: "./proxy_provider/Online/America.yaml"
-    health-check:
-      enable: true
-    interval: 12000
-    #21600
-
-  VPN1:
-    type: http
-    url: "https://raw.githubusercontent.com/GetPush/Clash/main/proxy_provider/Online/VPN1.yaml"
-    path: "./proxy_provider/Online/VPN1.yaml"
-    health-check:
-      enable: true
-    interval: 12000
-  VPN2:
-    type: http
-    url: "https://raw.githubusercontent.com/GetPush/Clash/main/proxy_provider/Online/VPN2.yaml"
-    path: "./proxy_provider/Online/VPN2.yaml"
-    health-check:
-      enable: true
-    interval: 12000
-
-  IPv1 🇮🇩:
-    type: http
-    url: "https://raw.githubusercontent.com/GetPush/Clash/main/proxy_provider/Online/idv1.yaml"
-    path: "./proxy_provider/Online/idv1.yaml"
-    health-check:
-      enable: true
-    interval: 12000
-  IPv2 🇮🇩:
-    type: http
-    url: "https://raw.githubusercontent.com/GetPush/Clash/main/proxy_provider/Online/idv2.yaml"
-    path: "./proxy_provider/Online/idv2.yaml"
-    health-check:
-      enable: true
-    interval: 12000
-  IPv3 🇮🇩:
-    type: http
-    url: "https://raw.githubusercontent.com/GetPush/Clash/main/proxy_provider/Online/idv3.yaml"
-    path: "./proxy_provider/Online/idv3.yaml"
-    health-check:
-      enable: true
-    interval: 12000
-  IPv4 🇮🇩:
-    type: http
-    url: "https://raw.githubusercontent.com/GetPush/Clash/main/proxy_provider/Online/idv4.yaml"
-    path: "./proxy_provider/Online/idv4.yaml"
-    health-check:
-      enable: true
-    interval: 12000
 
 rules:
 - RULE-SET,rule_reject,REJECT
 - RULE-SET,rule_malicious,REJECT
 - RULE-SET,rule_maliciousip,REJECT
 
-- RULE-SET,rule_adblock,TrafficAds
-- RULE-SET,rule_oisd_big,TrafficAds
+- RULE-SET,rule_adblock,REJECT
+- RULE-SET,rule_oisd_big,REJECT
 
 - RULE-SET,rule_basicads,TrafficAds
 - RULE-SET,rule_hijacking,TrafficAds
