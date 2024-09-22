@@ -345,9 +345,8 @@ rules:
 - RULE-SET,mlm,Game-Turbo
 - RULE-SET,gm,Game-Turbo
 - RULE-SET,rule_portgames,Game-Turbo
-- RULE-SET,porttcp,Game-Turbo
-- RULE-SET,portudp,Game-Turbo
 - RULE-SET,rule_portgametcp,Game-Turbo
+- RULE-SET,rule_portgameudp,Game-Turbo
 - RULE-SET,rule_PortTCP,Game-Turbo
 - RULE-SET,rule_PortUDP,Game-Turbo
 
@@ -471,7 +470,7 @@ rule-providers:
     url: https://raw.githubusercontent.com/GetPush/Clash/main/rule_provider/games/rule_portgametcp.yaml
     path: "./rule_provider/games/rule_portgametcp.yaml"
     interval: 43200
-  portudp:
+  rule_portgameudp:
     type: file
     behavior: classical
     url: https://raw.githubusercontent.com/GetPush/Clash/main/rule_provider/games/rule_portgameudp.yaml
