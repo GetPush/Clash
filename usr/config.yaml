@@ -338,6 +338,7 @@ rules:
 - RULE-SET,rule_nsfw,TrafficPorn
 
 - DST-PORT,5228,BOOST
+- RULE-SET,rule_discord,Game-Turbo
 - RULE-SET,porttcp,Game-Turbo
 - RULE-SET,portudp,Game-Turbo
 - RULE-SET,games,Game-Turbo
@@ -345,6 +346,9 @@ rules:
 - RULE-SET,gameu,Game-Turbo
 - RULE-SET,mlm,Game-Turbo
 - RULE-SET,gm,Game-Turbo
+- RULE-SET,rule_portgames,Game-Turbo
+- RULE-SET,rule_PortTCP,Game-Turbo
+- RULE-SET,rule_PortUDP,Game-Turbo
 
 - MATCH,BOOST
 
@@ -418,47 +422,71 @@ rule-providers:
 
 # game
 
+  rule_discord:
+    type: file
+    behavior: classical
+    url: https://raw.githubusercontent.com/GetPush/Clash/main/rule_provider/games/rule_discord.yaml
+    path: "./rule_provider/games/rule_discord.yaml"
+    interval: 43200
   gm:
     type: file
     behavior: classical
-    url: https://raw.githubusercontent.com/GetPush/Clash/main/rule_provider/rule_GamesMax.yaml
-    path: "./rule_provider/rule_GamesMax.yaml"
+    url: https://raw.githubusercontent.com/GetPush/Clash/main/rule_provider/games/rule_GamesMax.yaml
+    path: "./rule_provider/games/rule_GamesMax.yaml"
     interval: 43200
   gameu:
     type: file
     behavior: classical
-    url: https://raw.githubusercontent.com/GetPush/Clash/main/rule_provider/rule_gameumum.yaml
-    path: "./rule_provider/rule_gameumum.yaml"
+    url: https://raw.githubusercontent.com/GetPush/Clash/main/rule_provider/games/rule_gameumum.yaml
+    path: "./rule_provider/games/rule_gameumum.yaml"
     interval: 43200
   mlm:
     type: file
     behavior: classical
-    url: https://raw.githubusercontent.com/GetPush/Clash/main/rule_provider/rule_MobileLegend.yaml
-    path: "./rule_provider/rule_MobileLegend.yaml"
+    url: https://raw.githubusercontent.com/GetPush/Clash/main/rule_provider/games/rule_MobileLegend.yaml
+    path: "./rule_provider/games/rule_MobileLegend.yaml"
     interval: 43200
   games:
     type: file
     behavior: classical
-    url: https://raw.githubusercontent.com/GetPush/Clash/main/rule_provider/rule_games.yaml
-    path: "./rule_provider/rule_games.yaml"
+    url: https://raw.githubusercontent.com/GetPush/Clash/main/rule_provider/games/rule_games.yaml
+    path: "./rule_provider/games//rule_games.yaml"
     interval: 43200
   game:
     type: file
     behavior: classical
-    url: https://raw.githubusercontent.com/GetPush/Clash/main/rule_provider/rule_gaming.yaml
-    path: "./rule_provider/rule_gaming.yaml"
+    url: https://raw.githubusercontent.com/GetPush/Clash/main/rule_provider/games/rule_gaming.yaml
+    path: "./rule_provider/games/rule_gaming.yaml"
     interval: 43200
-  porttcp:
+  rule_portgames:
     type: file
     behavior: classical
-    url: https://raw.githubusercontent.com/GetPush/Clash/main/rule_provider/rule_portgametcp.yaml
-    path: "./rule_provider/rule_portgametcp.yaml"
+    url: https://raw.githubusercontent.com/GetPush/Clash/main/rule_provider/games/rule_portgames.yaml
+    path: "./rule_provider/games/rule_portgames.yaml"
     interval: 43200
   portudp:
     type: file
     behavior: classical
-    url: https://raw.githubusercontent.com/GetPush/Clash/main/rule_provider/rule_portgameudp.yaml
-    path: "./rule_provider/rule_portgameudp.yaml"
+    url: https://raw.githubusercontent.com/GetPush/Clash/main/rule_provider/games/rule_portgameudp.yaml
+    path: "./rule_provider/games/rule_portgameudp.yaml"
+    interval: 43200
+  portudp:
+    type: file
+    behavior: classical
+    url: https://raw.githubusercontent.com/GetPush/Clash/main/rule_provider/games/rule_portgameudp.yaml
+    path: "./rule_provider/games/rule_portgameudp.yaml"
+    interval: 43200
+  rule_PortTCP:
+    type: file
+    behavior: classical
+    url: https://raw.githubusercontent.com/GetPush/Clash/main/rule_provider/games/rule_PortTCP.yaml
+    path: "./rule_provider/games/rule_PortTCP.yaml"
+    interval: 43200
+  rule_PortUDP:
+    type: file
+    behavior: classical
+    url: https://raw.githubusercontent.com/GetPush/Clash/main/rule_provider/games/rule_PortUDP.yaml
+    path: "./rule_provider/games/rule_PortUDP.yaml"
     interval: 43200
 
   direct:
