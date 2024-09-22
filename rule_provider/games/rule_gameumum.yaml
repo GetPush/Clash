@@ -1,6 +1,5 @@
 payload:
   # FreeFire
-  - DOMAIN-KEYWORD,freefire
   - DOMAIN-SUFFIX,garena.com
   - DOMAIN-SUFFIX,avatargarenanow-a.akamaihd.net
   - DOMAIN-SUFFIX,cdngarenanow-a.akamaihd.net
