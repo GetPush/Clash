@@ -1,101 +1,21 @@
-redir-port: 9797
-port: 7890
-socks-port: 7891
-mixed-port: 7893
+tproxy-port: 7893
+bind-address: "*"
 mode: rule
-log-level: silent
 allow-lan: true
-unified-delay: true
+log-level: silent
 external-controller: 0.0.0.0:9090
-#secret: sign
-bind-address: 0.0.0.0
-external-ui: /data/adb/box/clash/ui/metacubexd
-tcp-concurrent: true
+external-ui: yacd-gh-pages
+unified-delay: true
+ipv6: false
 dns:
   enable: true
   ipv6: false
-  respect-rules: true
+  listen: 0.0.0.0:1053
   enhanced-mode: fake-ip
-  listen: 0.0.0.0:7874
-  fake-ip-range: 28.0.0.1/8
-  default-nameserver:
-    - 223.5.5.5
-    - udp://223.5.5.5
-    - 1.1.1.1
-    - 8.8.8.8
+  fake-ip-range: 28.0.0.0/8
+  use-hosts: true
   nameserver:
-    - 1.1.1.1
-    - 8.8.8.8
-    - quic://dns.adguard.com:784
-    - https://dns.adguard.com/dns-query
-    - tls://dns.adguard.com
-    - 223.5.5.5
-    - udp://223.5.5.5
-  proxy-server-nameserver:
-    - 1.1.1.1
-    - 8.8.8.8
-    - quic://dns.adguard.com:784
-    - https://dns.adguard.com/dns-query
-    - tls://dns.adguard.com
-    - 223.5.5.5
-    - udp://223.5.5.5
-  fake-ip-filter:
-    - '*'
-    - '*.lan'
-  fallback-filter:
-    geoip: true
-    geoip-code: ID
-    ipcidr:
-    - 0.0.0.0/8
-    - 10.0.0.0/8
-    - 100.64.0.0/10
-    - 127.0.0.0/8
-    - 169.254.0.0/16
-    - 172.16.0.0/12
-    - 192.0.0.0/24
-    - 192.0.2.0/24
-    - 192.88.99.0/24
-    - 192.168.0.0/16
-    - 198.18.0.0/15
-    - 198.51.100.0/24
-    - 203.0.113.0/24
-    - 224.0.0.0/4
-    - 240.0.0.0/4
-    - 255.255.255.255/32
-    domain:
-    - +.google.com
-    - +.facebook.com
-    - +.fbcdn.net
-    - +.ggpht.com
-    - +.youtube.com
-    - +.githubusercontent.com
-    - +.googlevideo.com
-    - +.msftconnecttest.com
-    - +.msftncsi.com
-    - msftconnecttest.com
-    - msftncsi.com
-    - +.*
-ipv6: false
-profile:
-  store-selected: true
-  store-fake-ip: true
-
-tproxy-port: 9898
-geodata-loader: memconservative
-sniffer:
-  enable: true
-  parse-pure-ip: true
-
-tun:
-  enable: false
-  stack: system
-  device: utun
-  auto-route: false
-  auto-detect-interface: false
-  dns-hijack:
-    - any:53
-    - tcp://any:53
-    - udp://any:53
+    - https://cloudflare-dns.com/dns-query
 
 proxies:
 proxy-groups:
@@ -104,6 +24,7 @@ proxy-groups:
   disable-udp: false
   proxies:
   - AUTO ROUTE
+  - FOCUS
   - DIRECT
   - DIRECT usb0
   use:
@@ -158,11 +79,152 @@ proxy-groups:
 - name: AUTO ROUTE
   type: fallback
   disable-udp: false
+  proxies:
+  - ROUTE Akun
+  - ROUTE 🇸🇬
+  - ROUTE 🇫🇷
+  - ROUTE 🇳🇱
+  - ROUTE 🇺🇲
+  - ROUTE ETH1
+  - ROUTE USB0
+  - ROUTE 🇮🇩
+  url: https://cp.cloudflare.com/generate_204
+  interval: '1'
+  lazy: false
+
+- name: FOCUS
+  type: select
+  strategy: round-robin
+  lazy: true
+  disable-udp: false
+  proxies:
+  - ROUTE Akun
+  - ROUTE 🇸🇬
+  - ROUTE 🇫🇷
+  - ROUTE 🇳🇱
+  - ROUTE 🇺🇲
+  - ROUTE 🇮🇩
+  - ROUTE ETH1
+  - ROUTE USB0
+  - IPv1 🇮🇩
+  - IPv2 🇮🇩
+  - IPv3 🇮🇩
+  - IPv4 🇮🇩
+  url: https://cp.cloudflare.com/generate_204
+  interval: '1'
+
+- name: ROUTE Akun
+  type: load-balance
+  strategy: round-robin
+  lazy: true
+  disable-udp: false
   use:
   - Akun
   url: https://cp.cloudflare.com/generate_204
   interval: '1'
-  lazy: false
+
+- name: ROUTE 🇸🇬
+  type: load-balance
+  strategy: round-robin
+  lazy: true
+  disable-udp: false
+  use:
+  - IP 🇸🇬
+  url: https://cp.cloudflare.com/generate_204
+  interval: '1'
+- name: ROUTE 🇫🇷
+  type: load-balance
+  strategy: round-robin
+  lazy: true
+  disable-udp: false
+  use:
+  - IP 🇫🇷
+  url: https://cp.cloudflare.com/generate_204
+  interval: '1'
+- name: ROUTE 🇳🇱
+  type: load-balance
+  strategy: round-robin
+  lazy: true
+  disable-udp: false
+  use:
+  - IP 🇳🇱
+  url: https://cp.cloudflare.com/generate_204
+  interval: '1'
+- name: ROUTE 🇺🇲
+  type: load-balance
+  strategy: round-robin
+  lazy: true
+  disable-udp: false
+  use:
+  - IP 🇺🇲
+  url: https://cp.cloudflare.com/generate_204
+  interval: '1'
+
+- name: ROUTE 🇮🇩
+  type: load-balance
+  strategy: round-robin
+  lazy: true
+  disable-udp: false
+  proxies:
+  - IPv1 🇮🇩
+  - IPv2 🇮🇩
+  - IPv3 🇮🇩
+  - IPv4 🇮🇩
+  url: https://cp.cloudflare.com/generate_204
+  interval: '1'
+- name: ROUTE ETH1
+  type: load-balance
+  disable-udp: false
+  use:
+  - VPN1
+  interface-name: eth1
+  url: http://cp.cloudflare.com/generate_204
+  interval: '1'
+- name: ROUTE USB0
+  type: load-balance
+  disable-udp: false
+  use:
+  - VPN2
+  interface-name: usb0
+  url: http://cp.cloudflare.com/generate_204
+  interval: '1'
+
+- name: IPv1 🇮🇩
+  type: load-balance
+  strategy: round-robin
+  lazy: true
+  disable-udp: false
+  use:
+  - IPv1 🇮🇩
+  url: https://cp.cloudflare.com/generate_204
+  interval: '1'
+- name: IPv2 🇮🇩
+  type: fallback
+  strategy: round-robin
+  lazy: true
+  disable-udp: false
+  use:
+  - IPv2 🇮🇩
+  url: https://cp.cloudflare.com/generate_204
+  interval: '1'
+- name: IPv3 🇮🇩
+  type: url-test
+  strategy: round-robin
+  lazy: true
+  disable-udp: false
+  use:
+  - IPv3 🇮🇩
+  url: https://cp.cloudflare.com/generate_204
+  interval: '1'
+- name: IPv4 🇮🇩
+  type: load-balance
+  strategy: round-robin
+  lazy: true
+  disable-udp: false
+  use:
+  - IPv4 🇮🇩
+  url: https://cp.cloudflare.com/generate_204
+  interval: '1'
 
 proxy-providers:
   Akun:
@@ -172,14 +234,93 @@ proxy-providers:
     health-check:
       enable: true
     interval: 12000
+#proxy-providers:
+#Interval: detik
+#86400 = 24 jam #43200 = 12 jam #21600 = 6 jam
+  IP 🇫🇷:
+    type: http
+    url: "https://raw.githubusercontent.com/GetPush/Clash/main/proxy_provider/Online/France.yaml"
+    path: "./proxy_provider/Online/France.yaml"
+    health-check:
+      enable: true
+    interval: 12000
+    #21600
+  IP 🇳🇱:
+    type: http
+    url: "https://raw.githubusercontent.com/GetPush/Clash/main/proxy_provider/Online/Netherlands.yaml"
+    path: "./proxy_provider/Online/Netherlands.yaml"
+    health-check:
+      enable: true
+    interval: 12000
+    #21600
+  IP 🇸🇬:
+    type: http
+    url: "https://raw.githubusercontent.com/GetPush/Clash/main/proxy_provider/Online/Singapore.yaml"
+    path: "./proxy_provider/Online/Singapore.yaml"
+    health-check:
+      enable: true
+    interval: 12000
+    #21600
+  IP 🇺🇲:
+    type: http
+    url: "https://raw.githubusercontent.com/GetPush/Clash/main/proxy_provider/Online/America.yaml"
+    path: "./proxy_provider/Online/America.yaml"
+    health-check:
+      enable: true
+    interval: 12000
+    #21600
+
+  VPN1:
+    type: http
+    url: "https://raw.githubusercontent.com/GetPush/Clash/main/proxy_provider/Online/VPN1.yaml"
+    path: "./proxy_provider/Online/VPN1.yaml"
+    health-check:
+      enable: true
+    interval: 12000
+  VPN2:
+    type: http
+    url: "https://raw.githubusercontent.com/GetPush/Clash/main/proxy_provider/Online/VPN2.yaml"
+    path: "./proxy_provider/Online/VPN2.yaml"
+    health-check:
+      enable: true
+    interval: 12000
+
+  IPv1 🇮🇩:
+    type: http
+    url: "https://raw.githubusercontent.com/GetPush/Clash/main/proxy_provider/Online/idv1.yaml"
+    path: "./proxy_provider/Online/idv1.yaml"
+    health-check:
+      enable: true
+    interval: 12000
+  IPv2 🇮🇩:
+    type: http
+    url: "https://raw.githubusercontent.com/GetPush/Clash/main/proxy_provider/Online/idv2.yaml"
+    path: "./proxy_provider/Online/idv2.yaml"
+    health-check:
+      enable: true
+    interval: 12000
+  IPv3 🇮🇩:
+    type: http
+    url: "https://raw.githubusercontent.com/GetPush/Clash/main/proxy_provider/Online/idv3.yaml"
+    path: "./proxy_provider/Online/idv3.yaml"
+    health-check:
+      enable: true
+    interval: 12000
+  IPv4 🇮🇩:
+    type: http
+    url: "https://raw.githubusercontent.com/GetPush/Clash/main/proxy_provider/Online/idv4.yaml"
+    path: "./proxy_provider/Online/idv4.yaml"
+    health-check:
+      enable: true
+    interval: 12000
 
 rules:
 - RULE-SET,rule_reject,REJECT
 - RULE-SET,rule_malicious,REJECT
 - RULE-SET,rule_maliciousip,REJECT
 
-- RULE-SET,rule_adblock,REJECT
-- RULE-SET,rule_oisd_big,REJECT
+- RULE-SET,rule_adblock,TrafficAds
+- RULE-SET,rule_oisd_big,TrafficAds
 
 - RULE-SET,rule_basicads,TrafficAds
 - RULE-SET,rule_hijacking,TrafficAds
