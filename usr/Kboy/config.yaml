@@ -117,14 +117,18 @@ rules:
 - RULE-SET,rule_porn,TrafficPorn
 - RULE-SET,rule_nsfw,TrafficPorn
 
-- DST-PORT,5228,BOOST
-- RULE-SET,porttcp,Game-Turbo
-- RULE-SET,portudp,Game-Turbo
+- DST-PORT,5228BOOST
+- RULE-SET,rule_discord,Game-Turbo
 - RULE-SET,games,Game-Turbo
 - RULE-SET,game,Game-Turbo
 - RULE-SET,gameu,Game-Turbo
 - RULE-SET,mlm,Game-Turbo
 - RULE-SET,gm,Game-Turbo
+- RULE-SET,rule_portgames,Game-Turbo
+- RULE-SET,rule_portgametcp,Game-Turbo
+- RULE-SET,rule_portgameudp,Game-Turbo
+- RULE-SET,rule_PortTCP,Game-Turbo
+- RULE-SET,rule_PortUDP,Game-Turbo
 
 - MATCH,BOOST
 
