@@ -42,7 +42,7 @@ proxies:
   uuid: *uidsg
   alterId: 0
   cipher: auto
-  tls: true
+  tls: false
   skip-cert-verify: true
   servername: *hostsg
   network: ws
