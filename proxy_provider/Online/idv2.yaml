@@ -1,6 +1,6 @@
 default:
 - &bug 104.21.30.242
-- &uid2 2b43ba7c-c7b8-5883-98e6-bfb957251999
+- &uid2 8e5fd881-a777-59a6-8bf9-446c3c64d156
 - &host2 id2.vmess.site
 - &path2 /vmess
 
