@@ -2,7 +2,7 @@ default:
 #- &bug 104.21.30.242
 - &uidsg e620d600-ee19-4012-a96c-968e85a52de9
 - &hostsg vmess-sg1.sshkit.org
-- &pathsg /sshkit/1828396894/66cf268530688/
+- &pathsg /sshkit/1828396894/66fe8c1ce5d88/
 
 proxies:
 - name: 🇸🇬 AXIS All BOOSTER B1
