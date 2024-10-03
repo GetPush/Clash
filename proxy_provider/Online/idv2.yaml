@@ -1,10 +1,27 @@
 default:
 - &bug 104.21.30.242
-- &uid2 2ec06f99-2d85-430e-aab7-d598a1ac9b60
-- &host2 id2-ray.ipservers.xyz
-- &path2 /JAGOANSSH/
+- &uid2 2b43ba7c-c7b8-5883-98e6-bfb957251999
+- &host2 id2.vmess.site
+- &path2 /vmess
 
 proxies:
+- name: IPv2 🇮🇩 10 Oct 2024 ByU
+  server: space.byu.id
+  port: 80
+  type: vmess
+  uuid: *uid2
+  alterId: 0
+  cipher: auto
+  tls: false
+  skip-cert-verify: true
+  servername: *host2
+  network: ws
+  ws-opts:
+    path: *path2
+    headers:
+      Host: *host2
+  udp: true
+
 - name: IPv2 🇮🇩 EX20 ByU
   server: space.byu.id
   port: 443
