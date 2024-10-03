@@ -4,82 +4,184 @@ default:
 - &pathsg /sshkit/1828396894/66cf268530688/
 
 proxies:
-- name: IPv1 🇮🇩 ID
-  server: *bug
-  port: 80
-  type: vmess
-  uuid: *uid1
-  alterId: 0
-  cipher: auto
-  tls: false
-  skip-cert-verify: true
-  servername: *host1
-  network: ws
-  ws-opts:
-    path: *path
-    headers:
-      Host: *host1
-  udp: true
-
-- name: IPv2 🇮🇩 ID
-  server: *bug
-  port: 80
-  type: vmess
-  uuid: *uid2
-  alterId: 0
-  cipher: auto
-  tls: false
-  skip-cert-verify: true
-  servername: *host2
-  network: ws
-  ws-opts:
-    path: *path
-    headers:
-      Host: *host2
-  udp: true
-
-- name: IPv3 🇮🇩 ID
-  server: *bug
-  port: 80
-  type: vmess
-  uuid: *uid3
-  alterId: 0
-  cipher: auto
-  tls: false
-  skip-cert-verify: true
-  servername: *host3
-  network: ws
-  ws-opts:
-    path: *path
-    headers:
-      Host: *host3
-  udp: true
-
-- name: IPv4 🇮🇩 ID
-  server: *bug
-  port: 80
-  type: vmess
-  uuid: *uid4
-  alterId: 0
-  cipher: auto
-  tls: false
-  skip-cert-verify: true
-  servername: *host4
-  network: ws
-  ws-opts:
-    path: *path
-    headers:
-      Host: *host4
-  udp: true
-
-- name: IPv1 🇸🇬 SG
-  server: *bug
+- name: 🇸🇬 ByU 443 11 Okt
+  server: space.byu.id
   port: 443
   type: vmess
   uuid: *uidsg
   alterId: 0
   cipher: auto
   tls: true
+  skip-cert-verify: true
+  servername: *hostsg
+  network: ws
+  ws-opts:
+    path: *pathsg
+    headers:
+      Host: *hostsg
+  udp: true
+
+- name: 🇸🇬 ByU 80 11 Okt
+  server: space.byu.id
+  port: 80
+  type: vmess
+  uuid: *uidsg
+  alterId: 0
+  cipher: auto
+  tls: false
+  skip-cert-verify: true
+  servername: *hostsg
+  network: ws
+  ws-opts:
+    path: *pathsg
+    headers:
+      Host: *hostsg
+  udp: true
+
+- name: AXIS GAME JBR B1
+  server: 104.19.142.89
+  port: 80
+  type: vmess
+  uuid: *uidsg
+  alterId: 0
+  cipher: auto
+  tls: false
+  skip-cert-verify: true
+  servername: *hostsg
+  network: ws
+  ws-opts:
+    path: *pathsg
+    headers:
+      Host: *hostsg
+  udp: true
+
+- name: AXIS All BOOSTER B1
+  server: 172.64.153.186
+  port: 80
+  type: vmess
+  uuid: *uidsg
+  alterId: 0
+  cipher: auto
+  tls: false
+  skip-cert-verify: true
+  servername: *hostsg
+  network: ws
+  ws-opts:
+    path: *pathsg
+    headers:
+      Host: *hostsg
+  udp: true
+
+- name: AXIS All BOOSTER B2
+  server: 104.18.34.70
+  port: 80
+  type: vmess
+  uuid: *uidsg
+  alterId: 0
+  cipher: auto
+  tls: false
+  skip-cert-verify: true
+  servername: *hostsg
+  network: ws
+  ws-opts:
+    path: *pathsg
+    headers:
+      Host: *hostsg
+  udp: true
+
+- name: AXIS GAME JTM
+  server: 104.18.21.94
+  port: 80
+  type: vmess
+  uuid: *uidsg
+  alterId: 0
+  cipher: auto
+  tls: false
+  skip-cert-verify: true
+  servername: *hostsg
+  network: ws
+  ws-opts:
+    path: *pathsg
+    headers:
+      Host: *hostsg
+  udp: true
+
+- name: AXIS GENFLIX
+  server: 104.21.30.242
+  port: 80
+  type: vmess
+  uuid: *uidsg
+  alterId: 0
+  cipher: auto
+  tls: false
+  skip-cert-verify: true
+  servername: *hostsg
+  network: ws
+  ws-opts:
+    path: *pathsg
+    headers:
+      Host: *hostsg
+  udp: true
+
+- name: XL AXIS VIDEO B3
+  server: 104.22.4.240
+  port: 80
+  type: vmess
+  uuid: *uidsg
+  alterId: 0
+  cipher: auto
+  tls: false
+  skip-cert-verify: true
+  servername: *hostsg
+  network: ws
+  ws-opts:
+    path: *pathsg
+    headers:
+      Host: *hostsg
+  udp: true
+
+- name: XL AXIS SUSHIROLL B2
+  server: 104.21.69.223
+  port: 80
+  type: vmess
+  uuid: *uidsg
+  alterId: 0
+  cipher: auto
+  tls: false
+  skip-cert-verify: true
+  servername: *hostsg
+  network: ws
+  ws-opts:
+    path: *pathsg
+    headers:
+      Host: *hostsg
+  udp: true
+
+- name: XL AXIS OPOK B6
+  server: 104.22.28.102
+  port: 80
+  type: vmess
+  uuid: *uidsg
+  alterId: 0
+  cipher: auto
+  tls: false
+  skip-cert-verify: true
+  servername: *hostsg
+  network: ws
+  ws-opts:
+    path: *pathsg
+    headers:
+      Host: *hostsg
+  udp: true
+
+- name: XL AXIS OPOK B7
+  server: 104.17.58.20
+  port: 80
+  type: vmess
+  uuid: *uidsg
+  alterId: 0
+  cipher: auto
+  tls: false
   skip-cert-verify: true
   servername: *hostsg
   network: ws
