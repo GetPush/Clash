@@ -1,31 +1,44 @@
+default:
+- &uid1 f2f4c070-859e-11ef-815a-1239d0255272
+- &host1 sg1-trojan.bonds.id
+
+- &uid2 3e4ed460-859f-11ef-907b-1239d0255272
+- &host2 sg2-trojan.bonds.id
+
+- &uid3 89013b40-859f-11ef-8ba0-1239d0255272
+- &host3 sg3-trojan.bonds.id
+
+- &uid4 1c9f0390-859f-11ef-a37a-1239d0255272
+- &host4 sg-4.test3.net
+
 proxies:
 # SG HE1
 - name: 🇸🇬 🐎 HE1 AXIS GAME JBR B1
   server: 104.19.142.89
   port: 443
   type: trojan
-  password: 4e70f940-518d-11ef-86a3-1239d0255272
+  password: *uid1
   skip-cert-verify: true
-  sni: sg1-trojan.bonds.id
+  sni: *host1
   network: ws
   ws-opts:
     path: /howdy
     headers:
-      Host: sg1-trojan.bonds.id
+      Host: *host1
   udp: true
 
 - name: 🇸🇬 🐎 HE1 AXIS All BOOSTER B2
   server: 104.18.34.70
   port: 443
   type: trojan
-  password: 4e70f940-518d-11ef-86a3-1239d0255272
+  password: *uid1
   skip-cert-verify: true
-  sni: sg1-trojan.bonds.id
+  sni: *host1
   network: ws
   ws-opts:
     path: /howdy
     headers:
-      Host: sg1-trojan.bonds.id
+      Host: *host1
   udp: true
 
 
@@ -34,28 +47,28 @@ proxies:
   server: 104.19.142.89
   port: 443
   type: trojan
-  password: 99bd6350-518d-11ef-ac9d-1239d0255272
+  password: *uid2
   skip-cert-verify: true
-  sni: sg2-trojan.bonds.id
+  sni: *host2
   network: ws
   ws-opts:
     path: /howdy
     headers:
-      Host: sg2-trojan.bonds.id
+      Host: *host2
   udp: true
 
 - name: 🇸🇬 🐎 HE2 AXIS All BOOSTER B2
   server: 104.18.34.70
   port: 443
   type: trojan
-  password: 99bd6350-518d-11ef-ac9d-1239d0255272
+  password: *uid2
   skip-cert-verify: true
-  sni: sg2-trojan.bonds.id
+  sni: *host2
   network: ws
   ws-opts:
     path: /howdy
     headers:
-      Host: sg2-trojan.bonds.id
+      Host: *host2
   udp: true
 
 
@@ -64,28 +77,28 @@ proxies:
   server: 104.19.142.89
   port: 443
   type: trojan
-  password: e00a620-518e-11ef-936c-1239d0255272
+  password: *uid3
   skip-cert-verify: true
-  sni: sg3-trojan.bonds.id
+  sni: *host3
   network: ws
   ws-opts:
     path: /howdy
     headers:
-      Host: sg3-trojan.bonds.id
+      Host: *host3
   udp: true
 
 - name: 🇸🇬 🐎 HE3 AXIS All BOOSTER B2
   server: 104.18.34.70
   port: 443
   type: trojan
-  password: e00a620-518e-11ef-936c-1239d0255272
+  password: *uid3
   skip-cert-verify: true
-  sni: sg3-trojan.bonds.id
+  sni: *host3
   network: ws
   ws-opts:
     path: /howdy
     headers:
-      Host: sg3-trojan.bonds.id
+      Host: *host3
   udp: true
 
 
@@ -94,26 +107,26 @@ proxies:
   server: 104.19.142.89
   port: 443
   type: trojan
-  password: c96b2420-518c-11ef-93db-1239d0255272
+  password: *uid4
   skip-cert-verify: true
-  sni: sg-4.test3.net
+  sni: *host4
   network: ws
   ws-opts:
     path: /howdy
     headers:
-      Host: sg-4.test3.net
+      Host: *host4
   udp: true
 
 - name: 🇸🇬 🐎 MELBI AXIS All BOOSTER B2
   server: 104.18.34.70
   port: 443
   type: trojan
-  password: c96b2420-518c-11ef-93db-1239d0255272
+  password: *uid4
   skip-cert-verify: true
-  sni: sg-4.test3.net
+  sni: *host4
   network: ws
   ws-opts:
     path: /howdy
     headers:
-      Host: sg-4.test3.net
+      Host: *host4
   udp: true
