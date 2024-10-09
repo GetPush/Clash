@@ -1,5 +1,5 @@
 proxies:
-- name: IPv2 🇮🇩 16Okt ByU
+- name: IPv2 🇮🇩 16Okt ByU B1
   server: space.byu.id
   port: 80
   type: vmess
@@ -16,7 +16,7 @@ proxies:
       Host: id2.vmess.site
   udp: true
 
-- name: IPv2 🇮🇩 16Okt ByU
+- name: IPv2 🇮🇩 16Okt ByU B2
   server: space.byu.id
   port: 443
   type: vmess
