@@ -1,7 +1,8 @@
-default
-- &uid1 I_Love_🇵🇸_SSHMax_91c8e41
-- &host1 id1.vmess.site
-- &path1 /vmess
+#default:
+#- &bug 104.21.30.242
+#- &uid1 I_Love_🇵🇸_SSHMax_91c8e41
+#- &host1 id1.vmess.site
+#- &path1 /vmess
 # 16 okt
 proxies:
 
@@ -9,1037 +10,1037 @@ proxies:
   server: space.byu.id
   port: 80
   type: vmess
-  uuid: *uid1
+  uuid: I_Love_🇵🇸_SSHMax_91c8e41
   alterId: 0
   cipher: auto
   tls: false
   skip-cert-verify: true
-  servername: *host1
+  servername: id1.vmess.site
   network: ws
   ws-opts:
-    path: *path1
+    path: /vmess
     headers:
-      Host: *host1
+      Host: id1.vmess.site
   udp: true
 
 - name: IPv1 🇮🇩 ByU B2
   server: space.byu.id
   port: 443
   type: vmess
-  uuid: *uid1
+  uuid: I_Love_🇵🇸_SSHMax_91c8e41
   alterId: 0
   cipher: auto
   tls: true
   skip-cert-verify: true
-  servername: *host1
+  servername: id1.vmess.site
   network: ws
   ws-opts:
-    path: *path1
+    path: /vmess
     headers:
-      Host: *host1
+      Host: id1.vmess.site
   udp: true
 
 - name: IPv1 🇮🇩 AXIS All BOOSTER B1
   server: 172.64.153.186
   port: 80
   type: vmess
-  uuid: *uid1
+  uuid: I_Love_🇵🇸_SSHMax_91c8e41
   alterId: 0
   cipher: auto
   tls: false
   skip-cert-verify: true
-  servername: *host1
+  servername: id1.vmess.site
   network: ws
   ws-opts:
-    path: *path1
+    path: /vmess
     headers:
-      Host: *host1
+      Host: id1.vmess.site
   udp: true
 
 - name: IPv1 🇮🇩 AXIS All BOOSTER B2
   server: 104.18.34.70
   port: 80
   type: vmess
-  uuid: *uid1
+  uuid: I_Love_🇵🇸_SSHMax_91c8e41
   alterId: 0
   cipher: auto
   tls: false
   skip-cert-verify: true
-  servername: *host1
+  servername: id1.vmess.site
   network: ws
   ws-opts:
-    path: *path1
+    path: /vmess
     headers:
-      Host: *host1
+      Host: id1.vmess.site
   udp: true
 
 - name: IPv1 🇮🇩 AXIS GAME JBR B1
   server: 104.19.142.89
   port: 80
   type: vmess
-  uuid: *uid1
+  uuid: I_Love_🇵🇸_SSHMax_91c8e41
   alterId: 0
   cipher: auto
   tls: false
   skip-cert-verify: true
-  servername: *host1
+  servername: id1.vmess.site
   network: ws
   ws-opts:
-    path: *path1
+    path: /vmess
     headers:
-      Host: *host1
+      Host: id1.vmess.site
   udp: true
 
 - name: IPv1 🇮🇩 AXIS GAME JBR B2
   server: 104.16.108.96
   port: 80
   type: vmess
-  uuid: *uid1
+  uuid: I_Love_🇵🇸_SSHMax_91c8e41
   alterId: 0
   cipher: auto
   tls: false
   skip-cert-verify: true
-  servername: *host1
+  servername: id1.vmess.site
   network: ws
   ws-opts:
-    path: *path1
+    path: /vmess
     headers:
-      Host: *host1
+      Host: id1.vmess.site
   udp: true
 
 - name: IPv1 🇮🇩 AXIS GAME JTM
   server: 104.18.21.94
   port: 80
   type: vmess
-  uuid: *uid1
+  uuid: I_Love_🇵🇸_SSHMax_91c8e41
   alterId: 0
   cipher: auto
   tls: false
   skip-cert-verify: true
-  servername: *host1
+  servername: id1.vmess.site
   network: ws
   ws-opts:
-    path: *path1
+    path: /vmess
     headers:
-      Host: *host1
+      Host: id1.vmess.site
   udp: true
 
 - name: IPv1 🇮🇩 AXIS GAME JTG B1
   server: cdn.appsflyer.com
   port: 443
   type: vmess
-  uuid: *uid1
+  uuid: I_Love_🇵🇸_SSHMax_91c8e41
   alterId: 0
   cipher: auto
   tls: true
   skip-cert-verify: true
-  servername: *host1
+  servername: id1.vmess.site
   network: ws
   ws-opts:
-    path: *path1
+    path: /vmess
     headers:
-      Host: *host1
+      Host: id1.vmess.site
   udp: true
 
 - name: IPv1 🇮🇩 AXIS GAME JTG B2
   server: iheartcoupons.onesignal.com
   port: 443
   type: vmess
-  uuid: *uid1
+  uuid: I_Love_🇵🇸_SSHMax_91c8e41
   alterId: 0
   cipher: auto
   tls: true
   skip-cert-verify: true
-  servername: *host1
+  servername: id1.vmess.site
   network: ws
   ws-opts:
-    path: *path1
+    path: /vmess
     headers:
-      Host: *host1
+      Host: id1.vmess.site
   udp: true
 
 - name: IPv1 🇮🇩 AXIS GAME B1
   server: 104.16.85.20
   port: 80
   type: vmess
-  uuid: *uid1
+  uuid: I_Love_🇵🇸_SSHMax_91c8e41
   alterId: 0
   cipher: auto
   tls: false
   skip-cert-verify: true
-  servername: *host1
+  servername: id1.vmess.site
   network: ws
   ws-opts:
-    path: *path1
+    path: /vmess
     headers:
-      Host: *host1
+      Host: id1.vmess.site
   udp: true
 
 - name: IPv1 🇮🇩 AXIS GAME B2
   server: 104.18.20.94
   port: 80
   type: vmess
-  uuid: *uid1
+  uuid: I_Love_🇵🇸_SSHMax_91c8e41
   alterId: 0
   cipher: auto
   tls: false
   skip-cert-verify: true
-  servername: *host1
+  servername: id1.vmess.site
   network: ws
   ws-opts:
-    path: *path1
+    path: /vmess
     headers:
-      Host: *host1
+      Host: id1.vmess.site
   udp: true
 
 - name: IPv1 🇮🇩 AXIS GAME B3
   server: web.poe.garena.com
   port: 443
   type: vmess
-  uuid: *uid1
+  uuid: I_Love_🇵🇸_SSHMax_91c8e41
   alterId: 0
   cipher: auto
   tls: true
   skip-cert-verify: true
-  servername: *host1
+  servername: id1.vmess.site
   network: ws
   ws-opts:
-    path: *path1
+    path: /vmess
     headers:
-      Host: *host1
+      Host: id1.vmess.site
   udp: true
 
 - name: IPv1 🇮🇩 AXIS Chat
   server: chat.sociomile.com
   port: 443
   type: vmess
-  uuid: *uid1
+  uuid: I_Love_🇵🇸_SSHMax_91c8e41
   alterId: 0
   cipher: auto
   tls: true
   skip-cert-verify: true
-  servername: *host1
+  servername: id1.vmess.site
   network: ws
   ws-opts:
-    path: *path1
+    path: /vmess
     headers:
-      Host: *host1
+      Host: id1.vmess.site
   udp: true
 
 - name: IPv1 🇮🇩 AXIS EDUKASI JTG
   server: iainkendari.ac.id
   port: 443
   type: vmess
-  uuid: *uid1
+  uuid: I_Love_🇵🇸_SSHMax_91c8e41
   alterId: 0
   cipher: auto
   tls: true
   skip-cert-verify: true
-  servername: *host1
+  servername: id1.vmess.site
   network: ws
   ws-opts:
-    path: *path1
+    path: /vmess
     headers:
-      Host: *host1
+      Host: id1.vmess.site
   udp: true
 
 - name: IPv1 🇮🇩 AXIS GENFLIX
   server: 104.21.30.242
   port: 80
   type: vmess
-  uuid: *uid1
+  uuid: I_Love_🇵🇸_SSHMax_91c8e41
   alterId: 0
   cipher: auto
   tls: false
   skip-cert-verify: true
-  servername: *host1
+  servername: id1.vmess.site
   network: ws
   ws-opts:
-    path: *path1
+    path: /vmess
     headers:
-      Host: *host1
+      Host: id1.vmess.site
   udp: true
   
 - name: IPv1 🇮🇩 AXIS NETFLIX
   server: creativeservices.netflix.com
   port: 443
   type: vmess
-  uuid: *uid1
+  uuid: I_Love_🇵🇸_SSHMax_91c8e41
   alterId: 0
   cipher: auto
   tls: true
   skip-cert-verify: true
-  servername: *host1
+  servername: id1.vmess.site
   network: ws
   ws-opts:
-    path: *path1
+    path: /vmess
     headers:
-      Host: *host1
+      Host: id1.vmess.site
   udp: true
 
 - name: IPv1 🇮🇩 AXIS XL CONFERENCE B1
   server: 104.26.4.126
   port: 80
   type: vmess
-  uuid: *uid1
+  uuid: I_Love_🇵🇸_SSHMax_91c8e41
   alterId: 0
   cipher: auto
   tls: false
   skip-cert-verify: true
-  servername: *host1
+  servername: id1.vmess.site
   network: ws
   ws-opts:
-    path: *path1
+    path: /vmess
     headers:
-      Host: *host1
+      Host: id1.vmess.site
   udp: true
 
 - name: IPv1 🇮🇩 AXIS XL CONFERENCE B2
   server: 104.18.21.226
   port: 80
   type: vmess
-  uuid: *uid1
+  uuid: I_Love_🇵🇸_SSHMax_91c8e41
   alterId: 0
   cipher: auto
   tls: false
   skip-cert-verify: true
-  servername: *host1
+  servername: id1.vmess.site
   network: ws
   ws-opts:
-    path: *path1
+    path: /vmess
     headers:
-      Host: *host1
+      Host: id1.vmess.site
   udp: true
 
 - name: IPv1 🇮🇩 AXIS XL CONFERENCE B3
   server: cdn-cf.zoom.us
   port: 443
   type: vmess
-  uuid: *uid1
+  uuid: I_Love_🇵🇸_SSHMax_91c8e41
   alterId: 0
   cipher: auto
   tls: true
   skip-cert-verify: true
-  servername: *host1
+  servername: id1.vmess.site
   network: ws
   ws-opts:
-    path: *path1
+    path: /vmess
     headers:
-      Host: *host1
+      Host: id1.vmess.site
   udp: true
 
 - name: IPv1 🇮🇩 AXIS XL CONFERENCE B4
   server: support.zoom.us
   port: 443
   type: vmess
-  uuid: *uid1
+  uuid: I_Love_🇵🇸_SSHMax_91c8e41
   alterId: 0
   cipher: auto
   tls: true
   skip-cert-verify: true
-  servername: *host1
+  servername: id1.vmess.site
   network: ws
   ws-opts:
-    path: *path1
+    path: /vmess
     headers:
-      Host: *host1
+      Host: id1.vmess.site
   udp: true
 
 - name: IPv1 🇮🇩 AXIS XL CONFERENCE B5
   server: 141.193.213.11
   port: 80
   type: vmess
-  uuid: *uid1
+  uuid: I_Love_🇵🇸_SSHMax_91c8e41
   alterId: 0
   cipher: auto
   tls: false
   skip-cert-verify: true
-  servername: *host1
+  servername: id1.vmess.site
   network: ws
   ws-opts:
-    path: *path1
+    path: /vmess
     headers:
-      Host: *host1
+      Host: id1.vmess.site
   udp: true
 
 - name: IPv1 🇮🇩 AXIS XL OPERA B1
   server: img.email.cashback.opera.com
   port: 443
   type: vmess
-  uuid: *uid1
+  uuid: I_Love_🇵🇸_SSHMax_91c8e41
   alterId: 0
   cipher: auto
   tls: true
   skip-cert-verify: true
-  servername: *host1
+  servername: id1.vmess.site
   network: ws
   ws-opts:
-    path: *path1
+    path: /vmess
     headers:
-      Host: *host1
+      Host: id1.vmess.site
   udp: true
 
 - name: IPv1 🇮🇩 AXIS XL SPOTIFY B1
   server: investors.spotify.com
   port: 443
   type: vmess
-  uuid: *uid1
+  uuid: I_Love_🇵🇸_SSHMax_91c8e41
   alterId: 0
   cipher: auto
   tls: true
   skip-cert-verify: true
-  servername: *host1
+  servername: id1.vmess.site
   network: ws
   ws-opts:
-    path: *path1
+    path: /vmess
     headers:
-      Host: *host1
+      Host: id1.vmess.site
   udp: true
 
 - name: IPv1 🇮🇩 AXIS XL MICROSOFT B1
   server: info.microsoft.com
   port: 443
   type: vmess
-  uuid: *uid1
+  uuid: I_Love_🇵🇸_SSHMax_91c8e41
   alterId: 0
   cipher: auto
   tls: true
   skip-cert-verify: true
-  servername: *host1
+  servername: id1.vmess.site
   network: ws
   ws-opts:
-    path: *path1
+    path: /vmess
     headers:
-      Host: *host1
+      Host: id1.vmess.site
   udp: true
 
 - name: IPv1 🇮🇩 AXIS XL OPERA B2
   server: res-odx.op-mobile.opera.com
   port: 443
   type: vmess
-  uuid: *uid1
+  uuid: I_Love_🇵🇸_SSHMax_91c8e41
   alterId: 0
   cipher: auto
   tls: true
   skip-cert-verify: true
-  servername: *host1
+  servername: id1.vmess.site
   network: ws
   ws-opts:
-    path: *path1
+    path: /vmess
     headers:
-      Host: *host1
+      Host: id1.vmess.site
   udp: true
 
 - name: IPv1 🇮🇩 XL AXIS EDUKASI B1
   server: support.udemy.com
   port: 443
   type: vmess
-  uuid: *uid1
+  uuid: I_Love_🇵🇸_SSHMax_91c8e41
   alterId: 0
   cipher: auto
   tls: true
   skip-cert-verify: true
-  servername: *host1
+  servername: id1.vmess.site
   network: ws
   ws-opts:
-    path: *path1
+    path: /vmess
     headers:
-      Host: *host1
+      Host: id1.vmess.site
   udp: true
 
 - name: IPv1 🇮🇩 XL AXIS EDUKASI JTM
   server: www.skillacademy.com
   port: 443
   type: vmess
-  uuid: *uid1
+  uuid: I_Love_🇵🇸_SSHMax_91c8e41
   alterId: 0
   cipher: auto
   tls: true
   skip-cert-verify: true
-  servername: *host1
+  servername: id1.vmess.site
   network: ws
   ws-opts:
-    path: *path1
+    path: /vmess
     headers:
-      Host: *host1
+      Host: id1.vmess.site
   udp: true
 
 - name: IPv1 🇮🇩 XL AXIS EDUKASI LUAR JAWA
   server: cdn.appsflyer.com
   port: 443
   type: vmess
-  uuid: *uid1
+  uuid: I_Love_🇵🇸_SSHMax_91c8e41
   alterId: 0
   cipher: auto
   tls: true
   skip-cert-verify: true
-  servername: *host1
+  servername: id1.vmess.site
   network: ws
   ws-opts:
-    path: *path1
+    path: /vmess
     headers:
-      Host: *host1
+      Host: id1.vmess.site
   udp: true
 
 - name: IPv1 🇮🇩 XL AXIS VIDEO B1
   server: quiz.vidio.com
   port: 443
   type: vmess
-  uuid: *uid1
+  uuid: I_Love_🇵🇸_SSHMax_91c8e41
   alterId: 0
   cipher: auto
   tls: true
   skip-cert-verify: true
-  servername: *host1
+  servername: id1.vmess.site
   network: ws
   ws-opts:
-    path: *path1
+    path: /vmess
     headers:
-      Host: *host1
+      Host: id1.vmess.site
   udp: true
 
 - name: IPv1 🇮🇩 XL AXIS VIDEO B3
   server: 104.22.4.240
   port: 443
   type: vmess
-  uuid: *uid1
+  uuid: I_Love_🇵🇸_SSHMax_91c8e41
   alterId: 0
   cipher: auto
   tls: true
   skip-cert-verify: true
-  servername: *host1
+  servername: id1.vmess.site
   network: ws
   ws-opts:
-    path: *path1
+    path: /vmess
     headers:
-      Host: *host1
+      Host: id1.vmess.site
   udp: true
 
 - name: IPv1 🇮🇩 XL AXIS SUSHIROLL B1
   server: blog.sushiroll.co.id
   port: 443
   type: vmess
-  uuid: *uid1
+  uuid: I_Love_🇵🇸_SSHMax_91c8e41
   alterId: 0
   cipher: auto
   tls: true
   skip-cert-verify: true
-  servername: *host1
+  servername: id1.vmess.site
   network: ws
   ws-opts:
-    path: *path1
+    path: /vmess
     headers:
-      Host: *host1
+      Host: id1.vmess.site
   udp: true
 
 - name: IPv1 🇮🇩 XL AXIS SUSHIROLL B2
   server: 104.21.69.223
   port: 443
   type: vmess
-  uuid: *uid1
+  uuid: I_Love_🇵🇸_SSHMax_91c8e41
   alterId: 0
   cipher: auto
   tls: true
   skip-cert-verify: true
-  servername: *host1
+  servername: id1.vmess.site
   network: ws
   ws-opts:
-    path: *path1
+    path: /vmess
     headers:
-      Host: *host1
+      Host: id1.vmess.site
   udp: true
 
 - name: IPv1 🇮🇩 XL AXIS VIU
   server: 104.18.0.139
   port: 443
   type: vmess
-  uuid: *uid1
+  uuid: I_Love_🇵🇸_SSHMax_91c8e41
   alterId: 0
   cipher: auto
   tls: true
   skip-cert-verify: true
-  servername: *host1
+  servername: id1.vmess.site
   network: ws
   ws-opts:
-    path: *path1
+    path: /vmess
     headers:
-      Host: *host1
+      Host: id1.vmess.site
   udp: true
 
 - name: IPv1 🇮🇩 XL AXIS OPOK B1
   server: www.ovo.id
   port: 443
   type: vmess
-  uuid: *uid1
+  uuid: I_Love_🇵🇸_SSHMax_91c8e41
   alterId: 0
   cipher: auto
   tls: true
   skip-cert-verify: true
-  servername: *host1
+  servername: id1.vmess.site
   network: ws
   ws-opts:
-    path: *path1
+    path: /vmess
     headers:
-      Host: *host1
+      Host: id1.vmess.site
   udp: true
 
 - name: IPv1 🇮🇩 XL AXIS OPOK B2
   server: sit.comet.xl.co.id
   port: 443
   type: vmess
-  uuid: *uid1
+  uuid: I_Love_🇵🇸_SSHMax_91c8e41
   alterId: 0
   cipher: auto
   tls: true
   skip-cert-verify: true
-  servername: *host1
+  servername: id1.vmess.site
   network: ws
   ws-opts:
-    path: *path1
+    path: /vmess
     headers:
-      Host: *host1
+      Host: id1.vmess.site
   udp: true
 
 - name: IPv1 🇮🇩 XL AXIS OPOK B3
   server: zeus.xl.co.id
   port: 443
   type: vmess
-  uuid: *uid1
+  uuid: I_Love_🇵🇸_SSHMax_91c8e41
   alterId: 0
   cipher: auto
   tls: true
   skip-cert-verify: true
-  servername: *host1
+  servername: id1.vmess.site
   network: ws
   ws-opts:
-    path: *path1
+    path: /vmess
     headers:
-      Host: *host1
+      Host: id1.vmess.site
   udp: true
 
 - name: IPv1 🇮🇩 XL AXIS OPOK B5
   server: www.xl.co.id
   port: 443
   type: vmess
-  uuid: *uid1
+  uuid: I_Love_🇵🇸_SSHMax_91c8e41
   alterId: 0
   cipher: auto
   tls: true
   skip-cert-verify: true
-  servername: *host1
+  servername: id1.vmess.site
   network: ws
   ws-opts:
-    path: *path1
+    path: /vmess
     headers:
-      Host: *host1
+      Host: id1.vmess.site
   udp: true
 
 - name: IPv1 🇮🇩 XL AXIS OPOK B6
   server: 104.22.28.102
   port: 80
   type: vmess
-  uuid: *uid1
+  uuid: I_Love_🇵🇸_SSHMax_91c8e41
   alterId: 0
   cipher: auto
   tls: false
   skip-cert-verify: true
-  servername: *host1
+  servername: id1.vmess.site
   network: ws
   ws-opts:
-    path: *path1
+    path: /vmess
     headers:
-      Host: *host1
+      Host: id1.vmess.site
   udp: true
 
 - name: IPv1 🇮🇩 XL AXIS OPOK B7
   server: 104.17.58.20
   port: 80
   type: vmess
-  uuid: *uid1
+  uuid: I_Love_🇵🇸_SSHMax_91c8e41
   alterId: 0
   cipher: auto
   tls: false
   skip-cert-verify: true
-  servername: *host1
+  servername: id1.vmess.site
   network: ws
   ws-opts:
-    path: *path1
+    path: /vmess
     headers:
-      Host: *host1
+      Host: id1.vmess.site
   udp: true
 
 - name: IPv1 🇮🇩 XL AXIS OPOK B8
   server: 104.18.12.65
   port: 80
   type: vmess
-  uuid: *uid1
+  uuid: I_Love_🇵🇸_SSHMax_91c8e41
   alterId: 0
   cipher: auto
   tls: false
   skip-cert-verify: true
-  servername: *host1
+  servername: id1.vmess.site
   network: ws
   ws-opts:
-    path: *path1
+    path: /vmess
     headers:
-      Host: *host1
+      Host: id1.vmess.site
   udp: true
 
 - name: IPv1 🇮🇩 XL AXIS OPOK B9
   server: staging.games.axis.co.id
   port: 443
   type: vmess
-  uuid: *uid1
+  uuid: I_Love_🇵🇸_SSHMax_91c8e41
   alterId: 0
   cipher: auto
   tls: true
   skip-cert-verify: true
-  servername: *host1
+  servername: id1.vmess.site
   network: ws
   ws-opts:
-    path: *path1
+    path: /vmess
     headers:
-      Host: *host1
+      Host: id1.vmess.site
   udp: true
 
 - name: IPv1 🇮🇩 XL FLEX UNLI TURBO B1
   server: 104.22.2.25
   port: 80
   type: vmess
-  uuid: *uid1
+  uuid: I_Love_🇵🇸_SSHMax_91c8e41
   alterId: 0
   cipher: auto
   tls: false
   skip-cert-verify: true
-  servername: *host1
+  servername: id1.vmess.site
   network: ws
   ws-opts:
-    path: *path1
+    path: /vmess
     headers:
-      Host: *host1
+      Host: id1.vmess.site
   udp: true
 
 - name: IPv1 🇮🇩 XL FLEX UNLI TURBO B2
   server: 104.16.17.120
   port: 80
   type: vmess
-  uuid: *uid1
+  uuid: I_Love_🇵🇸_SSHMax_91c8e41
   alterId: 0
   cipher: auto
   tls: false
   skip-cert-verify: true
-  servername: *host1
+  servername: id1.vmess.site
   network: ws
   ws-opts:
-    path: *path1
+    path: /vmess
     headers:
-      Host: *host1
+      Host: id1.vmess.site
   udp: true
 
 - name: IPv1 🇮🇩 XL AKRAB NOICE B1
   server: 104.17.3.81
   port: 80
   type: vmess
-  uuid: *uid1
+  uuid: I_Love_🇵🇸_SSHMax_91c8e41
   alterId: 0
   cipher: auto
   tls: false
   skip-cert-verify: true
-  servername: *host1
+  servername: id1.vmess.site
   network: ws
   ws-opts:
-    path: *path1
+    path: /vmess
     headers:
-      Host: *host1
+      Host: id1.vmess.site
   udp: true
 
 - name: IPv1 🇮🇩 XL AKRAB NOICE B2
   server: 104.17.2.81
   port: 80
   type: vmess
-  uuid: *uid1
+  uuid: I_Love_🇵🇸_SSHMax_91c8e41
   alterId: 0
   cipher: auto
   tls: false
   skip-cert-verify: true
-  servername: *host1
+  servername: id1.vmess.site
   network: ws
   ws-opts:
-    path: *path1
+    path: /vmess
     headers:
-      Host: *host1
+      Host: id1.vmess.site
   udp: true
 
 - name: IPv1 🇮🇩 XL AKRAB NOICE B3
   server: 104.18.2.198
   port: 80
   type: vmess
-  uuid: *uid1
+  uuid: I_Love_🇵🇸_SSHMax_91c8e41
   alterId: 0
   cipher: auto
   tls: false
   skip-cert-verify: true
-  servername: *host1
+  servername: id1.vmess.site
   network: ws
   ws-opts:
-    path: *path1
+    path: /vmess
     headers:
-      Host: *host1
+      Host: id1.vmess.site
   udp: true
 
 - name: IPv1 🇮🇩 XL AKRAB NOICE B4
   server: 104.18.3.198
   port: 80
   type: vmess
-  uuid: *uid1
+  uuid: I_Love_🇵🇸_SSHMax_91c8e41
   alterId: 0
   cipher: auto
   tls: false
   skip-cert-verify: true
-  servername: *host1
+  servername: id1.vmess.site
   network: ws
   ws-opts:
-    path: *path1
+    path: /vmess
     headers:
-      Host: *host1
+      Host: id1.vmess.site
   udp: true
 
 - name: IPv1 🇮🇩 XL AKRAB NOICE B5
   server: api.midtrans.com
   port: 443
   type: vmess
-  uuid: *uid1
+  uuid: I_Love_🇵🇸_SSHMax_91c8e41
   alterId: 0
   cipher: auto
   tls: true
   skip-cert-verify: true
-  servername: *host1
+  servername: id1.vmess.site
   network: ws
   ws-opts:
-    path: *path1
+    path: /vmess
     headers:
-      Host: *host1
+      Host: id1.vmess.site
   udp: true
 
 - name: IPv1 🇮🇩 XL AKRAB NOICE JTM JTG
   server: 104.18.1.196
   port: 80
   type: vmess
-  uuid: *uid1
+  uuid: I_Love_🇵🇸_SSHMax_91c8e41
   alterId: 0
   cipher: auto
   tls: false
   skip-cert-verify: true
-  servername: *host1
+  servername: id1.vmess.site
   network: ws
   ws-opts:
-    path: *path1
+    path: /vmess
     headers:
-      Host: *host1
+      Host: id1.vmess.site
   udp: true
 
 - name: IPv1 🇮🇩 XL AKRAB B2
   server: ruangguru.com
   port: 443
   type: vmess
-  uuid: *uid1
+  uuid: I_Love_🇵🇸_SSHMax_91c8e41
   alterId: 0
   cipher: auto
   tls: true
   skip-cert-verify: true
-  servername: *host1
+  servername: id1.vmess.site
   network: ws
   ws-opts:
-    path: *path1
+    path: /vmess
     headers:
-      Host: *host1
+      Host: id1.vmess.site
   udp: true
 
 - name: IPv1 🇮🇩 XL AKRAB B3
   server: 104.18.21.226
   port: 80
   type: vmess
-  uuid: *uid1
+  uuid: I_Love_🇵🇸_SSHMax_91c8e41
   alterId: 0
   cipher: auto
   tls: false
   skip-cert-verify: true
-  servername: *host1
+  servername: id1.vmess.site
   network: ws
   ws-opts:
-    path: *path1
+    path: /vmess
     headers:
-      Host: *host1
+      Host: id1.vmess.site
   udp: true
 
 - name: IPv1 🇮🇩 XL AKRAB B4
   server: 172.64.149.82
   port: 80
   type: vmess
-  uuid: *uid1
+  uuid: I_Love_🇵🇸_SSHMax_91c8e41
   alterId: 0
   cipher: auto
   tls: false
   skip-cert-verify: true
-  servername: *host1
+  servername: id1.vmess.site
   network: ws
   ws-opts:
-    path: *path1
+    path: /vmess
     headers:
-      Host: *host1
+      Host: id1.vmess.site
   udp: true
 
 - name: IPv1 🇮🇩 XL AKRAB JTM JTG B1
   server: 104.26.4.10
   port: 80
   type: vmess
-  uuid: *uid1
+  uuid: I_Love_🇵🇸_SSHMax_91c8e41
   alterId: 0
   cipher: auto
   tls: false
   skip-cert-verify: true
-  servername: *host1
+  servername: id1.vmess.site
   network: ws
   ws-opts:
-    path: *path1
+    path: /vmess
     headers:
-      Host: *host1
+      Host: id1.vmess.site
   udp: true
 
 - name: IPv1 🇮🇩 XL AKRAB JTM JTG B2
   server: cdn.onlymega.com
   port: 443
   type: vmess
-  uuid: *uid1
+  uuid: I_Love_🇵🇸_SSHMax_91c8e41
   alterId: 0
   cipher: auto
   tls: true
   skip-cert-verify: true
-  servername: *host1
+  servername: id1.vmess.site
   network: ws
   ws-opts:
-    path: *path1
+    path: /vmess
     headers:
-      Host: *host1
+      Host: id1.vmess.site
   udp: true
 
 - name: IPv1 🇮🇩 XL AKRAB JTM JTG B3
   server: api.fastworldpay.com
   port: 443
   type: vmess
-  uuid: *uid1
+  uuid: I_Love_🇵🇸_SSHMax_91c8e41
   alterId: 0
   cipher: auto
   tls: true
   skip-cert-verify: true
-  servername: *host1
+  servername: id1.vmess.site
   network: ws
   ws-opts:
-    path: *path1
+    path: /vmess
     headers:
-      Host: *host1
+      Host: id1.vmess.site
   udp: true
 
 - name: IPv1 🇮🇩 XL FLX JTG JTM B1
   server: ava.game.naver.com
   port: 443
   type: vmess
-  uuid: *uid1
+  uuid: I_Love_🇵🇸_SSHMax_91c8e41
   alterId: 0
   cipher: auto
   tls: true
   skip-cert-verify: true
-  servername: *host1
+  servername: id1.vmess.site
   network: ws
   ws-opts:
-    path: *path1
+    path: /vmess
     headers:
-      Host: *host1
+      Host: id1.vmess.site
   udp: true
 
 - name: IPv1 🇮🇩 XL FLX JTG JTM B2
   server: account.pmang.game.naver.com
   port: 443
   type: vmess
-  uuid: *uid1
+  uuid: I_Love_🇵🇸_SSHMax_91c8e41
   alterId: 0
   cipher: auto
   tls: true
   skip-cert-verify: true
-  servername: *host1
+  servername: id1.vmess.site
   network: ws
   ws-opts:
-    path: *path1
+    path: /vmess
     headers:
-      Host: *host1
+      Host: id1.vmess.site
   udp: true
 
 - name: IPv1 🇮🇩 XL VISION+ B1
   server: 104.21.235.171
   port: 80
   type: vmess
-  uuid: *uid1
+  uuid: I_Love_🇵🇸_SSHMax_91c8e41
   alterId: 0
   cipher: auto
   tls: false
   skip-cert-verify: true
-  servername: *host1
+  servername: id1.vmess.site
   network: ws
   ws-opts:
-    path: *path1
+    path: /vmess
     headers:
-      Host: *host1
+      Host: id1.vmess.site
   udp: true
 
 - name: IPv1 🇮🇩 XL VISION+ B2
   server: 104.21.235.172
   port: 80
   type: vmess
-  uuid: *uid1
+  uuid: I_Love_🇵🇸_SSHMax_91c8e41
   alterId: 0
   cipher: auto
   tls: false
   skip-cert-verify: true
-  servername: *host1
+  servername: id1.vmess.site
   network: ws
   ws-opts:
-    path: *path1
+    path: /vmess
     headers:
-      Host: *host1
+      Host: id1.vmess.site
   udp: true
 
 - name: IPv1 🇮🇩 XL LIVE ON OPOK B1
   server: 104.21.8.121
   port: 80
   type: vmess
-  uuid: *uid1
+  uuid: I_Love_🇵🇸_SSHMax_91c8e41
   alterId: 0
   cipher: auto
   tls: false
   skip-cert-verify: true
-  servername: *host1
+  servername: id1.vmess.site
   network: ws
   ws-opts:
-    path: *path1
+    path: /vmess
     headers:
-      Host: *host1
+      Host: id1.vmess.site
   udp: true
 
 - name: IPv1 🇮🇩 XL LIVE ON OPOK B2
   server: 172.67.139.111
   port: 80
   type: vmess
-  uuid: *uid1
+  uuid: I_Love_🇵🇸_SSHMax_91c8e41
   alterId: 0
   cipher: auto
   tls: false
   skip-cert-verify: true
-  servername: *host1
+  servername: id1.vmess.site
   network: ws
   ws-opts:
-    path: *path1
+    path: /vmess
     headers:
-      Host: *host1
+      Host: id1.vmess.site
   udp: true
 
 ###################### tsel
@@ -1047,119 +1048,119 @@ proxies:
   server: orangtua.ruangguru.com
   port: 443
   type: vmess
-  uuid: *uid1
+  uuid: I_Love_🇵🇸_SSHMax_91c8e41
   alterId: 0
   cipher: auto
   tls: true
   skip-cert-verify: true
-  servername: *host1
+  servername: id1.vmess.site
   network: ws
   ws-opts:
-    path: *path1
+    path: /vmess
     headers:
-      Host: *host1
+      Host: id1.vmess.site
   udp: true
 
 - name: IPv1 🇮🇩 TSEL byu GAME GGWP B1
   server: 104.19.142.108
   port: 80
   type: vmess
-  uuid: *uid1
+  uuid: I_Love_🇵🇸_SSHMax_91c8e41
   alterId: 0
   cipher: auto
   tls: false
   skip-cert-verify: true
-  servername: *host1
+  servername: id1.vmess.site
   network: ws
   ws-opts:
-    path: *path1
+    path: /vmess
     headers:
-      Host: *host1
+      Host: id1.vmess.site
   udp: true
   
 - name: IPv1 🇮🇩 TSEL byu GAME GGWP B2
   server: 104.19.143.108
   port: 80
   type: vmess
-  uuid: *uid1
+  uuid: I_Love_🇵🇸_SSHMax_91c8e41
   alterId: 0
   cipher: auto
   tls: false
   skip-cert-verify: true
-  servername: *host1
+  servername: id1.vmess.site
   network: ws
   ws-opts:
-    path: *path1
+    path: /vmess
     headers:
-      Host: *host1
+      Host: id1.vmess.site
   udp: true
 
 - name: IPv1 🇮🇩 TSEL RUANGGURU
   server: tracker.ruangguru.com
   port: 443
   type: vmess
-  uuid: *uid1
+  uuid: I_Love_🇵🇸_SSHMax_91c8e41
   alterId: 0
   cipher: auto
   tls: true
   skip-cert-verify: true
-  servername: *host1
+  servername: id1.vmess.site
   network: ws
   ws-opts:
-    path: *path1
+    path: /vmess
     headers:
-      Host: *host1
+      Host: id1.vmess.site
   udp: true
 
 - name: IPv1 🇮🇩 TSEL MULTIMEDIA B1
   server: ir.huya.com
   port: 443
   type: vmess
-  uuid: *uid1
+  uuid: I_Love_🇵🇸_SSHMax_91c8e41
   alterId: 0
   cipher: auto
   tls: true
   skip-cert-verify: true
-  servername: *host1
+  servername: id1.vmess.site
   network: ws
   ws-opts:
-    path: *path1
+    path: /vmess
     headers:
-      Host: *host1
+      Host: id1.vmess.site
   udp: true
 
 - name: IPv1 🇮🇩 TSEL OMG Nonton
   server: investors.spotify.com
   port: 443
   type: vmess
-  uuid: *uid1
+  uuid: I_Love_🇵🇸_SSHMax_91c8e41
   alterId: 0
   cipher: auto
   tls: true
   skip-cert-verify: true
-  servername: *host1
+  servername: id1.vmess.site
   network: ws
   ws-opts:
-    path: *path1
+    path: /vmess
     headers:
-      Host: *host1
+      Host: id1.vmess.site
   udp: true
 
 - name: IPv1 🇮🇩 TSEL ILPED B1
   server: io.ruangguru.com
   port: 443
   type: vmess
-  uuid: *uid1
+  uuid: I_Love_🇵🇸_SSHMax_91c8e41
   alterId: 0
   cipher: auto
   tls: true
   skip-cert-verify: true
-  servername: *host1
+  servername: id1.vmess.site
   network: ws
   ws-opts:
-    path: *path1
+    path: /vmess
     headers:
-      Host: *host1
+      Host: id1.vmess.site
   udp: true
 
 ###################### isat
@@ -1167,51 +1168,51 @@ proxies:
   server: 172.67.70.101
   port: 80
   type: vmess
-  uuid: *uid1
+  uuid: I_Love_🇵🇸_SSHMax_91c8e41
   alterId: 0
   cipher: auto
   tls: false
   skip-cert-verify: true
-  servername: *host1
+  servername: id1.vmess.site
   network: ws
   ws-opts:
-    path: *path1
+    path: /vmess
     headers:
-      Host: *host1
+      Host: id1.vmess.site
   udp: true
 
 - name: IPv1 🇮🇩 ISAT OPOK B2
   server: 104.19.142.56
   port: 80
   type: vmess
-  uuid: *uid1
+  uuid: I_Love_🇵🇸_SSHMax_91c8e41
   alterId: 0
   cipher: auto
   tls: false
   skip-cert-verify: true
-  servername: *host1
+  servername: id1.vmess.site
   network: ws
   ws-opts:
-    path: *path1
+    path: /vmess
     headers:
-      Host: *host1
+      Host: id1.vmess.site
   udp: true
 
 - name: IPv1 🇮🇩 ISAT EDUKASI B1
   server: 104.17.2.81
   port: 80
   type: vmess
-  uuid: *uid1
+  uuid: I_Love_🇵🇸_SSHMax_91c8e41
   alterId: 0
   cipher: auto
   tls: false
   skip-cert-verify: true
-  servername: *host1
+  servername: id1.vmess.site
   network: ws
   ws-opts:
-    path: *path1
+    path: /vmess
     headers:
-      Host: *host1
+      Host: id1.vmess.site
   udp: true
 
 ###################### smartfren
@@ -1219,34 +1220,34 @@ proxies:
   server: api.ovo.id
   port: 443
   type: vmess
-  uuid: *uid1
+  uuid: I_Love_🇵🇸_SSHMax_91c8e41
   alterId: 0
   cipher: auto
   tls: true
   skip-cert-verify: true
-  servername: *host1
+  servername: id1.vmess.site
   network: ws
   ws-opts:
-    path: *path1
+    path: /vmess
     headers:
-      Host: *host1
+      Host: id1.vmess.site
   udp: true
 
 - name: IPv1 🇮🇩 SMARTFREN EDUKASI
   server: kelas.ruangguru.com
   port: 443
   type: vmess
-  uuid: *uid1
+  uuid: I_Love_🇵🇸_SSHMax_91c8e41
   alterId: 0
   cipher: auto
   tls: true
   skip-cert-verify: true
-  servername: *host1
+  servername: id1.vmess.site
   network: ws
   ws-opts:
-    path: *path1
+    path: /vmess
     headers:
-      Host: *host1
+      Host: id1.vmess.site
   udp: true
 
 ###################### tri
@@ -1254,17 +1255,17 @@ proxies:
   server: 104.21.22.52
   port: 80
   type: vmess
-  uuid: *uid1
+  uuid: I_Love_🇵🇸_SSHMax_91c8e41
   alterId: 0
   cipher: auto
   tls: false
   skip-cert-verify: true
-  servername: *host1
+  servername: id1.vmess.site
   network: ws
   ws-opts:
-    path: *path1
+    path: /vmess
     headers:
-      Host: *host1
+      Host: id1.vmess.site
   udp: true
 
 ###################### All SC
@@ -1272,202 +1273,202 @@ proxies:
   server: investors.spotify.com
   port: 443
   type: vmess
-  uuid: *uid1
+  uuid: I_Love_🇵🇸_SSHMax_91c8e41
   alterId: 0
   cipher: auto
   tls: true
   skip-cert-verify: true
-  servername: *host1
+  servername: id1.vmess.site
   network: ws
   ws-opts:
-    path: *path1
+    path: /vmess
     headers:
-      Host: *host1
+      Host: id1.vmess.site
   udp: true
 
 - name: IPv1 🇮🇩 VISION B1
   server: 104.21.58.186
   port: 80
   type: vmess
-  uuid: *uid1
+  uuid: I_Love_🇵🇸_SSHMax_91c8e41
   alterId: 0
   cipher: auto
   tls: false
   skip-cert-verify: true
-  servername: *host1
+  servername: id1.vmess.site
   network: ws
   ws-opts:
-    path: *path1
+    path: /vmess
     headers:
-      Host: *host1
+      Host: id1.vmess.site
   udp: true
 
 - name: IPv1 🇮🇩 VISION B2
   server: 172.67.206.64
   port: 80
   type: vmess
-  uuid: *uid1
+  uuid: I_Love_🇵🇸_SSHMax_91c8e41
   alterId: 0
   cipher: auto
   tls: false
   skip-cert-verify: true
-  servername: *host1
+  servername: id1.vmess.site
   network: ws
   ws-opts:
-    path: *path1
+    path: /vmess
     headers:
-      Host: *host1
+      Host: id1.vmess.site
   udp: true
 
 - name: IPv1 🇮🇩 VISION B3
   server: 172.67.192.40
   port: 80
   type: vmess
-  uuid: *uid1
+  uuid: I_Love_🇵🇸_SSHMax_91c8e41
   alterId: 0
   cipher: auto
   tls: false
   skip-cert-verify: true
-  servername: *host1
+  servername: id1.vmess.site
   network: ws
   ws-opts:
-    path: *path1
+    path: /vmess
     headers:
-      Host: *host1
+      Host: id1.vmess.site
   udp: true
 
 - name: IPv1 🇮🇩 VISION B4
   server: 104.21.73.208
   port: 80
   type: vmess
-  uuid: *uid1
+  uuid: I_Love_🇵🇸_SSHMax_91c8e41
   alterId: 0
   cipher: auto
   tls: false
   skip-cert-verify: true
-  servername: *host1
+  servername: id1.vmess.site
   network: ws
   ws-opts:
-    path: *path1
+    path: /vmess
     headers:
-      Host: *host1
+      Host: id1.vmess.site
   udp: true
 
 - name: IPv1 🇮🇩 VISION B6
   server: 104.18.225.52
   port: 80
   type: vmess
-  uuid: *uid1
+  uuid: I_Love_🇵🇸_SSHMax_91c8e41
   alterId: 0
   cipher: auto
   tls: false
   skip-cert-verify: true
-  servername: *host1
+  servername: id1.vmess.site
   network: ws
   ws-opts:
-    path: *path1
+    path: /vmess
     headers:
-      Host: *host1
+      Host: id1.vmess.site
   udp: true
 
 - name: IPv1 🇮🇩 GENFLIX B1
   server: beta.genflix.co.id
   port: 443
   type: vmess
-  uuid: *uid1
+  uuid: I_Love_🇵🇸_SSHMax_91c8e41
   alterId: 0
   cipher: auto
   tls: true
   skip-cert-verify: true
-  servername: *host1
+  servername: id1.vmess.site
   network: ws
   ws-opts:
-    path: *path1
+    path: /vmess
     headers:
-      Host: *host1
+      Host: id1.vmess.site
   udp: true
 
 - name: IPv1 🇮🇩 GENFLIX B2
   server: app.genflix.co.id
   port: 443
   type: vmess
-  uuid: *uid1
+  uuid: I_Love_🇵🇸_SSHMax_91c8e41
   alterId: 0
   cipher: auto
   tls: true
   skip-cert-verify: true
-  servername: *host1
+  servername: id1.vmess.site
   network: ws
   ws-opts:
-    path: *path1
+    path: /vmess
     headers:
-      Host: *host1
+      Host: id1.vmess.site
   udp: true
 
 - name: IPv1 🇮🇩 VIDIO
   server: quiz.int.vidio.com
   port: 443
   type: vmess
-  uuid: *uid1
+  uuid: I_Love_🇵🇸_SSHMax_91c8e41
   alterId: 0
   cipher: auto
   tls: true
   skip-cert-verify: true
-  servername: *host1
+  servername: id1.vmess.site
   network: ws
   ws-opts:
-    path: *path1
+    path: /vmess
     headers:
-      Host: *host1
+      Host: id1.vmess.site
   udp: true
 
 - name: IPv1 🇮🇩 SUSHIROLL
   server: www.sushiroll.co.id
   port: 443
   type: vmess
-  uuid: *uid1
+  uuid: I_Love_🇵🇸_SSHMax_91c8e41
   alterId: 0
   cipher: auto
   tls: true
   skip-cert-verify: true
-  servername: *host1
+  servername: id1.vmess.site
   network: ws
   ws-opts:
-    path: *path1
+    path: /vmess
     headers:
-      Host: *host1
+      Host: id1.vmess.site
   udp: true
 
 - name: IPv1 🇮🇩 WIFI.ID B1
   server: io.ruangguru.com
   port: 443
   type: vmess
-  uuid: *uid1
+  uuid: I_Love_🇵🇸_SSHMax_91c8e41
   alterId: 0
   cipher: auto
   tls: true
   skip-cert-verify: true
-  servername: *host1
+  servername: id1.vmess.site
   network: ws
   ws-opts:
-    path: *path1
+    path: /vmess
     headers:
-      Host: *host1
+      Host: id1.vmess.site
   udp: true
 
 - name: IPv1 🇮🇩 WIFI.ID B2
   server: 104.17.2.81
   port: 80
   type: vmess
-  uuid: *uid1
+  uuid: I_Love_🇵🇸_SSHMax_91c8e41
   alterId: 0
   cipher: auto
   tls: false
   skip-cert-verify: true
-  servername: *host1
+  servername: id1.vmess.site
   network: ws
   ws-opts:
-    path: *path1
+    path: /vmess
     headers:
-      Host: *host1
+      Host: id1.vmess.site
   udp: true
