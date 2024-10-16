@@ -1,192 +1,187 @@
-default:
-- &uidsg e620d600-ee19-4012-a96c-968e85a52de9
-- &hostsg vmess-sg1.sshkit.org
-- &pathsg /sshkit/1828396894/66fe8c1ce5d88/
-
 proxies:
-- name: 🇸🇬 ByU 443 11 Okt
+- name: IPv2 🇮🇩 16Okt ByU B1
+  server: space.byu.id
+  port: 80
+  type: vmess
+  uuid: I_Love_🇵🇸_SSHMax_9b258d7
+  alterId: 0
+  cipher: auto
+  tls: false
+  skip-cert-verify: true
+  servername: id2.vmess.site
+  network: ws
+  ws-opts:
+    path: /vmess
+    headers:
+      Host: id2.vmess.site
+  udp: true
+
+- name: IPv2 🇮🇩 16Okt ByU B2
   server: space.byu.id
   port: 443
   type: vmess
-  uuid: *uidsg
+  uuid: I_Love_🇵🇸_SSHMax_9b258d7
   alterId: 0
   cipher: auto
   tls: true
   skip-cert-verify: true
-  servername: *hostsg
+  servername: id2.vmess.site
   network: ws
   ws-opts:
-    path: *pathsg
+    path: /vmess
     headers:
-      Host: *hostsg
+      Host: id2.vmess.site
   udp: true
 
-- name: 🇸🇬 ByU 80 11 Okt
-  server: space.byu.id
-  port: 80
-  type: vmess
-  uuid: *uidsg
-  alterId: 0
-  cipher: auto
-  tls: false
-  skip-cert-verify: true
-  servername: *hostsg
-  network: ws
-  ws-opts:
-    path: *pathsg
-    headers:
-      Host: *hostsg
-  udp: true
-
-- name: AXIS GAME JBR B1
+- name: IPv2 🇮🇩 16Okt AXIS GAME JBR B1
   server: 104.19.142.89
   port: 80
   type: vmess
-  uuid: *uidsg
+  uuid: I_Love_🇵🇸_SSHMax_9b258d7
   alterId: 0
   cipher: auto
   tls: false
   skip-cert-verify: true
-  servername: *hostsg
+  servername: id2.vmess.site
   network: ws
   ws-opts:
-    path: *pathsg
+    path: /vmess
     headers:
-      Host: *hostsg
+      Host: id2.vmess.site
   udp: true
 
-- name: AXIS All BOOSTER B1
+- name: IPv2 🇮🇩 16Okt AXIS All BOOSTER B1
   server: 172.64.153.186
   port: 80
   type: vmess
-  uuid: *uidsg
+  uuid: I_Love_🇵🇸_SSHMax_9b258d7
   alterId: 0
   cipher: auto
   tls: false
   skip-cert-verify: true
-  servername: *hostsg
+  servername: id2.vmess.site
   network: ws
   ws-opts:
-    path: *pathsg
+    path: /vmess
     headers:
-      Host: *hostsg
+      Host: id2.vmess.site
   udp: true
 
-- name: AXIS All BOOSTER B2
+- name: IPv2 🇮🇩 16Okt AXIS All BOOSTER B2
   server: 104.18.34.70
   port: 80
   type: vmess
-  uuid: *uidsg
+  uuid: I_Love_🇵🇸_SSHMax_9b258d7
   alterId: 0
   cipher: auto
   tls: false
   skip-cert-verify: true
-  servername: *hostsg
+  servername: id2.vmess.site
   network: ws
   ws-opts:
-    path: *pathsg
+    path: /vmess
     headers:
-      Host: *hostsg
+      Host: id2.vmess.site
   udp: true
 
-- name: AXIS GAME JTM
+- name: IPv2 🇮🇩 16Okt AXIS GAME JTM
   server: 104.18.21.94
   port: 80
   type: vmess
-  uuid: *uidsg
+  uuid: I_Love_🇵🇸_SSHMax_9b258d7
   alterId: 0
   cipher: auto
   tls: false
   skip-cert-verify: true
-  servername: *hostsg
+  servername: id2.vmess.site
   network: ws
   ws-opts:
-    path: *pathsg
+    path: /vmess
     headers:
-      Host: *hostsg
+      Host: id2.vmess.site
   udp: true
 
-- name: AXIS GENFLIX
+- name: IPv2 🇮🇩 16Okt AXIS GENFLIX
   server: 104.21.30.242
   port: 80
   type: vmess
-  uuid: *uidsg
+  uuid: I_Love_🇵🇸_SSHMax_9b258d7
   alterId: 0
   cipher: auto
   tls: false
   skip-cert-verify: true
-  servername: *hostsg
+  servername: id2.vmess.site
   network: ws
   ws-opts:
-    path: *pathsg
+    path: /vmess
     headers:
-      Host: *hostsg
+      Host: id2.vmess.site
   udp: true
 
-- name: XL AXIS VIDEO B3
+- name: IPv2 🇮🇩 16Okt XL AXIS VIDEO B3
   server: 104.22.4.240
   port: 80
   type: vmess
-  uuid: *uidsg
+  uuid: I_Love_🇵🇸_SSHMax_9b258d7
   alterId: 0
   cipher: auto
   tls: false
   skip-cert-verify: true
-  servername: *hostsg
+  servername: id2.vmess.site
   network: ws
   ws-opts:
-    path: *pathsg
+    path: /vmess
     headers:
-      Host: *hostsg
+      Host: id2.vmess.site
   udp: true
 
-- name: XL AXIS SUSHIROLL B2
+- name: IPv2 🇮🇩 16Okt XL AXIS SUSHIROLL B2
   server: 104.21.69.223
   port: 80
   type: vmess
-  uuid: *uidsg
+  uuid: I_Love_🇵🇸_SSHMax_9b258d7
   alterId: 0
   cipher: auto
   tls: false
   skip-cert-verify: true
-  servername: *hostsg
+  servername: id2.vmess.site
   network: ws
   ws-opts:
-    path: *pathsg
+    path: /vmess
     headers:
-      Host: *hostsg
+      Host: id2.vmess.site
   udp: true
 
-- name: XL AXIS OPOK B6
+- name: IPv2 🇮🇩 16Okt XL AXIS OPOK B6
   server: 104.22.28.102
   port: 80
   type: vmess
-  uuid: *uidsg
+  uuid: I_Love_🇵🇸_SSHMax_9b258d7
   alterId: 0
   cipher: auto
   tls: false
   skip-cert-verify: true
-  servername: *hostsg
+  servername: id2.vmess.site
   network: ws
   ws-opts:
-    path: *pathsg
+    path: /vmess
     headers:
-      Host: *hostsg
+      Host: id2.vmess.site
   udp: true
 
-- name: XL AXIS OPOK B7
+- name: IPv2 🇮🇩 16Okt XL AXIS OPOK B7
   server: 104.17.58.20
   port: 80
   type: vmess
-  uuid: *uidsg
+  uuid: I_Love_🇵🇸_SSHMax_9b258d7
   alterId: 0
   cipher: auto
   tls: false
   skip-cert-verify: true
-  servername: *hostsg
+  servername: id2.vmess.site
   network: ws
   ws-opts:
-    path: *pathsg
+    path: /vmess
     headers:
-      Host: *hostsg
+      Host: id2.vmess.site
   udp: true
