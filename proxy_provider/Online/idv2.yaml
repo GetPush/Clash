@@ -1,187 +1,187 @@
 proxies:
-- name: IPv2 🇮🇩 16Okt ByU B1
+- name: IDv3 🇮🇩 29 Okt ByU B1
   server: space.byu.id
   port: 80
   type: vmess
-  uuid: I_Love_🇵🇸_SSHMax_9b258d7
+  uuid: 6957c2a8-6dfe-4f6e-a9ca-f4985de5ea1e
   alterId: 0
   cipher: auto
   tls: false
   skip-cert-verify: true
-  servername: id2.vmess.site
+  servername: id2-ray.ipservers.xyz
   network: ws
   ws-opts:
-    path: /vmess
+    path: /JAGOANSSH/
     headers:
-      Host: id2.vmess.site
+      Host: id2-ray.ipservers.xyz
   udp: true
 
-- name: IPv2 🇮🇩 16Okt ByU B2
+- name: IDv3 🇮🇩 29 Okt ByU B2
   server: space.byu.id
   port: 443
   type: vmess
-  uuid: I_Love_🇵🇸_SSHMax_9b258d7
+  uuid: 6957c2a8-6dfe-4f6e-a9ca-f4985de5ea1e
   alterId: 0
   cipher: auto
   tls: true
   skip-cert-verify: true
-  servername: id2.vmess.site
+  servername: id2-ray.ipservers.xyz
   network: ws
   ws-opts:
-    path: /vmess
+    path: /JAGOANSSH/
     headers:
-      Host: id2.vmess.site
+      Host: id2-ray.ipservers.xyz
   udp: true
 
-- name: IPv2 🇮🇩 16Okt AXIS GAME JBR B1
+- name: IDv3 🇮🇩 29 Okt AXIS GAME JBR B1
   server: 104.19.142.89
   port: 80
   type: vmess
-  uuid: I_Love_🇵🇸_SSHMax_9b258d7
+  uuid: 6957c2a8-6dfe-4f6e-a9ca-f4985de5ea1e
   alterId: 0
   cipher: auto
   tls: false
   skip-cert-verify: true
-  servername: id2.vmess.site
+  servername: id2-ray.ipservers.xyz
   network: ws
   ws-opts:
-    path: /vmess
+    path: /JAGOANSSH/
     headers:
-      Host: id2.vmess.site
+      Host: id2-ray.ipservers.xyz
   udp: true
 
-- name: IPv2 🇮🇩 16Okt AXIS All BOOSTER B1
+- name: IDv3 🇮🇩 29 Okt AXIS All BOOSTER B1
   server: 172.64.153.186
   port: 80
   type: vmess
-  uuid: I_Love_🇵🇸_SSHMax_9b258d7
+  uuid: 6957c2a8-6dfe-4f6e-a9ca-f4985de5ea1e
   alterId: 0
   cipher: auto
   tls: false
   skip-cert-verify: true
-  servername: id2.vmess.site
+  servername: id2-ray.ipservers.xyz
   network: ws
   ws-opts:
-    path: /vmess
+    path: /JAGOANSSH/
     headers:
-      Host: id2.vmess.site
+      Host: id2-ray.ipservers.xyz
   udp: true
 
-- name: IPv2 🇮🇩 16Okt AXIS All BOOSTER B2
+- name: IDv3 🇮🇩 29 Okt AXIS All BOOSTER B2
   server: 104.18.34.70
   port: 80
   type: vmess
-  uuid: I_Love_🇵🇸_SSHMax_9b258d7
+  uuid: 6957c2a8-6dfe-4f6e-a9ca-f4985de5ea1e
   alterId: 0
   cipher: auto
   tls: false
   skip-cert-verify: true
-  servername: id2.vmess.site
+  servername: id2-ray.ipservers.xyz
   network: ws
   ws-opts:
-    path: /vmess
+    path: /JAGOANSSH/
     headers:
-      Host: id2.vmess.site
+      Host: id2-ray.ipservers.xyz
   udp: true
 
-- name: IPv2 🇮🇩 16Okt AXIS GAME JTM
+- name: IDv3 🇮🇩 29 Okt AXIS GAME JTM
   server: 104.18.21.94
   port: 80
   type: vmess
-  uuid: I_Love_🇵🇸_SSHMax_9b258d7
+  uuid: 6957c2a8-6dfe-4f6e-a9ca-f4985de5ea1e
   alterId: 0
   cipher: auto
   tls: false
   skip-cert-verify: true
-  servername: id2.vmess.site
+  servername: id2-ray.ipservers.xyz
   network: ws
   ws-opts:
-    path: /vmess
+    path: /JAGOANSSH/
     headers:
-      Host: id2.vmess.site
+      Host: id2-ray.ipservers.xyz
   udp: true
 
-- name: IPv2 🇮🇩 16Okt AXIS GENFLIX
+- name: IDv3 🇮🇩 29 Okt AXIS GENFLIX
   server: 104.21.30.242
   port: 80
   type: vmess
-  uuid: I_Love_🇵🇸_SSHMax_9b258d7
+  uuid: 6957c2a8-6dfe-4f6e-a9ca-f4985de5ea1e
   alterId: 0
   cipher: auto
   tls: false
   skip-cert-verify: true
-  servername: id2.vmess.site
+  servername: id2-ray.ipservers.xyz
   network: ws
   ws-opts:
-    path: /vmess
+    path: /JAGOANSSH/
     headers:
-      Host: id2.vmess.site
+      Host: id2-ray.ipservers.xyz
   udp: true
 
-- name: IPv2 🇮🇩 16Okt XL AXIS VIDEO B3
+- name: IDv3 🇮🇩 29 Okt XL AXIS VIDEO B3
   server: 104.22.4.240
   port: 80
   type: vmess
-  uuid: I_Love_🇵🇸_SSHMax_9b258d7
+  uuid: 6957c2a8-6dfe-4f6e-a9ca-f4985de5ea1e
   alterId: 0
   cipher: auto
   tls: false
   skip-cert-verify: true
-  servername: id2.vmess.site
+  servername: id2-ray.ipservers.xyz
   network: ws
   ws-opts:
-    path: /vmess
+    path: /JAGOANSSH/
     headers:
-      Host: id2.vmess.site
+      Host: id2-ray.ipservers.xyz
   udp: true
 
-- name: IPv2 🇮🇩 16Okt XL AXIS SUSHIROLL B2
+- name: IDv3 🇮🇩 29 Okt XL AXIS SUSHIROLL B2
   server: 104.21.69.223
   port: 80
   type: vmess
-  uuid: I_Love_🇵🇸_SSHMax_9b258d7
+  uuid: 6957c2a8-6dfe-4f6e-a9ca-f4985de5ea1e
   alterId: 0
   cipher: auto
   tls: false
   skip-cert-verify: true
-  servername: id2.vmess.site
+  servername: id2-ray.ipservers.xyz
   network: ws
   ws-opts:
-    path: /vmess
+    path: /JAGOANSSH/
     headers:
-      Host: id2.vmess.site
+      Host: id2-ray.ipservers.xyz
   udp: true
 
-- name: IPv2 🇮🇩 16Okt XL AXIS OPOK B6
+- name: IDv3 🇮🇩 29 Okt XL AXIS OPOK B6
   server: 104.22.28.102
   port: 80
   type: vmess
-  uuid: I_Love_🇵🇸_SSHMax_9b258d7
+  uuid: 6957c2a8-6dfe-4f6e-a9ca-f4985de5ea1e
   alterId: 0
   cipher: auto
   tls: false
   skip-cert-verify: true
-  servername: id2.vmess.site
+  servername: id2-ray.ipservers.xyz
   network: ws
   ws-opts:
-    path: /vmess
+    path: /JAGOANSSH/
     headers:
-      Host: id2.vmess.site
+      Host: id2-ray.ipservers.xyz
   udp: true
 
-- name: IPv2 🇮🇩 16Okt XL AXIS OPOK B7
+- name: IDv3 🇮🇩 29 Okt XL AXIS OPOK B7
   server: 104.17.58.20
   port: 80
   type: vmess
-  uuid: I_Love_🇵🇸_SSHMax_9b258d7
+  uuid: 6957c2a8-6dfe-4f6e-a9ca-f4985de5ea1e
   alterId: 0
   cipher: auto
   tls: false
   skip-cert-verify: true
-  servername: id2.vmess.site
+  servername: id2-ray.ipservers.xyz
   network: ws
   ws-opts:
-    path: /vmess
+    path: /JAGOANSSH/
     headers:
-      Host: id2.vmess.site
+      Host: id2-ray.ipservers.xyz
   udp: true
